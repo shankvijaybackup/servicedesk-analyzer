@@ -93,16 +93,38 @@ def _workshop_questions(theme_stats, agentic) -> list[str]:
 
 
 def _slide_outline(meta, qa, pareto_res, mttr_res, theme_stats, opps, agentic, wins,
-                   workflow=None) -> list[dict]:
+                   workflow=None, outcomes=None, stakeholders=None) -> list[dict]:
     workflow = workflow or {}
     top_themes = ", ".join(t["theme"] for t in theme_stats[:3])
     period_note = (f"Period: {meta['date_range_str']}"
                    + (f" (ONLY {meta['period_days']} DAYS - snapshot, not baseline)"
                       if meta.get("short_period") else ""))
+    outcome_slides = []
+    if outcomes and outcomes["deflect_range"][1] > 0:
+        oc = outcomes
+        ob = [f"{oc['addressable']} of {oc['total_n']} tickets ({oc['addressable_pct']}%) "
+              "have a viable automation path",
+              f"{oc['deflect_range'][0]}-{oc['deflect_range'][1]} tickets need no human "
+              f"agent ({oc['deflect_pct_range'][0]}-{oc['deflect_pct_range'][1]}%)"]
+        if oc["wait_hours_range"]:
+            ob.append(f"{oc['wait_hours_range'][0]:,}-{oc['wait_hours_range'][1]:,} employee "
+                      "waiting hours eliminated (measured)")
+        ob.append(f"{oc['effort_hours_range'][0]:,}-{oc['effort_hours_range'][1]:,} "
+                  "agent-hours returned (assumption: 15-45 min/ticket)")
+        if oc["fte_range"]:
+            ob.append(f"~{oc['fte_range'][0]}-{oc['fte_range'][1]} FTE-equivalent per month "
+                      "redirected to project work")
+        ob.append("Cost = hours x your loaded rate (bring to workshop)")
+        outcome_slides.append({"title": "Business Outcomes", "bullets": ob})
+    if stakeholders:
+        outcome_slides.append({"title": "Value by Stakeholder", "bullets": [
+            f"{s['stakeholder']}: {s['outcome'][:110]}" for s in stakeholders[:6]]})
+
     slides = [
         {"title": "Service Desk Intelligence Assessment",
          "bullets": [f"Dataset: {meta['source_name']}", f"{qa['total_records']} records analyzed",
                      period_note, "Method: deterministic rule-based analysis, no data retained"]},
+        *outcome_slides,
         {"title": "Data Quality", "bullets": [
             f"Verdict: {qa['verdict']}",
             *(qa["issues"][:4] or ["No blocking quality issues found"])]},
@@ -142,6 +164,136 @@ def _slide_outline(meta, qa, pareto_res, mttr_res, theme_stats, opps, agentic, w
             "Agent hourly cost for ROI model"]},
     ]
     return slides
+
+
+# Industry band for L1/L2 agent handle time per ticket, used ONLY when the
+# export has no effort data (it never does). Always labeled as an assumption.
+HANDLE_TIME_HOURS = (0.25, 0.75)  # 15-45 minutes
+
+
+def _business_outcomes(opps, mttr_res, workflow, meta, total_n) -> dict:
+    """Translate analysis into outcome ranges. Every figure is either
+    measured (from the export) or assumption-based (explicitly labeled)."""
+    automatable = [o for o in opps if not o["solution_type"].startswith("F.")]
+    deflect_lo = sum(o["deflection_range_tickets"][0] for o in automatable)
+    deflect_hi = sum(o["deflection_range_tickets"][1] for o in automatable)
+    addressable = sum(o["tickets_addressable"] for o in automatable)
+
+    # Employee wait time eliminated: measured (deflected x median MTTR elapsed)
+    wait_lo = wait_hi = None
+    if mttr_res.get("overall"):
+        med = mttr_res["overall"]["median"]
+        wait_lo, wait_hi = round(deflect_lo * med), round(deflect_hi * med)
+
+    # Agent effort returned: assumption-based (no effort data in exports)
+    effort_lo = round(deflect_lo * HANDLE_TIME_HOURS[0])
+    effort_hi = round(deflect_hi * HANDLE_TIME_HOURS[1])
+
+    # FTE-equivalent capacity per month: assumption-based. Suppressed when it
+    # rounds to nothing (sub-0.1 FTE is noise, not an executive message).
+    fte_lo = fte_hi = None
+    period_days = meta.get("period_days")
+    if period_days and period_days >= 7 and deflect_hi > 0:
+        months = max(period_days / 30.4, 0.25)
+        lo = round(effort_lo / months / 160, 1)
+        hi = round(effort_hi / months / 160, 1)
+        if hi >= 0.3:
+            fte_lo, fte_hi = lo, hi
+
+    stuck_n = workflow.get("stuck_n", 0) if workflow.get("available") else 0
+    transfer_n = workflow.get("transfer_n", 0) if workflow.get("available") else 0
+
+    return {
+        "total_n": total_n,
+        "addressable": addressable,
+        "addressable_pct": round(addressable / total_n * 100, 1) if total_n else 0,
+        "deflect_range": (deflect_lo, deflect_hi),
+        "deflect_pct_range": (round(deflect_lo / total_n * 100, 1),
+                              round(deflect_hi / total_n * 100, 1)) if total_n else (0, 0),
+        "wait_hours_range": (wait_lo, wait_hi) if wait_lo is not None else None,
+        "effort_hours_range": (effort_lo, effort_hi),
+        "fte_range": (fte_lo, fte_hi) if fte_lo is not None else None,
+        "stuck_n": stuck_n,
+        "transfer_n": transfer_n,
+        "period_days": period_days,
+        "assumptions": [
+            "Deflection ranges are conservative industry bands applied to your observed "
+            "volumes; they assume API access and good knowledge quality per theme.",
+            f"Agent effort uses an industry handle-time band of "
+            f"{int(HANDLE_TIME_HOURS[0]*60)}-{int(HANDLE_TIME_HOURS[1]*60)} minutes per "
+            "ticket because exports do not contain effort data. Replace with your own "
+            "handle times for a committed business case.",
+            "Employee wait-time figures use median MTTR from your export (elapsed clock "
+            "time)." if wait_lo is not None else
+            "Employee wait-time savings cannot be computed: this export has no "
+            "resolution timestamps.",
+            "Cost: multiply agent-hours returned by your loaded hourly cost for L1/L2. "
+            "This report does not invent currency figures.",
+        ],
+    }
+
+
+def _stakeholder_value(outcomes, opps, agentic, workflow) -> list[dict]:
+    """What each executive gets. Only claims backed by the computed outcomes."""
+    d_lo, d_hi = outcomes["deflect_range"]
+    e_lo, e_hi = outcomes["effort_hours_range"]
+    period = (f"over this {outcomes['period_days']}-day window"
+              if outcomes.get("period_days") else "over the export period")
+    rows = []
+    rows.append({
+        "stakeholder": "CIO / Head of IT",
+        "outcome": (f"{d_lo}-{d_hi} tickets ({outcomes['deflect_pct_range'][0]}-"
+                    f"{outcomes['deflect_pct_range'][1]}% of volume) resolved without an "
+                    f"agent {period}; L1 refocused on complex work"),
+        "metric": "Deflection rate, MTTR trend, automation coverage by theme",
+    })
+    rows.append({
+        "stakeholder": "CFO",
+        "outcome": (f"{e_lo}-{e_hi} agent-hours returned {period} (assumption-based); "
+                    "cost impact = hours x your loaded hourly rate. Capacity absorbed "
+                    "without headcount growth"
+                    + (f"; roughly {outcomes['fte_range'][0]}-{outcomes['fte_range'][1]} "
+                       "FTE-equivalent per month" if outcomes.get("fte_range") else "")),
+        "metric": "Agent-hours returned, cost per ticket, FTE-equivalent capacity",
+    })
+    if outcomes["wait_hours_range"]:
+        w_lo, w_hi = outcomes["wait_hours_range"]
+        emp_outcome = (f"{w_lo}-{w_hi} employee waiting hours eliminated {period}: "
+                       "instant answers instead of waiting on a queue")
+    else:
+        emp_outcome = ("Instant 24/7 answers in Slack/Teams for deflected requests "
+                       "instead of waiting on a queue (wait-hours not computable from "
+                       "this export)")
+    rows.append({
+        "stakeholder": "CHRO / Head of HR",
+        "outcome": emp_outcome + "; HR queries answered without HR team touch",
+        "metric": "Employee wait time, HR ticket deflection, onboarding turnaround",
+    })
+    top_theme = next((o for o in opps if not o["solution_type"].startswith("F.")), None)
+    rows.append({
+        "stakeholder": "Service Desk Lead",
+        "outcome": ((f"{outcomes['stuck_n']} stuck tickets and {outcomes['transfer_n']} "
+                     "misrouted transfers become automation targets; " if outcomes["stuck_n"]
+                     else "") +
+                    (f"biggest relief: {top_theme['theme']} "
+                     f"({top_theme['tickets_addressable']} tickets)" if top_theme else
+                     "queue relief pending SME validation")),
+        "metric": "Queue depth, stuck/on-hold share, transfer rate, first-contact resolution",
+    })
+    rows.append({
+        "stakeholder": "Platform Owner (ITSM)",
+        "outcome": ("Cleaner intake via AI categorization (reduces the misrouting and "
+                    "'Other' bucket found in this export); integrations built once, "
+                    "reused across workflows"),
+        "metric": "Categorization accuracy, intake quality, integration reuse",
+    })
+    rows.append({
+        "stakeholder": "Employees",
+        "outcome": ("Self-service in Slack/Teams with instant answers for the most "
+                    "common requests; no ticket status-chasing"),
+        "metric": "CSAT, self-service adoption, repeat-contact rate",
+    })
+    return rows
 
 
 def _roadmap(wins, opps, agentic) -> dict:
@@ -252,8 +404,13 @@ def analyze(source, source_name: str = "uploaded.csv") -> dict:
     n_records = len(view)
     del view  # forget normalized data
 
+    outcomes = _business_outcomes(opps, mttr_res, workflow, meta, n_records)
+    stakeholders = _stakeholder_value(outcomes, opps, agentic, workflow)
+
     return {
         "meta": meta,
+        "outcomes": outcomes,               # business outcomes
+        "stakeholders": stakeholders,       # per-stakeholder value
         "quality": qa,                      # B
         "theme_stats": theme_stats,         # C, E
         "other_terms": other_terms,         # blind-spot mining
@@ -266,7 +423,8 @@ def analyze(source, source_name: str = "uploaded.csv") -> dict:
         "roadmap": _roadmap(wins, opps, agentic),          # K
         "workshop_questions": _workshop_questions(theme_stats, agentic),  # L
         "slides": _slide_outline(meta, qa, pareto_res, mttr_res,
-                                 theme_stats, opps, agentic, wins, workflow),  # M
+                                 theme_stats, opps, agentic, wins, workflow,
+                                 outcomes, stakeholders),  # M
         "findings": findings,               # A
         "challenges": challenges,           # step 11
         "n_analyzed": n_records,

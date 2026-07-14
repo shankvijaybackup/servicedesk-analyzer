@@ -32,8 +32,49 @@ def render(r: dict) -> str:
           "month-end effects, and one-off events cannot be separated. Use this to shape "
           "questions, not to size ROI. Request 3-6 months of data for a committed roadmap.\n")
 
-    # A. Executive Summary
+    # A. Executive Summary - leads with outcomes, not metrics
     a("## A. Executive Summary\n")
+    o = r["outcomes"]
+    d_lo, d_hi = o["deflect_range"]
+    if d_hi > 0:
+        a(f"### The headline\n")
+        a(f"Of {o['total_n']} tickets in this export, **{o['addressable']} "
+          f"({o['addressable_pct']}%) sit in themes with a viable automation path**. "
+          f"Applying conservative deflection bands, **{d_lo}-{d_hi} tickets "
+          f"({o['deflect_pct_range'][0]}-{o['deflect_pct_range'][1]}%) would never need "
+          "a human agent**.\n")
+        bullets = []
+        if o["wait_hours_range"]:
+            w_lo, w_hi = o["wait_hours_range"]
+            bullets.append(f"**{w_lo:,}-{w_hi:,} employee waiting hours eliminated** "
+                           "(measured: deflected tickets x your median MTTR)")
+        e_lo, e_hi = o["effort_hours_range"]
+        bullets.append(f"**{e_lo:,}-{e_hi:,} agent-hours returned to the IT team** "
+                       "(assumption: 15-45 min handle time per ticket)")
+        if o["fte_range"]:
+            bullets.append(f"**~{o['fte_range'][0]}-{o['fte_range'][1]} FTE-equivalent "
+                           "capacity per month** freed for project work instead of tickets")
+        if o["stuck_n"]:
+            bullets.append(f"**{o['stuck_n']} tickets currently sitting in On Hold/Pending** "
+                           "become automation targets (reminders, escalation, delegation)")
+        for b in bullets:
+            a(f"- {b}")
+        a("\nCost translation: multiply agent-hours by your loaded L1/L2 hourly rate. "
+          "This report does not invent currency figures; bring your rate to the workshop.\n")
+    else:
+        a("No automation opportunity cleared the evidence threshold in this export. "
+          "See data quality issues below; a larger or cleaner export is needed.\n")
+
+    a("### What each stakeholder gets\n")
+    a("| Stakeholder | Outcome | Value metrics to track |")
+    a("| --- | --- | --- |")
+    for s in r["stakeholders"]:
+        a(f"| {s['stakeholder']} | {s['outcome']} | {s['metric']} |")
+    a("")
+    a("### Basis and assumptions for the numbers above\n")
+    for asm in o["assumptions"]:
+        a(f"- {asm}")
+    a("")
     a(f"Data quality verdict: **{q['verdict']}**. "
       f"{q['total_records']} records covering {r['meta']['date_range_str']}.\n")
     a("### Top findings\n")
