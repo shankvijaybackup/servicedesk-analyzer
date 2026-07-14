@@ -1,0 +1,133 @@
+Issue Key,Project,Issue Type,Summary,Description,Status,Priority,Assignee,Reporter,Created,Resolved,Resolution
+DVO-1031,DevOps,Task,Deployment to staging stuck at approval,Deployment to staging stuck at approval. See runbook for context.,Done,Low,Agent 04,Employee 7855,2025-01-27T08:44:05,2025-01-31T21:25:57,Done
+DVO-1105,DevOps,Infrastructure,Terraform plan drift on network module,Terraform plan drift on network module. See runbook for context.,Done,High,Agent 08,Employee 5113,2025-03-30T04:14:03,2025-03-31T23:38:52,Done
+DVO-1048,DevOps,Access,Access request: production logs read-only,Access request: production logs read-only. See runbook for context.,Done,High,Agent 04,Employee 5270,2025-04-04T04:31:01,2025-04-06T04:21:11,Done
+DVO-1020,DevOps,Task,Deployment to staging stuck at approval,Deployment to staging stuck at approval. See runbook for context.,To Do,Low,Agent 04,Employee 1579,2025-01-24T20:49:36,,
+DVO-1057,DevOps,Task,New service onboarding to monitoring,New service onboarding to monitoring. See runbook for context.,Done,Medium,Agent 07,Employee 3565,2025-05-15T21:01:06,2025-05-21T04:29:48,Done
+DVO-1067,DevOps,Bug,Kibana dashboard not loading,Kibana dashboard not loading. See runbook for context.,Done,Highest,Agent 06,Employee 5554,2025-06-15T17:06:11,2025-06-16T18:51:05,Done
+DVO-1041,DevOps,Access,Access request: production logs read-only,Access request: production logs read-only. See runbook for context.,Done,Highest,Agent 07,Employee 4987,2025-07-01T19:54:51,2025-07-04T04:41:43,Done
+DVO-1026,DevOps,Task,Deployment to staging stuck at approval,Deployment to staging stuck at approval. See runbook for context.,Done,Medium,Agent 01,Employee 1769,2025-04-14T19:29:34,2025-04-17T13:45:13,Done
+DVO-1044,DevOps,Access,Access request: production logs read-only,Access request: production logs read-only. See runbook for context.,Done,High,Agent 03,Employee 5218,2025-01-25T17:43:03,2025-01-26T23:29:34,Done
+DVO-1098,DevOps,Access,VPN access for new contractor,VPN access for new contractor. See runbook for context.,Done,Medium,Agent 06,Employee 8886,2025-06-09T01:10:06,2025-06-10T00:39:53,Done
+DVO-1021,DevOps,Task,Deployment to staging stuck at approval,Deployment to staging stuck at approval. See runbook for context.,Blocked,Highest,Agent 04,Employee 4808,2025-02-28T20:16:18,,
+DVO-1006,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,To Do,High,Agent 06,Employee 4516,2025-04-15T15:00:31,,
+DVO-1039,DevOps,Access,Access request: production logs read-only,Access request: production logs read-only. See runbook for context.,Done,Low,Agent 07,Employee 5022,2025-05-05T10:20:40,2025-05-06T02:37:53,Done
+DVO-1042,DevOps,Access,Access request: production logs read-only,Access request: production logs read-only. See runbook for context.,Done,High,Agent 08,Employee 1902,2025-05-07T08:32:46,2025-05-10T07:14:25,Done
+DVO-1081,DevOps,Infrastructure,Increase disk on build agents,Increase disk on build agents. See runbook for context.,Done,Medium,Agent 07,Employee 4728,2025-03-29T11:40:40,2025-04-01T05:26:47,Done
+DVO-1113,DevOps,Question,How to request a new namespace,How to request a new namespace. See runbook for context.,Done,High,Agent 06,Employee 1081,2025-05-17T06:46:42,2025-05-18T03:42:59,Done
+DVO-1073,DevOps,Infrastructure,Increase disk on build agents,Increase disk on build agents. See runbook for context.,Done,Highest,Agent 04,Employee 2194,2025-03-05T11:51:56,2025-03-08T12:46:12,Done
+DVO-1017,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,To Do,Low,Agent 07,Employee 1155,2025-03-21T10:07:12,,
+DVO-1117,DevOps,Question,How to request a new namespace,How to request a new namespace. See runbook for context.,Done,High,Agent 02,Employee 5116,2025-04-16T12:35:31,2025-04-17T01:12:43,Done
+DVO-1009,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,To Do,High,Agent 05,Employee 9136,2025-06-06T05:30:27,,
+DVO-1106,DevOps,Infrastructure,Terraform plan drift on network module,Terraform plan drift on network module. See runbook for context.,Done,Highest,Agent 03,Employee 3186,2025-03-17T18:59:31,2025-03-19T00:38:01,Done
+DVO-1034,DevOps,Access,Access request: production logs read-only,Access request: production logs read-only. See runbook for context.,Done,Medium,Agent 05,Employee 6164,2025-01-20T16:41:21,2025-01-23T06:23:36,Done
+DVO-1121,DevOps,Access,Secrets manager permission denied,Secrets manager permission denied. See runbook for context.,In Progress,Low,Agent 01,Employee 3370,2025-03-05T23:21:02,,
+DVO-1094,DevOps,Access,VPN access for new contractor,VPN access for new contractor. See runbook for context.,To Do,Low,Agent 02,Employee 9149,2025-03-17T01:51:04,,
+DVO-1052,DevOps,Task,New service onboarding to monitoring,New service onboarding to monitoring. See runbook for context.,Done,Medium,Agent 07,Employee 8452,2025-03-14T16:01:32,2025-03-17T22:08:04,Done
+DVO-1065,DevOps,Bug,Kibana dashboard not loading,Kibana dashboard not loading. See runbook for context.,Done,High,Agent 08,Employee 8029,2025-05-07T05:19:07,2025-05-07T10:55:35,Done
+DVO-1027,DevOps,Task,Deployment to staging stuck at approval,Deployment to staging stuck at approval. See runbook for context.,Blocked,Low,Agent 01,Employee 9271,2025-07-11T18:04:40,,
+DVO-1099,DevOps,Access,VPN access for new contractor,VPN access for new contractor. See runbook for context.,Done,High,Agent 02,Employee 1117,2025-05-16T10:10:04,2025-05-17T16:26:11,Done
+DVO-1116,DevOps,Question,How to request a new namespace,How to request a new namespace. See runbook for context.,Blocked,Highest,Agent 05,Employee 3477,2025-01-31T06:21:58,,
+DVO-1124,DevOps,Access,Secrets manager permission denied,Secrets manager permission denied. See runbook for context.,Done,Low,Agent 04,Employee 3481,2025-03-21T11:40:03,2025-03-23T08:36:40,Done
+DVO-1011,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,Done,High,Agent 04,Employee 8482,2025-02-25T14:56:57,2025-02-27T02:34:12,Done
+DVO-1107,DevOps,Infrastructure,Terraform plan drift on network module,Terraform plan drift on network module. See runbook for context.,Done,High,Agent 03,Employee 5623,2025-05-28T10:38:05,2025-05-30T20:30:33,Done
+DVO-1111,DevOps,Infrastructure,Terraform plan drift on network module,Terraform plan drift on network module. See runbook for context.,Done,Low,Agent 07,Employee 3807,2025-03-30T02:01:39,2025-04-02T07:32:35,Done
+DVO-1064,DevOps,Bug,Kibana dashboard not loading,Kibana dashboard not loading. See runbook for context.,Done,High,Agent 01,Employee 7849,2025-06-29T20:24:20,2025-06-30T19:50:27,Done
+DVO-1096,DevOps,Access,VPN access for new contractor,VPN access for new contractor. See runbook for context.,To Do,Medium,Agent 05,Employee 7222,2025-04-23T15:14:33,,
+DVO-1062,DevOps,Bug,Kibana dashboard not loading,Kibana dashboard not loading. See runbook for context.,Done,Medium,Agent 03,Employee 5617,2025-04-18T19:29:21,2025-04-20T00:38:31,Done
+DVO-1076,DevOps,Infrastructure,Increase disk on build agents,Increase disk on build agents. See runbook for context.,Blocked,Low,Agent 07,Employee 3404,2025-06-15T20:51:55,,
+DVO-1019,DevOps,Task,Deployment to staging stuck at approval,Deployment to staging stuck at approval. See runbook for context.,In Progress,Medium,Agent 02,Employee 2551,2025-04-22T11:42:05,,
+DVO-1032,DevOps,Task,Deployment to staging stuck at approval,Deployment to staging stuck at approval. See runbook for context.,Done,Medium,Agent 02,Employee 4940,2025-05-16T11:11:04,2025-05-17T00:15:24,Done
+DVO-1103,DevOps,Infrastructure,Terraform plan drift on network module,Terraform plan drift on network module. See runbook for context.,Done,Low,Agent 07,Employee 9960,2025-01-25T15:45:05,2025-01-29T01:06:06,Done
+DVO-1080,DevOps,Infrastructure,Increase disk on build agents,Increase disk on build agents. See runbook for context.,In Progress,Highest,Agent 05,Employee 7781,2025-07-12T06:22:12,,
+DVO-1045,DevOps,Access,Access request: production logs read-only,Access request: production logs read-only. See runbook for context.,Blocked,Low,Agent 02,Employee 4673,2025-02-16T21:50:00,,
+DVO-1053,DevOps,Task,New service onboarding to monitoring,New service onboarding to monitoring. See runbook for context.,Done,Highest,Agent 03,Employee 9985,2025-03-24T10:16:17,2025-04-01T22:13:38,Done
+DVO-1114,DevOps,Question,How to request a new namespace,How to request a new namespace. See runbook for context.,Done,Highest,Agent 01,Employee 4445,2025-07-04T16:53:37,2025-07-04T20:04:15,Done
+DVO-1104,DevOps,Infrastructure,Terraform plan drift on network module,Terraform plan drift on network module. See runbook for context.,Done,Highest,Agent 05,Employee 7358,2025-04-05T10:31:40,2025-04-06T17:50:45,Done
+DVO-1046,DevOps,Access,Access request: production logs read-only,Access request: production logs read-only. See runbook for context.,Done,Medium,Agent 02,Employee 1434,2025-02-06T08:04:47,2025-02-07T09:08:13,Done
+DVO-1119,DevOps,Question,How to request a new namespace,How to request a new namespace. See runbook for context.,In Progress,High,Agent 06,Employee 9375,2025-05-15T16:43:52,,
+DVO-1015,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,Done,Highest,Agent 05,Employee 2469,2025-06-10T17:20:07,2025-06-13T09:52:29,Done
+DVO-1059,DevOps,Task,New service onboarding to monitoring,New service onboarding to monitoring. See runbook for context.,Done,Medium,Agent 07,Employee 9876,2025-05-27T21:24:43,2025-06-03T19:51:54,Done
+DVO-1112,DevOps,Question,How to request a new namespace,How to request a new namespace. See runbook for context.,Done,Low,Agent 03,Employee 8114,2025-04-30T17:49:17,2025-05-01T01:12:28,Done
+DVO-1068,DevOps,Bug,Kibana dashboard not loading,Kibana dashboard not loading. See runbook for context.,Done,Low,Agent 03,Employee 9517,2025-06-15T19:29:00,2025-06-16T22:12:03,Done
+DVO-1084,DevOps,Infrastructure,Increase disk on build agents,Increase disk on build agents. See runbook for context.,In Progress,Medium,Agent 04,Employee 3614,2025-07-12T19:10:17,,
+DVO-1088,DevOps,Security,Rotate API keys for payment gateway,Rotate API keys for payment gateway. See runbook for context.,Done,High,Agent 03,Employee 1925,2025-01-19T14:11:15,2025-01-20T01:31:12,Done
+DVO-1074,DevOps,Infrastructure,Increase disk on build agents,Increase disk on build agents. See runbook for context.,Done,Highest,Agent 02,Employee 4329,2025-02-14T18:33:01,2025-02-15T07:20:49,Done
+DVO-1010,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,Done,Highest,Agent 07,Employee 9806,2025-02-09T09:23:23,2025-02-10T10:05:25,Done
+DVO-1072,DevOps,Bug,Kibana dashboard not loading,Kibana dashboard not loading. See runbook for context.,Done,High,Agent 04,Employee 8584,2025-05-20T05:50:04,2025-05-20T21:56:38,Done
+DVO-1129,DevOps,Task,Alert fatigue: tune noisy monitor,Alert fatigue: tune noisy monitor. See runbook for context.,Done,Low,Agent 08,Employee 9864,2025-02-14T01:56:58,2025-02-16T15:47:34,Done
+DVO-1035,DevOps,Access,Access request: production logs read-only,Access request: production logs read-only. See runbook for context.,Done,High,Agent 08,Employee 9932,2025-03-18T03:10:54,2025-03-20T03:43:50,Done
+DVO-1066,DevOps,Bug,Kibana dashboard not loading,Kibana dashboard not loading. See runbook for context.,Done,Highest,Agent 02,Employee 4907,2025-06-29T06:30:58,2025-06-30T15:53:21,Done
+DVO-1108,DevOps,Infrastructure,Terraform plan drift on network module,Terraform plan drift on network module. See runbook for context.,Blocked,Low,Agent 05,Employee 9599,2025-03-31T19:10:06,,
+DVO-1087,DevOps,Security,Rotate API keys for payment gateway,Rotate API keys for payment gateway. See runbook for context.,Done,High,Agent 02,Employee 5010,2025-06-26T03:51:03,2025-06-27T12:27:01,Done
+DVO-1013,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,In Progress,High,Agent 02,Employee 5343,2025-04-12T18:03:22,,
+DVO-1089,DevOps,Security,Rotate API keys for payment gateway,Rotate API keys for payment gateway. See runbook for context.,Done,High,Agent 02,Employee 3081,2025-05-13T17:00:07,2025-05-16T04:50:07,Done
+DVO-1075,DevOps,Infrastructure,Increase disk on build agents,Increase disk on build agents. See runbook for context.,Done,Highest,Agent 01,Employee 1734,2025-06-26T13:09:42,2025-06-29T21:25:15,Done
+DVO-1014,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,Done,Low,Agent 03,Employee 4192,2025-05-19T03:17:49,2025-05-21T15:21:24,Done
+DVO-1101,DevOps,Access,VPN access for new contractor,VPN access for new contractor. See runbook for context.,Done,Highest,Agent 07,Employee 9360,2025-07-11T19:52:09,2025-07-12T13:03:17,Done
+DVO-1071,DevOps,Bug,Kibana dashboard not loading,Kibana dashboard not loading. See runbook for context.,Blocked,Highest,Agent 01,Employee 2319,2025-06-15T04:20:35,,
+DVO-1058,DevOps,Task,New service onboarding to monitoring,New service onboarding to monitoring. See runbook for context.,Done,Low,Agent 07,Employee 1535,2025-06-22T11:53:31,2025-06-26T02:05:24,Done
+DVO-1070,DevOps,Bug,Kibana dashboard not loading,Kibana dashboard not loading. See runbook for context.,To Do,Highest,Agent 06,Employee 5996,2025-05-03T23:15:36,,
+DVO-1036,DevOps,Access,Access request: production logs read-only,Access request: production logs read-only. See runbook for context.,Done,Low,Agent 05,Employee 8091,2025-03-05T12:11:22,2025-03-07T14:00:58,Done
+DVO-1018,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,Done,Low,Agent 04,Employee 9585,2025-05-04T18:20:28,2025-05-06T01:01:47,Done
+DVO-1022,DevOps,Task,Deployment to staging stuck at approval,Deployment to staging stuck at approval. See runbook for context.,Done,High,Agent 03,Employee 3507,2025-03-02T15:56:57,2025-03-04T19:43:42,Done
+DVO-1023,DevOps,Task,Deployment to staging stuck at approval,Deployment to staging stuck at approval. See runbook for context.,Done,Medium,Agent 05,Employee 7840,2025-05-26T13:47:11,2025-05-30T17:32:25,Done
+DVO-1047,DevOps,Access,Access request: production logs read-only,Access request: production logs read-only. See runbook for context.,Done,Low,Agent 03,Employee 8316,2025-07-10T22:36:25,2025-07-13T17:51:23,Done
+DVO-1004,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,In Progress,High,Agent 03,Employee 9252,2025-02-27T21:52:19,,
+DVO-1097,DevOps,Access,VPN access for new contractor,VPN access for new contractor. See runbook for context.,Blocked,Medium,Agent 03,Employee 6432,2025-03-21T12:44:54,,
+DVO-1090,DevOps,Security,Rotate API keys for payment gateway,Rotate API keys for payment gateway. See runbook for context.,Done,Highest,Agent 01,Employee 3961,2025-01-29T17:32:57,2025-01-31T09:42:29,Done
+DVO-1083,DevOps,Infrastructure,Increase disk on build agents,Increase disk on build agents. See runbook for context.,In Progress,Low,Agent 03,Employee 3830,2025-05-28T06:39:24,,
+DVO-1007,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,Done,Low,Agent 03,Employee 4009,2025-05-10T18:16:35,2025-05-13T11:24:44,Done
+DVO-1028,DevOps,Task,Deployment to staging stuck at approval,Deployment to staging stuck at approval. See runbook for context.,Done,High,Agent 01,Employee 3563,2025-04-04T22:09:45,2025-04-05T13:05:42,Done
+DVO-1056,DevOps,Task,New service onboarding to monitoring,New service onboarding to monitoring. See runbook for context.,Done,Low,Agent 06,Employee 2707,2025-04-29T02:56:34,2025-04-30T15:12:04,Done
+DVO-1063,DevOps,Bug,Kibana dashboard not loading,Kibana dashboard not loading. See runbook for context.,Done,Low,Agent 08,Employee 4658,2025-01-23T08:51:51,2025-01-24T05:48:14,Done
+DVO-1100,DevOps,Access,VPN access for new contractor,VPN access for new contractor. See runbook for context.,Done,Low,Agent 03,Employee 3717,2025-07-03T01:56:08,2025-07-03T13:29:52,Done
+DVO-1085,DevOps,Security,Rotate API keys for payment gateway,Rotate API keys for payment gateway. See runbook for context.,Done,Medium,Agent 06,Employee 5451,2025-04-17T22:24:52,2025-04-18T13:07:04,Done
+DVO-1123,DevOps,Access,Secrets manager permission denied,Secrets manager permission denied. See runbook for context.,In Progress,Low,Agent 06,Employee 9947,2025-02-22T06:00:50,,
+DVO-1120,DevOps,Question,How to request a new namespace,How to request a new namespace. See runbook for context.,Done,Low,Agent 05,Employee 9265,2025-03-31T11:31:41,2025-04-01T07:55:38,Done
+DVO-1050,DevOps,Task,New service onboarding to monitoring,New service onboarding to monitoring. See runbook for context.,In Progress,High,Agent 05,Employee 7718,2025-06-07T04:25:23,,
+DVO-1091,DevOps,Security,Rotate API keys for payment gateway,Rotate API keys for payment gateway. See runbook for context.,Done,Low,Agent 04,Employee 7353,2025-07-04T15:51:13,2025-07-07T06:42:09,Done
+DVO-1054,DevOps,Task,New service onboarding to monitoring,New service onboarding to monitoring. See runbook for context.,Done,High,Agent 04,Employee 8031,2025-05-17T11:23:07,2025-05-27T10:19:53,Done
+DVO-1012,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,Done,High,Agent 04,Employee 8437,2025-04-13T10:23:10,2025-04-13T14:58:30,Done
+DVO-1122,DevOps,Access,Secrets manager permission denied,Secrets manager permission denied. See runbook for context.,In Progress,High,Agent 04,Employee 3557,2025-05-01T08:33:21,,
+DVO-1130,DevOps,Task,Alert fatigue: tune noisy monitor,Alert fatigue: tune noisy monitor. See runbook for context.,Done,Highest,Agent 04,Employee 7733,2025-04-27T23:43:14,2025-05-02T03:12:24,Done
+DVO-1132,DevOps,Task,Alert fatigue: tune noisy monitor,Alert fatigue: tune noisy monitor. See runbook for context.,In Progress,Highest,Agent 01,Employee 6456,2025-07-13T18:58:07,,
+DVO-1051,DevOps,Task,New service onboarding to monitoring,New service onboarding to monitoring. See runbook for context.,Done,Medium,Agent 06,Employee 3948,2025-01-20T23:51:26,2025-01-22T23:44:10,Done
+DVO-1001,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,Done,High,Agent 06,Employee 6916,2025-03-14T11:34:32,2025-03-15T02:23:00,Done
+DVO-1077,DevOps,Infrastructure,Increase disk on build agents,Increase disk on build agents. See runbook for context.,To Do,Highest,Agent 05,Employee 1341,2025-05-08T00:15:04,,
+DVO-1131,DevOps,Task,Alert fatigue: tune noisy monitor,Alert fatigue: tune noisy monitor. See runbook for context.,To Do,High,Agent 08,Employee 3543,2025-03-25T14:29:37,,
+DVO-1002,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,To Do,Low,Agent 05,Employee 1759,2025-05-21T21:01:44,,
+DVO-1125,DevOps,Access,Secrets manager permission denied,Secrets manager permission denied. See runbook for context.,Done,Medium,Agent 04,Employee 3007,2025-06-14T17:23:15,2025-06-16T14:46:37,Done
+DVO-1005,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,Done,High,Agent 05,Employee 6085,2025-03-12T14:10:26,2025-03-13T14:44:23,Done
+DVO-1038,DevOps,Access,Access request: production logs read-only,Access request: production logs read-only. See runbook for context.,Blocked,High,Agent 03,Employee 6566,2025-02-24T11:32:47,,
+DVO-1061,DevOps,Bug,Kibana dashboard not loading,Kibana dashboard not loading. See runbook for context.,In Progress,Medium,Agent 08,Employee 7391,2025-06-20T18:03:57,,
+DVO-1128,DevOps,Task,Alert fatigue: tune noisy monitor,Alert fatigue: tune noisy monitor. See runbook for context.,Done,Low,Agent 04,Employee 5968,2025-04-26T12:54:29,2025-05-05T13:22:58,Done
+DVO-1079,DevOps,Infrastructure,Increase disk on build agents,Increase disk on build agents. See runbook for context.,In Progress,Highest,Agent 01,Employee 5724,2025-03-11T12:35:26,,
+DVO-1008,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,In Progress,Medium,Agent 03,Employee 3200,2025-02-26T10:52:27,,
+DVO-1092,DevOps,Security,Rotate API keys for payment gateway,Rotate API keys for payment gateway. See runbook for context.,Done,High,Agent 07,Employee 1398,2025-06-03T03:33:37,2025-06-04T21:39:42,Done
+DVO-1003,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,Done,Medium,Agent 07,Employee 5474,2025-05-20T05:05:24,2025-05-20T19:30:08,Done
+DVO-1095,DevOps,Access,VPN access for new contractor,VPN access for new contractor. See runbook for context.,Done,High,Agent 03,Employee 1171,2025-02-07T16:18:08,2025-02-08T17:42:26,Done
+DVO-1033,DevOps,Task,Deployment to staging stuck at approval,Deployment to staging stuck at approval. See runbook for context.,Done,Low,Agent 03,Employee 8985,2025-02-11T15:58:08,2025-02-16T13:51:24,Done
+DVO-1109,DevOps,Infrastructure,Terraform plan drift on network module,Terraform plan drift on network module. See runbook for context.,In Progress,High,Agent 07,Employee 2631,2025-01-27T15:00:19,,
+DVO-1110,DevOps,Infrastructure,Terraform plan drift on network module,Terraform plan drift on network module. See runbook for context.,Done,Highest,Agent 07,Employee 8786,2025-06-03T13:45:53,2025-06-06T20:52:37,Done
+DVO-1082,DevOps,Infrastructure,Increase disk on build agents,Increase disk on build agents. See runbook for context.,Done,Medium,Agent 08,Employee 4583,2025-03-10T08:49:45,2025-03-11T20:30:35,Done
+DVO-1049,DevOps,Task,New service onboarding to monitoring,New service onboarding to monitoring. See runbook for context.,In Progress,Highest,Agent 08,Employee 7823,2025-06-28T11:37:41,,
+DVO-1030,DevOps,Task,Deployment to staging stuck at approval,Deployment to staging stuck at approval. See runbook for context.,Done,Highest,Agent 08,Employee 2358,2025-01-17T18:54:08,2025-01-21T00:49:51,Done
+DVO-1060,DevOps,Task,New service onboarding to monitoring,New service onboarding to monitoring. See runbook for context.,Done,High,Agent 07,Employee 3673,2025-04-26T22:19:49,2025-04-30T19:17:20,Done
+DVO-1055,DevOps,Task,New service onboarding to monitoring,New service onboarding to monitoring. See runbook for context.,Done,Medium,Agent 04,Employee 4000,2025-03-12T04:57:21,2025-03-16T12:06:38,Done
+DVO-1093,DevOps,Security,Rotate API keys for payment gateway,Rotate API keys for payment gateway. See runbook for context.,In Progress,Low,Agent 05,Employee 9153,2025-05-26T14:02:50,,
+DVO-1024,DevOps,Task,Deployment to staging stuck at approval,Deployment to staging stuck at approval. See runbook for context.,Done,Highest,Agent 02,Employee 1012,2025-05-02T18:18:46,2025-05-05T04:15:42,Done
+DVO-1102,DevOps,Access,VPN access for new contractor,VPN access for new contractor. See runbook for context.,Done,Low,Agent 02,Employee 8462,2025-02-21T08:26:17,2025-02-22T05:03:30,Done
+DVO-1025,DevOps,Task,Deployment to staging stuck at approval,Deployment to staging stuck at approval. See runbook for context.,Done,Highest,Agent 06,Employee 2458,2025-02-05T18:39:53,2025-02-06T12:13:58,Done
+DVO-1118,DevOps,Question,How to request a new namespace,How to request a new namespace. See runbook for context.,Done,Medium,Agent 07,Employee 6085,2025-04-07T11:25:24,2025-04-07T22:22:45,Done
+DVO-1037,DevOps,Access,Access request: production logs read-only,Access request: production logs read-only. See runbook for context.,Done,High,Agent 05,Employee 4324,2025-02-02T20:08:50,2025-02-04T20:08:58,Done
+DVO-1029,DevOps,Task,Deployment to staging stuck at approval,Deployment to staging stuck at approval. See runbook for context.,In Progress,Highest,Agent 05,Employee 6615,2025-06-08T23:47:27,,
+DVO-1016,DevOps,Bug,CI pipeline failing on main branch,CI pipeline failing on main branch. See runbook for context.,Done,Highest,Agent 07,Employee 7788,2025-03-07T16:09:53,2025-03-10T03:00:28,Done
+DVO-1069,DevOps,Bug,Kibana dashboard not loading,Kibana dashboard not loading. See runbook for context.,In Progress,High,Agent 07,Employee 9415,2025-05-28T22:31:29,,
+DVO-1126,DevOps,Access,Secrets manager permission denied,Secrets manager permission denied. See runbook for context.,Done,Highest,Agent 04,Employee 3337,2025-05-05T13:20:04,2025-05-06T11:55:18,Done
+DVO-1127,DevOps,Task,Alert fatigue: tune noisy monitor,Alert fatigue: tune noisy monitor. See runbook for context.,Done,Low,Agent 02,Employee 4436,2025-03-31T03:30:05,2025-04-07T22:04:39,Done
+DVO-1115,DevOps,Question,How to request a new namespace,How to request a new namespace. See runbook for context.,Done,Medium,Agent 03,Employee 6934,2025-04-20T14:07:57,2025-04-20T15:56:50,Done
+DVO-1043,DevOps,Access,Access request: production logs read-only,Access request: production logs read-only. See runbook for context.,Done,High,Agent 04,Employee 3077,2025-02-16T08:29:40,2025-02-18T06:17:52,Done
+DVO-1078,DevOps,Infrastructure,Increase disk on build agents,Increase disk on build agents. See runbook for context.,Done,Medium,Agent 07,Employee 8530,2025-04-02T18:43:28,2025-04-04T20:12:38,Done
+DVO-1086,DevOps,Security,Rotate API keys for payment gateway,Rotate API keys for payment gateway. See runbook for context.,In Progress,Highest,Agent 01,Employee 7507,2025-02-16T14:28:43,,
+DVO-1040,DevOps,Access,Access request: production logs read-only,Access request: production logs read-only. See runbook for context.,Done,Low,Agent 01,Employee 2515,2025-02-15T00:08:11,2025-02-17T13:02:51,Done

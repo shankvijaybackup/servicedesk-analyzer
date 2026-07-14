@@ -58,6 +58,15 @@ _STRIP_PATTERNS = [
     re.compile(r"\[cid:[^\]]*\]", re.IGNORECASE),
     re.compile(r"&[a-z]+;|&#\d+;"),            # HTML entities
     re.compile(r"[A-Za-z0-9+/\-_%]{40,}"),     # base64 / tracking blobs
+    # Email signature/footer noise: must not influence classification
+    # ("Get Outlook for iOS" would otherwise pull tickets into Email theme)
+    re.compile(r"get outlook for (ios|android)", re.IGNORECASE),
+    re.compile(r"sent from my (iphone|ipad|android|samsung|galaxy)[^.]*", re.IGNORECASE),
+    re.compile(r"\[external\]", re.IGNORECASE),
+    re.compile(r"external sender[:.][^.]*\.", re.IGNORECASE),
+    re.compile(r"disclaimer:.*", re.IGNORECASE | re.DOTALL),
+    re.compile(r"this email and any files transmitted.*", re.IGNORECASE | re.DOTALL),
+    re.compile(r"(warm |kind |best )?regards,.*", re.IGNORECASE | re.DOTALL),
 ]
 _WS_RE = re.compile(r"\s+")
 

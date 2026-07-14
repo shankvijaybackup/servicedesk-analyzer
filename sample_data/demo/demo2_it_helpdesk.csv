@@ -1,0 +1,361 @@
+RequestID,Subject,Description,Category,Department,Requester,Technician,Request Mode,Created Time,Resolved Time,Request Status,Priority
+70254,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,Manufacturing,Employee 8135,Tech 04,E-Mail,2025-08-19 11:59:18,,On Hold,Low
+70225,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,R&D,Employee 1793,Tech 02,Web Form,2025-08-01 13:23:28,2025-08-04 23:43:13,Closed,High
+70268,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,IT,Employee 4266,Tech 10,Phone Call,2025-06-01 10:28:27,2025-06-01 16:38:13,Resolved,Medium
+70106,Software install request,Software install request. Raised via self-service portal.,Software,R&D,Employee 6485,Tech 02,E-Mail,2025-06-12 20:52:26,2025-06-14 10:30:56,Closed,Medium
+70244,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,Manufacturing,Employee 2683,Tech 01,Phone Call,2025-06-30 07:39:35,2025-07-01 05:30:26,Closed,Low
+70360,Approval stuck for laptop request,Approval stuck for laptop request. Raised via self-service portal.,Workflow,Manufacturing,Employee 2832,Tech 09,Web Form,2025-08-04 07:09:00,2025-08-12 23:47:58,Closed,Low
+70046,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,R&D,Employee 7063,Tech 07,Phone Call,2025-08-17 18:57:30,2025-08-18 21:50:57,Closed,Low
+70278,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Regulatory Affairs,Employee 9928,Tech 03,Phone Call,2025-08-20 18:35:53,2025-08-21 08:49:09,Closed,Medium
+70140,License required for design tool,License required for design tool. Raised via self-service portal.,Software,Quality,Employee 7681,Tech 08,E-Mail,2025-06-08 02:16:32,2025-06-10 02:03:34,Closed,Medium
+70165,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Manufacturing,Employee 4870,Tech 02,E-Mail,2025-07-29 17:48:40,,On Hold,High
+70255,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,R&D,Employee 7842,Tech 09,E-Mail,2025-06-13 20:33:27,2025-06-14 11:49:08,Closed,Medium
+70199,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,Finance,Employee 4404,Tech 08,Phone Call,2025-08-15 17:07:41,2025-08-16 09:28:51,Resolved,Medium
+70209,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,Supply Chain,Employee 1470,Tech 04,Phone Call,2025-06-21 20:35:30,,Open,High
+70272,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,HR,Employee 5257,Tech 02,Web Form,2025-06-25 07:34:08,2025-06-26 03:30:25,Closed,Low
+70298,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Quality,Employee 8837,Tech 02,Phone Call,2025-06-18 18:29:28,,On Hold,Low
+70208,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,Marketing,Employee 5502,Tech 04,E-Mail,2025-08-02 19:41:33,2025-08-04 01:12:16,Resolved,Low
+70289,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Finance,Employee 1788,Tech 12,Web Form,2025-08-08 12:50:17,2025-08-09 21:36:25,Closed,High
+70074,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,Manufacturing,Employee 5495,Tech 03,Phone Call,2025-07-02 14:59:34,,Open,Low
+70234,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Regulatory Affairs,Employee 9814,Tech 09,Phone Call,2025-08-02 12:44:36,2025-08-07 10:38:53,Closed,High
+70156,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,R&D,Employee 1302,Tech 12,E-Mail,2025-07-22 21:38:30,,Open,Low
+70078,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,HR,Employee 5866,Tech 05,Phone Call,2025-08-24 07:15:43,2025-08-25 05:58:29,Closed,Low
+70138,License required for design tool,License required for design tool. Raised via self-service portal.,Software,IT,Employee 2809,Tech 03,Phone Call,2025-07-13 12:17:59,2025-07-14 03:04:33,Closed,High
+70088,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,IT,Employee 9623,Tech 09,Phone Call,2025-06-25 23:43:23,2025-06-27 05:00:58,Closed,Medium
+70320,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,R&D,Employee 6080,Tech 09,Phone Call,2025-07-12 16:35:34,2025-07-12 21:30:55,Closed,Low
+70284,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Supply Chain,Employee 5961,Tech 04,Phone Call,2025-07-26 07:07:06,2025-07-26 23:01:58,Closed,High
+70146,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Quality,Employee 9796,Tech 12,Phone Call,2025-06-26 02:52:32,2025-06-27 03:06:03,Closed,High
+70257,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,IT,Employee 9092,Tech 10,Web Form,2025-07-14 07:57:56,,Open,Low
+70238,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Manufacturing,Employee 7887,Tech 09,E-Mail,2025-07-11 21:06:33,2025-07-13 06:20:32,Closed,Low
+70161,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Finance,Employee 7303,Tech 09,E-Mail,2025-08-20 20:45:19,,Open,Low
+70160,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Supply Chain,Employee 4396,Tech 10,E-Mail,2025-07-30 01:57:01,2025-07-31 04:37:28,Closed,Low
+70186,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Regulatory Affairs,Employee 3745,Tech 06,E-Mail,2025-07-09 17:14:48,2025-07-12 12:40:34,Closed,High
+70017,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Manufacturing,Employee 3200,Tech 04,Web Form,2025-07-10 11:18:25,2025-07-10 12:11:38,Closed,Low
+70056,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,R&D,Employee 5243,Tech 11,E-Mail,2025-07-17 08:24:21,2025-07-17 23:03:40,Resolved,Low
+70018,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Regulatory Affairs,Employee 8031,Tech 01,E-Mail,2025-07-23 10:52:53,2025-07-23 13:53:17,Closed,High
+70070,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,Field Sales,Employee 6981,Tech 11,Web Form,2025-07-10 19:30:35,,Open,Low
+70296,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Quality,Employee 2069,Tech 04,Web Form,2025-08-23 23:02:36,2025-08-25 20:51:03,Closed,High
+70102,Software install request,Software install request. Raised via self-service portal.,Software,HR,Employee 8873,Tech 09,Phone Call,2025-07-08 10:23:21,2025-07-09 09:24:48,Closed,Low
+70090,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,Field Sales,Employee 9937,Tech 07,Web Form,2025-06-20 04:04:15,2025-06-20 23:27:00,Closed,High
+70032,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Regulatory Affairs,Employee 1667,Tech 12,E-Mail,2025-06-02 20:32:15,2025-06-02 23:01:18,Closed,High
+70235,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Regulatory Affairs,Employee 5160,Tech 05,E-Mail,2025-07-02 05:14:49,,Open,High
+70135,License required for design tool,License required for design tool. Raised via self-service portal.,Software,HR,Employee 4791,Tech 02,Phone Call,2025-06-20 00:16:18,2025-06-22 04:27:36,Closed,Medium
+70357,Approval stuck for laptop request,Approval stuck for laptop request. Raised via self-service portal.,Workflow,Regulatory Affairs,Employee 2237,Tech 01,Phone Call,2025-08-02 11:13:37,,On Hold,High
+70353,Approval stuck for laptop request,Approval stuck for laptop request. Raised via self-service portal.,Workflow,Field Sales,Employee 3478,Tech 11,Phone Call,2025-06-15 14:56:14,2025-06-19 10:55:17,Resolved,High
+70288,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,HR,Employee 7200,Tech 06,E-Mail,2025-06-04 06:34:37,2025-06-06 06:03:51,Resolved,Low
+70001,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Manufacturing,Employee 1798,Tech 07,E-Mail,2025-07-18 10:40:44,2025-07-18 14:39:01,Closed,Low
+70075,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,Supply Chain,Employee 8102,Tech 06,E-Mail,2025-08-29 03:00:23,2025-08-30 18:38:24,Closed,Medium
+70038,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Regulatory Affairs,Employee 3917,Tech 07,Web Form,2025-06-22 23:24:49,2025-06-23 01:51:15,Closed,Low
+70356,Approval stuck for laptop request,Approval stuck for laptop request. Raised via self-service portal.,Workflow,IT,Employee 6342,Tech 01,Web Form,2025-06-10 12:00:06,2025-06-19 22:26:16,Closed,Low
+70325,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,R&D,Employee 3057,Tech 09,Web Form,2025-06-02 21:31:57,,On Hold,Medium
+70277,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Supply Chain,Employee 8897,Tech 08,Web Form,2025-06-25 15:26:28,2025-06-26 07:24:48,Closed,Medium
+70021,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,HR,Employee 9935,Tech 07,Phone Call,2025-06-05 01:01:27,2025-06-05 04:57:02,Resolved,Low
+70230,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Manufacturing,Employee 1994,Tech 01,Web Form,2025-08-12 15:36:52,,On Hold,Low
+70036,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Finance,Employee 4835,Tech 05,Phone Call,2025-07-21 06:36:51,2025-07-21 09:05:36,Closed,High
+70164,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Manufacturing,Employee 9129,Tech 05,Web Form,2025-07-05 20:33:16,2025-07-06 20:13:52,Closed,Medium
+70313,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Finance,Employee 3485,Tech 03,E-Mail,2025-07-19 07:18:11,2025-07-19 14:11:48,Closed,Medium
+70264,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Supply Chain,Employee 5069,Tech 04,Phone Call,2025-08-11 12:33:27,2025-08-12 09:55:58,Closed,Low
+70343,Weekly sales report not generated,Weekly sales report not generated. Raised via self-service portal.,Reporting,Field Sales,Employee 5283,Tech 05,Phone Call,2025-07-28 08:26:01,2025-07-31 22:25:50,Closed,Medium
+70256,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,Supply Chain,Employee 9325,Tech 02,Web Form,2025-08-25 05:13:50,,On Hold,Medium
+70128,License required for design tool,License required for design tool. Raised via self-service portal.,Software,Regulatory Affairs,Employee 9270,Tech 07,E-Mail,2025-08-13 14:47:16,,Open,High
+70169,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Marketing,Employee 5482,Tech 08,Web Form,2025-07-31 12:38:09,2025-08-02 08:03:22,Closed,Medium
+70315,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Manufacturing,Employee 1234,Tech 08,E-Mail,2025-06-12 10:29:15,2025-06-12 13:01:58,Closed,High
+70110,Software install request,Software install request. Raised via self-service portal.,Software,Regulatory Affairs,Employee 9365,Tech 11,Phone Call,2025-06-03 20:03:42,2025-06-05 17:06:23,Closed,Low
+70124,Software install request,Software install request. Raised via self-service portal.,Software,Supply Chain,Employee 6550,Tech 04,E-Mail,2025-06-09 20:46:31,2025-06-10 04:41:54,Closed,Medium
+70155,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,IT,Employee 8061,Tech 04,Web Form,2025-08-29 02:02:24,2025-08-31 01:34:37,Resolved,Low
+70055,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,HR,Employee 5380,Tech 04,Phone Call,2025-08-22 20:32:59,2025-08-24 07:36:36,Closed,Low
+70089,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,Regulatory Affairs,Employee 6752,Tech 02,Web Form,2025-06-02 01:02:02,2025-06-03 11:26:24,Closed,High
+70179,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Manufacturing,Employee 5480,Tech 03,Phone Call,2025-08-20 20:15:07,2025-08-23 10:30:53,Resolved,High
+70319,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Manufacturing,Employee 9303,Tech 05,E-Mail,2025-08-26 01:02:16,2025-08-26 04:44:20,Closed,Medium
+70249,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,HR,Employee 3726,Tech 07,Phone Call,2025-08-22 06:21:15,2025-08-23 06:30:35,Closed,Medium
+70008,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Field Sales,Employee 5599,Tech 05,Phone Call,2025-06-10 06:00:21,2025-06-10 07:15:08,Closed,Medium
+70297,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Field Sales,Employee 5933,Tech 12,Web Form,2025-08-06 14:42:57,2025-08-08 14:12:24,Resolved,Low
+70097,Software install request,Software install request. Raised via self-service portal.,Software,Marketing,Employee 1949,Tech 09,Phone Call,2025-06-15 21:02:29,2025-06-17 12:47:52,Resolved,High
+70111,Software install request,Software install request. Raised via self-service portal.,Software,Marketing,Employee 4557,Tech 06,Web Form,2025-06-17 03:16:11,2025-06-18 14:12:26,Closed,Low
+70120,Software install request,Software install request. Raised via self-service portal.,Software,Marketing,Employee 1181,Tech 09,Web Form,2025-08-12 13:40:34,2025-08-13 14:54:16,Closed,Medium
+70152,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,IT,Employee 6398,Tech 10,Web Form,2025-08-26 03:43:13,2025-08-27 11:02:04,Closed,High
+70064,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,Finance,Employee 9261,Tech 01,E-Mail,2025-06-02 16:22:22,2025-06-04 10:59:17,Closed,High
+70029,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Supply Chain,Employee 7904,Tech 06,Phone Call,2025-07-19 13:35:53,2025-07-19 15:16:12,Closed,High
+70263,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Field Sales,Employee 2911,Tech 03,Phone Call,2025-08-25 21:11:35,2025-08-26 18:14:02,Resolved,High
+70210,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,Field Sales,Employee 9440,Tech 12,E-Mail,2025-06-26 05:59:35,,On Hold,Medium
+70158,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,R&D,Employee 3302,Tech 01,Phone Call,2025-07-19 03:58:13,2025-07-20 21:46:07,Resolved,High
+70202,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,HR,Employee 7893,Tech 01,Web Form,2025-06-04 10:58:29,2025-06-07 10:16:37,Closed,High
+70259,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,Quality,Employee 1918,Tech 09,Web Form,2025-06-23 15:40:53,2025-06-24 22:22:18,Resolved,Medium
+70057,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,Quality,Employee 9015,Tech 10,Phone Call,2025-06-06 00:15:58,2025-06-07 05:39:11,Closed,Medium
+70204,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,Regulatory Affairs,Employee 6605,Tech 04,Web Form,2025-06-18 10:32:53,2025-06-20 01:27:59,Resolved,Medium
+70071,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,Field Sales,Employee 2851,Tech 01,E-Mail,2025-07-24 14:11:56,2025-07-25 20:13:18,Closed,Medium
+70332,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,R&D,Employee 5803,Tech 02,E-Mail,2025-07-31 03:45:54,2025-07-31 11:39:41,Closed,High
+70295,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,IT,Employee 1496,Tech 10,Phone Call,2025-07-04 12:01:46,2025-07-04 18:07:05,Closed,Low
+70107,Software install request,Software install request. Raised via self-service portal.,Software,Finance,Employee 5302,Tech 07,Web Form,2025-06-21 03:54:52,2025-06-21 08:08:08,Closed,Low
+70222,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Manufacturing,Employee 3296,Tech 12,Web Form,2025-06-13 07:42:23,2025-06-16 11:26:41,Resolved,Low
+70134,License required for design tool,License required for design tool. Raised via self-service portal.,Software,R&D,Employee 7445,Tech 11,E-Mail,2025-07-28 01:04:34,,On Hold,High
+70307,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Finance,Employee 8037,Tech 03,Phone Call,2025-06-11 21:36:41,2025-06-12 19:53:05,Closed,Medium
+70220,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Regulatory Affairs,Employee 3617,Tech 04,E-Mail,2025-08-10 14:16:45,2025-08-14 13:53:43,Closed,Medium
+70279,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Finance,Employee 6859,Tech 06,E-Mail,2025-08-18 11:27:16,2025-08-19 13:46:27,Closed,Medium
+70201,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,Regulatory Affairs,Employee 7827,Tech 02,E-Mail,2025-07-09 19:08:49,2025-07-11 17:01:31,Closed,Medium
+70262,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Regulatory Affairs,Employee 6254,Tech 11,Phone Call,2025-07-11 13:28:52,2025-07-11 23:29:59,Closed,Low
+70020,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Regulatory Affairs,Employee 2795,Tech 08,E-Mail,2025-08-03 07:37:11,2025-08-03 10:20:00,Resolved,Medium
+70198,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,R&D,Employee 1672,Tech 04,E-Mail,2025-06-04 14:17:48,2025-06-06 20:10:30,Closed,Low
+70213,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,Supply Chain,Employee 3676,Tech 11,E-Mail,2025-07-21 07:11:16,2025-07-22 07:18:50,Closed,High
+70159,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Manufacturing,Employee 5684,Tech 10,Phone Call,2025-06-17 17:47:40,2025-06-18 01:33:51,Closed,Medium
+70011,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Manufacturing,Employee 8660,Tech 11,Web Form,2025-07-24 18:55:06,,Open,Low
+70147,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,HR,Employee 6633,Tech 02,E-Mail,2025-06-26 09:22:37,2025-06-27 05:59:27,Closed,Low
+70022,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,HR,Employee 5096,Tech 07,Web Form,2025-07-29 06:25:08,2025-07-29 09:42:09,Closed,Low
+70281,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Regulatory Affairs,Employee 4938,Tech 07,E-Mail,2025-08-28 19:15:24,2025-08-30 05:00:25,Closed,Medium
+70049,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,Quality,Employee 3786,Tech 03,Phone Call,2025-06-20 19:03:55,2025-06-22 05:46:17,Closed,Low
+70016,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Finance,Employee 3375,Tech 05,Web Form,2025-08-13 19:19:10,2025-08-13 21:05:09,Resolved,High
+70173,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Quality,Employee 8106,Tech 10,Web Form,2025-07-01 16:38:50,2025-07-06 03:10:25,Resolved,Low
+70091,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,HR,Employee 1367,Tech 07,E-Mail,2025-08-23 00:46:25,2025-08-24 04:52:39,Closed,High
+70072,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,R&D,Employee 8781,Tech 02,E-Mail,2025-08-18 02:41:03,2025-08-18 19:36:22,Closed,Medium
+70355,Approval stuck for laptop request,Approval stuck for laptop request. Raised via self-service portal.,Workflow,Field Sales,Employee 1605,Tech 01,Web Form,2025-07-02 18:58:59,,Open,Medium
+70334,Weekly sales report not generated,Weekly sales report not generated. Raised via self-service portal.,Reporting,Quality,Employee 3496,Tech 08,Web Form,2025-07-21 05:32:07,2025-07-24 21:03:03,Closed,Medium
+70104,Software install request,Software install request. Raised via self-service portal.,Software,Marketing,Employee 2170,Tech 10,Web Form,2025-07-13 10:38:35,2025-07-14 08:45:39,Resolved,Low
+70066,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,Field Sales,Employee 7857,Tech 03,Web Form,2025-08-09 12:08:22,2025-08-12 09:18:26,Closed,High
+70043,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,IT,Employee 4132,Tech 09,Web Form,2025-06-10 14:58:59,2025-06-12 08:26:12,Closed,Low
+70151,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Regulatory Affairs,Employee 1744,Tech 11,Phone Call,2025-08-23 18:57:22,2025-08-24 11:55:56,Closed,Low
+70359,Approval stuck for laptop request,Approval stuck for laptop request. Raised via self-service portal.,Workflow,Finance,Employee 5374,Tech 03,Phone Call,2025-07-12 08:59:07,2025-07-13 11:30:56,Closed,Low
+70037,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Field Sales,Employee 1368,Tech 04,Phone Call,2025-08-18 14:59:44,2025-08-18 17:20:54,Closed,High
+70105,Software install request,Software install request. Raised via self-service portal.,Software,Marketing,Employee 8302,Tech 12,E-Mail,2025-06-05 20:00:10,2025-06-07 16:41:17,Closed,Medium
+70150,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Finance,Employee 7036,Tech 05,E-Mail,2025-07-05 16:39:40,2025-07-06 10:25:57,Closed,Medium
+70316,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Finance,Employee 4675,Tech 10,E-Mail,2025-08-20 04:26:15,2025-08-20 11:05:17,Closed,Medium
+70108,Software install request,Software install request. Raised via self-service portal.,Software,Finance,Employee 2419,Tech 07,E-Mail,2025-06-08 02:18:01,2025-06-09 05:41:27,Closed,Medium
+70237,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Manufacturing,Employee 7405,Tech 09,E-Mail,2025-07-12 04:48:00,2025-07-16 21:57:04,Closed,Medium
+70013,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Quality,Employee 1695,Tech 09,E-Mail,2025-06-30 17:48:06,2025-06-30 20:45:57,Closed,High
+70085,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,R&D,Employee 3387,Tech 10,E-Mail,2025-08-23 21:35:12,2025-08-25 02:54:56,Closed,Medium
+70221,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Supply Chain,Employee 3918,Tech 05,Web Form,2025-08-11 10:54:19,2025-08-16 03:58:11,Closed,High
+70162,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Finance,Employee 3023,Tech 10,Web Form,2025-07-17 13:22:03,2025-07-19 09:58:01,Closed,Medium
+70339,Weekly sales report not generated,Weekly sales report not generated. Raised via self-service portal.,Reporting,R&D,Employee 7564,Tech 09,E-Mail,2025-07-09 15:03:38,2025-07-10 14:11:14,Closed,Low
+70127,License required for design tool,License required for design tool. Raised via self-service portal.,Software,HR,Employee 3243,Tech 05,Phone Call,2025-07-12 17:58:11,2025-07-14 14:15:01,Closed,High
+70167,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Supply Chain,Employee 3097,Tech 03,E-Mail,2025-07-25 08:10:17,2025-07-26 10:26:35,Closed,Low
+70014,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Supply Chain,Employee 4023,Tech 12,Phone Call,2025-07-27 18:06:58,2025-07-27 18:44:26,Closed,Medium
+70117,Software install request,Software install request. Raised via self-service portal.,Software,Regulatory Affairs,Employee 9393,Tech 03,E-Mail,2025-08-07 03:32:04,2025-08-08 02:57:10,Resolved,Low
+70143,License required for design tool,License required for design tool. Raised via self-service portal.,Software,IT,Employee 8815,Tech 11,Phone Call,2025-07-18 04:44:42,2025-07-19 22:24:08,Resolved,Medium
+70185,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Marketing,Employee 8836,Tech 02,E-Mail,2025-07-26 18:16:28,2025-08-01 06:20:04,Closed,Low
+70047,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,HR,Employee 7829,Tech 04,Web Form,2025-06-13 15:40:08,2025-06-16 07:41:23,Closed,Low
+70083,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,Finance,Employee 6215,Tech 08,Phone Call,2025-07-08 05:48:48,2025-07-08 20:32:14,Resolved,Low
+70203,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,Field Sales,Employee 3952,Tech 12,Web Form,2025-08-05 08:34:26,2025-08-07 01:18:40,Closed,Medium
+70050,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,Finance,Employee 3284,Tech 06,Phone Call,2025-08-08 12:07:24,2025-08-10 01:08:37,Closed,Medium
+70009,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Marketing,Employee 1881,Tech 08,Phone Call,2025-08-13 05:51:43,2025-08-13 06:26:58,Resolved,High
+70026,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Supply Chain,Employee 6181,Tech 03,Phone Call,2025-07-07 03:32:58,2025-07-07 05:25:41,Closed,Medium
+70227,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Regulatory Affairs,Employee 2820,Tech 09,E-Mail,2025-08-24 17:06:08,2025-08-27 20:40:10,Closed,High
+70335,Weekly sales report not generated,Weekly sales report not generated. Raised via self-service portal.,Reporting,Manufacturing,Employee 9894,Tech 04,Web Form,2025-08-05 14:28:38,2025-08-05 23:34:52,Closed,Medium
+70177,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Field Sales,Employee 2960,Tech 11,Web Form,2025-08-28 15:01:13,,Open,Low
+70024,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Supply Chain,Employee 5802,Tech 03,E-Mail,2025-07-07 19:41:30,2025-07-07 21:03:17,Closed,Low
+70232,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Finance,Employee 1628,Tech 03,Web Form,2025-06-28 22:35:58,,Open,High
+70243,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,R&D,Employee 5129,Tech 04,Web Form,2025-08-16 03:28:30,2025-08-16 18:37:49,Closed,Medium
+70087,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,Manufacturing,Employee 1654,Tech 03,E-Mail,2025-07-09 00:05:25,2025-07-10 04:45:20,Closed,Medium
+70176,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Manufacturing,Employee 5125,Tech 05,E-Mail,2025-07-18 09:07:14,,Open,Low
+70168,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Manufacturing,Employee 2599,Tech 05,E-Mail,2025-07-16 19:51:19,2025-07-18 09:33:15,Closed,Low
+70182,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Finance,Employee 9020,Tech 11,Web Form,2025-08-13 03:39:12,2025-08-18 03:00:17,Closed,Low
+70308,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Field Sales,Employee 7337,Tech 05,Phone Call,2025-07-07 23:23:50,2025-07-08 15:03:24,Closed,High
+70109,Software install request,Software install request. Raised via self-service portal.,Software,Quality,Employee 9701,Tech 07,E-Mail,2025-08-20 04:34:13,2025-08-20 10:27:18,Closed,Low
+70252,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,HR,Employee 3206,Tech 12,Phone Call,2025-07-10 07:02:28,2025-07-11 04:24:38,Resolved,High
+70314,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Manufacturing,Employee 6697,Tech 02,Web Form,2025-07-29 22:35:03,2025-07-30 05:16:00,Closed,High
+70354,Approval stuck for laptop request,Approval stuck for laptop request. Raised via self-service portal.,Workflow,Finance,Employee 3107,Tech 04,E-Mail,2025-06-13 00:55:27,,On Hold,High
+70224,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Supply Chain,Employee 4479,Tech 08,E-Mail,2025-08-05 12:35:35,2025-08-10 02:46:49,Closed,Medium
+70358,Approval stuck for laptop request,Approval stuck for laptop request. Raised via self-service portal.,Workflow,IT,Employee 4744,Tech 09,Phone Call,2025-07-28 14:25:36,2025-07-30 17:57:34,Closed,High
+70045,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,IT,Employee 4488,Tech 03,Web Form,2025-08-28 18:51:30,2025-08-30 04:28:44,Closed,Low
+70118,Software install request,Software install request. Raised via self-service portal.,Software,HR,Employee 4958,Tech 03,Web Form,2025-08-27 03:19:20,2025-08-28 21:56:57,Closed,Medium
+70184,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Quality,Employee 7924,Tech 05,Web Form,2025-08-11 18:11:55,,Open,Medium
+70030,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,R&D,Employee 4157,Tech 03,E-Mail,2025-07-05 07:35:53,2025-07-05 10:07:00,Resolved,Medium
+70023,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Finance,Employee 6054,Tech 12,E-Mail,2025-06-26 13:12:05,,On Hold,High
+70121,Software install request,Software install request. Raised via self-service portal.,Software,Marketing,Employee 4028,Tech 09,E-Mail,2025-08-06 17:47:26,2025-08-07 17:27:50,Resolved,Low
+70271,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Marketing,Employee 5463,Tech 08,E-Mail,2025-07-14 07:02:41,2025-07-15 16:53:16,Resolved,Low
+70031,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,IT,Employee 9597,Tech 08,Web Form,2025-07-11 05:24:53,2025-07-11 07:31:14,Resolved,High
+70280,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Regulatory Affairs,Employee 9522,Tech 10,Phone Call,2025-08-04 16:13:04,2025-08-05 17:40:59,Closed,Medium
+70101,Software install request,Software install request. Raised via self-service portal.,Software,Finance,Employee 5985,Tech 05,Web Form,2025-07-29 14:20:34,,On Hold,High
+70096,Software install request,Software install request. Raised via self-service portal.,Software,Marketing,Employee 7772,Tech 07,Phone Call,2025-06-25 03:01:15,,On Hold,Low
+70141,License required for design tool,License required for design tool. Raised via self-service portal.,Software,Supply Chain,Employee 8562,Tech 08,Phone Call,2025-07-19 12:29:53,2025-07-20 17:34:02,Resolved,Medium
+70081,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,Regulatory Affairs,Employee 8741,Tech 04,E-Mail,2025-06-03 07:18:48,2025-06-04 16:04:00,Closed,Medium
+70309,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Field Sales,Employee 7733,Tech 12,Web Form,2025-06-27 00:39:45,2025-06-27 01:47:35,Resolved,High
+70145,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Finance,Employee 4982,Tech 02,E-Mail,2025-07-19 12:16:13,2025-07-20 12:44:46,Closed,Low
+70053,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,Quality,Employee 9985,Tech 07,E-Mail,2025-08-16 00:03:30,2025-08-16 16:06:19,Closed,High
+70039,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,HR,Employee 7025,Tech 12,Phone Call,2025-06-21 19:33:15,2025-06-21 21:27:54,Closed,Low
+70042,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,Regulatory Affairs,Employee 4574,Tech 12,E-Mail,2025-07-26 07:24:46,2025-07-28 11:45:22,Closed,Medium
+70305,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Supply Chain,Employee 4150,Tech 03,Phone Call,2025-08-02 22:24:02,,On Hold,High
+70163,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Regulatory Affairs,Employee 7775,Tech 01,Phone Call,2025-08-14 03:58:27,2025-08-15 06:31:35,Closed,High
+70080,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,Marketing,Employee 1486,Tech 03,Phone Call,2025-07-19 20:21:56,,On Hold,Medium
+70052,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,Quality,Employee 6664,Tech 04,Web Form,2025-07-09 23:05:02,2025-07-12 14:58:17,Closed,Low
+70239,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Field Sales,Employee 8884,Tech 07,Phone Call,2025-08-06 19:28:13,,On Hold,High
+70349,Approval stuck for laptop request,Approval stuck for laptop request. Raised via self-service portal.,Workflow,Field Sales,Employee 9741,Tech 04,Web Form,2025-08-13 18:43:21,2025-08-17 02:35:59,Resolved,Low
+70123,Software install request,Software install request. Raised via self-service portal.,Software,Finance,Employee 8409,Tech 10,Phone Call,2025-06-29 17:55:54,2025-07-01 12:49:01,Closed,High
+70054,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,Finance,Employee 5669,Tech 05,Web Form,2025-07-10 07:37:17,2025-07-11 08:25:07,Closed,High
+70171,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Quality,Employee 8676,Tech 12,Web Form,2025-08-11 09:41:29,2025-08-11 15:58:47,Resolved,Low
+70178,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Marketing,Employee 4016,Tech 01,E-Mail,2025-08-18 03:09:52,2025-08-24 17:49:37,Closed,Medium
+70084,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,R&D,Employee 2570,Tech 09,Web Form,2025-08-29 04:15:58,2025-08-29 12:25:22,Closed,High
+70041,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,IT,Employee 4515,Tech 04,Phone Call,2025-07-20 07:18:26,,Open,Low
+70130,License required for design tool,License required for design tool. Raised via self-service portal.,Software,Quality,Employee 1865,Tech 09,E-Mail,2025-08-22 06:30:53,2025-08-22 16:01:02,Closed,Low
+70323,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,HR,Employee 7346,Tech 09,Phone Call,2025-07-02 11:45:20,2025-07-02 18:09:42,Closed,Low
+70350,Approval stuck for laptop request,Approval stuck for laptop request. Raised via self-service portal.,Workflow,Marketing,Employee 2498,Tech 04,E-Mail,2025-07-14 11:48:11,2025-07-17 17:14:03,Closed,Low
+70002,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Regulatory Affairs,Employee 5893,Tech 01,E-Mail,2025-08-21 12:30:53,2025-08-21 14:32:11,Resolved,Low
+70206,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,Regulatory Affairs,Employee 4150,Tech 09,E-Mail,2025-08-19 13:30:05,2025-08-22 03:14:37,Resolved,Medium
+70246,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,Marketing,Employee 5240,Tech 12,Web Form,2025-06-25 13:29:46,2025-06-26 04:38:55,Closed,Medium
+70012,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Regulatory Affairs,Employee 8562,Tech 11,Phone Call,2025-06-16 20:30:55,2025-06-16 22:38:03,Closed,Medium
+70077,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,IT,Employee 5724,Tech 01,E-Mail,2025-06-28 03:56:37,2025-06-28 16:39:37,Closed,High
+70351,Approval stuck for laptop request,Approval stuck for laptop request. Raised via self-service portal.,Workflow,Supply Chain,Employee 9152,Tech 12,E-Mail,2025-07-04 21:47:40,2025-07-10 11:32:09,Closed,Medium
+70311,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,R&D,Employee 7625,Tech 05,E-Mail,2025-07-15 07:59:28,2025-07-15 11:37:30,Closed,Medium
+70175,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Supply Chain,Employee 7082,Tech 04,E-Mail,2025-07-26 18:27:59,2025-07-30 03:47:42,Closed,High
+70211,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,Field Sales,Employee 6720,Tech 03,Web Form,2025-08-02 13:46:03,2025-08-05 08:14:54,Closed,High
+70172,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Quality,Employee 6947,Tech 01,Web Form,2025-06-23 20:53:54,2025-06-24 04:42:07,Closed,Low
+70068,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,Supply Chain,Employee 5673,Tech 10,Phone Call,2025-07-29 02:05:16,2025-07-31 22:19:43,Closed,High
+70082,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,IT,Employee 7025,Tech 02,Phone Call,2025-08-27 12:33:17,,On Hold,Low
+70236,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Marketing,Employee 9432,Tech 04,Phone Call,2025-07-11 12:42:40,,On Hold,Medium
+70318,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Field Sales,Employee 1248,Tech 11,Web Form,2025-08-18 02:27:05,2025-08-18 09:33:33,Closed,Low
+70216,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,Field Sales,Employee 7771,Tech 07,Phone Call,2025-08-11 01:31:22,2025-08-12 05:12:15,Resolved,Medium
+70181,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Manufacturing,Employee 6504,Tech 12,E-Mail,2025-06-13 00:33:14,2025-06-19 19:42:38,Resolved,Medium
+70242,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,Supply Chain,Employee 3794,Tech 08,Web Form,2025-08-14 12:57:32,2025-08-14 17:35:05,Closed,Low
+70290,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,HR,Employee 5716,Tech 11,E-Mail,2025-08-10 15:35:12,2025-08-11 14:09:18,Closed,High
+70157,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,IT,Employee 8372,Tech 07,E-Mail,2025-08-24 22:27:42,2025-08-25 15:11:13,Closed,High
+70207,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,Finance,Employee 3981,Tech 08,E-Mail,2025-08-25 03:34:45,2025-08-26 07:00:38,Closed,Low
+70345,Weekly sales report not generated,Weekly sales report not generated. Raised via self-service portal.,Reporting,Finance,Employee 6088,Tech 12,Web Form,2025-07-28 15:42:49,,Open,High
+70086,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,R&D,Employee 4126,Tech 07,Web Form,2025-08-12 04:11:55,2025-08-13 02:34:52,Closed,High
+70061,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,HR,Employee 6284,Tech 10,E-Mail,2025-08-04 13:19:22,2025-08-07 07:32:16,Closed,Low
+70338,Weekly sales report not generated,Weekly sales report not generated. Raised via self-service portal.,Reporting,Regulatory Affairs,Employee 8316,Tech 10,E-Mail,2025-07-27 20:55:30,2025-07-28 09:15:47,Closed,High
+70139,License required for design tool,License required for design tool. Raised via self-service portal.,Software,Marketing,Employee 7627,Tech 06,E-Mail,2025-07-16 07:12:33,2025-07-16 20:46:23,Closed,High
+70260,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,Supply Chain,Employee 5455,Tech 08,E-Mail,2025-08-14 19:02:34,2025-08-15 17:19:41,Closed,Low
+70188,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,IT,Employee 2356,Tech 02,Web Form,2025-08-15 15:47:56,2025-08-18 16:36:19,Closed,Low
+70148,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,HR,Employee 1881,Tech 09,Web Form,2025-06-10 17:52:25,2025-06-11 05:35:54,Resolved,Low
+70200,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,R&D,Employee 6842,Tech 04,Phone Call,2025-06-23 13:48:59,,On Hold,Medium
+70003,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Quality,Employee 1349,Tech 08,E-Mail,2025-08-14 18:32:41,2025-08-14 20:40:32,Closed,Medium
+70119,Software install request,Software install request. Raised via self-service portal.,Software,Regulatory Affairs,Employee 4196,Tech 04,E-Mail,2025-08-18 17:04:08,2025-08-20 14:05:08,Resolved,Low
+70240,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,HR,Employee 5219,Tech 04,Phone Call,2025-07-09 05:50:34,2025-07-11 19:22:17,Closed,Medium
+70193,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,R&D,Employee 3512,Tech 11,Web Form,2025-08-25 06:28:42,2025-09-03 21:11:37,Closed,Low
+70341,Weekly sales report not generated,Weekly sales report not generated. Raised via self-service portal.,Reporting,R&D,Employee 8330,Tech 06,E-Mail,2025-07-13 00:15:54,2025-07-15 22:10:59,Closed,Low
+70069,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,HR,Employee 8705,Tech 05,Web Form,2025-07-22 01:46:12,2025-07-23 22:14:56,Closed,Low
+70346,Weekly sales report not generated,Weekly sales report not generated. Raised via self-service portal.,Reporting,IT,Employee 6462,Tech 05,Web Form,2025-07-09 06:56:11,2025-07-12 15:50:35,Closed,High
+70328,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,HR,Employee 4386,Tech 06,Web Form,2025-07-31 13:38:37,,On Hold,Medium
+70183,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,R&D,Employee 4603,Tech 03,Web Form,2025-08-08 17:50:35,2025-08-12 15:28:43,Closed,Low
+70223,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Manufacturing,Employee 4830,Tech 08,Phone Call,2025-07-22 20:34:32,2025-07-25 21:56:14,Closed,Low
+70095,Software install request,Software install request. Raised via self-service portal.,Software,Marketing,Employee 3382,Tech 03,Web Form,2025-06-20 09:17:17,2025-06-21 01:07:39,Closed,Low
+70025,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Regulatory Affairs,Employee 5023,Tech 11,E-Mail,2025-07-31 02:03:13,2025-07-31 05:50:55,Closed,High
+70073,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,Field Sales,Employee 8334,Tech 12,Phone Call,2025-06-09 04:14:47,,Open,Medium
+70228,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,HR,Employee 5583,Tech 04,Phone Call,2025-06-27 07:20:56,2025-07-01 12:07:00,Closed,Low
+70004,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,R&D,Employee 7728,Tech 01,Web Form,2025-07-09 22:15:10,2025-07-09 23:47:26,Closed,Low
+70131,License required for design tool,License required for design tool. Raised via self-service portal.,Software,R&D,Employee 3646,Tech 04,Web Form,2025-06-25 22:53:00,2025-06-28 07:27:19,Resolved,High
+70317,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Field Sales,Employee 4485,Tech 06,Phone Call,2025-07-14 19:32:55,,Open,High
+70051,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,HR,Employee 7749,Tech 03,Web Form,2025-07-04 08:54:37,2025-07-05 16:27:55,Closed,Medium
+70093,Software install request,Software install request. Raised via self-service portal.,Software,IT,Employee 2951,Tech 05,Phone Call,2025-08-21 05:31:36,2025-08-22 14:45:41,Closed,Medium
+70196,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,R&D,Employee 3062,Tech 10,Web Form,2025-06-10 23:38:43,2025-06-15 04:34:39,Closed,Low
+70283,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Finance,Employee 2301,Tech 07,Phone Call,2025-08-13 16:18:23,2025-08-15 12:25:41,Closed,Medium
+70044,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,Field Sales,Employee 8061,Tech 10,Web Form,2025-07-15 01:42:25,2025-07-16 00:53:34,Closed,Medium
+70286,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Quality,Employee 5246,Tech 05,Web Form,2025-08-17 16:23:32,,Open,Low
+70035,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Finance,Employee 7886,Tech 08,Phone Call,2025-07-19 08:36:02,,Open,High
+70190,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Finance,Employee 2074,Tech 06,Web Form,2025-06-15 17:30:51,,Open,Medium
+70065,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,Supply Chain,Employee 3225,Tech 06,Phone Call,2025-07-26 05:36:48,2025-07-27 01:20:29,Resolved,High
+70247,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,IT,Employee 7035,Tech 03,Phone Call,2025-06-12 20:19:50,2025-06-13 17:55:05,Closed,Low
+70275,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,HR,Employee 4670,Tech 12,Web Form,2025-08-17 16:09:25,,Open,Medium
+70217,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Field Sales,Employee 1816,Tech 12,Phone Call,2025-06-19 22:54:49,,Open,Low
+70094,Software install request,Software install request. Raised via self-service portal.,Software,Finance,Employee 8917,Tech 06,Web Form,2025-06-05 13:56:51,2025-06-06 12:59:35,Closed,Low
+70333,Weekly sales report not generated,Weekly sales report not generated. Raised via self-service portal.,Reporting,Quality,Employee 5356,Tech 03,Web Form,2025-08-19 21:10:47,2025-08-23 16:05:57,Closed,High
+70076,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,HR,Employee 3869,Tech 02,Phone Call,2025-06-16 01:34:35,2025-06-17 20:34:06,Closed,Medium
+70303,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Regulatory Affairs,Employee 1232,Tech 11,Web Form,2025-06-18 17:48:28,2025-06-19 06:48:35,Closed,High
+70136,License required for design tool,License required for design tool. Raised via self-service portal.,Software,Marketing,Employee 7607,Tech 11,E-Mail,2025-08-01 14:47:21,2025-08-03 00:18:06,Closed,High
+70125,License required for design tool,License required for design tool. Raised via self-service portal.,Software,Supply Chain,Employee 5891,Tech 07,Phone Call,2025-06-25 13:30:56,,On Hold,Low
+70324,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Field Sales,Employee 6958,Tech 08,E-Mail,2025-06-23 08:05:22,,Open,Low
+70321,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Field Sales,Employee 5035,Tech 06,Phone Call,2025-07-26 05:21:56,2025-07-26 09:20:28,Closed,Medium
+70327,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Supply Chain,Employee 3323,Tech 02,Web Form,2025-06-09 01:00:15,2025-06-09 06:40:47,Closed,High
+70116,Software install request,Software install request. Raised via self-service portal.,Software,HR,Employee 9402,Tech 06,Phone Call,2025-06-20 11:20:28,2025-06-20 18:23:29,Resolved,Low
+70174,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Finance,Employee 3325,Tech 07,Phone Call,2025-06-21 16:07:14,,Open,High
+70212,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,HR,Employee 1792,Tech 03,Web Form,2025-07-08 10:13:00,,On Hold,High
+70033,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,R&D,Employee 6630,Tech 09,E-Mail,2025-07-09 14:17:50,2025-07-09 15:27:21,Closed,Medium
+70299,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Regulatory Affairs,Employee 3456,Tech 06,Web Form,2025-07-25 08:46:07,2025-07-26 20:02:30,Closed,Low
+70261,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Regulatory Affairs,Employee 1833,Tech 10,E-Mail,2025-08-09 12:45:22,2025-08-09 22:57:32,Closed,Low
+70352,Approval stuck for laptop request,Approval stuck for laptop request. Raised via self-service portal.,Workflow,Regulatory Affairs,Employee 5090,Tech 04,E-Mail,2025-06-15 08:01:28,2025-06-21 04:58:02,Closed,High
+70253,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,Finance,Employee 1596,Tech 06,E-Mail,2025-08-05 00:08:12,2025-08-06 11:23:50,Closed,Medium
+70331,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,R&D,Employee 4712,Tech 04,Web Form,2025-06-19 22:14:48,2025-06-20 05:23:07,Resolved,High
+70005,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,IT,Employee 8232,Tech 05,Web Form,2025-06-02 04:13:52,,On Hold,Low
+70251,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,R&D,Employee 2521,Tech 03,Web Form,2025-06-28 07:52:59,2025-06-29 16:12:15,Closed,High
+70132,License required for design tool,License required for design tool. Raised via self-service portal.,Software,IT,Employee 6808,Tech 04,Web Form,2025-08-18 21:39:26,2025-08-21 07:32:46,Closed,High
+70322,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Marketing,Employee 9148,Tech 06,E-Mail,2025-08-11 23:14:51,2025-08-12 02:28:19,Closed,Medium
+70293,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Manufacturing,Employee 6776,Tech 04,Web Form,2025-06-28 19:05:30,,Open,High
+70265,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Finance,Employee 4900,Tech 09,Web Form,2025-06-19 17:29:22,2025-06-21 04:48:00,Closed,High
+70019,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Finance,Employee 5764,Tech 10,Web Form,2025-08-24 11:46:30,,Open,Medium
+70294,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Finance,Employee 8319,Tech 10,E-Mail,2025-06-01 21:49:32,2025-06-02 16:33:16,Closed,High
+70113,Software install request,Software install request. Raised via self-service portal.,Software,Manufacturing,Employee 6119,Tech 07,Phone Call,2025-06-21 23:24:51,,Open,Low
+70103,Software install request,Software install request. Raised via self-service portal.,Software,Finance,Employee 5076,Tech 01,Web Form,2025-06-10 04:26:46,2025-06-11 15:41:21,Resolved,Low
+70058,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,R&D,Employee 5446,Tech 08,Web Form,2025-08-02 07:01:18,2025-08-04 09:41:43,Closed,High
+70302,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Field Sales,Employee 6745,Tech 10,Web Form,2025-08-06 08:43:04,2025-08-07 19:47:13,Closed,High
+70187,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Finance,Employee 2379,Tech 01,Phone Call,2025-06-28 16:18:31,2025-07-05 07:02:18,Closed,Medium
+70330,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Supply Chain,Employee 5642,Tech 01,E-Mail,2025-06-19 15:16:27,2025-06-19 23:03:57,Closed,High
+70205,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,HR,Employee 3951,Tech 11,Phone Call,2025-07-30 03:50:32,,Open,Medium
+70266,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Finance,Employee 8237,Tech 11,Web Form,2025-06-19 18:16:17,2025-06-20 16:38:28,Closed,Low
+70192,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Supply Chain,Employee 2488,Tech 01,Web Form,2025-07-14 14:14:00,2025-07-22 11:02:13,Resolved,Medium
+70273,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Field Sales,Employee 8223,Tech 04,Web Form,2025-07-24 20:55:51,2025-07-25 11:12:40,Closed,Low
+70189,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Manufacturing,Employee 4150,Tech 03,Web Form,2025-06-28 18:59:50,2025-07-03 15:03:27,Closed,High
+70063,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,R&D,Employee 9488,Tech 06,E-Mail,2025-08-10 07:04:10,2025-08-10 22:05:13,Closed,High
+70100,Software install request,Software install request. Raised via self-service portal.,Software,Marketing,Employee 4842,Tech 05,E-Mail,2025-07-30 22:24:17,2025-08-01 00:03:47,Closed,Medium
+70112,Software install request,Software install request. Raised via self-service portal.,Software,IT,Employee 3360,Tech 01,Phone Call,2025-08-17 21:34:24,2025-08-18 14:43:19,Resolved,Low
+70310,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Marketing,Employee 7620,Tech 07,Phone Call,2025-06-22 20:02:33,,Open,Low
+70144,License required for design tool,License required for design tool. Raised via self-service portal.,Software,Finance,Employee 1135,Tech 12,Phone Call,2025-08-10 06:25:10,,Open,High
+70194,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Quality,Employee 4250,Tech 05,Phone Call,2025-08-06 11:21:24,,On Hold,High
+70329,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Finance,Employee 6579,Tech 11,Phone Call,2025-07-03 17:19:47,2025-07-03 23:48:24,Closed,Medium
+70337,Weekly sales report not generated,Weekly sales report not generated. Raised via self-service portal.,Reporting,Marketing,Employee 6755,Tech 10,Phone Call,2025-07-01 23:15:23,2025-07-04 00:58:49,Closed,High
+70027,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,R&D,Employee 5367,Tech 04,Web Form,2025-08-20 15:25:41,2025-08-20 16:18:47,Closed,High
+70067,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,Finance,Employee 1754,Tech 06,Phone Call,2025-08-07 19:05:22,2025-08-08 14:34:37,Closed,Medium
+70347,Weekly sales report not generated,Weekly sales report not generated. Raised via self-service portal.,Reporting,Marketing,Employee 2654,Tech 01,E-Mail,2025-07-22 22:42:15,2025-07-26 22:09:03,Closed,Low
+70197,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,HR,Employee 1569,Tech 12,Phone Call,2025-07-26 17:02:30,2025-07-27 02:13:29,Closed,Low
+70285,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Finance,Employee 5841,Tech 05,Phone Call,2025-07-05 08:18:49,2025-07-06 12:28:29,Resolved,Low
+70092,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,HR,Employee 3275,Tech 12,E-Mail,2025-07-26 22:41:22,,On Hold,Medium
+70191,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Quality,Employee 8880,Tech 06,Web Form,2025-08-01 16:59:04,2025-08-09 08:06:42,Closed,High
+70062,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,R&D,Employee 5299,Tech 09,E-Mail,2025-06-11 13:18:28,2025-06-13 11:55:51,Closed,Medium
+70233,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Regulatory Affairs,Employee 8394,Tech 05,Phone Call,2025-07-18 05:37:56,2025-07-20 20:25:21,Closed,Low
+70215,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,Supply Chain,Employee 5594,Tech 09,Web Form,2025-06-08 17:50:03,2025-06-11 16:02:23,Closed,High
+70267,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Supply Chain,Employee 1838,Tech 06,Web Form,2025-07-14 02:13:56,2025-07-14 15:50:47,Closed,Medium
+70040,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Finance,Employee 4920,Tech 03,Web Form,2025-06-14 02:55:49,2025-06-14 05:41:45,Closed,High
+70312,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Quality,Employee 9140,Tech 08,Phone Call,2025-06-20 23:41:32,,Open,Low
+70340,Weekly sales report not generated,Weekly sales report not generated. Raised via self-service portal.,Reporting,Field Sales,Employee 4419,Tech 10,Phone Call,2025-07-18 00:31:02,2025-07-19 07:03:28,Closed,Medium
+70231,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Regulatory Affairs,Employee 2480,Tech 06,Web Form,2025-07-04 17:16:01,2025-07-08 07:44:40,Closed,Low
+70098,Software install request,Software install request. Raised via self-service portal.,Software,Marketing,Employee 6611,Tech 12,Phone Call,2025-06-01 05:04:35,2025-06-02 03:16:03,Closed,Medium
+70219,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Manufacturing,Employee 3114,Tech 10,Web Form,2025-08-11 07:14:52,2025-08-12 12:57:01,Closed,High
+70034,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Field Sales,Employee 6947,Tech 09,E-Mail,2025-08-09 05:50:41,2025-08-09 08:51:54,Closed,High
+70149,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Marketing,Employee 4697,Tech 03,Phone Call,2025-08-18 02:38:33,2025-08-19 02:27:53,Closed,Low
+70292,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Supply Chain,Employee 4534,Tech 05,E-Mail,2025-07-31 13:41:34,2025-07-31 22:51:39,Closed,Low
+70342,Weekly sales report not generated,Weekly sales report not generated. Raised via self-service portal.,Reporting,R&D,Employee 3499,Tech 02,Web Form,2025-07-24 16:20:21,2025-07-26 07:50:27,Closed,High
+70079,Leaver access revocation,Leaver access revocation. Raised via self-service portal.,User Lifecycle,Marketing,Employee 7582,Tech 06,Web Form,2025-07-01 11:36:24,2025-07-02 23:47:06,Closed,Medium
+70274,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,IT,Employee 5458,Tech 07,Web Form,2025-06-16 08:31:50,2025-06-16 14:01:23,Resolved,Medium
+70326,How do I set up MFA on new phone,How do I set up MFA on new phone. Raised via self-service portal.,How-to,Quality,Employee 7613,Tech 06,E-Mail,2025-07-22 15:42:45,2025-07-22 18:11:16,Closed,Low
+70170,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Finance,Employee 5409,Tech 03,Phone Call,2025-06-10 09:33:34,2025-06-11 13:59:34,Closed,High
+70028,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,HR,Employee 8351,Tech 02,E-Mail,2025-07-08 15:32:48,2025-07-08 19:07:06,Closed,High
+70250,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,Field Sales,Employee 5453,Tech 01,Web Form,2025-07-10 20:51:03,2025-07-12 08:12:19,Closed,Medium
+70301,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Marketing,Employee 4302,Tech 11,E-Mail,2025-07-20 17:39:10,2025-07-21 12:13:18,Closed,Low
+70114,Software install request,Software install request. Raised via self-service portal.,Software,Regulatory Affairs,Employee 9018,Tech 09,Phone Call,2025-06-29 22:23:30,2025-07-01 20:20:37,Closed,High
+70059,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,Supply Chain,Employee 4616,Tech 08,Phone Call,2025-08-05 03:32:14,,Open,Low
+70258,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,HR,Employee 3156,Tech 08,Phone Call,2025-08-01 08:00:08,2025-08-02 22:40:04,Closed,High
+70129,License required for design tool,License required for design tool. Raised via self-service portal.,Software,HR,Employee 7287,Tech 11,E-Mail,2025-08-09 15:36:42,2025-08-09 23:43:53,Closed,Low
+70348,Weekly sales report not generated,Weekly sales report not generated. Raised via self-service portal.,Reporting,Supply Chain,Employee 3024,Tech 11,E-Mail,2025-06-11 01:30:16,2025-06-13 07:56:54,Closed,Low
+70137,License required for design tool,License required for design tool. Raised via self-service portal.,Software,Finance,Employee 4691,Tech 11,Web Form,2025-07-01 12:54:57,,On Hold,Medium
+70153,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Quality,Employee 9917,Tech 11,Web Form,2025-08-05 12:13:02,2025-08-06 20:19:37,Closed,Low
+70060,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,Field Sales,Employee 2944,Tech 07,E-Mail,2025-06-28 11:09:15,2025-06-30 05:50:23,Closed,Low
+70142,License required for design tool,License required for design tool. Raised via self-service portal.,Software,R&D,Employee 5824,Tech 10,Web Form,2025-07-07 09:44:00,2025-07-07 18:31:57,Closed,Low
+70226,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Manufacturing,Employee 5614,Tech 10,Phone Call,2025-06-11 13:50:58,2025-06-15 10:36:38,Closed,High
+70006,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,IT,Employee 6271,Tech 12,E-Mail,2025-08-04 11:55:04,2025-08-04 15:04:11,Closed,Low
+70344,Weekly sales report not generated,Weekly sales report not generated. Raised via self-service portal.,Reporting,Marketing,Employee 4607,Tech 12,Phone Call,2025-08-08 23:01:21,2025-08-11 16:10:46,Closed,High
+70248,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,Regulatory Affairs,Employee 9409,Tech 02,Web Form,2025-08-25 04:51:06,2025-08-26 21:49:55,Closed,Low
+70126,License required for design tool,License required for design tool. Raised via self-service portal.,Software,HR,Employee 5616,Tech 08,Phone Call,2025-08-11 16:07:05,2025-08-12 07:32:37,Closed,High
+70166,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Supply Chain,Employee 8105,Tech 10,Phone Call,2025-06-05 21:02:03,2025-06-07 08:44:21,Closed,Medium
+70099,Software install request,Software install request. Raised via self-service portal.,Software,IT,Employee 9669,Tech 02,Phone Call,2025-07-10 01:40:52,2025-07-11 09:14:20,Closed,Medium
+70015,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,IT,Employee 2905,Tech 08,Web Form,2025-06-16 01:09:14,2025-06-16 02:27:13,Closed,High
+70229,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Finance,Employee 1124,Tech 08,Web Form,2025-06-18 18:32:12,2025-06-20 03:12:34,Closed,High
+70245,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,Finance,Employee 4392,Tech 04,Phone Call,2025-07-15 04:41:22,2025-07-17 00:49:13,Closed,Medium
+70010,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Manufacturing,Employee 6764,Tech 06,E-Mail,2025-07-17 12:15:37,2025-07-17 13:02:58,Closed,Medium
+70291,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Regulatory Affairs,Employee 3862,Tech 10,E-Mail,2025-07-13 03:27:06,2025-07-14 13:37:03,Closed,Low
+70282,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Regulatory Affairs,Employee 1104,Tech 05,Web Form,2025-06-24 01:21:20,,On Hold,Low
+70218,Wi-Fi drops in meeting rooms,Wi-Fi drops in meeting rooms. Raised via self-service portal.,Network,Field Sales,Employee 1456,Tech 12,Web Form,2025-06-30 21:46:49,,Open,Medium
+70304,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Marketing,Employee 8696,Tech 06,Phone Call,2025-07-09 11:59:22,2025-07-09 23:19:04,Closed,Low
+70300,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Field Sales,Employee 5881,Tech 06,Web Form,2025-07-14 14:15:27,2025-07-16 07:31:41,Closed,Medium
+70241,VPN setup for remote work,VPN setup for remote work. Raised via self-service portal.,Network,Quality,Employee 2519,Tech 12,Web Form,2025-06-21 09:07:28,2025-06-21 18:31:58,Resolved,High
+70048,New starter account creation,New starter account creation. Raised via self-service portal.,User Lifecycle,Regulatory Affairs,Employee 7049,Tech 04,Phone Call,2025-06-21 07:49:29,2025-06-23 15:28:54,Closed,Low
+70180,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Regulatory Affairs,Employee 8967,Tech 09,E-Mail,2025-07-17 08:58:35,2025-07-23 06:43:39,Closed,Medium
+70306,Distribution list update,Distribution list update. Raised via self-service portal.,Email & Collaboration,Regulatory Affairs,Employee 2655,Tech 02,Web Form,2025-08-05 16:52:46,,On Hold,Low
+70336,Weekly sales report not generated,Weekly sales report not generated. Raised via self-service portal.,Reporting,Regulatory Affairs,Employee 6672,Tech 01,Phone Call,2025-08-05 13:11:49,2025-08-06 14:04:31,Closed,High
+70214,Monitor flickering,Monitor flickering. Raised via self-service portal.,Hardware,Regulatory Affairs,Employee 9701,Tech 10,Web Form,2025-07-03 17:17:48,,On Hold,Medium
+70007,Password reset for domain account,Password reset for domain account. Raised via self-service portal.,Identity & Access,Finance,Employee 8070,Tech 02,E-Mail,2025-07-22 14:21:07,2025-07-22 17:06:43,Closed,High
+70133,License required for design tool,License required for design tool. Raised via self-service portal.,Software,Manufacturing,Employee 4091,Tech 08,Phone Call,2025-06-09 00:37:05,2025-06-10 11:11:44,Closed,Low
+70269,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Regulatory Affairs,Employee 1880,Tech 06,Web Form,2025-08-11 18:09:14,2025-08-13 00:13:29,Closed,Low
+70115,Software install request,Software install request. Raised via self-service portal.,Software,HR,Employee 9365,Tech 06,Phone Call,2025-08-21 17:05:47,2025-08-23 13:31:27,Closed,Low
+70270,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Manufacturing,Employee 3714,Tech 04,Web Form,2025-06-13 21:06:10,2025-06-14 15:39:44,Closed,High
+70154,Printer not printing on level 2,Printer not printing on level 2. Raised via self-service portal.,Hardware,Field Sales,Employee 3431,Tech 02,Web Form,2025-08-28 05:25:20,2025-08-30 01:22:06,Closed,Medium
+70122,Software install request,Software install request. Raised via self-service portal.,Software,R&D,Employee 9468,Tech 03,E-Mail,2025-06-08 16:04:32,2025-06-10 06:04:06,Resolved,High
+70276,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,Regulatory Affairs,Employee 3282,Tech 04,Phone Call,2025-06-02 22:38:10,,Open,Medium
+70287,Shared mailbox access request,Shared mailbox access request. Raised via self-service portal.,Email & Collaboration,IT,Employee 3384,Tech 07,Web Form,2025-06-18 00:43:47,2025-06-19 12:19:39,Closed,Medium
+70195,Laptop replacement request,Laptop replacement request. Raised via self-service portal.,Hardware,Supply Chain,Employee 3807,Tech 01,Phone Call,2025-08-26 01:54:43,2025-09-04 22:32:32,Closed,High

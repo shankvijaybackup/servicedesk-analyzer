@@ -6,3 +6,5 @@ output/
 *.egg-info/
 sample_data/*.csv
 sample_data/*.xlsx
+# demo/ CSVs are fully synthetic (no names, no customers) and are published
+!sample_data/demo/*.csv
