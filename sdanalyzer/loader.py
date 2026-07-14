@@ -80,13 +80,23 @@ def _norm(name: str) -> str:
     return re.sub(r"[^a-z0-9 ]", " ", str(name).lower()).strip()
 
 
+# Tokens that disqualify a column from mapping to a field, even on substring
+# match. Prevents "Resolved By" (a person) from becoming resolved_date.
+NEGATIVE_TOKENS = {
+    "resolved_date": {"by", "notes"},
+    "created_date": {"by"},
+}
+
+
 def detect_columns(columns) -> dict:
     """Return {canonical_field: source_column} for fields that can be mapped."""
     normed = {_norm(c): c for c in columns}
     mapping = {}
     for field, candidates in FIELD_CANDIDATES.items():
+        neg = NEGATIVE_TOKENS.get(field, set())
         for cand in candidates:
-            if cand in normed and normed[cand] not in mapping.values():
+            if cand in normed and normed[cand] not in mapping.values() \
+                    and not (neg & set(cand.split())):
                 mapping[field] = normed[cand]
                 break
         if field in mapping:
@@ -95,10 +105,41 @@ def detect_columns(columns) -> dict:
         for n, orig in normed.items():
             if orig in mapping.values():
                 continue
+            if neg & set(n.split()):
+                continue
             if any(cand in n for cand in candidates):
                 mapping[field] = orig
                 break
     return mapping
+
+
+def _validate_mapping(df: pd.DataFrame, mapping: dict) -> list[str]:
+    """Sanity-check field mappings against actual content. Drops mappings
+    that do not hold up (e.g. a 'date' column that contains names) and
+    returns human-readable notes about what was rejected."""
+    notes = []
+    for field in ("created_date", "resolved_date"):
+        col = mapping.get(field)
+        if not col:
+            continue
+        sample = df[col].dropna().astype(str)
+        sample = sample[sample.str.strip() != ""].head(300)
+        if not len(sample):
+            continue
+        parsed = pd.to_datetime(sample, errors="coerce", format="mixed")
+        if parsed.notna().mean() < 0.2:
+            notes.append(
+                f"Column '{col}' looked like {field} by name but its values are not "
+                "dates; mapping rejected so downstream metrics are not corrupted.")
+            del mapping[field]
+    if "mttr_hours" in mapping:
+        sample = pd.to_numeric(df[mapping["mttr_hours"]], errors="coerce")
+        if sample.notna().mean() < 0.2:
+            notes.append(
+                f"Column '{mapping['mttr_hours']}' looked like an MTTR column but is "
+                "not numeric; mapping rejected.")
+            del mapping["mttr_hours"]
+    return notes
 
 
 _XLSX_MAGIC = b"PK\x03\x04"  # xlsx is a zip container
@@ -134,10 +175,10 @@ def _read_excel(source) -> pd.DataFrame:
     return next(iter(sheets.values()))
 
 
-def load_csv(source, filename: str | None = None) -> tuple[pd.DataFrame, dict]:
+def load_csv(source, filename: str | None = None) -> tuple[pd.DataFrame, dict, list[str]]:
     """Load a CSV or Excel file from a path, file-like object, or raw bytes.
 
-    Returns (raw_dataframe, column_mapping).
+    Returns (raw_dataframe, column_mapping, mapping_notes).
     """
     if isinstance(source, bytes):
         source = io.BytesIO(source)
@@ -154,4 +195,5 @@ def load_csv(source, filename: str | None = None) -> tuple[pd.DataFrame, dict]:
                              na_values=NA_VALUES, encoding="latin-1")
     df.columns = [str(c).strip() for c in df.columns]
     mapping = detect_columns(df.columns)
-    return df, mapping
+    notes = _validate_mapping(df, mapping)
+    return df, mapping, notes

@@ -97,6 +97,20 @@ THEME_PLAYBOOK = {
         "rationale": "Sync, enrollment, and compliance actions are Graph-API accessible; "
                      "console-only actions suit agentic execution with approval.",
     },
+    "Security & Compliance": {
+        "solution_type": "C. Integration Automation + E. Human-in-the-loop AI",
+        "capabilities": [
+            "Workflow execution", "MCP/API orchestration", "Human approval loop",
+            "Analytics and operational insights",
+        ],
+        "deflection": (25, 45), "mttr_reduction": (30, 50),
+        "complexity": "Medium", "risk": "Medium",
+        "dependencies": ["Security tooling API access (EDR, CASB, SIEM)",
+                         "InfoSec sign-off on automation scope"],
+        "rationale": "Recurring compliance reports, agent-version upgrades, and standard "
+                     "security checks are schedulable and API-driven; alerts and "
+                     "exceptions stay with the security team.",
+    },
     "SAP / ERP": {
         "solution_type": "D. Agentic AI + E. Human-in-the-loop AI",
         "capabilities": [
@@ -262,14 +276,19 @@ def _confidence_for(count: int, total: int, theme_conf: str) -> str:
     return "Low confidence"
 
 
+MIN_OPPORTUNITY_TICKETS = 5  # below this, an "opportunity" is statistical noise
+
+
 def build_opportunities(view: pd.DataFrame, theme_stats: list[dict]) -> list[dict]:
-    """One opportunity entry per theme with volume, mapped to playbook + ROI ranges."""
+    """One opportunity entry per theme with meaningful volume, mapped to
+    playbook + ROI ranges. Themes below MIN_OPPORTUNITY_TICKETS are excluded:
+    recommending automation on 2 tickets is noise, not insight."""
     total = len(view)
     out = []
     for ts in theme_stats:
         theme = ts["theme"]
         play = THEME_PLAYBOOK.get(theme)
-        if play is None or ts["count"] == 0:
+        if play is None or ts["count"] < MIN_OPPORTUNITY_TICKETS:
             continue
         lo, hi = play["deflection"]
         mlo, mhi = play["mttr_reduction"]
@@ -311,7 +330,7 @@ def build_agentic_backlog(view: pd.DataFrame) -> list[dict]:
     out = []
     for tpl in AGENTIC_TEMPLATES:
         n = counts.get(tpl["theme"], 0)
-        if n == 0:
+        if n < MIN_OPPORTUNITY_TICKETS:
             continue
         entry = dict(tpl)
         entry["evidence_tickets"] = n

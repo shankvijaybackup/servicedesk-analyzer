@@ -85,7 +85,12 @@ def assess(df: pd.DataFrame, mapping: dict) -> dict:
         issues.append(f"{dup_full} fully duplicated rows")
     if created_parse_rate is not None and created_parse_rate < 90:
         issues.append(f"Only {created_parse_rate}% of created dates parse cleanly")
-    if resolved_parse_rate is not None and resolved_parse_rate < 60:
+    if "resolved_date" not in mapping:
+        issues.append("No resolution timestamp column found; MTTR cannot be computed. "
+                      "Request an export with a resolved/closed date column")
+    elif resolved_parse_rate is not None and resolved_parse_rate == 0:
+        issues.append("Resolved-date column contains no parseable dates; MTTR cannot be computed")
+    elif resolved_parse_rate is not None and resolved_parse_rate < 60:
         issues.append(f"Only {resolved_parse_rate}% of tickets have parseable resolved dates; MTTR coverage is partial")
     if short_desc_pct is not None and short_desc_pct > 25:
         issues.append(f"{short_desc_pct}% of ticket summaries are under 15 characters; theme classification confidence is reduced")

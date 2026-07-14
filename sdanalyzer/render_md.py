@@ -26,6 +26,11 @@ def render(r: dict) -> str:
     a(f"**Records analyzed:** {r['n_analyzed']}  ")
     a("**Method:** Deterministic rule-based analysis. No AI training, no data retention. "
       "The dataset was processed in memory and discarded.\n")
+    if r["meta"].get("short_period"):
+        a(f"> **Short observation window: {r['meta']['period_days']} days.** Volumes and "
+          "rankings in this report are a snapshot, not a baseline. Weekly cycles, "
+          "month-end effects, and one-off events cannot be separated. Use this to shape "
+          "questions, not to size ROI. Request 3-6 months of data for a committed roadmap.\n")
 
     # A. Executive Summary
     a("## A. Executive Summary\n")
@@ -114,7 +119,28 @@ def render(r: dict) -> str:
         a("\n**Slowest themes:** " + ", ".join(f"{s['key']} ({s['median']}h)" for s in m["slowest_themes"]))
         a("**Fastest themes:** " + ", ".join(f"{s['key']} ({s['median']}h)" for s in m["fastest_themes"]) + "\n")
     else:
-        a("MTTR could not be computed: resolved dates or MTTR column missing/unparseable.\n")
+        a("MTTR could not be computed: this export has no parseable resolution timestamps. "
+          "Ask for an export that includes a resolved/closed date column.\n")
+
+    # Workflow-state friction (always shown when available; primary signal when MTTR absent)
+    w = r.get("workflow", {})
+    if w.get("available"):
+        a("### Workflow-state friction signals\n")
+        a(f"- Open (not closed/resolved/cancelled): {w['open_n']} tickets ({w['open_pct']}%)")
+        a(f"- Stuck in On Hold / Pending: **{w['stuck_n']} tickets ({w['stuck_pct']}%)**"
+          + (" - a large share of work is waiting on something; find out what."
+             if w["stuck_pct"] >= 15 else ""))
+        if w["transfer_n"]:
+            a(f"- Transferred between teams: {w['transfer_n']} tickets ({w['transfer_pct']}%) - "
+              "each transfer is a routing miss at intake")
+            if w["transfer_targets"]:
+                a("  - Transfer destinations: " +
+                  ", ".join(f"{k} ({v})" for k, v in w["transfer_targets"].items()))
+        if w["stuck_by_theme"]:
+            a("\n**Where tickets get stuck:**\n")
+            for s in w["stuck_by_theme"]:
+                a(f"- {s['theme']}: {s['stuck']} of {s['count']} on hold ({s['pct']}%)")
+        a("")
 
     # E. Theme and Category Breakdown
     a("## E. Theme and Category Breakdown\n")
@@ -130,6 +156,11 @@ def render(r: dict) -> str:
         if t["top_raw_categories"]:
             a(f"- Original categories: " + ", ".join(f"{k} ({v})" for k, v in t["top_raw_categories"].items()))
         a(f"- Classification confidence: **{t['confidence']}**\n")
+        if t["theme"] == "Other / Unclear" and r.get("other_terms"):
+            a("**What the unclassified tickets actually mention** (term mining, for SME review):\n")
+            a(_kv_table({term: n for term, n in r["other_terms"]}, "Term", "Tickets mentioning"))
+            a("These terms are candidates for new themes or keyword rules. "
+              "Review with the customer, then re-run the analysis.\n")
 
     # F. Application Landscape
     a("## F. Application Landscape\n")

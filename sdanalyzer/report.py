@@ -92,22 +92,32 @@ def _workshop_questions(theme_stats, agentic) -> list[str]:
     return qs
 
 
-def _slide_outline(meta, qa, pareto_res, mttr_res, theme_stats, opps, agentic, wins) -> list[dict]:
+def _slide_outline(meta, qa, pareto_res, mttr_res, theme_stats, opps, agentic, wins,
+                   workflow=None) -> list[dict]:
+    workflow = workflow or {}
     top_themes = ", ".join(t["theme"] for t in theme_stats[:3])
+    period_note = (f"Period: {meta['date_range_str']}"
+                   + (f" (ONLY {meta['period_days']} DAYS - snapshot, not baseline)"
+                      if meta.get("short_period") else ""))
     slides = [
         {"title": "Service Desk Intelligence Assessment",
          "bullets": [f"Dataset: {meta['source_name']}", f"{qa['total_records']} records analyzed",
-                     f"Period: {meta['date_range_str']}", "Method: deterministic rule-based analysis, no data retained"]},
+                     period_note, "Method: deterministic rule-based analysis, no data retained"]},
         {"title": "Data Quality", "bullets": [
             f"Verdict: {qa['verdict']}",
             *(qa["issues"][:4] or ["No blocking quality issues found"])]},
         {"title": "Where the Volume Is", "bullets": [
             f"Top themes: {top_themes}",
             *(f"{d['theme']}: {d['count']} tickets ({d['pct']}%)" for d in pareto_res["drivers"][:4])]},
-        {"title": "Where the Pain Is (MTTR)", "bullets": (
-            [f"Overall median MTTR: {mttr_res['overall']['median']} hrs "
-             f"(coverage {mttr_res['overall']['coverage_pct']}%)"] if mttr_res["overall"] else ["MTTR not computable from this export"])
-            + [f"Slowest: {s['key']} at {s['median']} hrs median" for s in mttr_res["by_theme"][:3]]},
+        {"title": "Where the Pain Is", "bullets": (
+            ([f"Overall median MTTR: {mttr_res['overall']['median']} hrs "
+              f"(coverage {mttr_res['overall']['coverage_pct']}%)"]
+             + [f"Slowest: {s['key']} at {s['median']} hrs median" for s in mttr_res["by_theme"][:3]])
+            if mttr_res["overall"] else
+            (["MTTR not computable (no resolution timestamps in export)"]
+             + ([f"{workflow['stuck_n']} tickets ({workflow['stuck_pct']}%) stuck in On Hold/Pending",
+                 f"{workflow['transfer_n']} tickets ({workflow['transfer_pct']}%) transferred between teams"]
+                if workflow.get("available") else [])))},
         {"title": "Automation Opportunity Backlog", "bullets": [
             f"{o['theme']}: {o['deflection_range_tickets'][0]}-{o['deflection_range_tickets'][1]} "
             f"tickets deflectable ({o['solution_type'].split('+')[0].strip()})"
@@ -168,27 +178,42 @@ def _roadmap(wins, opps, agentic) -> dict:
 
 def analyze(source, source_name: str = "uploaded.csv") -> dict:
     """Full pipeline. Returns the report dict; retains no data afterward."""
-    df, mapping = loader.load_csv(source, filename=source_name)
+    df, mapping, mapping_notes = loader.load_csv(source, filename=source_name)
     qa = quality.assess(df, mapping)
+    qa["mapping_notes"] = mapping_notes
+    qa["issues"] = mapping_notes + qa["issues"]
     view = normalize.normalize(df, mapping)
     del df  # forget raw data immediately
     view = themes.classify(view)
     theme_stats = themes.theme_summary(view)
+    other_terms = themes.mine_other_terms(view)
     pareto_res = analysis.pareto(view)
     mttr_res = analysis.mttr_analysis(view)
+    workflow = analysis.workflow_state_analysis(view)
     opps = opportunities.build_opportunities(view, theme_stats)
     agentic = opportunities.build_agentic_backlog(view)
     wins = opportunities.quick_wins(opps)
 
     dr = qa["date_range"]
+    period_days = (dr[1] - dr[0]).days + 1 if dr else None
+    short_period = period_days is not None and period_days < 30
     meta = {
         "source_name": source_name,
         "date_range_str": (f"{dr[0]:%Y-%m-%d} to {dr[1]:%Y-%m-%d}" if dr else "unknown"),
+        "period_days": period_days,
+        "short_period": short_period,
     }
 
     # Executive summary content (deliverable A)
     top3 = [t for t in theme_stats if t["theme"] != "Other / Unclear"][:3]
     findings = []
+    if short_period:
+        findings.append({
+            "text": (f"This export covers only {period_days} days. Volumes below are a "
+                     "snapshot, not a baseline; do not size automation ROI from this "
+                     "sample alone. Request 3-6 months of data."),
+            "confidence": "High confidence",
+        })
     for t in top3:
         findings.append({
             "text": (f"'{t['theme']}' is a top driver with {t['count']} tickets ({t['pct']}%)"
@@ -202,12 +227,26 @@ def analyze(source, source_name: str = "uploaded.csv") -> dict:
                      f"{hp['vs_overall']}x the overall median"),
             "confidence": "Medium confidence",
         })
+    if workflow.get("available") and workflow["stuck_pct"] >= 10:
+        findings.append({
+            "text": (f"{workflow['stuck_n']} tickets ({workflow['stuck_pct']}%) are sitting in "
+                     "On Hold/Pending states - a workflow friction signal independent of MTTR. "
+                     "Investigate what these are waiting on (approvals, parts, third parties)."),
+            "confidence": "High confidence",
+        })
+    if workflow.get("available") and workflow["transfer_n"] >= 3:
+        findings.append({
+            "text": (f"{workflow['transfer_n']} tickets ({workflow['transfer_pct']}%) were "
+                     "transferred between teams - routing/triage friction that intelligent "
+                     "categorization at intake can reduce."),
+            "confidence": "Medium confidence",
+        })
     if qa["verdict"] != "GOOD":
         findings.append({
             "text": f"Data quality is {qa['verdict']}: " + "; ".join(qa["issues"][:2]),
             "confidence": "High confidence",
         })
-    findings = findings[:5]
+    findings = findings[:6]
 
     challenges = _validation_challenges(qa, view, theme_stats)
     n_records = len(view)
@@ -217,15 +256,17 @@ def analyze(source, source_name: str = "uploaded.csv") -> dict:
         "meta": meta,
         "quality": qa,                      # B
         "theme_stats": theme_stats,         # C, E
+        "other_terms": other_terms,         # blind-spot mining
         "pareto": pareto_res,               # C, F, G
         "mttr": mttr_res,                   # D
+        "workflow": workflow,               # D fallback / friction
         "opportunities": opps,              # H, J
         "agentic": agentic,                 # I
         "quick_wins": wins,
         "roadmap": _roadmap(wins, opps, agentic),          # K
         "workshop_questions": _workshop_questions(theme_stats, agentic),  # L
         "slides": _slide_outline(meta, qa, pareto_res, mttr_res,
-                                 theme_stats, opps, agentic, wins),        # M
+                                 theme_stats, opps, agentic, wins, workflow),  # M
         "findings": findings,               # A
         "challenges": challenges,           # step 11
         "n_analyzed": n_records,
