@@ -22,6 +22,18 @@ This tool is fully offline and deterministic. Verifiable in the source:
   you can download formats, then purges it. A "Forget now" button purges immediately.
   The CLI writes only the report files you ask for.
 
+Do not take these claims on faith. Run the audit yourself:
+
+```bash
+.venv/bin/python audit.py
+```
+
+It verifies, on your machine: no network/AI imports anywhere in the source, the
+dependency list is exactly pandas/flask/python-pptx/openpyxl, the web app has no
+disk writes, raw data is deleted at every pipeline stage, "Forget now" and the
+30-minute TTL actually purge, and generated reports contain no emojis, no
+marketing filler, and no invented figures. Exits non-zero on any violation.
+
 ## Quick start (local)
 
 Requires Python 3.10+.
