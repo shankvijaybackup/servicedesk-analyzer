@@ -1,0 +1,4060 @@
+{
+  "meta": {
+    "tool": "servicedesk-analyzer",
+    "version": "0.1.0",
+    "generated_at": "2026-07-14T17:02:18",
+    "source_name": "examples/sample_servicedesk.csv",
+    "stateless_note": "Analysis is deterministic and in-memory. No model was used, no data was retained, and no data left this machine."
+  },
+  "data_quality": {
+    "total_records": 600,
+    "columns_in_file": [
+      "Number",
+      "Opened",
+      "Resolved",
+      "State",
+      "Priority",
+      "Type",
+      "Category",
+      "Subcategory",
+      "Assignment group",
+      "Configuration item",
+      "Short description",
+      "Department",
+      "Requested by"
+    ],
+    "fields_detected": [
+      "ticket_id",
+      "created",
+      "resolved",
+      "status",
+      "priority",
+      "type",
+      "category",
+      "subcategory",
+      "assignment_group",
+      "requester",
+      "department",
+      "short_description",
+      "description",
+      "application"
+    ],
+    "fields_missing": [
+      "assignee",
+      "mttr_hours"
+    ],
+    "duplicate_records": 0,
+    "duplicate_basis": "ticket id (Number)",
+    "date_range": {
+      "start": "2026-01-01",
+      "end": "2026-06-24",
+      "days": 174,
+      "parsed_share": 100.0
+    },
+    "mttr_available": "True",
+    "mttr_source": "derived from created/resolved timestamps",
+    "distinct_counts": {
+      "type": 2,
+      "priority": 4,
+      "assignment_group": 7,
+      "category": 10,
+      "subcategory": 22,
+      "application": 20,
+      "department": 5,
+      "status": 4
+    },
+    "completeness_pct": {
+      "ticket_id": 100.0,
+      "created": 100.0,
+      "resolved": 64.5,
+      "status": 100.0,
+      "priority": 100.0,
+      "type": 100.0,
+      "category": 100.0,
+      "subcategory": 100.0,
+      "assignment_group": 100.0,
+      "requester": 100.0,
+      "department": 100.0,
+      "application": 100.0,
+      "short_description": 100.0
+    },
+    "quality_score": 100,
+    "quality_grade": "Strong",
+    "quality_reasons": []
+  },
+  "volume": {
+    "total": 600,
+    "by_month": [
+      {
+        "month": "2026-01",
+        "count": 86
+      },
+      {
+        "month": "2026-02",
+        "count": 105
+      },
+      {
+        "month": "2026-03",
+        "count": 101
+      },
+      {
+        "month": "2026-04",
+        "count": 108
+      },
+      {
+        "month": "2026-05",
+        "count": 113
+      },
+      {
+        "month": "2026-06",
+        "count": 87
+      }
+    ],
+    "by_type": [
+      {
+        "value": "Incident",
+        "count": 320,
+        "pct": 53.3
+      },
+      {
+        "value": "Request",
+        "count": 280,
+        "pct": 46.7
+      }
+    ],
+    "by_status": [
+      {
+        "value": "Resolved",
+        "count": 387,
+        "pct": 64.5
+      },
+      {
+        "value": "Open",
+        "count": 117,
+        "pct": 19.5
+      },
+      {
+        "value": "In Progress",
+        "count": 96,
+        "pct": 16.0
+      }
+    ],
+    "by_priority": [
+      {
+        "value": "4 - Low",
+        "count": 157,
+        "pct": 26.2
+      },
+      {
+        "value": "3 - Moderate",
+        "count": 156,
+        "pct": 26.0
+      },
+      {
+        "value": "1 - Critical",
+        "count": 148,
+        "pct": 24.7
+      },
+      {
+        "value": "2 - High",
+        "count": 139,
+        "pct": 23.2
+      }
+    ],
+    "resolved": 387,
+    "open_backlog": 213
+  },
+  "mttr": {
+    "available": true,
+    "overall": {
+      "n": 387,
+      "median_hours": 11.4,
+      "mean_hours": 15.8,
+      "p90_hours": 35.0
+    },
+    "by_theme": [
+      {
+        "value": "Hardware & Devices",
+        "n": 32,
+        "median_hours": 42.2,
+        "mean_hours": 43.3,
+        "p90_hours": 65.8
+      },
+      {
+        "value": "Attendance & Leave",
+        "n": 20,
+        "median_hours": 22.0,
+        "mean_hours": 21.7,
+        "p90_hours": 31.2
+      },
+      {
+        "value": "HR & Payroll",
+        "n": 11,
+        "median_hours": 20.9,
+        "mean_hours": 19.4,
+        "p90_hours": 25.0
+      },
+      {
+        "value": "Data / Reporting",
+        "n": 18,
+        "median_hours": 18.2,
+        "mean_hours": 16.6,
+        "p90_hours": 24.4
+      },
+      {
+        "value": "Approval / Workflow",
+        "n": 16,
+        "median_hours": 16.5,
+        "mean_hours": 15.4,
+        "p90_hours": 23.5
+      },
+      {
+        "value": "Application & Software",
+        "n": 74,
+        "median_hours": 13.1,
+        "mean_hours": 15.2,
+        "p90_hours": 30.1
+      },
+      {
+        "value": "Salesforce / CRM",
+        "n": 33,
+        "median_hours": 13.1,
+        "mean_hours": 16.8,
+        "p90_hours": 28.8
+      },
+      {
+        "value": "Device Management / MDM",
+        "n": 31,
+        "median_hours": 9.6,
+        "mean_hours": 10.4,
+        "p90_hours": 15.6
+      },
+      {
+        "value": "Network & Connectivity",
+        "n": 28,
+        "median_hours": 6.8,
+        "mean_hours": 7.0,
+        "p90_hours": 11.0
+      },
+      {
+        "value": "Email & Collaboration",
+        "n": 31,
+        "median_hours": 5.9,
+        "mean_hours": 6.2,
+        "p90_hours": 9.2
+      },
+      {
+        "value": "Access & Authentication",
+        "n": 93,
+        "median_hours": 3.3,
+        "mean_hours": 12.5,
+        "p90_hours": 34.0
+      }
+    ],
+    "by_category": [
+      {
+        "value": "Hardware",
+        "n": 32,
+        "median_hours": 42.2,
+        "mean_hours": 43.3,
+        "p90_hours": 65.8
+      },
+      {
+        "value": "HR",
+        "n": 49,
+        "median_hours": 23.0,
+        "mean_hours": 25.2,
+        "p90_hours": 43.4
+      },
+      {
+        "value": "Reporting",
+        "n": 18,
+        "median_hours": 18.2,
+        "mean_hours": 16.6,
+        "p90_hours": 24.4
+      },
+      {
+        "value": "Workflow",
+        "n": 16,
+        "median_hours": 16.5,
+        "mean_hours": 15.4,
+        "p90_hours": 23.5
+      },
+      {
+        "value": "CRM",
+        "n": 33,
+        "median_hours": 13.1,
+        "mean_hours": 16.8,
+        "p90_hours": 28.8
+      },
+      {
+        "value": "Software",
+        "n": 74,
+        "median_hours": 13.1,
+        "mean_hours": 15.2,
+        "p90_hours": 30.1
+      },
+      {
+        "value": "MDM",
+        "n": 31,
+        "median_hours": 9.6,
+        "mean_hours": 10.4,
+        "p90_hours": 15.6
+      },
+      {
+        "value": "Network",
+        "n": 28,
+        "median_hours": 6.8,
+        "mean_hours": 7.0,
+        "p90_hours": 11.0
+      },
+      {
+        "value": "Email",
+        "n": 31,
+        "median_hours": 5.9,
+        "mean_hours": 6.2,
+        "p90_hours": 9.2
+      },
+      {
+        "value": "Access",
+        "n": 75,
+        "median_hours": 2.6,
+        "mean_hours": 7.7,
+        "p90_hours": 23.2
+      }
+    ],
+    "by_subcategory": [
+      {
+        "value": "Peripheral",
+        "n": 18,
+        "median_hours": 47.5,
+        "mean_hours": 47.9,
+        "p90_hours": 68.6
+      },
+      {
+        "value": "Laptop",
+        "n": 14,
+        "median_hours": 32.3,
+        "mean_hours": 37.4,
+        "p90_hours": 57.9
+      },
+      {
+        "value": "License",
+        "n": 22,
+        "median_hours": 28.7,
+        "mean_hours": 28.2,
+        "p90_hours": 38.2
+      },
+      {
+        "value": "Attendance",
+        "n": 38,
+        "median_hours": 24.3,
+        "mean_hours": 26.8,
+        "p90_hours": 44.9
+      },
+      {
+        "value": "Sync",
+        "n": 13,
+        "median_hours": 24.0,
+        "mean_hours": 26.4,
+        "p90_hours": 43.1
+      },
+      {
+        "value": "Payroll",
+        "n": 11,
+        "median_hours": 20.9,
+        "mean_hours": 19.4,
+        "p90_hours": 25.0
+      },
+      {
+        "value": "Access Request",
+        "n": 22,
+        "median_hours": 20.8,
+        "mean_hours": 21.3,
+        "p90_hours": 32.5
+      },
+      {
+        "value": "Report",
+        "n": 18,
+        "median_hours": 18.2,
+        "mean_hours": 16.6,
+        "p90_hours": 24.4
+      },
+      {
+        "value": "Content",
+        "n": 15,
+        "median_hours": 17.5,
+        "mean_hours": 16.2,
+        "p90_hours": 20.5
+      },
+      {
+        "value": "Approval",
+        "n": 16,
+        "median_hours": 16.5,
+        "mean_hours": 15.4,
+        "p90_hours": 23.5
+      },
+      {
+        "value": "Compliance",
+        "n": 14,
+        "median_hours": 13.4,
+        "mean_hours": 13.3,
+        "p90_hours": 18.3
+      },
+      {
+        "value": "Data",
+        "n": 20,
+        "median_hours": 10.5,
+        "mean_hours": 10.6,
+        "p90_hours": 16.0
+      },
+      {
+        "value": "Application Error",
+        "n": 18,
+        "median_hours": 10.4,
+        "mean_hours": 10.5,
+        "p90_hours": 14.7
+      },
+      {
+        "value": "Enrollment",
+        "n": 17,
+        "median_hours": 8.6,
+        "mean_hours": 8.1,
+        "p90_hours": 9.8
+      },
+      {
+        "value": "Connectivity",
+        "n": 16,
+        "median_hours": 8.3,
+        "mean_hours": 8.4,
+        "p90_hours": 11.8
+      },
+      {
+        "value": "Distribution List",
+        "n": 12,
+        "median_hours": 7.7,
+        "mean_hours": 7.3,
+        "p90_hours": 11.4
+      },
+      {
+        "value": "VPN",
+        "n": 12,
+        "median_hours": 5.7,
+        "mean_hours": 5.1,
+        "p90_hours": 6.8
+      },
+      {
+        "value": "Mailbox",
+        "n": 19,
+        "median_hours": 5.4,
+        "mean_hours": 5.4,
+        "p90_hours": 8.1
+      },
+      {
+        "value": "How-to",
+        "n": 19,
+        "median_hours": 4.2,
+        "mean_hours": 4.0,
+        "p90_hours": 5.9
+      },
+      {
+        "value": "MFA",
+        "n": 19,
+        "median_hours": 2.7,
+        "mean_hours": 2.6,
+        "p90_hours": 3.7
+      },
+      {
+        "value": "Account Lockout",
+        "n": 20,
+        "median_hours": 1.9,
+        "mean_hours": 1.8,
+        "p90_hours": 2.9
+      },
+      {
+        "value": "Password",
+        "n": 14,
+        "median_hours": 1.5,
+        "mean_hours": 1.6,
+        "p90_hours": 2.3
+      }
+    ],
+    "by_application": [
+      {
+        "value": "Monitor",
+        "n": 18,
+        "median_hours": 47.5,
+        "mean_hours": 47.9,
+        "p90_hours": 68.6
+      },
+      {
+        "value": "SAP",
+        "n": 18,
+        "median_hours": 34.5,
+        "mean_hours": 32.6,
+        "p90_hours": 46.9
+      },
+      {
+        "value": "Dell Latitude",
+        "n": 14,
+        "median_hours": 32.3,
+        "mean_hours": 37.4,
+        "p90_hours": 57.9
+      },
+      {
+        "value": "Adobe Creative Cloud",
+        "n": 22,
+        "median_hours": 28.7,
+        "mean_hours": 28.2,
+        "p90_hours": 38.2
+      },
+      {
+        "value": "SAP SuccessFactors",
+        "n": 20,
+        "median_hours": 22.0,
+        "mean_hours": 21.7,
+        "p90_hours": 31.2
+      },
+      {
+        "value": "Workday",
+        "n": 11,
+        "median_hours": 20.9,
+        "mean_hours": 19.4,
+        "p90_hours": 25.0
+      },
+      {
+        "value": "Microsoft Entra ID",
+        "n": 22,
+        "median_hours": 20.8,
+        "mean_hours": 21.3,
+        "p90_hours": 32.5
+      },
+      {
+        "value": "Power BI",
+        "n": 18,
+        "median_hours": 18.2,
+        "mean_hours": 16.6,
+        "p90_hours": 24.4
+      },
+      {
+        "value": "Field Sales App",
+        "n": 15,
+        "median_hours": 17.5,
+        "mean_hours": 16.2,
+        "p90_hours": 20.5
+      },
+      {
+        "value": "ServiceNow",
+        "n": 16,
+        "median_hours": 16.5,
+        "mean_hours": 15.4,
+        "p90_hours": 23.5
+      },
+      {
+        "value": "Salesforce",
+        "n": 33,
+        "median_hours": 13.1,
+        "mean_hours": 16.8,
+        "p90_hours": 28.8
+      },
+      {
+        "value": "SAP GUI",
+        "n": 18,
+        "median_hours": 10.4,
+        "mean_hours": 10.5,
+        "p90_hours": 14.7
+      },
+      {
+        "value": "Intune",
+        "n": 31,
+        "median_hours": 9.6,
+        "mean_hours": 10.4,
+        "p90_hours": 15.6
+      },
+      {
+        "value": "Meraki WiFi",
+        "n": 16,
+        "median_hours": 8.3,
+        "mean_hours": 8.4,
+        "p90_hours": 11.8
+      },
+      {
+        "value": "Exchange",
+        "n": 12,
+        "median_hours": 7.7,
+        "mean_hours": 7.3,
+        "p90_hours": 11.4
+      },
+      {
+        "value": "GlobalProtect",
+        "n": 12,
+        "median_hours": 5.7,
+        "mean_hours": 5.1,
+        "p90_hours": 6.8
+      },
+      {
+        "value": "Outlook",
+        "n": 19,
+        "median_hours": 5.4,
+        "mean_hours": 5.4,
+        "p90_hours": 8.1
+      },
+      {
+        "value": "Company Portal",
+        "n": 19,
+        "median_hours": 4.2,
+        "mean_hours": 4.0,
+        "p90_hours": 5.9
+      },
+      {
+        "value": "Okta",
+        "n": 39,
+        "median_hours": 2.2,
+        "mean_hours": 2.2,
+        "p90_hours": 3.4
+      },
+      {
+        "value": "Active Directory",
+        "n": 14,
+        "median_hours": 1.5,
+        "mean_hours": 1.6,
+        "p90_hours": 2.3
+      }
+    ],
+    "by_priority": [
+      {
+        "value": "2 - High",
+        "n": 94,
+        "median_hours": 12.8,
+        "mean_hours": 16.4,
+        "p90_hours": 33.2
+      },
+      {
+        "value": "1 - Critical",
+        "n": 97,
+        "median_hours": 12.4,
+        "mean_hours": 17.9,
+        "p90_hours": 45.9
+      },
+      {
+        "value": "4 - Low",
+        "n": 101,
+        "median_hours": 10.5,
+        "mean_hours": 13.9,
+        "p90_hours": 30.0
+      },
+      {
+        "value": "3 - Moderate",
+        "n": 95,
+        "median_hours": 9.4,
+        "mean_hours": 15.3,
+        "p90_hours": 35.6
+      }
+    ],
+    "by_assignment_group": [
+      {
+        "value": "ERP Support",
+        "n": 49,
+        "median_hours": 15.4,
+        "mean_hours": 19.0,
+        "p90_hours": 44.5
+      },
+      {
+        "value": "Network Team",
+        "n": 57,
+        "median_hours": 12.6,
+        "mean_hours": 16.3,
+        "p90_hours": 35.0
+      },
+      {
+        "value": "Endpoint Team",
+        "n": 71,
+        "median_hours": 12.0,
+        "mean_hours": 16.5,
+        "p90_hours": 38.2
+      },
+      {
+        "value": "HR Ops",
+        "n": 53,
+        "median_hours": 11.7,
+        "mean_hours": 14.8,
+        "p90_hours": 28.7
+      },
+      {
+        "value": "Identity Team",
+        "n": 45,
+        "median_hours": 11.6,
+        "mean_hours": 17.5,
+        "p90_hours": 38.2
+      },
+      {
+        "value": "Service Desk L1",
+        "n": 53,
+        "median_hours": 9.4,
+        "mean_hours": 14.2,
+        "p90_hours": 31.1
+      },
+      {
+        "value": "CRM Support",
+        "n": 59,
+        "median_hours": 7.6,
+        "mean_hours": 13.2,
+        "p90_hours": 30.6
+      }
+    ],
+    "slowest": [
+      {
+        "value": "Hardware & Devices",
+        "n": 32,
+        "median_hours": 42.2,
+        "mean_hours": 43.3,
+        "p90_hours": 65.8
+      },
+      {
+        "value": "Attendance & Leave",
+        "n": 20,
+        "median_hours": 22.0,
+        "mean_hours": 21.7,
+        "p90_hours": 31.2
+      },
+      {
+        "value": "HR & Payroll",
+        "n": 11,
+        "median_hours": 20.9,
+        "mean_hours": 19.4,
+        "p90_hours": 25.0
+      },
+      {
+        "value": "Data / Reporting",
+        "n": 18,
+        "median_hours": 18.2,
+        "mean_hours": 16.6,
+        "p90_hours": 24.4
+      },
+      {
+        "value": "Approval / Workflow",
+        "n": 16,
+        "median_hours": 16.5,
+        "mean_hours": 15.4,
+        "p90_hours": 23.5
+      }
+    ],
+    "fastest": [
+      {
+        "value": "Access & Authentication",
+        "n": 93,
+        "median_hours": 3.3,
+        "mean_hours": 12.5,
+        "p90_hours": 34.0
+      },
+      {
+        "value": "Email & Collaboration",
+        "n": 31,
+        "median_hours": 5.9,
+        "mean_hours": 6.2,
+        "p90_hours": 9.2
+      },
+      {
+        "value": "Network & Connectivity",
+        "n": 28,
+        "median_hours": 6.8,
+        "mean_hours": 7.0,
+        "p90_hours": 11.0
+      },
+      {
+        "value": "Device Management / MDM",
+        "n": 31,
+        "median_hours": 9.6,
+        "mean_hours": 10.4,
+        "p90_hours": 15.6
+      },
+      {
+        "value": "Application & Software",
+        "n": 74,
+        "median_hours": 13.1,
+        "mean_hours": 15.2,
+        "p90_hours": 30.1
+      }
+    ]
+  },
+  "themes": [
+    {
+      "theme": "Access & Authentication",
+      "count": 139,
+      "pct": 23.2,
+      "mttr_median_hours": 3.3,
+      "mttr_p90_hours": 34.0,
+      "top_types": [
+        {
+          "value": "Incident",
+          "count": 76
+        },
+        {
+          "value": "Request",
+          "count": 63
+        }
+      ],
+      "top_applications": [
+        {
+          "value": "Okta",
+          "count": 57
+        },
+        {
+          "value": "Microsoft Entra ID",
+          "count": 36
+        },
+        {
+          "value": "SAP",
+          "count": 27
+        }
+      ],
+      "examples": [
+        "Password reset for the finance app",
+        "Attendance not captured, need unlock in the VPN",
+        "Attendance not captured, need unlock in email"
+      ],
+      "avg_match_score": 2.17,
+      "description_coverage_pct": 100.0,
+      "confidence": "High"
+    },
+    {
+      "theme": "Application & Software",
+      "count": 108,
+      "pct": 18.0,
+      "mttr_median_hours": 13.1,
+      "mttr_p90_hours": 30.1,
+      "top_types": [
+        {
+          "value": "Request",
+          "count": 56
+        },
+        {
+          "value": "Incident",
+          "count": 52
+        }
+      ],
+      "top_applications": [
+        {
+          "value": "Company Portal",
+          "count": 30
+        },
+        {
+          "value": "Field Sales App",
+          "count": 28
+        },
+        {
+          "value": "Adobe Creative Cloud",
+          "count": 26
+        }
+      ],
+      "examples": [
+        "the finance app keeps crashing on launch",
+        "the HR system keeps crashing on launch",
+        "the finance app keeps crashing on launch"
+      ],
+      "avg_match_score": 2.33,
+      "description_coverage_pct": 100.0,
+      "confidence": "High"
+    },
+    {
+      "theme": "Salesforce / CRM",
+      "count": 51,
+      "pct": 8.5,
+      "mttr_median_hours": 13.1,
+      "mttr_p90_hours": 28.8,
+      "top_types": [
+        {
+          "value": "Request",
+          "count": 31
+        },
+        {
+          "value": "Incident",
+          "count": 20
+        }
+      ],
+      "top_applications": [
+        {
+          "value": "Salesforce",
+          "count": 51
+        }
+      ],
+      "examples": [
+        "Update opportunity stage in the CRM",
+        "Salesforce report not syncing data",
+        "Update opportunity stage in the CRM"
+      ],
+      "avg_match_score": 2.61,
+      "description_coverage_pct": 100.0,
+      "confidence": "High"
+    },
+    {
+      "theme": "Hardware & Devices",
+      "count": 50,
+      "pct": 8.3,
+      "mttr_median_hours": 42.2,
+      "mttr_p90_hours": 65.8,
+      "top_types": [
+        {
+          "value": "Request",
+          "count": 25
+        },
+        {
+          "value": "Incident",
+          "count": 25
+        }
+      ],
+      "top_applications": [
+        {
+          "value": "Monitor",
+          "count": 25
+        },
+        {
+          "value": "Dell Latitude",
+          "count": 25
+        }
+      ],
+      "examples": [
+        "Need a new monitor",
+        "Need a new monitor",
+        "Need a new monitor"
+      ],
+      "avg_match_score": 3.0,
+      "description_coverage_pct": 100.0,
+      "confidence": "High"
+    },
+    {
+      "theme": "Device Management / MDM",
+      "count": 49,
+      "pct": 8.2,
+      "mttr_median_hours": 9.6,
+      "mttr_p90_hours": 15.6,
+      "top_types": [
+        {
+          "value": "Request",
+          "count": 29
+        },
+        {
+          "value": "Incident",
+          "count": 20
+        }
+      ],
+      "top_applications": [
+        {
+          "value": "Intune",
+          "count": 49
+        }
+      ],
+      "examples": [
+        "Enroll my iPhone in the CRM",
+        "Device shows non-compliant in the VPN",
+        "Enroll my iPhone in email"
+      ],
+      "avg_match_score": 3.18,
+      "description_coverage_pct": 100.0,
+      "confidence": "High"
+    },
+    {
+      "theme": "Email & Collaboration",
+      "count": 48,
+      "pct": 8.0,
+      "mttr_median_hours": 5.9,
+      "mttr_p90_hours": 9.2,
+      "top_types": [
+        {
+          "value": "Incident",
+          "count": 29
+        },
+        {
+          "value": "Request",
+          "count": 19
+        }
+      ],
+      "top_applications": [
+        {
+          "value": "Outlook",
+          "count": 29
+        },
+        {
+          "value": "Exchange",
+          "count": 19
+        }
+      ],
+      "examples": [
+        "Outlook not receiving email",
+        "Add me to the the finance app distribution list",
+        "Outlook not receiving email"
+      ],
+      "avg_match_score": 3.0,
+      "description_coverage_pct": 100.0,
+      "confidence": "High"
+    },
+    {
+      "theme": "Network & Connectivity",
+      "count": 45,
+      "pct": 7.5,
+      "mttr_median_hours": 6.8,
+      "mttr_p90_hours": 11.0,
+      "top_types": [
+        {
+          "value": "Incident",
+          "count": 45
+        }
+      ],
+      "top_applications": [
+        {
+          "value": "Meraki WiFi",
+          "count": 24
+        },
+        {
+          "value": "GlobalProtect",
+          "count": 21
+        }
+      ],
+      "examples": [
+        "WiFi keeps dropping in office",
+        "WiFi keeps dropping in office",
+        "VPN not connecting"
+      ],
+      "avg_match_score": 2.53,
+      "description_coverage_pct": 100.0,
+      "confidence": "High"
+    },
+    {
+      "theme": "Attendance & Leave",
+      "count": 33,
+      "pct": 5.5,
+      "mttr_median_hours": 22.0,
+      "mttr_p90_hours": 31.2,
+      "top_types": [
+        {
+          "value": "Incident",
+          "count": 33
+        }
+      ],
+      "top_applications": [
+        {
+          "value": "SAP SuccessFactors",
+          "count": 33
+        }
+      ],
+      "examples": [
+        "Leave balance incorrect in the VPN",
+        "Leave balance incorrect in the HR system",
+        "Leave balance incorrect in the VPN"
+      ],
+      "avg_match_score": 2.0,
+      "description_coverage_pct": 100.0,
+      "confidence": "Medium"
+    },
+    {
+      "theme": "Approval / Workflow",
+      "count": 31,
+      "pct": 5.2,
+      "mttr_median_hours": 16.5,
+      "mttr_p90_hours": 23.5,
+      "top_types": [
+        {
+          "value": "Request",
+          "count": 31
+        }
+      ],
+      "top_applications": [
+        {
+          "value": "ServiceNow",
+          "count": 31
+        }
+      ],
+      "examples": [
+        "Approve my software purchase in the finance app",
+        "Approve my software purchase in the portal",
+        "Approve my software purchase in the HR system"
+      ],
+      "avg_match_score": 3.0,
+      "description_coverage_pct": 100.0,
+      "confidence": "Medium"
+    },
+    {
+      "theme": "Data / Reporting",
+      "count": 26,
+      "pct": 4.3,
+      "mttr_median_hours": 18.2,
+      "mttr_p90_hours": 24.4,
+      "top_types": [
+        {
+          "value": "Request",
+          "count": 26
+        }
+      ],
+      "top_applications": [
+        {
+          "value": "Power BI",
+          "count": 26
+        }
+      ],
+      "examples": [
+        "Need the Q3 sales dashboard export",
+        "Need the Q3 sales dashboard export",
+        "Need the Q3 sales dashboard export"
+      ],
+      "avg_match_score": 6.0,
+      "description_coverage_pct": 100.0,
+      "confidence": "Medium"
+    },
+    {
+      "theme": "HR & Payroll",
+      "count": 20,
+      "pct": 3.3,
+      "mttr_median_hours": 20.9,
+      "mttr_p90_hours": 25.0,
+      "top_types": [
+        {
+          "value": "Incident",
+          "count": 20
+        }
+      ],
+      "top_applications": [
+        {
+          "value": "Workday",
+          "count": 20
+        }
+      ],
+      "examples": [
+        "Payslip missing in email",
+        "Payslip missing in email",
+        "Payslip missing in email"
+      ],
+      "avg_match_score": 3.0,
+      "description_coverage_pct": 100.0,
+      "confidence": "Medium"
+    }
+  ],
+  "pareto": {
+    "by_theme": {
+      "total": 600,
+      "distinct": 11,
+      "vital_few_count": 7,
+      "vital_few_share_of_categories": 63.6,
+      "rows": [
+        {
+          "rank": 1,
+          "value": "Access & Authentication",
+          "count": 139,
+          "pct": 23.2,
+          "cumulative_pct": 23.2
+        },
+        {
+          "rank": 2,
+          "value": "Application & Software",
+          "count": 108,
+          "pct": 18.0,
+          "cumulative_pct": 41.2
+        },
+        {
+          "rank": 3,
+          "value": "Salesforce / CRM",
+          "count": 51,
+          "pct": 8.5,
+          "cumulative_pct": 49.7
+        },
+        {
+          "rank": 4,
+          "value": "Hardware & Devices",
+          "count": 50,
+          "pct": 8.3,
+          "cumulative_pct": 58.0
+        },
+        {
+          "rank": 5,
+          "value": "Device Management / MDM",
+          "count": 49,
+          "pct": 8.2,
+          "cumulative_pct": 66.2
+        },
+        {
+          "rank": 6,
+          "value": "Email & Collaboration",
+          "count": 48,
+          "pct": 8.0,
+          "cumulative_pct": 74.2
+        },
+        {
+          "rank": 7,
+          "value": "Network & Connectivity",
+          "count": 45,
+          "pct": 7.5,
+          "cumulative_pct": 81.7
+        },
+        {
+          "rank": 8,
+          "value": "Attendance & Leave",
+          "count": 33,
+          "pct": 5.5,
+          "cumulative_pct": 87.2
+        },
+        {
+          "rank": 9,
+          "value": "Approval / Workflow",
+          "count": 31,
+          "pct": 5.2,
+          "cumulative_pct": 92.3
+        },
+        {
+          "rank": 10,
+          "value": "Data / Reporting",
+          "count": 26,
+          "pct": 4.3,
+          "cumulative_pct": 96.7
+        },
+        {
+          "rank": 11,
+          "value": "HR & Payroll",
+          "count": 20,
+          "pct": 3.3,
+          "cumulative_pct": 100.0
+        }
+      ],
+      "vital_few": [
+        {
+          "rank": 1,
+          "value": "Access & Authentication",
+          "count": 139,
+          "pct": 23.2,
+          "cumulative_pct": 23.2
+        },
+        {
+          "rank": 2,
+          "value": "Application & Software",
+          "count": 108,
+          "pct": 18.0,
+          "cumulative_pct": 41.2
+        },
+        {
+          "rank": 3,
+          "value": "Salesforce / CRM",
+          "count": 51,
+          "pct": 8.5,
+          "cumulative_pct": 49.7
+        },
+        {
+          "rank": 4,
+          "value": "Hardware & Devices",
+          "count": 50,
+          "pct": 8.3,
+          "cumulative_pct": 58.0
+        },
+        {
+          "rank": 5,
+          "value": "Device Management / MDM",
+          "count": 49,
+          "pct": 8.2,
+          "cumulative_pct": 66.2
+        },
+        {
+          "rank": 6,
+          "value": "Email & Collaboration",
+          "count": 48,
+          "pct": 8.0,
+          "cumulative_pct": 74.2
+        },
+        {
+          "rank": 7,
+          "value": "Network & Connectivity",
+          "count": 45,
+          "pct": 7.5,
+          "cumulative_pct": 81.7
+        }
+      ]
+    },
+    "by_category": {
+      "total": 600,
+      "distinct": 10,
+      "vital_few_count": 7,
+      "vital_few_share_of_categories": 70.0,
+      "rows": [
+        {
+          "rank": 1,
+          "value": "Access",
+          "count": 112,
+          "pct": 18.7,
+          "cumulative_pct": 18.7
+        },
+        {
+          "rank": 2,
+          "value": "Software",
+          "count": 108,
+          "pct": 18.0,
+          "cumulative_pct": 36.7
+        },
+        {
+          "rank": 3,
+          "value": "HR",
+          "count": 80,
+          "pct": 13.3,
+          "cumulative_pct": 50.0
+        },
+        {
+          "rank": 4,
+          "value": "CRM",
+          "count": 51,
+          "pct": 8.5,
+          "cumulative_pct": 58.5
+        },
+        {
+          "rank": 5,
+          "value": "Hardware",
+          "count": 50,
+          "pct": 8.3,
+          "cumulative_pct": 66.8
+        },
+        {
+          "rank": 6,
+          "value": "MDM",
+          "count": 49,
+          "pct": 8.2,
+          "cumulative_pct": 75.0
+        },
+        {
+          "rank": 7,
+          "value": "Email",
+          "count": 48,
+          "pct": 8.0,
+          "cumulative_pct": 83.0
+        },
+        {
+          "rank": 8,
+          "value": "Network",
+          "count": 45,
+          "pct": 7.5,
+          "cumulative_pct": 90.5
+        },
+        {
+          "rank": 9,
+          "value": "Workflow",
+          "count": 31,
+          "pct": 5.2,
+          "cumulative_pct": 95.7
+        },
+        {
+          "rank": 10,
+          "value": "Reporting",
+          "count": 26,
+          "pct": 4.3,
+          "cumulative_pct": 100.0
+        }
+      ],
+      "vital_few": [
+        {
+          "rank": 1,
+          "value": "Access",
+          "count": 112,
+          "pct": 18.7,
+          "cumulative_pct": 18.7
+        },
+        {
+          "rank": 2,
+          "value": "Software",
+          "count": 108,
+          "pct": 18.0,
+          "cumulative_pct": 36.7
+        },
+        {
+          "rank": 3,
+          "value": "HR",
+          "count": 80,
+          "pct": 13.3,
+          "cumulative_pct": 50.0
+        },
+        {
+          "rank": 4,
+          "value": "CRM",
+          "count": 51,
+          "pct": 8.5,
+          "cumulative_pct": 58.5
+        },
+        {
+          "rank": 5,
+          "value": "Hardware",
+          "count": 50,
+          "pct": 8.3,
+          "cumulative_pct": 66.8
+        },
+        {
+          "rank": 6,
+          "value": "MDM",
+          "count": 49,
+          "pct": 8.2,
+          "cumulative_pct": 75.0
+        },
+        {
+          "rank": 7,
+          "value": "Email",
+          "count": 48,
+          "pct": 8.0,
+          "cumulative_pct": 83.0
+        }
+      ]
+    },
+    "by_application": {
+      "total": 600,
+      "distinct": 20,
+      "vital_few_count": 15,
+      "vital_few_share_of_categories": 75.0,
+      "rows": [
+        {
+          "rank": 1,
+          "value": "Okta",
+          "count": 57,
+          "pct": 9.5,
+          "cumulative_pct": 9.5
+        },
+        {
+          "rank": 2,
+          "value": "Salesforce",
+          "count": 51,
+          "pct": 8.5,
+          "cumulative_pct": 18.0
+        },
+        {
+          "rank": 3,
+          "value": "Intune",
+          "count": 49,
+          "pct": 8.2,
+          "cumulative_pct": 26.2
+        },
+        {
+          "rank": 4,
+          "value": "Microsoft Entra ID",
+          "count": 36,
+          "pct": 6.0,
+          "cumulative_pct": 32.2
+        },
+        {
+          "rank": 5,
+          "value": "SAP SuccessFactors",
+          "count": 33,
+          "pct": 5.5,
+          "cumulative_pct": 37.7
+        },
+        {
+          "rank": 6,
+          "value": "ServiceNow",
+          "count": 31,
+          "pct": 5.2,
+          "cumulative_pct": 42.8
+        },
+        {
+          "rank": 7,
+          "value": "Company Portal",
+          "count": 30,
+          "pct": 5.0,
+          "cumulative_pct": 47.8
+        },
+        {
+          "rank": 8,
+          "value": "Outlook",
+          "count": 29,
+          "pct": 4.8,
+          "cumulative_pct": 52.7
+        },
+        {
+          "rank": 9,
+          "value": "Field Sales App",
+          "count": 28,
+          "pct": 4.7,
+          "cumulative_pct": 57.3
+        },
+        {
+          "rank": 10,
+          "value": "SAP",
+          "count": 27,
+          "pct": 4.5,
+          "cumulative_pct": 61.8
+        },
+        {
+          "rank": 11,
+          "value": "Power BI",
+          "count": 26,
+          "pct": 4.3,
+          "cumulative_pct": 66.2
+        },
+        {
+          "rank": 12,
+          "value": "Adobe Creative Cloud",
+          "count": 26,
+          "pct": 4.3,
+          "cumulative_pct": 70.5
+        },
+        {
+          "rank": 13,
+          "value": "Monitor",
+          "count": 25,
+          "pct": 4.2,
+          "cumulative_pct": 74.7
+        },
+        {
+          "rank": 14,
+          "value": "Dell Latitude",
+          "count": 25,
+          "pct": 4.2,
+          "cumulative_pct": 78.8
+        },
+        {
+          "rank": 15,
+          "value": "Meraki WiFi",
+          "count": 24,
+          "pct": 4.0,
+          "cumulative_pct": 82.8
+        },
+        {
+          "rank": 16,
+          "value": "SAP GUI",
+          "count": 24,
+          "pct": 4.0,
+          "cumulative_pct": 86.8
+        },
+        {
+          "rank": 17,
+          "value": "GlobalProtect",
+          "count": 21,
+          "pct": 3.5,
+          "cumulative_pct": 90.3
+        },
+        {
+          "rank": 18,
+          "value": "Workday",
+          "count": 20,
+          "pct": 3.3,
+          "cumulative_pct": 93.7
+        },
+        {
+          "rank": 19,
+          "value": "Active Directory",
+          "count": 19,
+          "pct": 3.2,
+          "cumulative_pct": 96.8
+        },
+        {
+          "rank": 20,
+          "value": "Exchange",
+          "count": 19,
+          "pct": 3.2,
+          "cumulative_pct": 100.0
+        }
+      ],
+      "vital_few": [
+        {
+          "rank": 1,
+          "value": "Okta",
+          "count": 57,
+          "pct": 9.5,
+          "cumulative_pct": 9.5
+        },
+        {
+          "rank": 2,
+          "value": "Salesforce",
+          "count": 51,
+          "pct": 8.5,
+          "cumulative_pct": 18.0
+        },
+        {
+          "rank": 3,
+          "value": "Intune",
+          "count": 49,
+          "pct": 8.2,
+          "cumulative_pct": 26.2
+        },
+        {
+          "rank": 4,
+          "value": "Microsoft Entra ID",
+          "count": 36,
+          "pct": 6.0,
+          "cumulative_pct": 32.2
+        },
+        {
+          "rank": 5,
+          "value": "SAP SuccessFactors",
+          "count": 33,
+          "pct": 5.5,
+          "cumulative_pct": 37.7
+        },
+        {
+          "rank": 6,
+          "value": "ServiceNow",
+          "count": 31,
+          "pct": 5.2,
+          "cumulative_pct": 42.8
+        },
+        {
+          "rank": 7,
+          "value": "Company Portal",
+          "count": 30,
+          "pct": 5.0,
+          "cumulative_pct": 47.8
+        },
+        {
+          "rank": 8,
+          "value": "Outlook",
+          "count": 29,
+          "pct": 4.8,
+          "cumulative_pct": 52.7
+        },
+        {
+          "rank": 9,
+          "value": "Field Sales App",
+          "count": 28,
+          "pct": 4.7,
+          "cumulative_pct": 57.3
+        },
+        {
+          "rank": 10,
+          "value": "SAP",
+          "count": 27,
+          "pct": 4.5,
+          "cumulative_pct": 61.8
+        },
+        {
+          "rank": 11,
+          "value": "Power BI",
+          "count": 26,
+          "pct": 4.3,
+          "cumulative_pct": 66.2
+        },
+        {
+          "rank": 12,
+          "value": "Adobe Creative Cloud",
+          "count": 26,
+          "pct": 4.3,
+          "cumulative_pct": 70.5
+        },
+        {
+          "rank": 13,
+          "value": "Monitor",
+          "count": 25,
+          "pct": 4.2,
+          "cumulative_pct": 74.7
+        },
+        {
+          "rank": 14,
+          "value": "Dell Latitude",
+          "count": 25,
+          "pct": 4.2,
+          "cumulative_pct": 78.8
+        },
+        {
+          "rank": 15,
+          "value": "Meraki WiFi",
+          "count": 24,
+          "pct": 4.0,
+          "cumulative_pct": 82.8
+        }
+      ]
+    },
+    "by_assignment_group": {
+      "total": 600,
+      "distinct": 7,
+      "vital_few_count": 6,
+      "vital_few_share_of_categories": 85.7,
+      "rows": [
+        {
+          "rank": 1,
+          "value": "Endpoint Team",
+          "count": 102,
+          "pct": 17.0,
+          "cumulative_pct": 17.0
+        },
+        {
+          "rank": 2,
+          "value": "HR Ops",
+          "count": 90,
+          "pct": 15.0,
+          "cumulative_pct": 32.0
+        },
+        {
+          "rank": 3,
+          "value": "CRM Support",
+          "count": 88,
+          "pct": 14.7,
+          "cumulative_pct": 46.7
+        },
+        {
+          "rank": 4,
+          "value": "Network Team",
+          "count": 86,
+          "pct": 14.3,
+          "cumulative_pct": 61.0
+        },
+        {
+          "rank": 5,
+          "value": "Service Desk L1",
+          "count": 84,
+          "pct": 14.0,
+          "cumulative_pct": 75.0
+        },
+        {
+          "rank": 6,
+          "value": "ERP Support",
+          "count": 81,
+          "pct": 13.5,
+          "cumulative_pct": 88.5
+        },
+        {
+          "rank": 7,
+          "value": "Identity Team",
+          "count": 69,
+          "pct": 11.5,
+          "cumulative_pct": 100.0
+        }
+      ],
+      "vital_few": [
+        {
+          "rank": 1,
+          "value": "Endpoint Team",
+          "count": 102,
+          "pct": 17.0,
+          "cumulative_pct": 17.0
+        },
+        {
+          "rank": 2,
+          "value": "HR Ops",
+          "count": 90,
+          "pct": 15.0,
+          "cumulative_pct": 32.0
+        },
+        {
+          "rank": 3,
+          "value": "CRM Support",
+          "count": 88,
+          "pct": 14.7,
+          "cumulative_pct": 46.7
+        },
+        {
+          "rank": 4,
+          "value": "Network Team",
+          "count": 86,
+          "pct": 14.3,
+          "cumulative_pct": 61.0
+        },
+        {
+          "rank": 5,
+          "value": "Service Desk L1",
+          "count": 84,
+          "pct": 14.0,
+          "cumulative_pct": 75.0
+        },
+        {
+          "rank": 6,
+          "value": "ERP Support",
+          "count": 81,
+          "pct": 13.5,
+          "cumulative_pct": 88.5
+        }
+      ]
+    },
+    "high_pain_themes": [
+      {
+        "value": "Hardware & Devices",
+        "count": 50,
+        "mttr_median_hours": 42.2,
+        "est_effort_hours": 2108.1
+      },
+      {
+        "value": "Application & Software",
+        "count": 108,
+        "mttr_median_hours": 13.1,
+        "est_effort_hours": 1411.7
+      },
+      {
+        "value": "Attendance & Leave",
+        "count": 33,
+        "mttr_median_hours": 22.0,
+        "est_effort_hours": 725.8
+      },
+      {
+        "value": "Salesforce / CRM",
+        "count": 51,
+        "mttr_median_hours": 13.1,
+        "est_effort_hours": 666.4
+      },
+      {
+        "value": "Approval / Workflow",
+        "count": 31,
+        "mttr_median_hours": 16.5,
+        "est_effort_hours": 512.7
+      },
+      {
+        "value": "Data / Reporting",
+        "count": 26,
+        "mttr_median_hours": 18.2,
+        "est_effort_hours": 472.3
+      },
+      {
+        "value": "Device Management / MDM",
+        "count": 49,
+        "mttr_median_hours": 9.6,
+        "est_effort_hours": 471.5
+      },
+      {
+        "value": "Access & Authentication",
+        "count": 139,
+        "mttr_median_hours": 3.3,
+        "est_effort_hours": 457.9
+      },
+      {
+        "value": "HR & Payroll",
+        "count": 20,
+        "mttr_median_hours": 20.9,
+        "est_effort_hours": 418.4
+      },
+      {
+        "value": "Network & Connectivity",
+        "count": 45,
+        "mttr_median_hours": 6.8,
+        "est_effort_hours": 304.6
+      }
+    ],
+    "high_pain_applications": [
+      {
+        "value": "Monitor",
+        "count": 25,
+        "mttr_median_hours": 47.5,
+        "est_effort_hours": 1186.7
+      },
+      {
+        "value": "SAP",
+        "count": 27,
+        "mttr_median_hours": 34.5,
+        "est_effort_hours": 931.5
+      },
+      {
+        "value": "Dell Latitude",
+        "count": 25,
+        "mttr_median_hours": 32.3,
+        "est_effort_hours": 808.7
+      },
+      {
+        "value": "Microsoft Entra ID",
+        "count": 36,
+        "mttr_median_hours": 20.8,
+        "est_effort_hours": 747.8
+      },
+      {
+        "value": "Adobe Creative Cloud",
+        "count": 26,
+        "mttr_median_hours": 28.7,
+        "est_effort_hours": 746.7
+      },
+      {
+        "value": "SAP SuccessFactors",
+        "count": 33,
+        "mttr_median_hours": 22.0,
+        "est_effort_hours": 725.8
+      },
+      {
+        "value": "Salesforce",
+        "count": 51,
+        "mttr_median_hours": 13.1,
+        "est_effort_hours": 666.4
+      },
+      {
+        "value": "ServiceNow",
+        "count": 31,
+        "mttr_median_hours": 16.5,
+        "est_effort_hours": 512.7
+      },
+      {
+        "value": "Field Sales App",
+        "count": 28,
+        "mttr_median_hours": 17.5,
+        "est_effort_hours": 490.2
+      },
+      {
+        "value": "Power BI",
+        "count": 26,
+        "mttr_median_hours": 18.2,
+        "est_effort_hours": 472.3
+      }
+    ]
+  },
+  "application_landscape": {
+    "available": true,
+    "distinct_applications": 20,
+    "top": [
+      {
+        "application": "Okta",
+        "count": 57,
+        "pct": 9.5
+      },
+      {
+        "application": "Salesforce",
+        "count": 51,
+        "pct": 8.5
+      },
+      {
+        "application": "Intune",
+        "count": 49,
+        "pct": 8.2
+      },
+      {
+        "application": "Microsoft Entra ID",
+        "count": 36,
+        "pct": 6.0
+      },
+      {
+        "application": "SAP SuccessFactors",
+        "count": 33,
+        "pct": 5.5
+      },
+      {
+        "application": "ServiceNow",
+        "count": 31,
+        "pct": 5.2
+      },
+      {
+        "application": "Company Portal",
+        "count": 30,
+        "pct": 5.0
+      },
+      {
+        "application": "Outlook",
+        "count": 29,
+        "pct": 4.8
+      },
+      {
+        "application": "Field Sales App",
+        "count": 28,
+        "pct": 4.7
+      },
+      {
+        "application": "SAP",
+        "count": 27,
+        "pct": 4.5
+      },
+      {
+        "application": "Power BI",
+        "count": 26,
+        "pct": 4.3
+      },
+      {
+        "application": "Adobe Creative Cloud",
+        "count": 26,
+        "pct": 4.3
+      },
+      {
+        "application": "Monitor",
+        "count": 25,
+        "pct": 4.2
+      },
+      {
+        "application": "Dell Latitude",
+        "count": 25,
+        "pct": 4.2
+      },
+      {
+        "application": "Meraki WiFi",
+        "count": 24,
+        "pct": 4.0
+      }
+    ]
+  },
+  "opportunities": {
+    "backlog": [
+      {
+        "theme": "Access & Authentication",
+        "tickets_addressable": 139,
+        "pct_of_total": 23.2,
+        "automation_types": [
+          {
+            "code": "B",
+            "label": "Workflow Automation"
+          },
+          {
+            "code": "C",
+            "label": "Integration Automation"
+          },
+          {
+            "code": "D",
+            "label": "Agentic AI"
+          }
+        ],
+        "primary_type": "Workflow Automation",
+        "atomicwork_capabilities": [
+          "Access provisioning",
+          "Identity automation",
+          "Employee self-service",
+          "Ticket deflection",
+          "AI coworker in Slack or Microsoft Teams"
+        ],
+        "deflection_range_pct": [
+          40,
+          70
+        ],
+        "est_deflectable_tickets_range": [
+          56,
+          97
+        ],
+        "mttr_reduction_potential": "High",
+        "implementation_complexity": "Medium",
+        "risk_level": "Medium",
+        "integration_dependency": [
+          "Okta",
+          "Microsoft Entra ID",
+          "Active Directory"
+        ],
+        "confidence": "High",
+        "note": null
+      },
+      {
+        "theme": "Application & Software",
+        "tickets_addressable": 108,
+        "pct_of_total": 18.0,
+        "automation_types": [
+          {
+            "code": "A",
+            "label": "Knowledge AI"
+          },
+          {
+            "code": "B",
+            "label": "Workflow Automation"
+          }
+        ],
+        "primary_type": "Knowledge AI",
+        "atomicwork_capabilities": [
+          "Guided troubleshooting",
+          "Knowledge ingestion",
+          "Ticket deflection",
+          "Employee self-service"
+        ],
+        "deflection_range_pct": [
+          25,
+          45
+        ],
+        "est_deflectable_tickets_range": [
+          27,
+          49
+        ],
+        "mttr_reduction_potential": "Medium",
+        "implementation_complexity": "Medium",
+        "risk_level": "Low",
+        "integration_dependency": [
+          "ServiceNow",
+          "Jira Service Management",
+          "Freshservice"
+        ],
+        "confidence": "High",
+        "note": null
+      },
+      {
+        "theme": "Email & Collaboration",
+        "tickets_addressable": 48,
+        "pct_of_total": 8.0,
+        "automation_types": [
+          {
+            "code": "A",
+            "label": "Knowledge AI"
+          },
+          {
+            "code": "B",
+            "label": "Workflow Automation"
+          },
+          {
+            "code": "C",
+            "label": "Integration Automation"
+          }
+        ],
+        "primary_type": "Knowledge AI",
+        "atomicwork_capabilities": [
+          "Knowledge ingestion",
+          "Workflow execution",
+          "Access provisioning",
+          "Employee self-service"
+        ],
+        "deflection_range_pct": [
+          30,
+          55
+        ],
+        "est_deflectable_tickets_range": [
+          14,
+          26
+        ],
+        "mttr_reduction_potential": "Medium",
+        "implementation_complexity": "Medium",
+        "risk_level": "Low",
+        "integration_dependency": [
+          "Microsoft 365",
+          "Google Workspace"
+        ],
+        "confidence": "High",
+        "note": null
+      },
+      {
+        "theme": "Device Management / MDM",
+        "tickets_addressable": 49,
+        "pct_of_total": 8.2,
+        "automation_types": [
+          {
+            "code": "C",
+            "label": "Integration Automation"
+          },
+          {
+            "code": "D",
+            "label": "Agentic AI"
+          }
+        ],
+        "primary_type": "Integration Automation",
+        "atomicwork_capabilities": [
+          "MCP/API orchestration",
+          "Agentic backend action",
+          "IT service automation"
+        ],
+        "deflection_range_pct": [
+          25,
+          45
+        ],
+        "est_deflectable_tickets_range": [
+          12,
+          22
+        ],
+        "mttr_reduction_potential": "Medium",
+        "implementation_complexity": "Medium",
+        "risk_level": "Medium",
+        "integration_dependency": [
+          "Intune",
+          "Jamf"
+        ],
+        "confidence": "Medium",
+        "note": null
+      },
+      {
+        "theme": "Salesforce / CRM",
+        "tickets_addressable": 51,
+        "pct_of_total": 8.5,
+        "automation_types": [
+          {
+            "code": "C",
+            "label": "Integration Automation"
+          },
+          {
+            "code": "D",
+            "label": "Agentic AI"
+          }
+        ],
+        "primary_type": "Integration Automation",
+        "atomicwork_capabilities": [
+          "MCP/API orchestration",
+          "Agentic backend action",
+          "Analytics and operational insights"
+        ],
+        "deflection_range_pct": [
+          20,
+          40
+        ],
+        "est_deflectable_tickets_range": [
+          10,
+          20
+        ],
+        "mttr_reduction_potential": "Medium",
+        "implementation_complexity": "High",
+        "risk_level": "Medium",
+        "integration_dependency": [
+          "Salesforce"
+        ],
+        "confidence": "Medium",
+        "note": null
+      },
+      {
+        "theme": "Attendance & Leave",
+        "tickets_addressable": 33,
+        "pct_of_total": 5.5,
+        "automation_types": [
+          {
+            "code": "B",
+            "label": "Workflow Automation"
+          },
+          {
+            "code": "C",
+            "label": "Integration Automation"
+          }
+        ],
+        "primary_type": "Workflow Automation",
+        "atomicwork_capabilities": [
+          "Workflow execution",
+          "HR service automation",
+          "Approval automation",
+          "Employee self-service"
+        ],
+        "deflection_range_pct": [
+          40,
+          60
+        ],
+        "est_deflectable_tickets_range": [
+          13,
+          20
+        ],
+        "mttr_reduction_potential": "High",
+        "implementation_complexity": "Medium",
+        "risk_level": "Low",
+        "integration_dependency": [
+          "SAP",
+          "Workday",
+          "HR systems"
+        ],
+        "confidence": "Medium",
+        "note": null
+      },
+      {
+        "theme": "Approval / Workflow",
+        "tickets_addressable": 31,
+        "pct_of_total": 5.2,
+        "automation_types": [
+          {
+            "code": "B",
+            "label": "Workflow Automation"
+          },
+          {
+            "code": "E",
+            "label": "Human-in-the-loop AI"
+          }
+        ],
+        "primary_type": "Workflow Automation",
+        "atomicwork_capabilities": [
+          "Approval automation",
+          "Workflow execution",
+          "Human approval loop"
+        ],
+        "deflection_range_pct": [
+          40,
+          60
+        ],
+        "est_deflectable_tickets_range": [
+          12,
+          19
+        ],
+        "mttr_reduction_potential": "Medium",
+        "implementation_complexity": "Medium",
+        "risk_level": "Low",
+        "integration_dependency": [
+          "ServiceNow",
+          "Jira Service Management"
+        ],
+        "confidence": "Medium",
+        "note": null
+      },
+      {
+        "theme": "Network & Connectivity",
+        "tickets_addressable": 45,
+        "pct_of_total": 7.5,
+        "automation_types": [
+          {
+            "code": "A",
+            "label": "Knowledge AI"
+          },
+          {
+            "code": "D",
+            "label": "Agentic AI"
+          }
+        ],
+        "primary_type": "Knowledge AI",
+        "atomicwork_capabilities": [
+          "Guided troubleshooting",
+          "Knowledge ingestion",
+          "Ticket deflection"
+        ],
+        "deflection_range_pct": [
+          15,
+          35
+        ],
+        "est_deflectable_tickets_range": [
+          7,
+          16
+        ],
+        "mttr_reduction_potential": "Medium",
+        "implementation_complexity": "Medium",
+        "risk_level": "Medium",
+        "integration_dependency": [
+          "Network tools"
+        ],
+        "confidence": "High",
+        "note": null
+      },
+      {
+        "theme": "Hardware & Devices",
+        "tickets_addressable": 50,
+        "pct_of_total": 8.3,
+        "automation_types": [
+          {
+            "code": "B",
+            "label": "Workflow Automation"
+          },
+          {
+            "code": "E",
+            "label": "Human-in-the-loop AI"
+          },
+          {
+            "code": "F",
+            "label": "No Automation Recommended"
+          }
+        ],
+        "primary_type": "Workflow Automation",
+        "atomicwork_capabilities": [
+          "Employee self-service",
+          "Workflow execution",
+          "Approval automation",
+          "Analytics and operational insights"
+        ],
+        "deflection_range_pct": [
+          15,
+          30
+        ],
+        "est_deflectable_tickets_range": [
+          8,
+          15
+        ],
+        "mttr_reduction_potential": "Low",
+        "implementation_complexity": "Low",
+        "risk_level": "Low",
+        "integration_dependency": [
+          "ServiceNow",
+          "asset systems"
+        ],
+        "confidence": "High",
+        "note": "Physical fulfilment caps automation; focus on request intake, approval, and status."
+      },
+      {
+        "theme": "Data / Reporting",
+        "tickets_addressable": 26,
+        "pct_of_total": 4.3,
+        "automation_types": [
+          {
+            "code": "C",
+            "label": "Integration Automation"
+          },
+          {
+            "code": "D",
+            "label": "Agentic AI"
+          },
+          {
+            "code": "E",
+            "label": "Human-in-the-loop AI"
+          }
+        ],
+        "primary_type": "Integration Automation",
+        "atomicwork_capabilities": [
+          "Analytics and operational insights",
+          "MCP/API orchestration",
+          "Agentic backend action",
+          "Human approval loop"
+        ],
+        "deflection_range_pct": [
+          20,
+          40
+        ],
+        "est_deflectable_tickets_range": [
+          5,
+          10
+        ],
+        "mttr_reduction_potential": "Medium",
+        "implementation_complexity": "Medium",
+        "risk_level": "Medium",
+        "integration_dependency": [
+          "BI tools",
+          "data platforms"
+        ],
+        "confidence": "Medium",
+        "note": null
+      },
+      {
+        "theme": "HR & Payroll",
+        "tickets_addressable": 20,
+        "pct_of_total": 3.3,
+        "automation_types": [
+          {
+            "code": "A",
+            "label": "Knowledge AI"
+          },
+          {
+            "code": "B",
+            "label": "Workflow Automation"
+          },
+          {
+            "code": "E",
+            "label": "Human-in-the-loop AI"
+          }
+        ],
+        "primary_type": "Knowledge AI",
+        "atomicwork_capabilities": [
+          "HR service automation",
+          "Knowledge ingestion",
+          "Approval automation",
+          "Employee self-service"
+        ],
+        "deflection_range_pct": [
+          30,
+          50
+        ],
+        "est_deflectable_tickets_range": [
+          6,
+          10
+        ],
+        "mttr_reduction_potential": "Medium",
+        "implementation_complexity": "Medium",
+        "risk_level": "Medium",
+        "integration_dependency": [
+          "Workday",
+          "SAP",
+          "HR systems"
+        ],
+        "confidence": "Medium",
+        "note": null
+      }
+    ],
+    "agentic_backlog": [
+      {
+        "theme": "Access & Authentication",
+        "tickets_addressable": 139,
+        "trigger": "Password reset, account unlock, or access request ticket created",
+        "system_of_action": "Identity provider (Entra ID / Okta / AD)",
+        "required_permissions": "Scoped identity admin for reset/unlock/group membership",
+        "workflow_steps": [
+          "Verify requester identity",
+          "Check policy and entitlements",
+          "Execute reset or group change",
+          "Confirm and close"
+        ],
+        "automation_feasibility": "High where IdP API is available",
+        "risk_level": "Medium (identity actions; privileged changes need approval)",
+        "fallback_path": "Route to IAM team with a prepared action packet",
+        "human_approval_required": "Required for privileged or role escalations",
+        "expected_impact": "Large share of L1 access load handled without an agent",
+        "confidence": "High"
+      },
+      {
+        "theme": "Application & Software",
+        "tickets_addressable": 108,
+        "trigger": "Repeated application error or configuration request",
+        "system_of_action": "Application admin console or config API",
+        "required_permissions": "App-scoped admin (read plus limited config)",
+        "workflow_steps": [
+          "Match to known issue",
+          "Apply guided fix or config",
+          "Verify",
+          "Document"
+        ],
+        "automation_feasibility": "Medium; depends on app API maturity",
+        "risk_level": "Low to Medium",
+        "fallback_path": "Escalate to app owner with diagnosis",
+        "human_approval_required": "For production config changes",
+        "expected_impact": "Deflect how-to and known-error tickets, shorten diagnosis",
+        "confidence": "High"
+      },
+      {
+        "theme": "Salesforce / CRM",
+        "tickets_addressable": 51,
+        "trigger": "CRM data/metadata sync issue or record correction",
+        "system_of_action": "Salesforce (API / metadata / admin)",
+        "required_permissions": "Scoped Salesforce admin",
+        "workflow_steps": [
+          "Diagnose the sync/record issue",
+          "Prepare metadata or data fix",
+          "Validate in sandbox if available",
+          "Apply",
+          "Verify"
+        ],
+        "automation_feasibility": "Medium to High via API",
+        "risk_level": "Medium to High",
+        "fallback_path": "Escalate to Salesforce admin/ops",
+        "human_approval_required": "For metadata/schema changes",
+        "expected_impact": "Resolve recurring CRM sync/data tickets faster",
+        "confidence": "Medium"
+      },
+      {
+        "theme": "Device Management / MDM",
+        "tickets_addressable": 49,
+        "trigger": "Device enrolment, compliance, or remote action request",
+        "system_of_action": "MDM (Intune / Jamf)",
+        "required_permissions": "Scoped MDM admin",
+        "workflow_steps": [
+          "Confirm device and policy",
+          "Trigger enrol/sync/lock/wipe as requested",
+          "Verify compliance state"
+        ],
+        "automation_feasibility": "High; MDM APIs are mature",
+        "risk_level": "Medium (wipe/lock are destructive)",
+        "fallback_path": "Route to endpoint team",
+        "human_approval_required": "Required for wipe/lock",
+        "expected_impact": "Deflect enrolment/compliance tickets; act on devices safely",
+        "confidence": "Medium"
+      },
+      {
+        "theme": "Email & Collaboration",
+        "tickets_addressable": 48,
+        "trigger": "Distribution list, mailbox, or calendar access request",
+        "system_of_action": "Microsoft 365 / Google Workspace admin",
+        "required_permissions": "Scoped collaboration admin",
+        "workflow_steps": [
+          "Validate request",
+          "Apply membership/mailbox change",
+          "Confirm"
+        ],
+        "automation_feasibility": "High; mature APIs",
+        "risk_level": "Low",
+        "fallback_path": "Route to messaging team",
+        "human_approval_required": "For shared/privileged mailboxes",
+        "expected_impact": "Deflect routine mailbox/DL requests",
+        "confidence": "High"
+      },
+      {
+        "theme": "Attendance & Leave",
+        "tickets_addressable": 33,
+        "trigger": "Attendance correction or leave-balance/unlock request",
+        "system_of_action": "HR / attendance system (e.g. SAP)",
+        "required_permissions": "Scoped attendance admin",
+        "workflow_steps": [
+          "Validate request against policy",
+          "Apply correction or unlock",
+          "Confirm balance",
+          "Notify"
+        ],
+        "automation_feasibility": "High where attendance API/UI is reachable",
+        "risk_level": "Low to Medium",
+        "fallback_path": "Route to HR ops",
+        "human_approval_required": "For exceptions beyond policy",
+        "expected_impact": "Deflect routine attendance/leave tickets end to end",
+        "confidence": "Medium"
+      },
+      {
+        "theme": "Data / Reporting",
+        "tickets_addressable": 26,
+        "trigger": "Recurring report request or data reconciliation",
+        "system_of_action": "BI / data platform",
+        "required_permissions": "Read plus scoped write for reconciliation",
+        "workflow_steps": [
+          "Interpret the request",
+          "Run the query/report",
+          "Reconcile if needed",
+          "Deliver",
+          "Log"
+        ],
+        "automation_feasibility": "Medium to High",
+        "risk_level": "Medium",
+        "fallback_path": "Route to data team",
+        "human_approval_required": "For data writes",
+        "expected_impact": "Deflect standard report requests; speed reconciliation",
+        "confidence": "Medium"
+      },
+      {
+        "theme": "HR & Payroll",
+        "tickets_addressable": 20,
+        "trigger": "Payroll or benefits query or correction request",
+        "system_of_action": "HRIS (Workday / SAP HR)",
+        "required_permissions": "Read plus scoped correction with approval",
+        "workflow_steps": [
+          "Answer from policy knowledge",
+          "If correction needed prepare change",
+          "Route for HR approval",
+          "Apply"
+        ],
+        "automation_feasibility": "Medium; sensitive data",
+        "risk_level": "Medium to High (compliance)",
+        "fallback_path": "Route to HR shared services",
+        "human_approval_required": "Required",
+        "expected_impact": "Deflect policy questions; speed corrections with a human checkpoint",
+        "confidence": "Medium"
+      }
+    ],
+    "solution_map": [
+      {
+        "theme": "Access & Authentication",
+        "tickets": 139,
+        "capabilities": [
+          "Access provisioning",
+          "Identity automation",
+          "Employee self-service",
+          "Ticket deflection",
+          "AI coworker in Slack or Microsoft Teams"
+        ],
+        "primary_type": "Workflow Automation"
+      },
+      {
+        "theme": "Application & Software",
+        "tickets": 108,
+        "capabilities": [
+          "Guided troubleshooting",
+          "Knowledge ingestion",
+          "Ticket deflection",
+          "Employee self-service"
+        ],
+        "primary_type": "Knowledge AI"
+      },
+      {
+        "theme": "Salesforce / CRM",
+        "tickets": 51,
+        "capabilities": [
+          "MCP/API orchestration",
+          "Agentic backend action",
+          "Analytics and operational insights"
+        ],
+        "primary_type": "Integration Automation"
+      },
+      {
+        "theme": "Hardware & Devices",
+        "tickets": 50,
+        "capabilities": [
+          "Employee self-service",
+          "Workflow execution",
+          "Approval automation",
+          "Analytics and operational insights"
+        ],
+        "primary_type": "Workflow Automation"
+      },
+      {
+        "theme": "Device Management / MDM",
+        "tickets": 49,
+        "capabilities": [
+          "MCP/API orchestration",
+          "Agentic backend action",
+          "IT service automation"
+        ],
+        "primary_type": "Integration Automation"
+      },
+      {
+        "theme": "Email & Collaboration",
+        "tickets": 48,
+        "capabilities": [
+          "Knowledge ingestion",
+          "Workflow execution",
+          "Access provisioning",
+          "Employee self-service"
+        ],
+        "primary_type": "Knowledge AI"
+      },
+      {
+        "theme": "Network & Connectivity",
+        "tickets": 45,
+        "capabilities": [
+          "Guided troubleshooting",
+          "Knowledge ingestion",
+          "Ticket deflection"
+        ],
+        "primary_type": "Knowledge AI"
+      },
+      {
+        "theme": "Attendance & Leave",
+        "tickets": 33,
+        "capabilities": [
+          "Workflow execution",
+          "HR service automation",
+          "Approval automation",
+          "Employee self-service"
+        ],
+        "primary_type": "Workflow Automation"
+      },
+      {
+        "theme": "Approval / Workflow",
+        "tickets": 31,
+        "capabilities": [
+          "Approval automation",
+          "Workflow execution",
+          "Human approval loop"
+        ],
+        "primary_type": "Workflow Automation"
+      },
+      {
+        "theme": "Data / Reporting",
+        "tickets": 26,
+        "capabilities": [
+          "Analytics and operational insights",
+          "MCP/API orchestration",
+          "Agentic backend action",
+          "Human approval loop"
+        ],
+        "primary_type": "Integration Automation"
+      },
+      {
+        "theme": "HR & Payroll",
+        "tickets": 20,
+        "capabilities": [
+          "HR service automation",
+          "Knowledge ingestion",
+          "Approval automation",
+          "Employee self-service"
+        ],
+        "primary_type": "Knowledge AI"
+      }
+    ],
+    "roi_summary": {
+      "total_tickets": 600,
+      "addressable_tickets": 600,
+      "est_total_deflectable_range": [
+        170,
+        304
+      ],
+      "est_total_deflectable_pct_range": [
+        28.3,
+        50.7
+      ],
+      "assumptions": [
+        "Deflection ranges assume the resolution path is API-accessible and knowledge quality is good.",
+        "Ranges are planning estimates, not commitments; validate with SMEs before quoting.",
+        "Physical fulfilment (hardware) and ambiguous 'Other' tickets are excluded from deflection upside."
+      ]
+    }
+  },
+  "executive": {
+    "current_state_summary": [
+      "600 tickets analyzed over 2026-01-01 to 2026-06-24 (174 days).",
+      "Data quality: Strong (100/100).",
+      "Largest theme: Access & Authentication at 23.2% of volume.",
+      "Overall median MTTR: 11.4h.",
+      "Estimated deflectable volume: 28.3% to 50.7% (planning estimate)."
+    ],
+    "top_findings": [
+      {
+        "finding": "7 themes drive ~80% of ticket volume (led by Access & Authentication at 23.2%).",
+        "confidence": "High"
+      },
+      {
+        "finding": "Slowest theme by MTTR: Hardware & Devices at 42.2h median.",
+        "confidence": "Medium"
+      },
+      {
+        "finding": "Highest deflection upside: Access & Authentication (56-97 tickets, Workflow Automation).",
+        "confidence": "High"
+      }
+    ],
+    "top_automation_opportunities": [
+      {
+        "theme": "Access & Authentication",
+        "tickets_addressable": 139,
+        "pct_of_total": 23.2,
+        "automation_types": [
+          {
+            "code": "B",
+            "label": "Workflow Automation"
+          },
+          {
+            "code": "C",
+            "label": "Integration Automation"
+          },
+          {
+            "code": "D",
+            "label": "Agentic AI"
+          }
+        ],
+        "primary_type": "Workflow Automation",
+        "atomicwork_capabilities": [
+          "Access provisioning",
+          "Identity automation",
+          "Employee self-service",
+          "Ticket deflection",
+          "AI coworker in Slack or Microsoft Teams"
+        ],
+        "deflection_range_pct": [
+          40,
+          70
+        ],
+        "est_deflectable_tickets_range": [
+          56,
+          97
+        ],
+        "mttr_reduction_potential": "High",
+        "implementation_complexity": "Medium",
+        "risk_level": "Medium",
+        "integration_dependency": [
+          "Okta",
+          "Microsoft Entra ID",
+          "Active Directory"
+        ],
+        "confidence": "High",
+        "note": null
+      },
+      {
+        "theme": "Application & Software",
+        "tickets_addressable": 108,
+        "pct_of_total": 18.0,
+        "automation_types": [
+          {
+            "code": "A",
+            "label": "Knowledge AI"
+          },
+          {
+            "code": "B",
+            "label": "Workflow Automation"
+          }
+        ],
+        "primary_type": "Knowledge AI",
+        "atomicwork_capabilities": [
+          "Guided troubleshooting",
+          "Knowledge ingestion",
+          "Ticket deflection",
+          "Employee self-service"
+        ],
+        "deflection_range_pct": [
+          25,
+          45
+        ],
+        "est_deflectable_tickets_range": [
+          27,
+          49
+        ],
+        "mttr_reduction_potential": "Medium",
+        "implementation_complexity": "Medium",
+        "risk_level": "Low",
+        "integration_dependency": [
+          "ServiceNow",
+          "Jira Service Management",
+          "Freshservice"
+        ],
+        "confidence": "High",
+        "note": null
+      },
+      {
+        "theme": "Email & Collaboration",
+        "tickets_addressable": 48,
+        "pct_of_total": 8.0,
+        "automation_types": [
+          {
+            "code": "A",
+            "label": "Knowledge AI"
+          },
+          {
+            "code": "B",
+            "label": "Workflow Automation"
+          },
+          {
+            "code": "C",
+            "label": "Integration Automation"
+          }
+        ],
+        "primary_type": "Knowledge AI",
+        "atomicwork_capabilities": [
+          "Knowledge ingestion",
+          "Workflow execution",
+          "Access provisioning",
+          "Employee self-service"
+        ],
+        "deflection_range_pct": [
+          30,
+          55
+        ],
+        "est_deflectable_tickets_range": [
+          14,
+          26
+        ],
+        "mttr_reduction_potential": "Medium",
+        "implementation_complexity": "Medium",
+        "risk_level": "Low",
+        "integration_dependency": [
+          "Microsoft 365",
+          "Google Workspace"
+        ],
+        "confidence": "High",
+        "note": null
+      },
+      {
+        "theme": "Device Management / MDM",
+        "tickets_addressable": 49,
+        "pct_of_total": 8.2,
+        "automation_types": [
+          {
+            "code": "C",
+            "label": "Integration Automation"
+          },
+          {
+            "code": "D",
+            "label": "Agentic AI"
+          }
+        ],
+        "primary_type": "Integration Automation",
+        "atomicwork_capabilities": [
+          "MCP/API orchestration",
+          "Agentic backend action",
+          "IT service automation"
+        ],
+        "deflection_range_pct": [
+          25,
+          45
+        ],
+        "est_deflectable_tickets_range": [
+          12,
+          22
+        ],
+        "mttr_reduction_potential": "Medium",
+        "implementation_complexity": "Medium",
+        "risk_level": "Medium",
+        "integration_dependency": [
+          "Intune",
+          "Jamf"
+        ],
+        "confidence": "Medium",
+        "note": null
+      },
+      {
+        "theme": "Salesforce / CRM",
+        "tickets_addressable": 51,
+        "pct_of_total": 8.5,
+        "automation_types": [
+          {
+            "code": "C",
+            "label": "Integration Automation"
+          },
+          {
+            "code": "D",
+            "label": "Agentic AI"
+          }
+        ],
+        "primary_type": "Integration Automation",
+        "atomicwork_capabilities": [
+          "MCP/API orchestration",
+          "Agentic backend action",
+          "Analytics and operational insights"
+        ],
+        "deflection_range_pct": [
+          20,
+          40
+        ],
+        "est_deflectable_tickets_range": [
+          10,
+          20
+        ],
+        "mttr_reduction_potential": "Medium",
+        "implementation_complexity": "High",
+        "risk_level": "Medium",
+        "integration_dependency": [
+          "Salesforce"
+        ],
+        "confidence": "Medium",
+        "note": null
+      }
+    ],
+    "top_agentic_opportunities": [
+      {
+        "theme": "Access & Authentication",
+        "tickets_addressable": 139,
+        "trigger": "Password reset, account unlock, or access request ticket created",
+        "system_of_action": "Identity provider (Entra ID / Okta / AD)",
+        "required_permissions": "Scoped identity admin for reset/unlock/group membership",
+        "workflow_steps": [
+          "Verify requester identity",
+          "Check policy and entitlements",
+          "Execute reset or group change",
+          "Confirm and close"
+        ],
+        "automation_feasibility": "High where IdP API is available",
+        "risk_level": "Medium (identity actions; privileged changes need approval)",
+        "fallback_path": "Route to IAM team with a prepared action packet",
+        "human_approval_required": "Required for privileged or role escalations",
+        "expected_impact": "Large share of L1 access load handled without an agent",
+        "confidence": "High"
+      },
+      {
+        "theme": "Application & Software",
+        "tickets_addressable": 108,
+        "trigger": "Repeated application error or configuration request",
+        "system_of_action": "Application admin console or config API",
+        "required_permissions": "App-scoped admin (read plus limited config)",
+        "workflow_steps": [
+          "Match to known issue",
+          "Apply guided fix or config",
+          "Verify",
+          "Document"
+        ],
+        "automation_feasibility": "Medium; depends on app API maturity",
+        "risk_level": "Low to Medium",
+        "fallback_path": "Escalate to app owner with diagnosis",
+        "human_approval_required": "For production config changes",
+        "expected_impact": "Deflect how-to and known-error tickets, shorten diagnosis",
+        "confidence": "High"
+      },
+      {
+        "theme": "Salesforce / CRM",
+        "tickets_addressable": 51,
+        "trigger": "CRM data/metadata sync issue or record correction",
+        "system_of_action": "Salesforce (API / metadata / admin)",
+        "required_permissions": "Scoped Salesforce admin",
+        "workflow_steps": [
+          "Diagnose the sync/record issue",
+          "Prepare metadata or data fix",
+          "Validate in sandbox if available",
+          "Apply",
+          "Verify"
+        ],
+        "automation_feasibility": "Medium to High via API",
+        "risk_level": "Medium to High",
+        "fallback_path": "Escalate to Salesforce admin/ops",
+        "human_approval_required": "For metadata/schema changes",
+        "expected_impact": "Resolve recurring CRM sync/data tickets faster",
+        "confidence": "Medium"
+      },
+      {
+        "theme": "Device Management / MDM",
+        "tickets_addressable": 49,
+        "trigger": "Device enrolment, compliance, or remote action request",
+        "system_of_action": "MDM (Intune / Jamf)",
+        "required_permissions": "Scoped MDM admin",
+        "workflow_steps": [
+          "Confirm device and policy",
+          "Trigger enrol/sync/lock/wipe as requested",
+          "Verify compliance state"
+        ],
+        "automation_feasibility": "High; MDM APIs are mature",
+        "risk_level": "Medium (wipe/lock are destructive)",
+        "fallback_path": "Route to endpoint team",
+        "human_approval_required": "Required for wipe/lock",
+        "expected_impact": "Deflect enrolment/compliance tickets; act on devices safely",
+        "confidence": "Medium"
+      },
+      {
+        "theme": "Email & Collaboration",
+        "tickets_addressable": 48,
+        "trigger": "Distribution list, mailbox, or calendar access request",
+        "system_of_action": "Microsoft 365 / Google Workspace admin",
+        "required_permissions": "Scoped collaboration admin",
+        "workflow_steps": [
+          "Validate request",
+          "Apply membership/mailbox change",
+          "Confirm"
+        ],
+        "automation_feasibility": "High; mature APIs",
+        "risk_level": "Low",
+        "fallback_path": "Route to messaging team",
+        "human_approval_required": "For shared/privileged mailboxes",
+        "expected_impact": "Deflect routine mailbox/DL requests",
+        "confidence": "High"
+      }
+    ],
+    "quick_wins": [
+      {
+        "theme": "Access & Authentication",
+        "why": "Workflow Automation, 40-70% deflection, medium complexity",
+        "confidence": "High"
+      },
+      {
+        "theme": "Application & Software",
+        "why": "Knowledge AI, 25-45% deflection, medium complexity",
+        "confidence": "High"
+      },
+      {
+        "theme": "Email & Collaboration",
+        "why": "Knowledge AI, 30-55% deflection, medium complexity",
+        "confidence": "High"
+      },
+      {
+        "theme": "Device Management / MDM",
+        "why": "Integration Automation, 25-45% deflection, medium complexity",
+        "confidence": "Medium"
+      },
+      {
+        "theme": "Attendance & Leave",
+        "why": "Workflow Automation, 40-60% deflection, medium complexity",
+        "confidence": "Medium"
+      }
+    ],
+    "roadmap_30_60_90": {
+      "days_0_30": {
+        "focus": "Deflect the deterministic, low-risk load",
+        "themes": [
+          "Application & Software",
+          "Email & Collaboration",
+          "Network & Connectivity"
+        ],
+        "actions": [
+          "Ingest existing knowledge",
+          "Stand up the AI coworker in Slack/Teams",
+          "Deflect top how-to and password/access requests"
+        ]
+      },
+      "days_30_60": {
+        "focus": "Automate deterministic workflows",
+        "themes": [
+          "Access & Authentication",
+          "Attendance & Leave",
+          "Approval / Workflow"
+        ],
+        "actions": [
+          "Wire approval and provisioning workflows",
+          "Connect the primary ITSM read/write",
+          "Measure deflection vs baseline"
+        ]
+      },
+      "days_60_90": {
+        "focus": "Integration and agentic use cases with guardrails",
+        "themes": [
+          "Device Management / MDM",
+          "Salesforce / CRM",
+          "Data / Reporting"
+        ],
+        "actions": [
+          "Pilot one agentic backend use case with human approval",
+          "Expand MCP/API integrations",
+          "Review ROI against the baseline"
+        ]
+      }
+    },
+    "risks_and_assumptions": [
+      "Deflection ranges assume the resolution path is API-accessible and knowledge quality is good.",
+      "Ranges are planning estimates, not commitments; validate with SMEs before quoting.",
+      "Physical fulfilment (hardware) and ambiguous 'Other' tickets are excluded from deflection upside.",
+      "Data quality is Strong; low-confidence themes need SME validation."
+    ],
+    "workshop_questions": [
+      "Which of the top themes are already partially automated today?",
+      "For the highest-volume theme, is the resolution path API-accessible or admin-UI only?",
+      "What is the knowledge-base quality and coverage for the top deflection candidates?",
+      "Which actions require a human approval step for compliance or risk reasons?",
+      "For Access & Authentication, who owns the system of action and what permissions can be granted?"
+    ],
+    "final_recommendations": [
+      "Start with quick wins: Access & Authentication, Application & Software, Email & Collaboration. These are deterministic and low risk.",
+      "Prioritize Access & Authentication for the largest deflection upside (56-97 tickets).",
+      "Pilot one agentic use case (Access & Authentication) behind a human approval checkpoint before scaling.",
+      "Treat all deflection figures as ranges to validate with SMEs, not commitments."
+    ],
+    "friction_points": [
+      {
+        "area": "Hardware & Devices",
+        "signal": "high total effort (volume x resolution time)",
+        "count": 50,
+        "mttr_median_hours": 42.2,
+        "est_effort_hours": 2108.1
+      },
+      {
+        "area": "Application & Software",
+        "signal": "high total effort (volume x resolution time)",
+        "count": 108,
+        "mttr_median_hours": 13.1,
+        "est_effort_hours": 1411.7
+      },
+      {
+        "area": "Attendance & Leave",
+        "signal": "high total effort (volume x resolution time)",
+        "count": 33,
+        "mttr_median_hours": 22.0,
+        "est_effort_hours": 725.8
+      },
+      {
+        "area": "Salesforce / CRM",
+        "signal": "high total effort (volume x resolution time)",
+        "count": 51,
+        "mttr_median_hours": 13.1,
+        "est_effort_hours": 666.4
+      },
+      {
+        "area": "Approval / Workflow",
+        "signal": "high total effort (volume x resolution time)",
+        "count": 31,
+        "mttr_median_hours": 16.5,
+        "est_effort_hours": 512.7
+      }
+    ],
+    "application_landscape": {
+      "available": true,
+      "distinct_applications": 20,
+      "top": [
+        {
+          "application": "Okta",
+          "count": 57,
+          "pct": 9.5
+        },
+        {
+          "application": "Salesforce",
+          "count": 51,
+          "pct": 8.5
+        },
+        {
+          "application": "Intune",
+          "count": 49,
+          "pct": 8.2
+        },
+        {
+          "application": "Microsoft Entra ID",
+          "count": 36,
+          "pct": 6.0
+        },
+        {
+          "application": "SAP SuccessFactors",
+          "count": 33,
+          "pct": 5.5
+        },
+        {
+          "application": "ServiceNow",
+          "count": 31,
+          "pct": 5.2
+        },
+        {
+          "application": "Company Portal",
+          "count": 30,
+          "pct": 5.0
+        },
+        {
+          "application": "Outlook",
+          "count": 29,
+          "pct": 4.8
+        },
+        {
+          "application": "Field Sales App",
+          "count": 28,
+          "pct": 4.7
+        },
+        {
+          "application": "SAP",
+          "count": 27,
+          "pct": 4.5
+        },
+        {
+          "application": "Power BI",
+          "count": 26,
+          "pct": 4.3
+        },
+        {
+          "application": "Adobe Creative Cloud",
+          "count": 26,
+          "pct": 4.3
+        },
+        {
+          "application": "Monitor",
+          "count": 25,
+          "pct": 4.2
+        },
+        {
+          "application": "Dell Latitude",
+          "count": 25,
+          "pct": 4.2
+        },
+        {
+          "application": "Meraki WiFi",
+          "count": 24,
+          "pct": 4.0
+        }
+      ]
+    },
+    "volume": {
+      "total": 600,
+      "by_month": [
+        {
+          "month": "2026-01",
+          "count": 86
+        },
+        {
+          "month": "2026-02",
+          "count": 105
+        },
+        {
+          "month": "2026-03",
+          "count": 101
+        },
+        {
+          "month": "2026-04",
+          "count": 108
+        },
+        {
+          "month": "2026-05",
+          "count": 113
+        },
+        {
+          "month": "2026-06",
+          "count": 87
+        }
+      ],
+      "by_type": [
+        {
+          "value": "Incident",
+          "count": 320,
+          "pct": 53.3
+        },
+        {
+          "value": "Request",
+          "count": 280,
+          "pct": 46.7
+        }
+      ],
+      "by_status": [
+        {
+          "value": "Resolved",
+          "count": 387,
+          "pct": 64.5
+        },
+        {
+          "value": "Open",
+          "count": 117,
+          "pct": 19.5
+        },
+        {
+          "value": "In Progress",
+          "count": 96,
+          "pct": 16.0
+        }
+      ],
+      "by_priority": [
+        {
+          "value": "4 - Low",
+          "count": 157,
+          "pct": 26.2
+        },
+        {
+          "value": "3 - Moderate",
+          "count": 156,
+          "pct": 26.0
+        },
+        {
+          "value": "1 - Critical",
+          "count": 148,
+          "pct": 24.7
+        },
+        {
+          "value": "2 - High",
+          "count": 139,
+          "pct": 23.2
+        }
+      ],
+      "resolved": 387,
+      "open_backlog": 213
+    }
+  },
+  "implementation": {
+    "test_plan": {
+      "cases": [
+        {
+          "id": "TC-001",
+          "area": "End-to-end lifecycle",
+          "title": "Full lifecycle for a Access & Authentication ticket",
+          "role": "Requester + Agent",
+          "steps": [
+            "As a requester, raise a incident representative of the 'Access & Authentication' theme",
+            "Verify it is categorized and routed to the right queue",
+            "As an agent, assign it, work it, and add a resolution note",
+            "Move it through the status flow (Open -> In Progress -> Resolved) and close it",
+            "Verify the requester can see the state at each step"
+          ],
+          "expected": "Ticket completes the full flow; every transition is recorded and visible to the requester",
+          "priority": "Must",
+          "source": "theme 'Access & Authentication': 139 tickets (23.2% of volume)"
+        },
+        {
+          "id": "TC-002",
+          "area": "End-to-end lifecycle",
+          "title": "Full lifecycle for a Application & Software ticket",
+          "role": "Requester + Agent",
+          "steps": [
+            "As a requester, raise a request representative of the 'Application & Software' theme",
+            "Verify it is categorized and routed to the right queue",
+            "As an agent, assign it, work it, and add a resolution note",
+            "Move it through the status flow (Open -> In Progress -> Resolved) and close it",
+            "Verify the requester can see the state at each step"
+          ],
+          "expected": "Ticket completes the full flow; every transition is recorded and visible to the requester",
+          "priority": "Must",
+          "source": "theme 'Application & Software': 108 tickets (18.0% of volume)"
+        },
+        {
+          "id": "TC-003",
+          "area": "End-to-end lifecycle",
+          "title": "Full lifecycle for a Salesforce / CRM ticket",
+          "role": "Requester + Agent",
+          "steps": [
+            "As a requester, raise a request representative of the 'Salesforce / CRM' theme",
+            "Verify it is categorized and routed to the right queue",
+            "As an agent, assign it, work it, and add a resolution note",
+            "Move it through the status flow (Open -> In Progress -> Resolved) and close it",
+            "Verify the requester can see the state at each step"
+          ],
+          "expected": "Ticket completes the full flow; every transition is recorded and visible to the requester",
+          "priority": "Must",
+          "source": "theme 'Salesforce / CRM': 51 tickets (8.5% of volume)"
+        },
+        {
+          "id": "TC-004",
+          "area": "End-to-end lifecycle",
+          "title": "Full lifecycle for a Hardware & Devices ticket",
+          "role": "Requester + Agent",
+          "steps": [
+            "As a requester, raise a request representative of the 'Hardware & Devices' theme",
+            "Verify it is categorized and routed to the right queue",
+            "As an agent, assign it, work it, and add a resolution note",
+            "Move it through the status flow (Open -> In Progress -> Resolved) and close it",
+            "Verify the requester can see the state at each step"
+          ],
+          "expected": "Ticket completes the full flow; every transition is recorded and visible to the requester",
+          "priority": "Must",
+          "source": "theme 'Hardware & Devices': 50 tickets (8.3% of volume)"
+        },
+        {
+          "id": "TC-005",
+          "area": "End-to-end lifecycle",
+          "title": "Full lifecycle for a Device Management / MDM ticket",
+          "role": "Requester + Agent",
+          "steps": [
+            "As a requester, raise a request representative of the 'Device Management / MDM' theme",
+            "Verify it is categorized and routed to the right queue",
+            "As an agent, assign it, work it, and add a resolution note",
+            "Move it through the status flow (Open -> In Progress -> Resolved) and close it",
+            "Verify the requester can see the state at each step"
+          ],
+          "expected": "Ticket completes the full flow; every transition is recorded and visible to the requester",
+          "priority": "Must",
+          "source": "theme 'Device Management / MDM': 49 tickets (8.2% of volume)"
+        },
+        {
+          "id": "TC-006",
+          "area": "End-to-end lifecycle",
+          "title": "Full lifecycle for a Email & Collaboration ticket",
+          "role": "Requester + Agent",
+          "steps": [
+            "As a requester, raise a incident representative of the 'Email & Collaboration' theme",
+            "Verify it is categorized and routed to the right queue",
+            "As an agent, assign it, work it, and add a resolution note",
+            "Move it through the status flow (Open -> In Progress -> Resolved) and close it",
+            "Verify the requester can see the state at each step"
+          ],
+          "expected": "Ticket completes the full flow; every transition is recorded and visible to the requester",
+          "priority": "Must",
+          "source": "theme 'Email & Collaboration': 48 tickets (8.0% of volume)"
+        },
+        {
+          "id": "TC-007",
+          "area": "End-to-end lifecycle",
+          "title": "Full lifecycle for a Network & Connectivity ticket",
+          "role": "Requester + Agent",
+          "steps": [
+            "As a requester, raise a incident representative of the 'Network & Connectivity' theme",
+            "Verify it is categorized and routed to the right queue",
+            "As an agent, assign it, work it, and add a resolution note",
+            "Move it through the status flow (Open -> In Progress -> Resolved) and close it",
+            "Verify the requester can see the state at each step"
+          ],
+          "expected": "Ticket completes the full flow; every transition is recorded and visible to the requester",
+          "priority": "Must",
+          "source": "theme 'Network & Connectivity': 45 tickets (7.5% of volume)"
+        },
+        {
+          "id": "TC-008",
+          "area": "End-to-end lifecycle",
+          "title": "Full lifecycle for a Attendance & Leave ticket",
+          "role": "Requester + Agent",
+          "steps": [
+            "As a requester, raise a incident representative of the 'Attendance & Leave' theme",
+            "Verify it is categorized and routed to the right queue",
+            "As an agent, assign it, work it, and add a resolution note",
+            "Move it through the status flow (Open -> In Progress -> Resolved) and close it",
+            "Verify the requester can see the state at each step"
+          ],
+          "expected": "Ticket completes the full flow; every transition is recorded and visible to the requester",
+          "priority": "Must",
+          "source": "theme 'Attendance & Leave': 33 tickets (5.5% of volume)"
+        },
+        {
+          "id": "TC-009",
+          "area": "Priority and SLA",
+          "title": "SLA behavior for priority 4 - Low",
+          "role": "Agent",
+          "steps": [
+            "Create a test ticket at priority 4 - Low",
+            "Verify the SLA clock, target, and any escalation timer start correctly",
+            "Let the ticket approach breach in the test window if feasible",
+            "Verify breach warnings fire to the right people"
+          ],
+          "expected": "Priority 4 - Low applies the configured SLA and escalation path",
+          "priority": "Should",
+          "source": "priority '4 - Low' present in the data"
+        },
+        {
+          "id": "TC-010",
+          "area": "Priority and SLA",
+          "title": "SLA behavior for priority 3 - Moderate",
+          "role": "Agent",
+          "steps": [
+            "Create a test ticket at priority 3 - Moderate",
+            "Verify the SLA clock, target, and any escalation timer start correctly",
+            "Let the ticket approach breach in the test window if feasible",
+            "Verify breach warnings fire to the right people"
+          ],
+          "expected": "Priority 3 - Moderate applies the configured SLA and escalation path",
+          "priority": "Should",
+          "source": "priority '3 - Moderate' present in the data"
+        },
+        {
+          "id": "TC-011",
+          "area": "Priority and SLA",
+          "title": "SLA behavior for priority 1 - Critical",
+          "role": "Agent",
+          "steps": [
+            "Create a test ticket at priority 1 - Critical",
+            "Verify the SLA clock, target, and any escalation timer start correctly",
+            "Let the ticket approach breach in the test window if feasible",
+            "Verify breach warnings fire to the right people"
+          ],
+          "expected": "Priority 1 - Critical applies the configured SLA and escalation path",
+          "priority": "Should",
+          "source": "priority '1 - Critical' present in the data"
+        },
+        {
+          "id": "TC-012",
+          "area": "Priority and SLA",
+          "title": "SLA behavior for priority 2 - High",
+          "role": "Agent",
+          "steps": [
+            "Create a test ticket at priority 2 - High",
+            "Verify the SLA clock, target, and any escalation timer start correctly",
+            "Let the ticket approach breach in the test window if feasible",
+            "Verify breach warnings fire to the right people"
+          ],
+          "expected": "Priority 2 - High applies the configured SLA and escalation path",
+          "priority": "Should",
+          "source": "priority '2 - High' present in the data"
+        },
+        {
+          "id": "TC-013",
+          "area": "Priority and SLA",
+          "title": "Escalation path for the historically slowest area (Hardware & Devices)",
+          "role": "Agent + Manager",
+          "steps": [
+            "Create a ticket in the 'Hardware & Devices' area",
+            "Leave it unactioned past the escalation threshold",
+            "Verify it escalates to the manager or next tier automatically"
+          ],
+          "expected": "Stale tickets escalate instead of sitting idle",
+          "priority": "Should",
+          "source": "slowest theme by MTTR: Hardware & Devices at 42.2h median"
+        },
+        {
+          "id": "TC-014",
+          "area": "Roles and permissions",
+          "title": "Requester sees only their own tickets",
+          "role": "Requester",
+          "steps": [
+            "Log in as a plain requester test account",
+            "Verify they can raise and view their own tickets",
+            "Verify they cannot see other users' tickets, admin settings, or queues"
+          ],
+          "expected": "Requester access is limited to their own records",
+          "priority": "Must",
+          "source": "baseline role separation"
+        },
+        {
+          "id": "TC-015",
+          "area": "Roles and permissions",
+          "title": "Queue visibility and assignment for group 'Endpoint Team'",
+          "role": "Agent (Endpoint Team)",
+          "steps": [
+            "Log in as a test agent in 'Endpoint Team'",
+            "Verify the agent sees the 'Endpoint Team' queue and can pick up and reassign within it",
+            "Verify the agent cannot edit tickets owned exclusively by other groups unless that is intended"
+          ],
+          "expected": "'Endpoint Team' agents work their queue; cross-queue access matches the agreed design",
+          "priority": "Must",
+          "source": "assignment group 'Endpoint Team' present in the data"
+        },
+        {
+          "id": "TC-016",
+          "area": "Roles and permissions",
+          "title": "Queue visibility and assignment for group 'HR Ops'",
+          "role": "Agent (HR Ops)",
+          "steps": [
+            "Log in as a test agent in 'HR Ops'",
+            "Verify the agent sees the 'HR Ops' queue and can pick up and reassign within it",
+            "Verify the agent cannot edit tickets owned exclusively by other groups unless that is intended"
+          ],
+          "expected": "'HR Ops' agents work their queue; cross-queue access matches the agreed design",
+          "priority": "Must",
+          "source": "assignment group 'HR Ops' present in the data"
+        },
+        {
+          "id": "TC-017",
+          "area": "Roles and permissions",
+          "title": "Queue visibility and assignment for group 'CRM Support'",
+          "role": "Agent (CRM Support)",
+          "steps": [
+            "Log in as a test agent in 'CRM Support'",
+            "Verify the agent sees the 'CRM Support' queue and can pick up and reassign within it",
+            "Verify the agent cannot edit tickets owned exclusively by other groups unless that is intended"
+          ],
+          "expected": "'CRM Support' agents work their queue; cross-queue access matches the agreed design",
+          "priority": "Must",
+          "source": "assignment group 'CRM Support' present in the data"
+        },
+        {
+          "id": "TC-018",
+          "area": "Roles and permissions",
+          "title": "Queue visibility and assignment for group 'Network Team'",
+          "role": "Agent (Network Team)",
+          "steps": [
+            "Log in as a test agent in 'Network Team'",
+            "Verify the agent sees the 'Network Team' queue and can pick up and reassign within it",
+            "Verify the agent cannot edit tickets owned exclusively by other groups unless that is intended"
+          ],
+          "expected": "'Network Team' agents work their queue; cross-queue access matches the agreed design",
+          "priority": "Must",
+          "source": "assignment group 'Network Team' present in the data"
+        },
+        {
+          "id": "TC-019",
+          "area": "Roles and permissions",
+          "title": "Queue visibility and assignment for group 'Service Desk L1'",
+          "role": "Agent (Service Desk L1)",
+          "steps": [
+            "Log in as a test agent in 'Service Desk L1'",
+            "Verify the agent sees the 'Service Desk L1' queue and can pick up and reassign within it",
+            "Verify the agent cannot edit tickets owned exclusively by other groups unless that is intended"
+          ],
+          "expected": "'Service Desk L1' agents work their queue; cross-queue access matches the agreed design",
+          "priority": "Must",
+          "source": "assignment group 'Service Desk L1' present in the data"
+        },
+        {
+          "id": "TC-020",
+          "area": "Roles and permissions",
+          "title": "Queue visibility and assignment for group 'ERP Support'",
+          "role": "Agent (ERP Support)",
+          "steps": [
+            "Log in as a test agent in 'ERP Support'",
+            "Verify the agent sees the 'ERP Support' queue and can pick up and reassign within it",
+            "Verify the agent cannot edit tickets owned exclusively by other groups unless that is intended"
+          ],
+          "expected": "'ERP Support' agents work their queue; cross-queue access matches the agreed design",
+          "priority": "Must",
+          "source": "assignment group 'ERP Support' present in the data"
+        },
+        {
+          "id": "TC-021",
+          "area": "Notifications",
+          "title": "Acknowledgement on ticket creation",
+          "role": "Requester",
+          "steps": [
+            "Before running: confirm outbound email is disabled or redirected to internal test recipients",
+            "Raise a test ticket",
+            "Verify the requester receives (or would receive) a creation acknowledgement",
+            "Verify the notification goes only to the intended recipient"
+          ],
+          "expected": "Creation acknowledgement is sent to the requester only",
+          "priority": "Must",
+          "source": "standard notification flow; email-safety guard applied"
+        },
+        {
+          "id": "TC-022",
+          "area": "Notifications",
+          "title": "Assignment and resolution notifications",
+          "role": "Agent",
+          "steps": [
+            "Before running: confirm outbound email is disabled or redirected to internal test recipients",
+            "Assign a test ticket to an agent and verify the agent is notified",
+            "Resolve it and verify the requester is notified with the resolution"
+          ],
+          "expected": "Assignment notifies the agent; resolution notifies the requester",
+          "priority": "Must",
+          "source": "standard notification flow; email-safety guard applied"
+        },
+        {
+          "id": "TC-023",
+          "area": "Notifications",
+          "title": "No notifications leak outside the test group",
+          "role": "Project Manager",
+          "steps": [
+            "Review the notification/audit log after a full test day",
+            "Verify no notification was sent to a real end user or external address"
+          ],
+          "expected": "Zero notifications reached anyone outside the test group",
+          "priority": "Must",
+          "source": "risk raised for go-lives without a test environment"
+        },
+        {
+          "id": "TC-024",
+          "area": "Approvals",
+          "title": "Approval flow for a Approval / Workflow request",
+          "role": "Requester + Approver",
+          "steps": [
+            "Raise a request in the 'Approval / Workflow' area that requires approval",
+            "Verify the approver is notified and can approve or reject",
+            "Verify rejection returns the request with a reason",
+            "Verify approval releases the request for fulfilment"
+          ],
+          "expected": "Approve and reject paths both work and are recorded",
+          "priority": "Must",
+          "source": "theme 'Approval / Workflow' present in the data"
+        },
+        {
+          "id": "TC-025",
+          "area": "Approvals",
+          "title": "Approval cannot be bypassed",
+          "role": "Agent",
+          "steps": [
+            "As an agent, attempt to fulfil an approval-gated request before approval",
+            "Verify the tool blocks fulfilment until the approval is recorded"
+          ],
+          "expected": "Approval gate cannot be skipped",
+          "priority": "Should",
+          "source": "control test for the approval flow"
+        },
+        {
+          "id": "TC-026",
+          "area": "Reporting",
+          "title": "Operational report matches known baseline",
+          "role": "Manager",
+          "steps": [
+            "Run the volume-by-category and open-backlog reports on the test data",
+            "Compare against the counts from this analysis as the baseline"
+          ],
+          "expected": "Report figures reconcile with the baseline counts",
+          "priority": "Should",
+          "source": "baseline: 600 records analyzed"
+        },
+        {
+          "id": "TC-027",
+          "area": "Reporting",
+          "title": "MTTR/resolution-time report is computable",
+          "role": "Manager",
+          "steps": [
+            "Resolve at least two test tickets with known timestamps",
+            "Run the resolution-time report and verify the durations are correct"
+          ],
+          "expected": "Resolution time is computed from the correct timestamps",
+          "priority": "Should",
+          "source": "MTTR available in the historical data"
+        },
+        {
+          "id": "TC-028",
+          "area": "Data migration",
+          "title": "Migrated record counts reconcile",
+          "role": "Technical Resource",
+          "steps": [
+            "Export the source data (baseline: 600 records)",
+            "Import into the new tool",
+            "Verify counts match by status and by category; investigate any delta"
+          ],
+          "expected": "Source and target record counts reconcile exactly",
+          "priority": "Must",
+          "source": "migration from the current email/excel workflow"
+        },
+        {
+          "id": "TC-029",
+          "area": "Data migration",
+          "title": "Missing fields are captured going forward",
+          "role": "Project Manager",
+          "steps": [
+            "Verify the new tool makes these fields mandatory or defaulted at creation: assignee, mttr_hours",
+            "Raise a test ticket and confirm the fields are populated"
+          ],
+          "expected": "Fields absent in the historical data are captured by the new tool",
+          "priority": "Should",
+          "source": "fields missing in the source data: assignee, mttr_hours"
+        }
+      ],
+      "total_cases": 29,
+      "must_count": 20,
+      "should_count": 9,
+      "could_count": 0,
+      "coverage_note": "Cases are generated from the 11 themes, 6 assignment groups, and 4 priority levels observed in the data. Test how the team actually works, not every feature."
+    },
+    "role_matrix": [
+      {
+        "role": "Requester / End User",
+        "derived_from": "baseline role",
+        "can": [
+          "Raise requests",
+          "View and comment on own tickets",
+          "Approve items routed to them"
+        ],
+        "cannot": [
+          "View others' tickets",
+          "Change configuration",
+          "Access queues"
+        ]
+      },
+      {
+        "role": "Service Desk Agent",
+        "derived_from": "baseline role",
+        "can": [
+          "Work assigned queue",
+          "Assign and reassign within group",
+          "Resolve and close",
+          "Add worklog and resolution notes"
+        ],
+        "cannot": [
+          "Change workflow or SLA configuration",
+          "Manage users"
+        ]
+      },
+      {
+        "role": "Agent: Endpoint Team",
+        "derived_from": "assignment group 'Endpoint Team' in the data",
+        "can": [
+          "Work the 'Endpoint Team' queue",
+          "Pick up, reassign, resolve within the group"
+        ],
+        "cannot": [
+          "Edit other groups' tickets (unless designed otherwise)",
+          "Change configuration"
+        ]
+      },
+      {
+        "role": "Agent: HR Ops",
+        "derived_from": "assignment group 'HR Ops' in the data",
+        "can": [
+          "Work the 'HR Ops' queue",
+          "Pick up, reassign, resolve within the group"
+        ],
+        "cannot": [
+          "Edit other groups' tickets (unless designed otherwise)",
+          "Change configuration"
+        ]
+      },
+      {
+        "role": "Agent: CRM Support",
+        "derived_from": "assignment group 'CRM Support' in the data",
+        "can": [
+          "Work the 'CRM Support' queue",
+          "Pick up, reassign, resolve within the group"
+        ],
+        "cannot": [
+          "Edit other groups' tickets (unless designed otherwise)",
+          "Change configuration"
+        ]
+      },
+      {
+        "role": "Agent: Network Team",
+        "derived_from": "assignment group 'Network Team' in the data",
+        "can": [
+          "Work the 'Network Team' queue",
+          "Pick up, reassign, resolve within the group"
+        ],
+        "cannot": [
+          "Edit other groups' tickets (unless designed otherwise)",
+          "Change configuration"
+        ]
+      },
+      {
+        "role": "Agent: Service Desk L1",
+        "derived_from": "assignment group 'Service Desk L1' in the data",
+        "can": [
+          "Work the 'Service Desk L1' queue",
+          "Pick up, reassign, resolve within the group"
+        ],
+        "cannot": [
+          "Edit other groups' tickets (unless designed otherwise)",
+          "Change configuration"
+        ]
+      },
+      {
+        "role": "Agent: ERP Support",
+        "derived_from": "assignment group 'ERP Support' in the data",
+        "can": [
+          "Work the 'ERP Support' queue",
+          "Pick up, reassign, resolve within the group"
+        ],
+        "cannot": [
+          "Edit other groups' tickets (unless designed otherwise)",
+          "Change configuration"
+        ]
+      },
+      {
+        "role": "Service Desk Manager",
+        "derived_from": "baseline role",
+        "can": [
+          "View all queues and reports",
+          "Reassign across groups",
+          "Approve escalations"
+        ],
+        "cannot": [
+          "Change system configuration (admin only)"
+        ]
+      },
+      {
+        "role": "Administrator",
+        "derived_from": "baseline role",
+        "can": [
+          "Configure workflows, SLAs, notifications, users, roles"
+        ],
+        "cannot": [
+          "Approve business requests (segregation of duties)"
+        ]
+      }
+    ],
+    "raci": [
+      {
+        "activity": "Map current workflows into test scenarios",
+        "responsible": "Project Manager",
+        "accountable": "Delivery Lead",
+        "consulted": "Business Users",
+        "informed": "Vendor / Implementer"
+      },
+      {
+        "activity": "Configure the tool (queues, roles, SLAs, notifications)",
+        "responsible": "Vendor / Implementer",
+        "accountable": "Project Manager",
+        "consulted": "Technical Resources",
+        "informed": "Delivery Lead"
+      },
+      {
+        "activity": "Prepare test accounts and disable/redirect outbound email",
+        "responsible": "Technical Resources",
+        "accountable": "Project Manager",
+        "consulted": "Vendor / Implementer",
+        "informed": "Business Users"
+      },
+      {
+        "activity": "Execute UAT test cases and log defects",
+        "responsible": "Technical Resources",
+        "accountable": "Project Manager",
+        "consulted": "Business Users",
+        "informed": "Delivery Lead"
+      },
+      {
+        "activity": "Fix defects and re-test",
+        "responsible": "Vendor / Implementer",
+        "accountable": "Project Manager",
+        "consulted": "Technical Resources",
+        "informed": "Delivery Lead"
+      },
+      {
+        "activity": "Data migration dry run and reconciliation",
+        "responsible": "Technical Resources",
+        "accountable": "Delivery Lead",
+        "consulted": "Vendor / Implementer",
+        "informed": "Project Manager"
+      },
+      {
+        "activity": "Go/no-go decision",
+        "responsible": "Project Manager",
+        "accountable": "Delivery Lead",
+        "consulted": "Vendor / Implementer",
+        "informed": "Business Users"
+      },
+      {
+        "activity": "End-user training and comms",
+        "responsible": "Project Manager",
+        "accountable": "Delivery Lead",
+        "consulted": "Business Users",
+        "informed": "Vendor / Implementer"
+      },
+      {
+        "activity": "Hypercare and post-go-live support",
+        "responsible": "Vendor / Implementer",
+        "accountable": "Project Manager",
+        "consulted": "Technical Resources",
+        "informed": "Business Users"
+      }
+    ],
+    "readiness_checklist": [
+      {
+        "item": "Outbound email/notifications disabled or redirected to internal test recipients for the whole test window",
+        "category": "Safety",
+        "gate": "Must",
+        "source": "no test environment: prevent accidental customer emails"
+      },
+      {
+        "item": "Dedicated test accounts exist for every role in the role matrix",
+        "category": "Safety",
+        "gate": "Must",
+        "source": "role matrix"
+      },
+      {
+        "item": "All Must test cases passed and signed off by a named owner",
+        "category": "Quality",
+        "gate": "Must",
+        "source": "UAT test plan"
+      },
+      {
+        "item": "Rollback plan agreed (keep the old email/excel channel warm for the first two weeks)",
+        "category": "Safety",
+        "gate": "Must",
+        "source": "standard go-live control"
+      },
+      {
+        "item": "Support model for launch week defined (who triages, who escalates)",
+        "category": "Operations",
+        "gate": "Must",
+        "source": "standard go-live control"
+      },
+      {
+        "item": "End users trained on raising and tracking requests",
+        "category": "Adoption",
+        "gate": "Should",
+        "source": "standard go-live control"
+      },
+      {
+        "item": "Category scheme in the new tool covers the top observed themes: Access & Authentication, Application & Software, Salesforce / CRM, Hardware & Devices, Device Management / MDM",
+        "category": "Configuration",
+        "gate": "Must",
+        "source": "theme breakdown of the historical data"
+      },
+      {
+        "item": "Request types configured to match observed intake: Incident, Request",
+        "category": "Configuration",
+        "gate": "Should",
+        "source": "type field in the historical data"
+      },
+      {
+        "item": "Baseline metrics from this analysis saved to compare after go-live (volume, MTTR, theme mix)",
+        "category": "Measurement",
+        "gate": "Should",
+        "source": "this analysis"
+      }
+    ],
+    "phase_plan_15_day": [
+      {
+        "days": "1-3",
+        "phase": "Setup and smoke test",
+        "activities": [
+          "Confirm configuration: queues, categories, roles, SLAs",
+          "Create test accounts per role; disable or redirect outbound email",
+          "Smoke test: one ticket end to end per request type"
+        ],
+        "exit_criteria": "One ticket completes the full lifecycle with no blocker"
+      },
+      {
+        "days": "4-8",
+        "phase": "Core workflow testing",
+        "activities": [
+          "Run lifecycle cases for the top themes (Access & Authentication, Application & Software, Salesforce / CRM, Hardware & Devices)",
+          "Run priority/SLA and escalation cases",
+          "Log every defect with steps to reproduce; retest fixes daily"
+        ],
+        "exit_criteria": "All Must lifecycle and SLA cases pass"
+      },
+      {
+        "days": "9-11",
+        "phase": "Roles, notifications, approvals",
+        "activities": [
+          "Verify queue visibility for each group (Endpoint Team, HR Ops, CRM Support, Network Team, Service Desk L1, ERP Support)",
+          "Run all notification cases; audit that nothing leaked externally",
+          "Run approval flow and bypass-prevention cases"
+        ],
+        "exit_criteria": "Role matrix verified; zero external notification leaks"
+      },
+      {
+        "days": "12-13",
+        "phase": "Migration dry run and regression",
+        "activities": [
+          "Dry-run data migration; reconcile counts against the baseline",
+          "Regression pass on all previously failed cases",
+          "Freeze configuration"
+        ],
+        "exit_criteria": "Migration reconciles; no open Must defects"
+      },
+      {
+        "days": "14",
+        "phase": "Go/no-go",
+        "activities": [
+          "Walk the readiness checklist with the delivery lead",
+          "Named sign-off on every Must item",
+          "Decide go/no-go; if no-go, agree the gap plan"
+        ],
+        "exit_criteria": "Documented go decision with sign-offs"
+      },
+      {
+        "days": "15",
+        "phase": "Go-live preparation",
+        "activities": [
+          "Re-enable outbound notifications for production recipients",
+          "Final comms to end users; hypercare rota confirmed",
+          "Keep the old intake channel open as fallback"
+        ],
+        "exit_criteria": "Tool live; fallback and support rota in place"
+      }
+    ],
+    "assumptions": [
+      "Test in a sandbox if available. If not, disable outbound email/notifications or redirect them to internal test recipients before any test run, so no customer or end user is notified by accident.",
+      "Use dedicated test accounts per role, never personal or customer accounts.",
+      "Test cases reflect workflows observed in the historical data; new processes introduced by the tool need cases added by the process owner.",
+      "Every Must case needs a pass and a named sign-off before go-live."
+    ]
+  }
+}

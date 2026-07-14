@@ -1,10 +1,32 @@
-.venv/
+# Python
 __pycache__/
-*.pyc
-.DS_Store
-output/
+*.py[cod]
 *.egg-info/
-sample_data/*.csv
-sample_data/*.xlsx
-# demo/ CSVs are fully synthetic (no names, no customers) and are published
-!sample_data/demo/*.csv
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.env
+
+# Tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+
+# Analyzer outputs (never commit customer data or generated reports)
+out/
+outputs/
+reports/
+*.report.html
+*.report.md
+*.report.json
+*.report.xlsx
+*.report.pptx
+
+# Any imported customer data
+data/*.csv
+data/*.xlsx
+!examples/*.csv
+!tests/data/*.csv

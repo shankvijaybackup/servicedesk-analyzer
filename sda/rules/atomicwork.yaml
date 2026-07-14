@@ -1,0 +1,232 @@
+# Deterministic mapping from theme -> automation type, Atomicwork capability,
+# and (where applicable) an agentic use case. These are conservative planning
+# assumptions, not promises. Deflection ranges are wide on purpose; the engine
+# always presents them as estimates gated on API access and knowledge quality.
+#
+# automation_types use the methodology codes:
+#   A Knowledge AI   B Workflow Automation   C Integration Automation
+#   D Agentic AI     E Human-in-the-loop     F No Automation Recommended
+
+defaults:
+  deflection_range: [10, 30]
+  mttr_reduction: "Low"
+  risk: "Medium"
+  complexity: "Medium"
+
+themes:
+  "Access & Authentication":
+    automation_types: [B, C, D]
+    capabilities: [Access provisioning, Identity automation, Employee self-service, Ticket deflection, AI coworker in Slack or Microsoft Teams]
+    deflection_range: [40, 70]
+    mttr_reduction: "High"
+    risk: "Medium"
+    complexity: "Medium"
+    integration: [Okta, Microsoft Entra ID, Active Directory]
+    agentic:
+      trigger: "Password reset, account unlock, or access request ticket created"
+      system_of_action: "Identity provider (Entra ID / Okta / AD)"
+      permissions: "Scoped identity admin for reset/unlock/group membership"
+      steps: [Verify requester identity, Check policy and entitlements, Execute reset or group change, Confirm and close]
+      feasibility: "High where IdP API is available"
+      risk: "Medium (identity actions; privileged changes need approval)"
+      fallback: "Route to IAM team with a prepared action packet"
+      human_approval: "Required for privileged or role escalations"
+      expected_impact: "Large share of L1 access load handled without an agent"
+
+  "Application & Software":
+    automation_types: [A, B]
+    capabilities: [Guided troubleshooting, Knowledge ingestion, Ticket deflection, Employee self-service]
+    deflection_range: [25, 45]
+    mttr_reduction: "Medium"
+    risk: "Low"
+    complexity: "Medium"
+    integration: [ServiceNow, Jira Service Management, Freshservice]
+    agentic:
+      trigger: "Repeated application error or configuration request"
+      system_of_action: "Application admin console or config API"
+      permissions: "App-scoped admin (read plus limited config)"
+      steps: [Match to known issue, Apply guided fix or config, Verify, Document]
+      feasibility: "Medium; depends on app API maturity"
+      risk: "Low to Medium"
+      fallback: "Escalate to app owner with diagnosis"
+      human_approval: "For production config changes"
+      expected_impact: "Deflect how-to and known-error tickets, shorten diagnosis"
+
+  "HR & Payroll":
+    automation_types: [A, B, E]
+    capabilities: [HR service automation, Knowledge ingestion, Approval automation, Employee self-service]
+    deflection_range: [30, 50]
+    mttr_reduction: "Medium"
+    risk: "Medium"
+    complexity: "Medium"
+    integration: [Workday, SAP, HR systems]
+    agentic:
+      trigger: "Payroll or benefits query or correction request"
+      system_of_action: "HRIS (Workday / SAP HR)"
+      permissions: "Read plus scoped correction with approval"
+      steps: [Answer from policy knowledge, If correction needed prepare change, Route for HR approval, Apply]
+      feasibility: "Medium; sensitive data"
+      risk: "Medium to High (compliance)"
+      fallback: "Route to HR shared services"
+      human_approval: "Required"
+      expected_impact: "Deflect policy questions; speed corrections with a human checkpoint"
+
+  "Attendance & Leave":
+    automation_types: [B, C]
+    capabilities: [Workflow execution, HR service automation, Approval automation, Employee self-service]
+    deflection_range: [40, 60]
+    mttr_reduction: "High"
+    risk: "Low"
+    complexity: "Medium"
+    integration: [SAP, Workday, HR systems]
+    agentic:
+      trigger: "Attendance correction or leave-balance/unlock request"
+      system_of_action: "HR / attendance system (e.g. SAP)"
+      permissions: "Scoped attendance admin"
+      steps: [Validate request against policy, Apply correction or unlock, Confirm balance, Notify]
+      feasibility: "High where attendance API/UI is reachable"
+      risk: "Low to Medium"
+      fallback: "Route to HR ops"
+      human_approval: "For exceptions beyond policy"
+      expected_impact: "Deflect routine attendance/leave tickets end to end"
+
+  "Hardware & Devices":
+    automation_types: [B, E, F]
+    capabilities: [Employee self-service, Workflow execution, Approval automation, Analytics and operational insights]
+    deflection_range: [15, 30]
+    mttr_reduction: "Low"
+    risk: "Low"
+    complexity: "Low"
+    integration: [ServiceNow, asset systems]
+    note: "Physical fulfilment caps automation; focus on request intake, approval, and status."
+
+  "Network & Connectivity":
+    automation_types: [A, D]
+    capabilities: [Guided troubleshooting, Knowledge ingestion, Ticket deflection]
+    deflection_range: [15, 35]
+    mttr_reduction: "Medium"
+    risk: "Medium"
+    complexity: "Medium"
+    integration: [Network tools]
+
+  "Email & Collaboration":
+    automation_types: [A, B, C]
+    capabilities: [Knowledge ingestion, Workflow execution, Access provisioning, Employee self-service]
+    deflection_range: [30, 55]
+    mttr_reduction: "Medium"
+    risk: "Low"
+    complexity: "Medium"
+    integration: [Microsoft 365, Google Workspace]
+    agentic:
+      trigger: "Distribution list, mailbox, or calendar access request"
+      system_of_action: "Microsoft 365 / Google Workspace admin"
+      permissions: "Scoped collaboration admin"
+      steps: [Validate request, Apply membership/mailbox change, Confirm]
+      feasibility: "High; mature APIs"
+      risk: "Low"
+      fallback: "Route to messaging team"
+      human_approval: "For shared/privileged mailboxes"
+      expected_impact: "Deflect routine mailbox/DL requests"
+
+  "SAP / ERP":
+    automation_types: [C, D, E]
+    capabilities: [MCP/API orchestration, Agentic backend action, Human approval loop, IT service automation]
+    deflection_range: [20, 40]
+    mttr_reduction: "Medium"
+    risk: "High"
+    complexity: "High"
+    integration: [SAP, ERP]
+    agentic:
+      trigger: "ERP transaction error, unlock, or data correction request"
+      system_of_action: "SAP / ERP (API or admin UI)"
+      permissions: "Scoped functional admin with change control"
+      steps: [Interpret the request, Locate the transaction/record, Prepare the change, Route for approval, Execute and verify]
+      feasibility: "Medium; strong governance required"
+      risk: "High"
+      fallback: "Hand to ERP functional team with full context"
+      human_approval: "Required"
+      expected_impact: "Cut coordination time on repetitive ERP tasks with a human checkpoint"
+
+  "Salesforce / CRM":
+    automation_types: [C, D]
+    capabilities: [MCP/API orchestration, Agentic backend action, Analytics and operational insights]
+    deflection_range: [20, 40]
+    mttr_reduction: "Medium"
+    risk: "Medium"
+    complexity: "High"
+    integration: [Salesforce]
+    agentic:
+      trigger: "CRM data/metadata sync issue or record correction"
+      system_of_action: "Salesforce (API / metadata / admin)"
+      permissions: "Scoped Salesforce admin"
+      steps: [Diagnose the sync/record issue, Prepare metadata or data fix, Validate in sandbox if available, Apply, Verify]
+      feasibility: "Medium to High via API"
+      risk: "Medium to High"
+      fallback: "Escalate to Salesforce admin/ops"
+      human_approval: "For metadata/schema changes"
+      expected_impact: "Resolve recurring CRM sync/data tickets faster"
+
+  "Device Management / MDM":
+    automation_types: [C, D]
+    capabilities: [MCP/API orchestration, Agentic backend action, IT service automation]
+    deflection_range: [25, 45]
+    mttr_reduction: "Medium"
+    risk: "Medium"
+    complexity: "Medium"
+    integration: [Intune, Jamf]
+    agentic:
+      trigger: "Device enrolment, compliance, or remote action request"
+      system_of_action: "MDM (Intune / Jamf)"
+      permissions: "Scoped MDM admin"
+      steps: [Confirm device and policy, Trigger enrol/sync/lock/wipe as requested, Verify compliance state]
+      feasibility: "High; MDM APIs are mature"
+      risk: "Medium (wipe/lock are destructive)"
+      fallback: "Route to endpoint team"
+      human_approval: "Required for wipe/lock"
+      expected_impact: "Deflect enrolment/compliance tickets; act on devices safely"
+
+  "Knowledge / How-to":
+    automation_types: [A]
+    capabilities: [Knowledge ingestion, Ticket deflection, Employee self-service, AI coworker in Slack or Microsoft Teams]
+    deflection_range: [50, 75]
+    mttr_reduction: "High"
+    risk: "Low"
+    complexity: "Low"
+    integration: [Knowledge base]
+
+  "Approval / Workflow":
+    automation_types: [B, E]
+    capabilities: [Approval automation, Workflow execution, Human approval loop]
+    deflection_range: [40, 60]
+    mttr_reduction: "Medium"
+    risk: "Low"
+    complexity: "Medium"
+    integration: [ServiceNow, Jira Service Management]
+
+  "Data / Reporting":
+    automation_types: [C, D, E]
+    capabilities: [Analytics and operational insights, MCP/API orchestration, Agentic backend action, Human approval loop]
+    deflection_range: [20, 40]
+    mttr_reduction: "Medium"
+    risk: "Medium"
+    complexity: "Medium"
+    integration: [BI tools, data platforms]
+    agentic:
+      trigger: "Recurring report request or data reconciliation"
+      system_of_action: "BI / data platform"
+      permissions: "Read plus scoped write for reconciliation"
+      steps: [Interpret the request, Run the query/report, Reconcile if needed, Deliver, Log]
+      feasibility: "Medium to High"
+      risk: "Medium"
+      fallback: "Route to data team"
+      human_approval: "For data writes"
+      expected_impact: "Deflect standard report requests; speed reconciliation"
+
+  "Other / Unclear":
+    automation_types: [F]
+    capabilities: [Analytics and operational insights]
+    deflection_range: [0, 10]
+    mttr_reduction: "None"
+    risk: "Unknown"
+    complexity: "Unknown"
+    note: "Too ambiguous or low volume to automate without SME validation and better categorization."

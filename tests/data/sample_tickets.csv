@@ -1,0 +1,25 @@
+Number,Opened,Resolved,State,Priority,Type,Category,Subcategory,Assignment group,Configuration item,Short description,Department,Requested by
+INC100000,2026-02-08 09:01:00,,Open,1 - Critical,Request,Reporting,Report,ERP Support,Power BI,Need the Q3 sales dashboard export,Operations,user23
+INC100001,2026-05-25 09:02:00,2026-05-25 17:59:55,Closed,1 - Critical,Request,MDM,Enrollment,Identity Team,Intune,Enroll my iPhone in the CRM,Operations,user155
+INC100002,2026-03-10 05:45:00,,Open,4 - Low,Incident,Access,Password,Network Team,Active Directory,Password reset for the finance app,Sales,user195
+INC100003,2026-05-25 15:21:00,2026-05-25 22:34:33,Closed,2 - High,Incident,Software,Application Error,Identity Team,SAP GUI,the finance app keeps crashing on launch,Sales,user24
+INC100004,2026-02-03 09:22:00,2026-02-03 12:45:03,Closed,4 - Low,Incident,Network,Connectivity,Network Team,Meraki WiFi,WiFi keeps dropping in office,HR,user21
+INC100005,2026-04-11 10:53:00,,Open,3 - Moderate,Request,CRM,Data,Network Team,Salesforce,Update opportunity stage in the CRM,Sales,user12
+INC100006,2026-03-20 03:49:00,2026-03-21 08:20:48,Closed,1 - Critical,Request,Workflow,Approval,HR Ops,ServiceNow,Approve my software purchase in the finance app,HR,user163
+INC100007,2026-02-25 21:23:00,2026-02-27 17:52:57,Closed,2 - High,Request,Hardware,Peripheral,ERP Support,Monitor,Need a new monitor,Sales,user156
+INC100008,2026-02-28 18:34:00,,Open,3 - Moderate,Request,Reporting,Report,ERP Support,Power BI,Need the Q3 sales dashboard export,Operations,user57
+INC100009,2026-04-22 01:53:00,2026-04-23 01:00:30,Closed,2 - High,Request,Workflow,Approval,CRM Support,ServiceNow,Approve my software purchase in the portal,Engineering,user103
+INC100010,2026-01-23 23:13:00,,In Progress,4 - Low,Incident,HR,Attendance,HR Ops,SAP SuccessFactors,Leave balance incorrect in the VPN,HR,user37
+INC100011,2026-02-18 00:15:00,,Open,3 - Moderate,Incident,HR,Attendance,ERP Support,SAP SuccessFactors,Leave balance incorrect in the HR system,HR,user150
+INC100012,2026-05-04 22:14:00,2026-05-05 04:50:19,Closed,1 - Critical,Incident,Network,Connectivity,CRM Support,Meraki WiFi,WiFi keeps dropping in office,Finance,user161
+INC100013,2026-05-25 11:38:00,2026-05-25 23:30:28,Closed,4 - Low,Incident,Software,Application Error,HR Ops,SAP GUI,the HR system keeps crashing on launch,HR,user136
+INC100014,2026-01-05 07:43:00,,Open,3 - Moderate,Incident,HR,Attendance,CRM Support,SAP SuccessFactors,Leave balance incorrect in the VPN,Engineering,user29
+INC100015,2026-05-29 18:10:00,2026-05-31 16:36:42,Resolved,1 - Critical,Request,HR,Attendance,ERP Support,SAP,"Attendance not captured, need unlock in the VPN",Engineering,user129
+INC100016,2026-06-23 15:58:00,2026-06-24 06:44:34,Closed,2 - High,Incident,Software,Application Error,Identity Team,SAP GUI,the finance app keeps crashing on launch,Finance,user139
+INC100017,2026-01-01 13:38:00,2026-01-02 10:46:48,Closed,4 - Low,Incident,CRM,Sync,Service Desk L1,Salesforce,Salesforce report not syncing data,Engineering,user213
+INC100018,2026-03-24 02:03:00,2026-03-26 04:59:55,Closed,1 - Critical,Request,HR,Attendance,ERP Support,SAP,"Attendance not captured, need unlock in email",Sales,user195
+INC100019,2026-02-13 07:08:00,,Open,4 - Low,Request,CRM,Data,Network Team,Salesforce,Update opportunity stage in the CRM,Engineering,user136
+INC100020,2026-05-25 19:13:00,,In Progress,3 - Moderate,Incident,MDM,Compliance,HR Ops,Intune,Device shows non-compliant in the VPN,Engineering,user113
+INC100021,2026-06-04 11:07:00,2026-06-04 21:59:16,Closed,2 - High,Incident,CRM,Sync,Service Desk L1,Salesforce,Salesforce report not syncing data,Sales,user151
+INC100022,2026-03-20 22:37:00,2026-03-21 13:15:29,Closed,1 - Critical,Request,CRM,Data,Identity Team,Salesforce,Update opportunity stage in the portal,Sales,user85
+INC100023,2026-03-23 14:17:00,,Open,4 - Low,Request,Access,Access Request,Identity Team,Microsoft Entra ID,Need access to the HR system shared drive,Finance,user186

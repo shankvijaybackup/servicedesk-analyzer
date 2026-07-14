@@ -1,0 +1,53 @@
+# Deterministic theme classification rules.
+# A ticket is scored against every theme by counting keyword/phrase hits in its
+# (category + subcategory + application + description) text. Highest score wins;
+# ties and zero-score go to "Other / Unclear". Word-boundary matching avoids
+# false hits (e.g. "app" will not match "happen"). Fully inspectable, no model.
+#
+# Each theme: keywords (single tokens or phrases) and optional negatives that
+# subtract from the score to reduce misclassification.
+
+themes:
+  - name: "Access & Authentication"
+    keywords: [password, reset, login, log in, sign in, mfa, "2fa", sso, okta, "active directory",
+               ldap, unlock, locked out, account locked, credential, vpn access, permission,
+               access request, provision, deprovision, role assignment, entra, azure ad, authentication]
+  - name: "Application & Software"
+    keywords: [application, app, software, install, installation, license, licence, upgrade, patch,
+               crash, error, bug, not working, freeze, hang, plugin, add-in, version, deployment,
+               configuration, feature request]
+    negatives: [hardware, laptop, monitor, printer]
+  - name: "HR & Payroll"
+    keywords: [payroll, salary, paycheck, pay slip, payslip, hr, human resources, benefits,
+               compensation, offer letter, w2, tax form, reimbursement, expense, onboarding hr]
+  - name: "Attendance & Leave"
+    keywords: [attendance, leave, pto, vacation, time off, absence, holiday, shift, roster,
+               clock in, clock out, timesheet, overtime]
+  - name: "Hardware & Devices"
+    keywords: [hardware, laptop, desktop, monitor, keyboard, mouse, printer, scanner, docking,
+               battery, screen, charger, headset, webcam, peripheral, device replacement, ipad, tablet, phone]
+    negatives: [software, application, mdm enroll]
+  - name: "Network & Connectivity"
+    keywords: [network, wifi, wi-fi, connectivity, connection, internet, vpn, latency, slow network,
+               dns, dhcp, firewall, bandwidth, ethernet, proxy, packet loss]
+  - name: "Email & Collaboration"
+    keywords: [email, outlook, mailbox, distribution list, calendar, teams, slack, zoom, sharepoint,
+               onedrive, google drive, meeting, spam, mail flow, gmail, exchange]
+  - name: "SAP / ERP"
+    keywords: [sap, erp, "s/4hana", hana, netweaver, fico, mm module, sd module, workday finance,
+               oracle erp, purchase order, invoice posting, gl account]
+  - name: "Salesforce / CRM"
+    keywords: [salesforce, crm, sfdc, lead, opportunity, sales cloud, service cloud, apex, metadata sync,
+               dynamics crm, hubspot, pipeline, dashboard sync]
+  - name: "Device Management / MDM"
+    keywords: [mdm, intune, jamf, enroll, enrollment, compliance policy, device policy, wipe,
+               remote lock, kandji, workspace one, mobileiron, byod, supervised device]
+  - name: "Knowledge / How-to"
+    keywords: [how to, how do i, guide, documentation, instructions, tutorial, question, clarification,
+               where can i, what is, training, walkthrough, kb article]
+  - name: "Approval / Workflow"
+    keywords: [approval, approve, authorize, sign off, request approval, workflow, routing,
+               escalation, pending approval, manager approval, review request]
+  - name: "Data / Reporting"
+    keywords: [report, reporting, dashboard, data extract, export, query, analytics, bi,
+               power bi, tableau, data correction, reconciliation, data load, etl]

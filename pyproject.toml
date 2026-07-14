@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "servicedesk-analyzer"
+version = "0.1.0"
+description = "Deterministic, offline service desk data analyzer. No LLM, no training, no data retention. Imports CSV/XLSX from any ITSM and produces executive-ready reports."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Service Desk Analyzer contributors" }]
+keywords = ["itsm", "servicedesk", "analytics", "servicenow", "jira", "freshservice", "zendesk"]
+dependencies = [
+  "pandas>=2.0",
+  "openpyxl>=3.1",
+  "python-pptx>=0.6.21",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+ui = ["streamlit>=1.30"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+sda = "sda.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["sda*"]
+
+[tool.setuptools.package-data]
+sda = ["rules/*.yaml"]

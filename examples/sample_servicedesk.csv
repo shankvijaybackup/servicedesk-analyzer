@@ -1,0 +1,601 @@
+Number,Opened,Resolved,State,Priority,Type,Category,Subcategory,Assignment group,Configuration item,Short description,Department,Requested by
+INC100000,2026-02-08 09:01:00,,Open,1 - Critical,Request,Reporting,Report,ERP Support,Power BI,Need the Q3 sales dashboard export,Operations,user23
+INC100001,2026-05-25 09:02:00,2026-05-25 17:59:55,Closed,1 - Critical,Request,MDM,Enrollment,Identity Team,Intune,Enroll my iPhone in the CRM,Operations,user155
+INC100002,2026-03-10 05:45:00,,Open,4 - Low,Incident,Access,Password,Network Team,Active Directory,Password reset for the finance app,Sales,user195
+INC100003,2026-05-25 15:21:00,2026-05-25 22:34:33,Closed,2 - High,Incident,Software,Application Error,Identity Team,SAP GUI,the finance app keeps crashing on launch,Sales,user24
+INC100004,2026-02-03 09:22:00,2026-02-03 12:45:03,Closed,4 - Low,Incident,Network,Connectivity,Network Team,Meraki WiFi,WiFi keeps dropping in office,HR,user21
+INC100005,2026-04-11 10:53:00,,Open,3 - Moderate,Request,CRM,Data,Network Team,Salesforce,Update opportunity stage in the CRM,Sales,user12
+INC100006,2026-03-20 03:49:00,2026-03-21 08:20:48,Closed,1 - Critical,Request,Workflow,Approval,HR Ops,ServiceNow,Approve my software purchase in the finance app,HR,user163
+INC100007,2026-02-25 21:23:00,2026-02-27 17:52:57,Closed,2 - High,Request,Hardware,Peripheral,ERP Support,Monitor,Need a new monitor,Sales,user156
+INC100008,2026-02-28 18:34:00,,Open,3 - Moderate,Request,Reporting,Report,ERP Support,Power BI,Need the Q3 sales dashboard export,Operations,user57
+INC100009,2026-04-22 01:53:00,2026-04-23 01:00:30,Closed,2 - High,Request,Workflow,Approval,CRM Support,ServiceNow,Approve my software purchase in the portal,Engineering,user103
+INC100010,2026-01-23 23:13:00,,In Progress,4 - Low,Incident,HR,Attendance,HR Ops,SAP SuccessFactors,Leave balance incorrect in the VPN,HR,user37
+INC100011,2026-02-18 00:15:00,,Open,3 - Moderate,Incident,HR,Attendance,ERP Support,SAP SuccessFactors,Leave balance incorrect in the HR system,HR,user150
+INC100012,2026-05-04 22:14:00,2026-05-05 04:50:19,Closed,1 - Critical,Incident,Network,Connectivity,CRM Support,Meraki WiFi,WiFi keeps dropping in office,Finance,user161
+INC100013,2026-05-25 11:38:00,2026-05-25 23:30:28,Closed,4 - Low,Incident,Software,Application Error,HR Ops,SAP GUI,the HR system keeps crashing on launch,HR,user136
+INC100014,2026-01-05 07:43:00,,Open,3 - Moderate,Incident,HR,Attendance,CRM Support,SAP SuccessFactors,Leave balance incorrect in the VPN,Engineering,user29
+INC100015,2026-05-29 18:10:00,2026-05-31 16:36:42,Resolved,1 - Critical,Request,HR,Attendance,ERP Support,SAP,"Attendance not captured, need unlock in the VPN",Engineering,user129
+INC100016,2026-06-23 15:58:00,2026-06-24 06:44:34,Closed,2 - High,Incident,Software,Application Error,Identity Team,SAP GUI,the finance app keeps crashing on launch,Finance,user139
+INC100017,2026-01-01 13:38:00,2026-01-02 10:46:48,Closed,4 - Low,Incident,CRM,Sync,Service Desk L1,Salesforce,Salesforce report not syncing data,Engineering,user213
+INC100018,2026-03-24 02:03:00,2026-03-26 04:59:55,Closed,1 - Critical,Request,HR,Attendance,ERP Support,SAP,"Attendance not captured, need unlock in email",Sales,user195
+INC100019,2026-02-13 07:08:00,,Open,4 - Low,Request,CRM,Data,Network Team,Salesforce,Update opportunity stage in the CRM,Engineering,user136
+INC100020,2026-05-25 19:13:00,,In Progress,3 - Moderate,Incident,MDM,Compliance,HR Ops,Intune,Device shows non-compliant in the VPN,Engineering,user113
+INC100021,2026-06-04 11:07:00,2026-06-04 21:59:16,Closed,2 - High,Incident,CRM,Sync,Service Desk L1,Salesforce,Salesforce report not syncing data,Sales,user151
+INC100022,2026-03-20 22:37:00,2026-03-21 13:15:29,Closed,1 - Critical,Request,CRM,Data,Identity Team,Salesforce,Update opportunity stage in the portal,Sales,user85
+INC100023,2026-03-23 14:17:00,,Open,4 - Low,Request,Access,Access Request,Identity Team,Microsoft Entra ID,Need access to the HR system shared drive,Finance,user186
+INC100024,2026-06-11 17:15:00,2026-06-12 00:53:35,Resolved,1 - Critical,Request,MDM,Enrollment,ERP Support,Intune,Enroll my iPhone in email,Engineering,user109
+INC100025,2026-06-09 18:55:00,,Open,1 - Critical,Incident,Network,VPN,ERP Support,GlobalProtect,VPN not connecting,Sales,user16
+INC100026,2026-04-27 04:51:00,2026-04-27 12:52:03,Closed,4 - Low,Incident,Network,Connectivity,Identity Team,Meraki WiFi,WiFi keeps dropping in office,Finance,user72
+INC100027,2026-03-27 15:55:00,2026-03-27 23:28:32,Closed,4 - Low,Incident,Email,Mailbox,CRM Support,Outlook,Outlook not receiving email,Sales,user13
+INC100028,2026-01-06 09:05:00,2026-01-07 02:19:28,Closed,2 - High,Request,Reporting,Report,CRM Support,Power BI,Need the Q3 sales dashboard export,Sales,user43
+INC100029,2026-01-02 02:24:00,2026-01-02 13:35:29,Closed,4 - Low,Incident,Network,Connectivity,Endpoint Team,Meraki WiFi,WiFi keeps dropping in office,Operations,user170
+INC100030,2026-06-16 11:09:00,2026-06-16 21:34:52,Closed,1 - Critical,Incident,Software,Content,ERP Support,Field Sales App,iPad slide deck not displaying in field app,Sales,user13
+INC100031,2026-06-13 02:32:00,,In Progress,2 - High,Request,MDM,Enrollment,Service Desk L1,Intune,Enroll my iPhone in the HR system,Sales,user218
+INC100032,2026-01-24 18:38:00,2026-01-25 05:02:30,Closed,1 - Critical,Incident,Software,Application Error,Network Team,SAP GUI,the CRM keeps crashing on launch,Operations,user153
+INC100033,2026-01-29 08:26:00,,Open,3 - Moderate,Incident,Access,Account Lockout,Endpoint Team,Okta,"Cannot log in to the CRM, account locked",Engineering,user62
+INC100034,2026-05-16 11:08:00,,Open,1 - Critical,Incident,HR,Attendance,Service Desk L1,SAP SuccessFactors,Leave balance incorrect in email,Operations,user145
+INC100035,2026-01-26 09:34:00,2026-01-26 11:30:57,Closed,3 - Moderate,Incident,Access,MFA,Identity Team,Okta,MFA not working on the finance app,Sales,user63
+INC100036,2026-04-08 15:10:00,2026-04-11 06:12:13,Resolved,1 - Critical,Request,Hardware,Peripheral,ERP Support,Monitor,Need a new monitor,Engineering,user170
+INC100037,2026-02-16 05:16:00,2026-02-16 06:38:54,Closed,1 - Critical,Incident,Access,MFA,ERP Support,Okta,MFA not working on the HR system,Finance,user70
+INC100038,2026-03-14 06:45:00,2026-03-15 17:38:31,Closed,3 - Moderate,Request,HR,Attendance,Network Team,SAP,"Attendance not captured, need unlock in email",Engineering,user217
+INC100039,2026-02-01 21:40:00,2026-02-02 00:45:12,Resolved,3 - Moderate,Incident,Access,Account Lockout,Service Desk L1,Okta,"Cannot log in to the portal, account locked",Engineering,user198
+INC100040,2026-03-31 18:10:00,,Open,1 - Critical,Request,Software,How-to,Service Desk L1,Company Portal,How do I install the portal,Finance,user140
+INC100041,2026-05-07 09:37:00,,In Progress,2 - High,Incident,Access,Account Lockout,HR Ops,Okta,"Cannot log in to the CRM, account locked",Sales,user79
+INC100042,2026-01-14 23:57:00,2026-01-17 03:33:40,Closed,1 - Critical,Request,Hardware,Peripheral,Endpoint Team,Monitor,Need a new monitor,HR,user159
+INC100043,2026-03-23 04:55:00,2026-03-23 10:05:27,Closed,2 - High,Request,Software,How-to,HR Ops,Company Portal,How do I install the portal,Finance,user189
+INC100044,2026-05-21 21:51:00,,Open,3 - Moderate,Incident,Hardware,Laptop,Identity Team,Dell Latitude,Laptop screen flickering,Sales,user98
+INC100045,2026-06-11 00:14:00,2026-06-11 01:07:57,Closed,4 - Low,Incident,Access,Account Lockout,Endpoint Team,Okta,"Cannot log in to the finance app, account locked",Finance,user58
+INC100046,2026-03-08 07:25:00,2026-03-08 08:52:33,Closed,3 - Moderate,Incident,Access,Password,Endpoint Team,Active Directory,Password reset for the VPN,Operations,user103
+INC100047,2026-04-24 09:01:00,2026-04-25 03:24:19,Closed,3 - Moderate,Request,Workflow,Approval,Identity Team,ServiceNow,Approve my software purchase in the HR system,Engineering,user10
+INC100048,2026-05-29 16:22:00,,Open,1 - Critical,Incident,Access,MFA,HR Ops,Okta,MFA not working on the HR system,Finance,user66
+INC100049,2026-05-30 05:00:00,,In Progress,2 - High,Incident,Access,Account Lockout,Endpoint Team,Okta,"Cannot log in to email, account locked",Sales,user171
+INC100050,2026-04-18 12:42:00,2026-04-20 02:08:44,Closed,3 - Moderate,Incident,Hardware,Laptop,ERP Support,Dell Latitude,Laptop screen flickering,Engineering,user104
+INC100051,2026-04-12 07:35:00,2026-04-12 17:36:13,Closed,2 - High,Incident,Software,Content,HR Ops,Field Sales App,iPad slide deck not displaying in field app,HR,user174
+INC100052,2026-04-14 02:25:00,,In Progress,2 - High,Incident,Software,Application Error,HR Ops,SAP GUI,the HR system keeps crashing on launch,Operations,user168
+INC100053,2026-06-09 02:28:00,2026-06-10 06:41:22,Resolved,2 - High,Incident,Hardware,Laptop,Network Team,Dell Latitude,Laptop screen flickering,Finance,user169
+INC100054,2026-04-08 05:32:00,,Open,2 - High,Request,Access,Access Request,ERP Support,Microsoft Entra ID,Need access to the finance app shared drive,Finance,user207
+INC100055,2026-02-20 16:01:00,2026-02-21 11:02:54,Closed,2 - High,Request,Software,License,HR Ops,Adobe Creative Cloud,Request license for the HR system,Sales,user117
+INC100056,2026-03-08 17:45:00,,Open,2 - High,Incident,Network,VPN,ERP Support,GlobalProtect,VPN not connecting,Sales,user193
+INC100057,2026-05-26 11:14:00,2026-05-26 15:02:26,Closed,4 - Low,Incident,Access,MFA,Service Desk L1,Okta,MFA not working on the HR system,Finance,user218
+INC100058,2026-06-06 04:08:00,2026-06-06 05:22:06,Resolved,3 - Moderate,Incident,Access,MFA,CRM Support,Okta,MFA not working on email,Operations,user209
+INC100059,2026-05-27 00:53:00,,In Progress,4 - Low,Incident,CRM,Sync,Identity Team,Salesforce,Salesforce report not syncing data,HR,user116
+INC100060,2026-03-26 18:53:00,,Open,4 - Low,Incident,HR,Attendance,ERP Support,SAP SuccessFactors,Leave balance incorrect in the CRM,Engineering,user113
+INC100061,2026-04-08 21:15:00,2026-04-10 06:55:09,Closed,3 - Moderate,Request,Access,Access Request,Endpoint Team,Microsoft Entra ID,Need access to the HR system shared drive,Sales,user36
+INC100062,2026-03-21 07:24:00,,Open,4 - Low,Request,Software,How-to,HR Ops,Company Portal,How do I install the finance app,Operations,user120
+INC100063,2026-01-22 15:13:00,2026-01-22 21:21:12,Resolved,4 - Low,Incident,Network,VPN,CRM Support,GlobalProtect,VPN not connecting,Sales,user220
+INC100064,2026-05-11 05:30:00,2026-05-11 14:42:26,Closed,4 - Low,Request,MDM,Enrollment,CRM Support,Intune,Enroll my iPhone in email,Operations,user192
+INC100065,2026-03-17 15:31:00,2026-03-17 23:26:57,Closed,3 - Moderate,Request,CRM,Data,HR Ops,Salesforce,Update opportunity stage in email,Sales,user100
+INC100066,2026-05-19 09:46:00,2026-05-21 21:06:35,Closed,1 - Critical,Incident,Hardware,Laptop,HR Ops,Dell Latitude,Laptop screen flickering,Operations,user170
+INC100067,2026-01-30 00:41:00,2026-01-30 01:02:53,Resolved,2 - High,Incident,Access,Password,CRM Support,Active Directory,Password reset for email,Finance,user13
+INC100068,2026-05-10 18:20:00,2026-05-11 08:40:08,Closed,4 - Low,Incident,HR,Attendance,Endpoint Team,SAP SuccessFactors,Leave balance incorrect in email,Engineering,user214
+INC100069,2026-06-10 21:01:00,,Open,1 - Critical,Request,Access,Access Request,Endpoint Team,Microsoft Entra ID,Need access to the CRM shared drive,Sales,user200
+INC100070,2026-01-15 02:48:00,2026-01-15 20:20:55,Closed,1 - Critical,Request,Reporting,Report,Network Team,Power BI,Need the Q3 sales dashboard export,Finance,user33
+INC100071,2026-02-09 10:36:00,2026-02-09 19:46:10,Closed,4 - Low,Request,Email,Distribution List,ERP Support,Exchange,Add me to the the finance app distribution list,Engineering,user43
+INC100072,2026-02-09 11:49:00,2026-02-10 00:52:11,Closed,1 - Critical,Incident,MDM,Compliance,Endpoint Team,Intune,Device shows non-compliant in the HR system,HR,user102
+INC100073,2026-03-10 01:04:00,,In Progress,2 - High,Incident,Software,Content,Service Desk L1,Field Sales App,iPad slide deck not displaying in field app,Engineering,user218
+INC100074,2026-02-11 16:50:00,,In Progress,4 - Low,Request,Workflow,Approval,ERP Support,ServiceNow,Approve my software purchase in the finance app,Sales,user130
+INC100075,2026-04-27 20:00:00,2026-04-28 04:56:10,Resolved,4 - Low,Request,Reporting,Report,Service Desk L1,Power BI,Need the Q3 sales dashboard export,Engineering,user163
+INC100076,2026-02-22 14:27:00,2026-02-22 19:49:01,Closed,3 - Moderate,Incident,Email,Mailbox,Network Team,Outlook,Outlook not receiving email,HR,user120
+INC100077,2026-04-02 23:20:00,2026-04-02 23:32:00,Closed,1 - Critical,Incident,Network,VPN,Endpoint Team,GlobalProtect,VPN not connecting,Finance,user193
+INC100078,2026-05-10 17:21:00,2026-05-10 21:13:24,Closed,4 - Low,Incident,Email,Mailbox,Identity Team,Outlook,Outlook not receiving email,Engineering,user88
+INC100079,2026-04-05 16:35:00,2026-04-06 14:51:44,Closed,2 - High,Incident,HR,Attendance,Service Desk L1,SAP SuccessFactors,Leave balance incorrect in the CRM,HR,user126
+INC100080,2026-03-24 09:44:00,2026-03-24 16:11:18,Resolved,1 - Critical,Request,CRM,Data,Service Desk L1,Salesforce,Update opportunity stage in the finance app,Finance,user104
+INC100081,2026-03-25 10:19:00,,Open,3 - Moderate,Incident,Software,Content,HR Ops,Field Sales App,iPad slide deck not displaying in field app,Operations,user89
+INC100082,2026-04-24 06:22:00,,Open,2 - High,Incident,Network,VPN,Service Desk L1,GlobalProtect,VPN not connecting,Finance,user81
+INC100083,2026-03-05 13:12:00,2026-03-05 16:29:39,Closed,4 - Low,Incident,Access,MFA,Endpoint Team,Okta,MFA not working on the VPN,Operations,user195
+INC100084,2026-04-07 23:06:00,2026-04-09 00:03:49,Closed,3 - Moderate,Incident,CRM,Sync,Service Desk L1,Salesforce,Salesforce report not syncing data,Operations,user33
+INC100085,2026-01-16 21:03:00,,In Progress,3 - Moderate,Incident,HR,Attendance,ERP Support,SAP SuccessFactors,Leave balance incorrect in the CRM,HR,user27
+INC100086,2026-04-08 10:30:00,2026-04-08 11:38:36,Resolved,1 - Critical,Incident,Access,Password,Endpoint Team,Active Directory,Password reset for email,Sales,user211
+INC100087,2026-05-18 03:31:00,2026-05-19 01:22:58,Closed,1 - Critical,Request,Access,Access Request,Identity Team,Microsoft Entra ID,Need access to the CRM shared drive,Operations,user78
+INC100088,2026-03-27 02:07:00,,In Progress,2 - High,Request,Access,Access Request,CRM Support,Microsoft Entra ID,Need access to the HR system shared drive,HR,user116
+INC100089,2026-04-12 20:55:00,,In Progress,4 - Low,Incident,Email,Mailbox,Endpoint Team,Outlook,Outlook not receiving email,Operations,user16
+INC100090,2026-02-04 05:48:00,2026-02-04 14:22:06,Closed,1 - Critical,Incident,MDM,Compliance,Identity Team,Intune,Device shows non-compliant in the CRM,Finance,user142
+INC100091,2026-02-23 19:00:00,2026-02-24 10:33:00,Resolved,4 - Low,Request,Access,Access Request,ERP Support,Microsoft Entra ID,Need access to the HR system shared drive,HR,user75
+INC100092,2026-03-21 09:18:00,,Open,1 - Critical,Incident,Access,Account Lockout,ERP Support,Okta,"Cannot log in to the CRM, account locked",Engineering,user202
+INC100093,2026-03-09 21:27:00,2026-03-10 22:18:47,Closed,2 - High,Request,Reporting,Report,ERP Support,Power BI,Need the Q3 sales dashboard export,Engineering,user212
+INC100094,2026-01-25 17:03:00,2026-01-25 21:37:09,Closed,3 - Moderate,Request,Software,How-to,HR Ops,Company Portal,How do I install the portal,HR,user177
+INC100095,2026-05-18 18:17:00,,In Progress,4 - Low,Request,HR,Attendance,HR Ops,SAP,"Attendance not captured, need unlock in the portal",Operations,user11
+INC100096,2026-04-21 09:38:00,2026-04-21 16:03:23,Closed,1 - Critical,Incident,Network,VPN,CRM Support,GlobalProtect,VPN not connecting,Engineering,user148
+INC100097,2026-03-02 04:30:00,,In Progress,4 - Low,Incident,Access,Account Lockout,Endpoint Team,Okta,"Cannot log in to the CRM, account locked",Operations,user112
+INC100098,2026-06-18 05:05:00,2026-06-18 16:10:18,Resolved,1 - Critical,Request,Reporting,Report,CRM Support,Power BI,Need the Q3 sales dashboard export,Engineering,user106
+INC100099,2026-06-19 11:18:00,,Open,4 - Low,Incident,Software,Content,CRM Support,Field Sales App,iPad slide deck not displaying in field app,Sales,user117
+INC100100,2026-04-18 17:16:00,2026-04-19 23:32:27,Closed,1 - Critical,Request,Access,Access Request,ERP Support,Microsoft Entra ID,Need access to the HR system shared drive,HR,user106
+INC100101,2026-03-06 09:33:00,2026-03-06 12:27:59,Closed,4 - Low,Incident,Access,Account Lockout,ERP Support,Okta,"Cannot log in to email, account locked",Sales,user53
+INC100102,2026-02-15 02:59:00,2026-02-15 12:22:39,Closed,1 - Critical,Incident,HR,Attendance,Service Desk L1,SAP SuccessFactors,Leave balance incorrect in the VPN,Operations,user205
+INC100103,2026-02-24 10:19:00,,In Progress,1 - Critical,Incident,HR,Payroll,Network Team,Workday,Payslip missing in email,Sales,user58
+INC100104,2026-06-07 21:07:00,,Open,3 - Moderate,Incident,Access,MFA,Network Team,Okta,MFA not working on the VPN,Engineering,user107
+INC100105,2026-06-11 13:15:00,2026-06-11 19:09:48,Resolved,2 - High,Request,Email,Distribution List,HR Ops,Exchange,Add me to the the CRM distribution list,Operations,user131
+INC100106,2026-01-25 04:17:00,2026-01-25 06:46:32,Resolved,3 - Moderate,Request,Software,How-to,CRM Support,Company Portal,How do I install the portal,Engineering,user186
+INC100107,2026-06-17 12:55:00,2026-06-19 12:45:49,Closed,4 - Low,Request,HR,Attendance,Network Team,SAP,"Attendance not captured, need unlock in email",Engineering,user86
+INC100108,2026-05-10 03:29:00,2026-05-10 19:23:33,Closed,2 - High,Request,CRM,Data,Network Team,Salesforce,Update opportunity stage in email,Finance,user220
+INC100109,2026-01-16 06:20:00,,Open,4 - Low,Incident,Network,VPN,ERP Support,GlobalProtect,VPN not connecting,HR,user170
+INC100110,2026-02-22 07:31:00,2026-02-23 07:42:17,Closed,3 - Moderate,Request,Reporting,Report,CRM Support,Power BI,Need the Q3 sales dashboard export,HR,user26
+INC100111,2026-06-06 08:00:00,,Open,2 - High,Incident,CRM,Sync,HR Ops,Salesforce,Salesforce report not syncing data,Finance,user20
+INC100112,2026-04-01 20:21:00,,In Progress,3 - Moderate,Request,Email,Distribution List,CRM Support,Exchange,Add me to the the VPN distribution list,Operations,user98
+INC100113,2026-06-16 22:55:00,,In Progress,1 - Critical,Incident,Hardware,Laptop,Network Team,Dell Latitude,Laptop screen flickering,Finance,user162
+INC100114,2026-04-09 11:14:00,,Open,1 - Critical,Request,Workflow,Approval,HR Ops,ServiceNow,Approve my software purchase in the CRM,Engineering,user8
+INC100115,2026-04-22 02:50:00,2026-04-22 06:01:28,Closed,3 - Moderate,Incident,Access,Account Lockout,Endpoint Team,Okta,"Cannot log in to the finance app, account locked",HR,user38
+INC100116,2026-05-22 00:36:00,,Open,1 - Critical,Incident,HR,Payroll,Network Team,Workday,Payslip missing in email,Operations,user175
+INC100117,2026-06-20 05:58:00,,In Progress,2 - High,Incident,HR,Payroll,Identity Team,Workday,Payslip missing in email,Engineering,user118
+INC100118,2026-01-04 13:57:00,2026-01-05 22:43:15,Resolved,2 - High,Incident,HR,Attendance,Service Desk L1,SAP SuccessFactors,Leave balance incorrect in email,Engineering,user151
+INC100119,2026-05-26 04:44:00,2026-05-27 00:13:53,Closed,4 - Low,Request,HR,Attendance,CRM Support,SAP,"Attendance not captured, need unlock in the finance app",Finance,user99
+INC100120,2026-02-06 18:15:00,2026-02-06 23:32:37,Resolved,3 - Moderate,Request,Email,Distribution List,Service Desk L1,Exchange,Add me to the the VPN distribution list,HR,user71
+INC100121,2026-01-18 02:58:00,,In Progress,4 - Low,Incident,Access,Password,CRM Support,Active Directory,Password reset for the finance app,Finance,user156
+INC100122,2026-03-17 03:40:00,2026-03-18 06:42:49,Closed,2 - High,Request,Hardware,Peripheral,ERP Support,Monitor,Need a new monitor,Sales,user80
+INC100123,2026-01-12 18:37:00,2026-01-12 22:07:45,Closed,2 - High,Incident,Email,Mailbox,Service Desk L1,Outlook,Outlook not receiving email,Engineering,user192
+INC100124,2026-03-02 07:12:00,2026-03-02 13:07:48,Closed,3 - Moderate,Incident,Network,VPN,Network Team,GlobalProtect,VPN not connecting,Engineering,user213
+INC100125,2026-03-30 02:58:00,2026-03-30 05:24:26,Resolved,3 - Moderate,Incident,Software,Application Error,ERP Support,SAP GUI,the finance app keeps crashing on launch,Sales,user120
+INC100126,2026-02-18 10:48:00,2026-02-19 14:59:37,Closed,4 - Low,Request,Access,Access Request,CRM Support,Microsoft Entra ID,Need access to the HR system shared drive,Engineering,user24
+INC100127,2026-01-06 03:16:00,,In Progress,1 - Critical,Incident,Network,Connectivity,HR Ops,Meraki WiFi,WiFi keeps dropping in office,Engineering,user150
+INC100128,2026-05-08 04:06:00,,Open,3 - Moderate,Incident,Network,Connectivity,Network Team,Meraki WiFi,WiFi keeps dropping in office,Sales,user163
+INC100129,2026-04-14 12:41:00,2026-04-14 19:13:15,Resolved,1 - Critical,Incident,Email,Mailbox,Identity Team,Outlook,Outlook not receiving email,Sales,user78
+INC100130,2026-02-10 00:06:00,2026-02-10 11:44:25,Closed,4 - Low,Request,Email,Distribution List,Endpoint Team,Exchange,Add me to the the VPN distribution list,Operations,user108
+INC100131,2026-02-23 02:56:00,2026-02-23 08:56:58,Resolved,1 - Critical,Request,MDM,Enrollment,CRM Support,Intune,Enroll my iPhone in email,Operations,user105
+INC100132,2026-01-12 13:44:00,2026-01-13 13:40:56,Closed,2 - High,Incident,HR,Attendance,CRM Support,SAP SuccessFactors,Leave balance incorrect in the finance app,Sales,user176
+INC100133,2026-05-03 19:03:00,2026-05-06 15:26:11,Resolved,3 - Moderate,Request,Hardware,Peripheral,Identity Team,Monitor,Need a new monitor,HR,user24
+INC100134,2026-03-14 18:41:00,,Open,3 - Moderate,Request,Workflow,Approval,Identity Team,ServiceNow,Approve my software purchase in the CRM,Operations,user53
+INC100135,2026-03-13 02:37:00,2026-03-13 21:39:49,Closed,2 - High,Request,Access,Access Request,Endpoint Team,Microsoft Entra ID,Need access to the CRM shared drive,Operations,user1
+INC100136,2026-02-19 18:08:00,,In Progress,1 - Critical,Incident,HR,Attendance,Identity Team,SAP SuccessFactors,Leave balance incorrect in the portal,Engineering,user203
+INC100137,2026-04-21 21:01:00,2026-04-22 19:28:31,Closed,3 - Moderate,Incident,HR,Payroll,Service Desk L1,Workday,Payslip missing in the CRM,HR,user135
+INC100138,2026-01-23 01:30:00,2026-01-23 04:45:07,Resolved,1 - Critical,Incident,Access,MFA,HR Ops,Okta,MFA not working on the HR system,Finance,user158
+INC100139,2026-04-14 07:29:00,,Open,1 - Critical,Incident,Access,Account Lockout,Service Desk L1,Okta,"Cannot log in to email, account locked",HR,user110
+INC100140,2026-02-07 05:31:00,,Open,1 - Critical,Request,Workflow,Approval,Endpoint Team,ServiceNow,Approve my software purchase in the HR system,Finance,user17
+INC100141,2026-04-05 05:39:00,,Open,3 - Moderate,Request,Software,How-to,HR Ops,Company Portal,How do I install the HR system,Operations,user76
+INC100142,2026-06-22 22:38:00,2026-06-23 07:39:54,Resolved,2 - High,Incident,Email,Mailbox,HR Ops,Outlook,Outlook not receiving email,Finance,user106
+INC100143,2026-06-05 04:25:00,2026-06-07 10:56:31,Resolved,1 - Critical,Incident,Hardware,Laptop,Endpoint Team,Dell Latitude,Laptop screen flickering,Engineering,user171
+INC100144,2026-05-09 03:09:00,,Open,1 - Critical,Incident,HR,Attendance,Service Desk L1,SAP SuccessFactors,Leave balance incorrect in email,Sales,user191
+INC100145,2026-02-14 18:35:00,2026-02-16 15:15:11,Closed,3 - Moderate,Request,Hardware,Peripheral,ERP Support,Monitor,Need a new monitor,HR,user91
+INC100146,2026-05-25 17:55:00,,Open,3 - Moderate,Request,Workflow,Approval,Endpoint Team,ServiceNow,Approve my software purchase in the portal,Operations,user130
+INC100147,2026-02-23 04:42:00,2026-02-24 09:25:14,Resolved,2 - High,Request,Software,License,CRM Support,Adobe Creative Cloud,Request license for the portal,Engineering,user217
+INC100148,2026-05-06 20:07:00,2026-05-06 23:16:47,Closed,1 - Critical,Request,CRM,Data,Network Team,Salesforce,Update opportunity stage in the VPN,Engineering,user8
+INC100149,2026-04-04 15:44:00,2026-04-04 23:49:23,Closed,3 - Moderate,Incident,Software,Application Error,Endpoint Team,SAP GUI,the portal keeps crashing on launch,Finance,user37
+INC100150,2026-05-18 04:04:00,2026-05-18 10:38:32,Closed,1 - Critical,Request,MDM,Enrollment,ERP Support,Intune,Enroll my iPhone in the HR system,Finance,user97
+INC100151,2026-06-05 05:21:00,2026-06-05 05:33:00,Closed,3 - Moderate,Incident,Network,VPN,Endpoint Team,GlobalProtect,VPN not connecting,Engineering,user199
+INC100152,2026-01-30 08:56:00,2026-01-30 18:33:23,Closed,1 - Critical,Request,MDM,Enrollment,ERP Support,Intune,Enroll my iPhone in the portal,Engineering,user114
+INC100153,2026-05-26 02:31:00,,In Progress,4 - Low,Request,Workflow,Approval,HR Ops,ServiceNow,Approve my software purchase in the finance app,Finance,user194
+INC100154,2026-02-09 05:22:00,2026-02-10 22:18:07,Resolved,4 - Low,Incident,CRM,Sync,Network Team,Salesforce,Salesforce report not syncing data,Engineering,user12
+INC100155,2026-05-16 06:38:00,2026-05-17 07:35:28,Closed,1 - Critical,Incident,HR,Payroll,Identity Team,Workday,Payslip missing in the finance app,Finance,user197
+INC100156,2026-03-29 14:18:00,2026-03-29 19:40:05,Closed,4 - Low,Request,Software,How-to,Identity Team,Company Portal,How do I install the CRM,HR,user137
+INC100157,2026-03-20 22:32:00,,In Progress,3 - Moderate,Incident,Software,Content,Service Desk L1,Field Sales App,iPad slide deck not displaying in field app,Sales,user112
+INC100158,2026-06-07 07:58:00,2026-06-07 09:58:31,Closed,4 - Low,Incident,Access,Password,ERP Support,Active Directory,Password reset for the VPN,HR,user75
+INC100159,2026-05-19 15:01:00,2026-05-19 16:49:09,Closed,2 - High,Incident,Access,MFA,CRM Support,Okta,MFA not working on the HR system,HR,user213
+INC100160,2026-05-04 21:05:00,2026-05-05 14:35:22,Resolved,4 - Low,Incident,Software,Content,Network Team,Field Sales App,iPad slide deck not displaying in field app,HR,user80
+INC100161,2026-03-18 00:21:00,2026-03-19 06:26:47,Closed,1 - Critical,Incident,Hardware,Laptop,Network Team,Dell Latitude,Laptop screen flickering,Sales,user136
+INC100162,2026-03-08 13:57:00,2026-03-09 01:12:08,Closed,2 - High,Incident,CRM,Sync,Identity Team,Salesforce,Salesforce report not syncing data,Finance,user66
+INC100163,2026-03-01 14:38:00,2026-03-03 13:43:47,Closed,1 - Critical,Request,Software,License,Identity Team,Adobe Creative Cloud,Request license for the VPN,HR,user119
+INC100164,2026-06-03 14:43:00,,In Progress,3 - Moderate,Request,MDM,Enrollment,CRM Support,Intune,Enroll my iPhone in the VPN,Engineering,user39
+INC100165,2026-01-24 16:30:00,2026-01-24 16:59:19,Resolved,3 - Moderate,Incident,Email,Mailbox,CRM Support,Outlook,Outlook not receiving email,Operations,user15
+INC100166,2026-06-23 13:04:00,2026-06-25 07:54:11,Closed,3 - Moderate,Request,Hardware,Peripheral,CRM Support,Monitor,Need a new monitor,Sales,user166
+INC100167,2026-06-23 10:24:00,2026-06-24 06:55:38,Resolved,1 - Critical,Request,Access,Access Request,HR Ops,Microsoft Entra ID,Need access to the HR system shared drive,Finance,user83
+INC100168,2026-06-12 17:32:00,2026-06-13 09:10:46,Closed,3 - Moderate,Incident,MDM,Compliance,ERP Support,Intune,Device shows non-compliant in the portal,Operations,user166
+INC100169,2026-01-14 17:15:00,,Open,4 - Low,Incident,Software,Application Error,HR Ops,SAP GUI,the HR system keeps crashing on launch,Operations,user157
+INC100170,2026-05-05 14:23:00,2026-05-05 20:05:12,Closed,1 - Critical,Incident,Software,Application Error,CRM Support,SAP GUI,the VPN keeps crashing on launch,Engineering,user17
+INC100171,2026-02-02 15:35:00,,Open,4 - Low,Incident,Hardware,Laptop,Endpoint Team,Dell Latitude,Laptop screen flickering,Operations,user39
+INC100172,2026-01-29 04:37:00,,Open,4 - Low,Incident,Hardware,Laptop,Identity Team,Dell Latitude,Laptop screen flickering,Sales,user80
+INC100173,2026-05-09 22:41:00,2026-05-10 10:16:34,Closed,2 - High,Request,CRM,Data,ERP Support,Salesforce,Update opportunity stage in the VPN,Operations,user24
+INC100174,2026-05-25 21:32:00,2026-05-26 16:18:55,Closed,2 - High,Request,Reporting,Report,Endpoint Team,Power BI,Need the Q3 sales dashboard export,Finance,user58
+INC100175,2026-02-23 06:04:00,2026-02-23 10:13:25,Closed,1 - Critical,Request,Software,How-to,Network Team,Company Portal,How do I install the HR system,Operations,user10
+INC100176,2026-04-26 07:56:00,,In Progress,2 - High,Request,Workflow,Approval,Identity Team,ServiceNow,Approve my software purchase in the VPN,Operations,user208
+INC100177,2026-05-30 18:02:00,2026-05-31 09:27:24,Resolved,3 - Moderate,Incident,Software,Application Error,ERP Support,SAP GUI,the VPN keeps crashing on launch,Finance,user114
+INC100178,2026-04-08 15:48:00,,Open,2 - High,Incident,MDM,Compliance,Endpoint Team,Intune,Device shows non-compliant in email,Finance,user95
+INC100179,2026-05-31 18:29:00,2026-06-01 05:54:54,Closed,4 - Low,Request,Workflow,Approval,Network Team,ServiceNow,Approve my software purchase in the HR system,HR,user42
+INC100180,2026-02-17 14:55:00,2026-02-19 04:11:11,Closed,3 - Moderate,Request,Software,License,Network Team,Adobe Creative Cloud,Request license for the portal,Operations,user218
+INC100181,2026-04-08 16:05:00,2026-04-08 19:31:32,Closed,3 - Moderate,Incident,Access,MFA,HR Ops,Okta,MFA not working on the HR system,Finance,user213
+INC100182,2026-02-01 16:58:00,2026-02-01 23:39:29,Closed,1 - Critical,Incident,Network,VPN,HR Ops,GlobalProtect,VPN not connecting,HR,user129
+INC100183,2026-03-22 20:24:00,2026-03-23 07:57:02,Closed,3 - Moderate,Request,Hardware,Peripheral,Identity Team,Monitor,Need a new monitor,Engineering,user26
+INC100184,2026-04-25 19:50:00,2026-04-26 14:02:07,Closed,4 - Low,Incident,Software,Content,ERP Support,Field Sales App,iPad slide deck not displaying in field app,HR,user115
+INC100185,2026-01-03 04:57:00,2026-01-03 18:42:09,Closed,1 - Critical,Incident,MDM,Compliance,Endpoint Team,Intune,Device shows non-compliant in the CRM,Finance,user141
+INC100186,2026-05-25 20:07:00,2026-05-26 07:17:26,Closed,2 - High,Incident,MDM,Compliance,HR Ops,Intune,Device shows non-compliant in the VPN,Operations,user118
+INC100187,2026-02-08 05:53:00,2026-02-09 05:56:57,Resolved,1 - Critical,Request,Access,Access Request,ERP Support,Microsoft Entra ID,Need access to the HR system shared drive,Operations,user62
+INC100188,2026-02-19 09:18:00,2026-02-20 05:53:49,Resolved,4 - Low,Incident,Software,Content,Identity Team,Field Sales App,iPad slide deck not displaying in field app,Sales,user135
+INC100189,2026-01-24 11:33:00,,In Progress,1 - Critical,Request,Hardware,Peripheral,HR Ops,Monitor,Need a new monitor,Sales,user163
+INC100190,2026-05-08 19:16:00,,Open,3 - Moderate,Incident,Network,Connectivity,Identity Team,Meraki WiFi,WiFi keeps dropping in office,Sales,user198
+INC100191,2026-04-24 20:08:00,2026-04-25 03:38:10,Closed,3 - Moderate,Request,MDM,Enrollment,Network Team,Intune,Enroll my iPhone in the finance app,Finance,user213
+INC100192,2026-06-08 23:44:00,2026-06-09 07:49:23,Resolved,1 - Critical,Request,Workflow,Approval,ERP Support,ServiceNow,Approve my software purchase in email,Sales,user76
+INC100193,2026-01-16 07:50:00,2026-01-16 19:50:33,Closed,1 - Critical,Request,Software,License,Endpoint Team,Adobe Creative Cloud,Request license for the finance app,Operations,user102
+INC100194,2026-06-11 23:16:00,2026-06-12 08:18:54,Closed,3 - Moderate,Request,CRM,Data,CRM Support,Salesforce,Update opportunity stage in the portal,Engineering,user70
+INC100195,2026-05-06 23:27:00,2026-05-07 01:40:07,Resolved,4 - Low,Incident,Access,MFA,HR Ops,Okta,MFA not working on the finance app,Finance,user128
+INC100196,2026-06-20 04:23:00,,In Progress,4 - Low,Incident,Software,Content,Service Desk L1,Field Sales App,iPad slide deck not displaying in field app,Operations,user211
+INC100197,2026-04-11 15:20:00,2026-04-12 05:18:56,Closed,1 - Critical,Incident,Software,Application Error,Endpoint Team,SAP GUI,the VPN keeps crashing on launch,Engineering,user79
+INC100198,2026-05-26 19:10:00,,Open,3 - Moderate,Incident,Email,Mailbox,Network Team,Outlook,Outlook not receiving email,Engineering,user164
+INC100199,2026-01-26 23:42:00,,Open,4 - Low,Incident,Access,Account Lockout,Endpoint Team,Okta,"Cannot log in to the HR system, account locked",Finance,user8
+INC100200,2026-05-30 22:02:00,2026-05-31 04:34:02,Closed,3 - Moderate,Request,Software,How-to,Endpoint Team,Company Portal,How do I install email,Operations,user9
+INC100201,2026-02-22 17:43:00,2026-02-23 07:50:55,Resolved,3 - Moderate,Incident,MDM,Compliance,Endpoint Team,Intune,Device shows non-compliant in email,Sales,user147
+INC100202,2026-05-06 15:25:00,2026-05-06 18:42:04,Closed,1 - Critical,Request,Software,How-to,Service Desk L1,Company Portal,How do I install the VPN,Finance,user128
+INC100203,2026-05-13 11:58:00,,In Progress,1 - Critical,Incident,CRM,Sync,Endpoint Team,Salesforce,Salesforce report not syncing data,HR,user55
+INC100204,2026-04-08 20:44:00,2026-04-09 08:27:54,Resolved,1 - Critical,Incident,MDM,Compliance,HR Ops,Intune,Device shows non-compliant in the CRM,HR,user23
+INC100205,2026-04-20 11:42:00,2026-04-21 06:59:19,Closed,1 - Critical,Request,Workflow,Approval,Network Team,ServiceNow,Approve my software purchase in the HR system,Engineering,user77
+INC100206,2026-03-01 19:50:00,2026-03-02 05:23:43,Closed,2 - High,Incident,Software,Application Error,CRM Support,SAP GUI,the CRM keeps crashing on launch,Finance,user203
+INC100207,2026-01-10 08:23:00,,In Progress,3 - Moderate,Request,Email,Distribution List,HR Ops,Exchange,Add me to the the HR system distribution list,Finance,user157
+INC100208,2026-01-23 19:19:00,2026-01-25 04:03:40,Resolved,4 - Low,Request,Access,Access Request,CRM Support,Microsoft Entra ID,Need access to email shared drive,Operations,user19
+INC100209,2026-04-19 14:41:00,2026-04-19 18:40:36,Closed,4 - Low,Request,Software,How-to,HR Ops,Company Portal,How do I install the VPN,Operations,user89
+INC100210,2026-03-04 11:49:00,2026-03-04 12:36:36,Closed,1 - Critical,Request,Software,How-to,CRM Support,Company Portal,How do I install the portal,Operations,user40
+INC100211,2026-02-26 13:10:00,2026-02-28 06:00:12,Closed,2 - High,Request,HR,Attendance,Endpoint Team,SAP,"Attendance not captured, need unlock in the HR system",Engineering,user217
+INC100212,2026-03-27 21:12:00,,Open,3 - Moderate,Request,Access,Access Request,Network Team,Microsoft Entra ID,Need access to the HR system shared drive,Sales,user129
+INC100213,2026-02-27 22:37:00,,In Progress,2 - High,Request,Reporting,Report,Identity Team,Power BI,Need the Q3 sales dashboard export,Operations,user185
+INC100214,2026-04-26 14:53:00,,In Progress,1 - Critical,Incident,MDM,Compliance,Service Desk L1,Intune,Device shows non-compliant in the VPN,Operations,user68
+INC100215,2026-03-14 07:49:00,,In Progress,4 - Low,Request,Reporting,Report,Network Team,Power BI,Need the Q3 sales dashboard export,Sales,user128
+INC100216,2026-04-10 05:41:00,2026-04-10 09:37:13,Closed,4 - Low,Request,Reporting,Report,Endpoint Team,Power BI,Need the Q3 sales dashboard export,Sales,user177
+INC100217,2026-02-24 07:28:00,2026-02-24 09:37:16,Resolved,4 - Low,Incident,Access,Account Lockout,HR Ops,Okta,"Cannot log in to the CRM, account locked",Engineering,user156
+INC100218,2026-04-18 01:55:00,,Open,3 - Moderate,Request,Software,How-to,HR Ops,Company Portal,How do I install the CRM,Engineering,user132
+INC100219,2026-02-06 14:20:00,2026-02-07 09:02:34,Closed,4 - Low,Request,CRM,Data,Service Desk L1,Salesforce,Update opportunity stage in the finance app,HR,user64
+INC100220,2026-02-03 10:03:00,2026-02-03 17:03:38,Closed,4 - Low,Request,Software,How-to,Identity Team,Company Portal,How do I install the CRM,Engineering,user148
+INC100221,2026-03-07 04:48:00,2026-03-08 10:02:35,Closed,4 - Low,Incident,Hardware,Laptop,Network Team,Dell Latitude,Laptop screen flickering,HR,user79
+INC100222,2026-01-09 06:05:00,2026-01-09 06:17:00,Resolved,2 - High,Request,Email,Distribution List,Network Team,Exchange,Add me to the the finance app distribution list,Sales,user13
+INC100223,2026-06-19 07:38:00,,Open,4 - Low,Request,HR,Attendance,Endpoint Team,SAP,"Attendance not captured, need unlock in the HR system",Sales,user217
+INC100224,2026-05-28 11:08:00,2026-05-28 13:50:46,Closed,3 - Moderate,Incident,Access,MFA,Service Desk L1,Okta,MFA not working on email,Sales,user146
+INC100225,2026-03-08 19:23:00,,In Progress,3 - Moderate,Request,CRM,Data,Service Desk L1,Salesforce,Update opportunity stage in email,Operations,user116
+INC100226,2026-04-06 20:52:00,,In Progress,1 - Critical,Request,CRM,Data,HR Ops,Salesforce,Update opportunity stage in the finance app,Engineering,user143
+INC100227,2026-02-19 14:12:00,,In Progress,4 - Low,Request,Hardware,Peripheral,Network Team,Monitor,Need a new monitor,Sales,user10
+INC100228,2026-04-25 01:51:00,2026-04-25 04:56:52,Resolved,2 - High,Request,Software,How-to,Endpoint Team,Company Portal,How do I install the HR system,Engineering,user42
+INC100229,2026-04-13 12:37:00,2026-04-13 20:23:47,Closed,4 - Low,Incident,Network,Connectivity,ERP Support,Meraki WiFi,WiFi keeps dropping in office,Engineering,user122
+INC100230,2026-05-07 02:21:00,,Open,3 - Moderate,Incident,Access,Password,CRM Support,Active Directory,Password reset for the VPN,Sales,user153
+INC100231,2026-04-02 00:41:00,,In Progress,2 - High,Request,Email,Distribution List,ERP Support,Exchange,Add me to the the portal distribution list,Operations,user123
+INC100232,2026-05-11 03:09:00,,Open,1 - Critical,Incident,Software,Application Error,Identity Team,SAP GUI,the portal keeps crashing on launch,HR,user81
+INC100233,2026-02-22 01:26:00,,Open,2 - High,Incident,Network,VPN,HR Ops,GlobalProtect,VPN not connecting,Operations,user121
+INC100234,2026-02-17 12:33:00,2026-02-17 12:45:00,Closed,4 - Low,Incident,Access,Account Lockout,Network Team,Okta,"Cannot log in to email, account locked",Engineering,user45
+INC100235,2026-04-28 05:34:00,2026-04-28 08:23:31,Closed,3 - Moderate,Incident,Email,Mailbox,Network Team,Outlook,Outlook not receiving email,Finance,user64
+INC100236,2026-04-13 06:14:00,2026-04-14 06:03:25,Closed,4 - Low,Incident,HR,Attendance,Endpoint Team,SAP SuccessFactors,Leave balance incorrect in email,Engineering,user144
+INC100237,2026-04-09 14:07:00,,In Progress,4 - Low,Incident,HR,Attendance,HR Ops,SAP SuccessFactors,Leave balance incorrect in the finance app,Finance,user75
+INC100238,2026-04-09 13:45:00,2026-04-09 15:15:28,Closed,3 - Moderate,Incident,Access,Account Lockout,ERP Support,Okta,"Cannot log in to email, account locked",Finance,user52
+INC100239,2026-04-03 22:59:00,,In Progress,3 - Moderate,Request,CRM,Data,Identity Team,Salesforce,Update opportunity stage in the portal,Operations,user190
+INC100240,2026-03-24 01:15:00,2026-03-24 06:35:12,Closed,2 - High,Request,MDM,Enrollment,Service Desk L1,Intune,Enroll my iPhone in the portal,HR,user85
+INC100241,2026-06-11 14:06:00,,Open,2 - High,Incident,Software,Content,Service Desk L1,Field Sales App,iPad slide deck not displaying in field app,Finance,user105
+INC100242,2026-06-12 17:30:00,,Open,3 - Moderate,Request,Reporting,Report,Endpoint Team,Power BI,Need the Q3 sales dashboard export,Sales,user197
+INC100243,2026-03-21 15:34:00,,Open,1 - Critical,Request,Access,Access Request,Identity Team,Microsoft Entra ID,Need access to email shared drive,Finance,user10
+INC100244,2026-06-19 11:11:00,,Open,1 - Critical,Incident,Network,Connectivity,Service Desk L1,Meraki WiFi,WiFi keeps dropping in office,Operations,user155
+INC100245,2026-04-25 17:18:00,2026-04-25 19:39:16,Resolved,4 - Low,Incident,Access,MFA,Identity Team,Okta,MFA not working on the HR system,HR,user70
+INC100246,2026-02-08 19:21:00,2026-02-09 19:34:14,Closed,2 - High,Request,Software,License,Service Desk L1,Adobe Creative Cloud,Request license for the VPN,Engineering,user203
+INC100247,2026-03-08 07:11:00,,In Progress,4 - Low,Request,HR,Attendance,CRM Support,SAP,"Attendance not captured, need unlock in email",Operations,user84
+INC100248,2026-05-18 04:42:00,2026-05-19 02:27:16,Closed,3 - Moderate,Request,Access,Access Request,Identity Team,Microsoft Entra ID,Need access to the portal shared drive,Engineering,user99
+INC100249,2026-06-02 20:48:00,2026-06-03 18:26:08,Closed,3 - Moderate,Incident,HR,Payroll,Endpoint Team,Workday,Payslip missing in the HR system,Operations,user3
+INC100250,2026-05-04 02:44:00,2026-05-05 04:48:56,Closed,3 - Moderate,Incident,HR,Attendance,Identity Team,SAP SuccessFactors,Leave balance incorrect in email,Operations,user181
+INC100251,2026-02-10 10:40:00,2026-02-11 18:57:25,Closed,3 - Moderate,Request,HR,Attendance,Network Team,SAP,"Attendance not captured, need unlock in the CRM",Finance,user35
+INC100252,2026-02-22 15:29:00,,Open,4 - Low,Request,Email,Distribution List,CRM Support,Exchange,Add me to the the HR system distribution list,Finance,user196
+INC100253,2026-01-29 07:33:00,2026-01-30 01:03:43,Resolved,3 - Moderate,Incident,HR,Payroll,Service Desk L1,Workday,Payslip missing in the HR system,Sales,user16
+INC100254,2026-06-22 21:12:00,,In Progress,4 - Low,Request,CRM,Data,Service Desk L1,Salesforce,Update opportunity stage in the VPN,Finance,user184
+INC100255,2026-06-17 05:05:00,,In Progress,4 - Low,Request,MDM,Enrollment,CRM Support,Intune,Enroll my iPhone in the portal,HR,user34
+INC100256,2026-05-23 04:29:00,,In Progress,3 - Moderate,Incident,CRM,Sync,ERP Support,Salesforce,Salesforce report not syncing data,HR,user66
+INC100257,2026-03-16 18:37:00,2026-03-16 20:21:13,Closed,1 - Critical,Incident,Access,Password,HR Ops,Active Directory,Password reset for the finance app,Sales,user139
+INC100258,2026-01-24 22:59:00,2026-01-25 01:47:14,Resolved,2 - High,Incident,Access,Account Lockout,CRM Support,Okta,"Cannot log in to the VPN, account locked",HR,user96
+INC100259,2026-06-03 11:55:00,2026-06-03 20:33:59,Resolved,4 - Low,Incident,Network,Connectivity,Service Desk L1,Meraki WiFi,WiFi keeps dropping in office,Operations,user35
+INC100260,2026-04-30 01:07:00,2026-04-30 20:42:26,Closed,2 - High,Request,Reporting,Report,ERP Support,Power BI,Need the Q3 sales dashboard export,Sales,user194
+INC100261,2026-04-13 05:29:00,,Open,4 - Low,Incident,Access,Password,Network Team,Active Directory,Password reset for email,Finance,user64
+INC100262,2026-04-29 12:09:00,2026-04-29 19:59:45,Closed,1 - Critical,Incident,Email,Mailbox,Service Desk L1,Outlook,Outlook not receiving email,HR,user158
+INC100263,2026-03-24 12:13:00,2026-03-24 14:51:01,Closed,1 - Critical,Incident,Access,Password,Network Team,Active Directory,Password reset for the portal,HR,user154
+INC100264,2026-01-17 23:15:00,,Open,2 - High,Request,Workflow,Approval,CRM Support,ServiceNow,Approve my software purchase in the portal,Finance,user129
+INC100265,2026-03-22 07:52:00,,Open,3 - Moderate,Request,HR,Attendance,Network Team,SAP,"Attendance not captured, need unlock in the HR system",Engineering,user61
+INC100266,2026-02-19 06:42:00,,In Progress,1 - Critical,Request,HR,Attendance,Network Team,SAP,"Attendance not captured, need unlock in the HR system",Finance,user161
+INC100267,2026-05-27 04:35:00,2026-05-28 01:54:17,Resolved,1 - Critical,Request,Workflow,Approval,Endpoint Team,ServiceNow,Approve my software purchase in the VPN,HR,user202
+INC100268,2026-04-20 04:44:00,2026-04-21 00:48:14,Resolved,2 - High,Incident,CRM,Sync,CRM Support,Salesforce,Salesforce report not syncing data,HR,user62
+INC100269,2026-04-14 00:54:00,,Open,2 - High,Incident,HR,Payroll,CRM Support,Workday,Payslip missing in email,Sales,user144
+INC100270,2026-05-23 13:35:00,,In Progress,2 - High,Incident,Network,VPN,Endpoint Team,GlobalProtect,VPN not connecting,Sales,user116
+INC100271,2026-02-01 22:34:00,,Open,2 - High,Request,Hardware,Peripheral,Service Desk L1,Monitor,Need a new monitor,HR,user173
+INC100272,2026-01-14 20:55:00,2026-01-15 10:44:22,Closed,2 - High,Incident,MDM,Compliance,HR Ops,Intune,Device shows non-compliant in the CRM,Engineering,user78
+INC100273,2026-03-14 16:59:00,2026-03-14 19:25:25,Closed,1 - Critical,Incident,Access,Password,ERP Support,Active Directory,Password reset for email,Finance,user179
+INC100274,2026-03-12 04:25:00,2026-03-12 08:12:52,Closed,4 - Low,Incident,MDM,Compliance,HR Ops,Intune,Device shows non-compliant in the HR system,Engineering,user79
+INC100275,2026-05-04 03:32:00,2026-05-04 20:38:39,Resolved,4 - Low,Incident,HR,Attendance,Service Desk L1,SAP SuccessFactors,Leave balance incorrect in the VPN,HR,user195
+INC100276,2026-03-11 17:23:00,2026-03-12 15:44:42,Closed,2 - High,Incident,Hardware,Laptop,ERP Support,Dell Latitude,Laptop screen flickering,Sales,user67
+INC100277,2026-05-23 21:18:00,2026-05-24 08:40:59,Closed,2 - High,Request,CRM,Data,Endpoint Team,Salesforce,Update opportunity stage in the CRM,HR,user146
+INC100278,2026-06-20 19:35:00,,Open,4 - Low,Incident,HR,Payroll,ERP Support,Workday,Payslip missing in the VPN,HR,user118
+INC100279,2026-05-01 14:10:00,2026-05-02 00:39:05,Closed,4 - Low,Incident,Software,Application Error,Identity Team,SAP GUI,the HR system keeps crashing on launch,Sales,user135
+INC100280,2026-01-26 17:52:00,,Open,2 - High,Incident,Access,Account Lockout,CRM Support,Okta,"Cannot log in to the VPN, account locked",Finance,user18
+INC100281,2026-02-21 22:00:00,2026-02-22 13:12:13,Closed,4 - Low,Incident,Software,Content,Endpoint Team,Field Sales App,iPad slide deck not displaying in field app,Operations,user164
+INC100282,2026-06-15 07:42:00,2026-06-16 07:33:02,Resolved,4 - Low,Request,Workflow,Approval,Service Desk L1,ServiceNow,Approve my software purchase in the portal,Operations,user185
+INC100283,2026-04-09 05:01:00,,In Progress,4 - Low,Incident,HR,Attendance,CRM Support,SAP SuccessFactors,Leave balance incorrect in the CRM,Sales,user25
+INC100284,2026-02-21 04:15:00,2026-02-22 02:00:51,Closed,3 - Moderate,Incident,CRM,Sync,Endpoint Team,Salesforce,Salesforce report not syncing data,Sales,user96
+INC100285,2026-06-07 01:36:00,2026-06-07 07:55:53,Closed,2 - High,Incident,Network,Connectivity,Endpoint Team,Meraki WiFi,WiFi keeps dropping in office,Sales,user168
+INC100286,2026-01-12 04:05:00,2026-01-12 12:55:39,Resolved,1 - Critical,Request,Reporting,Report,ERP Support,Power BI,Need the Q3 sales dashboard export,Finance,user22
+INC100287,2026-05-29 11:41:00,2026-05-30 01:10:25,Closed,1 - Critical,Request,Email,Distribution List,Network Team,Exchange,Add me to the the portal distribution list,Finance,user55
+INC100288,2026-06-12 16:17:00,2026-06-13 15:22:51,Closed,3 - Moderate,Incident,Software,Content,Network Team,Field Sales App,iPad slide deck not displaying in field app,Sales,user46
+INC100289,2026-01-06 17:13:00,,In Progress,2 - High,Incident,Hardware,Laptop,CRM Support,Dell Latitude,Laptop screen flickering,HR,user20
+INC100290,2026-02-25 19:36:00,2026-02-26 04:16:08,Closed,3 - Moderate,Request,HR,Attendance,HR Ops,SAP,"Attendance not captured, need unlock in the VPN",Finance,user203
+INC100291,2026-01-28 03:32:00,,Open,3 - Moderate,Incident,Software,Content,Service Desk L1,Field Sales App,iPad slide deck not displaying in field app,HR,user60
+INC100292,2026-04-27 15:38:00,,In Progress,3 - Moderate,Request,Access,Access Request,Service Desk L1,Microsoft Entra ID,Need access to the VPN shared drive,Engineering,user201
+INC100293,2026-06-17 20:14:00,2026-06-18 01:33:29,Closed,4 - Low,Incident,Email,Mailbox,HR Ops,Outlook,Outlook not receiving email,Operations,user170
+INC100294,2026-01-30 15:49:00,,In Progress,1 - Critical,Incident,Network,Connectivity,Service Desk L1,Meraki WiFi,WiFi keeps dropping in office,Finance,user98
+INC100295,2026-02-23 00:47:00,2026-02-23 20:06:53,Resolved,3 - Moderate,Incident,Software,Content,Endpoint Team,Field Sales App,iPad slide deck not displaying in field app,Sales,user2
+INC100296,2026-06-02 04:23:00,2026-06-03 14:29:24,Closed,4 - Low,Request,HR,Attendance,HR Ops,SAP,"Attendance not captured, need unlock in the HR system",Operations,user132
+INC100297,2026-02-05 15:01:00,2026-02-05 20:31:43,Closed,3 - Moderate,Incident,Network,VPN,Network Team,GlobalProtect,VPN not connecting,Operations,user154
+INC100298,2026-05-12 20:00:00,2026-05-13 12:10:14,Closed,2 - High,Incident,Hardware,Laptop,Network Team,Dell Latitude,Laptop screen flickering,Finance,user176
+INC100299,2026-02-28 05:08:00,2026-02-28 16:00:00,Closed,3 - Moderate,Incident,Network,Connectivity,Endpoint Team,Meraki WiFi,WiFi keeps dropping in office,Finance,user17
+INC100300,2026-05-29 17:17:00,2026-05-30 02:42:15,Resolved,3 - Moderate,Incident,Software,Application Error,Endpoint Team,SAP GUI,the CRM keeps crashing on launch,HR,user153
+INC100301,2026-03-09 02:29:00,2026-03-09 20:47:54,Closed,2 - High,Incident,MDM,Compliance,Endpoint Team,Intune,Device shows non-compliant in the portal,HR,user86
+INC100302,2026-05-11 01:51:00,2026-05-11 08:30:20,Closed,2 - High,Incident,MDM,Compliance,Endpoint Team,Intune,Device shows non-compliant in the finance app,Operations,user178
+INC100303,2026-06-13 21:20:00,2026-06-15 03:22:55,Closed,4 - Low,Request,Software,License,Endpoint Team,Adobe Creative Cloud,Request license for the finance app,HR,user148
+INC100304,2026-04-22 14:24:00,2026-04-23 11:19:07,Closed,1 - Critical,Incident,HR,Payroll,Network Team,Workday,Payslip missing in the CRM,Operations,user140
+INC100305,2026-01-10 13:46:00,2026-01-10 21:23:00,Resolved,2 - High,Incident,Software,Application Error,HR Ops,SAP GUI,the finance app keeps crashing on launch,Sales,user210
+INC100306,2026-06-20 19:08:00,,Open,2 - High,Incident,Network,VPN,ERP Support,GlobalProtect,VPN not connecting,HR,user19
+INC100307,2026-06-13 22:37:00,2026-06-14 06:20:54,Resolved,4 - Low,Incident,Email,Mailbox,Network Team,Outlook,Outlook not receiving email,Engineering,user180
+INC100308,2026-01-30 09:06:00,2026-01-30 16:15:02,Closed,1 - Critical,Request,CRM,Data,Network Team,Salesforce,Update opportunity stage in the VPN,HR,user193
+INC100309,2026-05-28 07:06:00,2026-05-29 10:34:15,Closed,1 - Critical,Incident,Hardware,Laptop,Endpoint Team,Dell Latitude,Laptop screen flickering,Operations,user192
+INC100310,2026-03-17 19:28:00,2026-03-18 08:31:58,Closed,2 - High,Incident,CRM,Sync,Endpoint Team,Salesforce,Salesforce report not syncing data,HR,user27
+INC100311,2026-05-23 08:58:00,2026-05-25 04:00:45,Closed,1 - Critical,Request,HR,Attendance,CRM Support,SAP,"Attendance not captured, need unlock in the VPN",Finance,user90
+INC100312,2026-04-28 11:29:00,2026-04-29 06:28:34,Closed,1 - Critical,Request,HR,Attendance,HR Ops,SAP,"Attendance not captured, need unlock in the VPN",HR,user82
+INC100313,2026-04-13 20:02:00,,Open,1 - Critical,Request,Access,Access Request,Service Desk L1,Microsoft Entra ID,Need access to the finance app shared drive,Sales,user174
+INC100314,2026-03-25 15:33:00,2026-03-25 23:28:23,Closed,4 - Low,Incident,Software,Application Error,HR Ops,SAP GUI,the CRM keeps crashing on launch,HR,user162
+INC100315,2026-03-05 23:40:00,,Open,4 - Low,Incident,Software,Application Error,HR Ops,SAP GUI,the portal keeps crashing on launch,Operations,user51
+INC100316,2026-05-27 23:24:00,2026-05-28 04:56:34,Closed,1 - Critical,Incident,Email,Mailbox,Network Team,Outlook,Outlook not receiving email,Operations,user48
+INC100317,2026-04-22 15:12:00,2026-04-24 02:41:24,Resolved,1 - Critical,Request,Hardware,Peripheral,Endpoint Team,Monitor,Need a new monitor,HR,user136
+INC100318,2026-04-18 08:38:00,2026-04-18 16:56:03,Resolved,3 - Moderate,Request,Reporting,Report,Endpoint Team,Power BI,Need the Q3 sales dashboard export,Operations,user45
+INC100319,2026-04-12 21:58:00,,In Progress,1 - Critical,Request,Workflow,Approval,ERP Support,ServiceNow,Approve my software purchase in the CRM,Engineering,user31
+INC100320,2026-04-15 14:07:00,2026-04-16 05:20:09,Closed,4 - Low,Incident,HR,Payroll,HR Ops,Workday,Payslip missing in the HR system,Finance,user148
+INC100321,2026-05-25 18:11:00,2026-05-26 03:26:44,Resolved,2 - High,Incident,Network,Connectivity,Network Team,Meraki WiFi,WiFi keeps dropping in office,HR,user74
+INC100322,2026-03-06 05:20:00,2026-03-06 06:59:19,Resolved,1 - Critical,Request,Software,How-to,HR Ops,Company Portal,How do I install the CRM,Finance,user209
+INC100323,2026-06-22 21:41:00,2026-06-23 01:18:45,Resolved,4 - Low,Incident,Network,Connectivity,ERP Support,Meraki WiFi,WiFi keeps dropping in office,HR,user182
+INC100324,2026-06-17 04:10:00,2026-06-17 06:14:39,Closed,2 - High,Incident,Email,Mailbox,Endpoint Team,Outlook,Outlook not receiving email,Engineering,user58
+INC100325,2026-04-09 21:10:00,2026-04-10 03:36:11,Resolved,4 - Low,Request,CRM,Data,Network Team,Salesforce,Update opportunity stage in the HR system,Sales,user147
+INC100326,2026-04-02 19:49:00,,In Progress,1 - Critical,Incident,Access,MFA,CRM Support,Okta,MFA not working on the VPN,HR,user140
+INC100327,2026-05-26 11:06:00,,Open,2 - High,Request,Software,License,Endpoint Team,Adobe Creative Cloud,Request license for the portal,HR,user68
+INC100328,2026-01-31 01:28:00,2026-02-02 03:43:51,Closed,3 - Moderate,Request,Hardware,Peripheral,CRM Support,Monitor,Need a new monitor,Operations,user162
+INC100329,2026-02-27 00:39:00,2026-02-27 04:11:53,Closed,2 - High,Incident,Network,VPN,CRM Support,GlobalProtect,VPN not connecting,Sales,user146
+INC100330,2026-04-07 07:38:00,,In Progress,3 - Moderate,Request,Hardware,Peripheral,Endpoint Team,Monitor,Need a new monitor,Engineering,user220
+INC100331,2026-02-02 21:08:00,2026-02-05 04:15:37,Resolved,1 - Critical,Incident,CRM,Sync,Endpoint Team,Salesforce,Salesforce report not syncing data,Finance,user180
+INC100332,2026-03-27 14:09:00,,Open,4 - Low,Request,Software,How-to,HR Ops,Company Portal,How do I install the CRM,Operations,user162
+INC100333,2026-05-22 18:24:00,2026-05-23 22:22:03,Resolved,1 - Critical,Incident,HR,Attendance,ERP Support,SAP SuccessFactors,Leave balance incorrect in the portal,HR,user132
+INC100334,2026-05-07 08:29:00,2026-05-08 06:11:39,Resolved,1 - Critical,Incident,HR,Attendance,ERP Support,SAP SuccessFactors,Leave balance incorrect in email,Engineering,user218
+INC100335,2026-05-17 03:13:00,2026-05-17 23:42:52,Resolved,2 - High,Request,Access,Access Request,HR Ops,Microsoft Entra ID,Need access to the finance app shared drive,Engineering,user213
+INC100336,2026-04-26 15:35:00,,In Progress,3 - Moderate,Request,HR,Attendance,ERP Support,SAP,"Attendance not captured, need unlock in the portal",Sales,user26
+INC100337,2026-06-07 05:01:00,2026-06-08 03:01:49,Closed,2 - High,Request,Reporting,Report,HR Ops,Power BI,Need the Q3 sales dashboard export,Sales,user110
+INC100338,2026-02-15 09:56:00,,Open,3 - Moderate,Request,Software,License,Service Desk L1,Adobe Creative Cloud,Request license for the VPN,Engineering,user65
+INC100339,2026-05-08 07:42:00,,Open,2 - High,Request,Access,Access Request,Service Desk L1,Microsoft Entra ID,Need access to email shared drive,Engineering,user186
+INC100340,2026-03-22 07:27:00,,Open,2 - High,Incident,Software,Content,HR Ops,Field Sales App,iPad slide deck not displaying in field app,Finance,user152
+INC100341,2026-06-02 06:00:00,2026-06-03 01:44:45,Closed,3 - Moderate,Incident,HR,Payroll,CRM Support,Workday,Payslip missing in the portal,HR,user178
+INC100342,2026-06-13 10:04:00,2026-06-13 12:08:36,Closed,1 - Critical,Request,Software,How-to,Service Desk L1,Company Portal,How do I install the finance app,Engineering,user77
+INC100343,2026-05-12 00:49:00,2026-05-12 06:33:15,Closed,2 - High,Request,Software,How-to,Service Desk L1,Company Portal,How do I install the HR system,Operations,user3
+INC100344,2026-02-26 09:28:00,2026-02-26 19:24:00,Closed,2 - High,Incident,MDM,Compliance,HR Ops,Intune,Device shows non-compliant in the HR system,HR,user56
+INC100345,2026-02-04 16:08:00,2026-02-05 01:02:59,Closed,4 - Low,Request,Access,Access Request,Endpoint Team,Microsoft Entra ID,Need access to email shared drive,Engineering,user203
+INC100346,2026-03-26 22:17:00,,Open,3 - Moderate,Request,Software,How-to,CRM Support,Company Portal,How do I install the VPN,Sales,user218
+INC100347,2026-04-14 08:13:00,,In Progress,2 - High,Request,Workflow,Approval,ERP Support,ServiceNow,Approve my software purchase in email,Engineering,user166
+INC100348,2026-03-24 01:31:00,2026-03-24 04:13:53,Resolved,1 - Critical,Incident,Access,Account Lockout,Network Team,Okta,"Cannot log in to the portal, account locked",Engineering,user82
+INC100349,2026-05-13 09:55:00,,In Progress,4 - Low,Request,Software,How-to,Endpoint Team,Company Portal,How do I install the HR system,Finance,user196
+INC100350,2026-01-26 06:01:00,,In Progress,1 - Critical,Request,Email,Distribution List,Service Desk L1,Exchange,Add me to the email distribution list,Operations,user74
+INC100351,2026-06-21 09:49:00,2026-06-22 01:36:52,Resolved,4 - Low,Request,Reporting,Report,ERP Support,Power BI,Need the Q3 sales dashboard export,Sales,user164
+INC100352,2026-02-22 11:17:00,2026-02-22 18:41:59,Closed,2 - High,Request,CRM,Data,CRM Support,Salesforce,Update opportunity stage in the CRM,Operations,user84
+INC100353,2026-01-23 22:19:00,,Open,4 - Low,Incident,Network,Connectivity,ERP Support,Meraki WiFi,WiFi keeps dropping in office,Sales,user63
+INC100354,2026-05-29 16:07:00,2026-05-30 10:04:03,Resolved,2 - High,Request,Access,Access Request,Service Desk L1,Microsoft Entra ID,Need access to the portal shared drive,Finance,user180
+INC100355,2026-02-26 07:31:00,2026-02-26 08:53:08,Closed,3 - Moderate,Incident,Access,Password,Identity Team,Active Directory,Password reset for the finance app,Finance,user192
+INC100356,2026-02-10 16:49:00,2026-02-11 10:04:17,Closed,1 - Critical,Incident,HR,Attendance,Endpoint Team,SAP SuccessFactors,Leave balance incorrect in the VPN,Operations,user161
+INC100357,2026-06-19 17:29:00,,In Progress,3 - Moderate,Request,Access,Access Request,Service Desk L1,Microsoft Entra ID,Need access to email shared drive,Operations,user43
+INC100358,2026-02-24 01:16:00,2026-02-26 23:54:13,Closed,1 - Critical,Request,Hardware,Peripheral,Identity Team,Monitor,Need a new monitor,Operations,user1
+INC100359,2026-01-05 13:15:00,2026-01-05 14:30:41,Closed,4 - Low,Incident,Access,Account Lockout,Endpoint Team,Okta,"Cannot log in to email, account locked",Finance,user46
+INC100360,2026-05-24 12:14:00,2026-05-24 14:15:09,Closed,3 - Moderate,Incident,Access,Account Lockout,Endpoint Team,Okta,"Cannot log in to the portal, account locked",Operations,user96
+INC100361,2026-06-21 17:43:00,2026-06-21 23:23:11,Closed,2 - High,Incident,Access,MFA,Identity Team,Okta,MFA not working on the HR system,Sales,user103
+INC100362,2026-06-09 03:55:00,2026-06-10 00:55:59,Closed,1 - Critical,Request,Access,Access Request,Network Team,Microsoft Entra ID,Need access to email shared drive,Sales,user95
+INC100363,2026-04-10 21:36:00,2026-04-11 14:43:34,Closed,2 - High,Request,Software,License,HR Ops,Adobe Creative Cloud,Request license for the finance app,Operations,user127
+INC100364,2026-03-26 01:09:00,2026-03-27 05:14:04,Closed,3 - Moderate,Request,Software,License,ERP Support,Adobe Creative Cloud,Request license for the VPN,Sales,user86
+INC100365,2026-05-09 19:54:00,,Open,3 - Moderate,Incident,Access,Password,Service Desk L1,Active Directory,Password reset for the CRM,Operations,user61
+INC100366,2026-06-18 07:03:00,2026-06-18 11:50:20,Closed,2 - High,Incident,Network,VPN,CRM Support,GlobalProtect,VPN not connecting,HR,user180
+INC100367,2026-06-06 20:47:00,2026-06-08 12:32:37,Closed,1 - Critical,Request,Hardware,Peripheral,Network Team,Monitor,Need a new monitor,HR,user20
+INC100368,2026-01-22 15:27:00,,Open,3 - Moderate,Request,MDM,Enrollment,CRM Support,Intune,Enroll my iPhone in the finance app,HR,user180
+INC100369,2026-04-19 22:28:00,2026-04-21 11:50:40,Closed,2 - High,Incident,Hardware,Laptop,Service Desk L1,Dell Latitude,Laptop screen flickering,Finance,user200
+INC100370,2026-02-07 13:09:00,2026-02-07 21:45:26,Closed,4 - Low,Request,MDM,Enrollment,Service Desk L1,Intune,Enroll my iPhone in the HR system,Engineering,user198
+INC100371,2026-06-04 15:19:00,2026-06-06 03:19:16,Resolved,3 - Moderate,Request,Software,License,CRM Support,Adobe Creative Cloud,Request license for the portal,Sales,user41
+INC100372,2026-04-15 05:52:00,,Open,3 - Moderate,Request,Workflow,Approval,Identity Team,ServiceNow,Approve my software purchase in the portal,Finance,user92
+INC100373,2026-01-18 02:43:00,2026-01-18 09:50:56,Closed,3 - Moderate,Incident,Network,Connectivity,CRM Support,Meraki WiFi,WiFi keeps dropping in office,Sales,user104
+INC100374,2026-03-27 15:06:00,2026-03-28 00:31:12,Resolved,1 - Critical,Incident,Email,Mailbox,Service Desk L1,Outlook,Outlook not receiving email,Finance,user34
+INC100375,2026-05-18 02:23:00,,Open,1 - Critical,Request,Software,License,Network Team,Adobe Creative Cloud,Request license for the HR system,Engineering,user209
+INC100376,2026-01-08 19:04:00,2026-01-09 22:09:07,Closed,2 - High,Request,Access,Access Request,Service Desk L1,Microsoft Entra ID,Need access to the finance app shared drive,Sales,user11
+INC100377,2026-01-18 15:10:00,,In Progress,4 - Low,Incident,Email,Mailbox,CRM Support,Outlook,Outlook not receiving email,HR,user128
+INC100378,2026-05-12 00:43:00,2026-05-12 02:24:40,Resolved,2 - High,Incident,Access,Password,Endpoint Team,Active Directory,Password reset for the finance app,HR,user39
+INC100379,2026-03-26 06:41:00,2026-03-26 09:10:31,Closed,4 - Low,Incident,Access,Account Lockout,HR Ops,Okta,"Cannot log in to the HR system, account locked",HR,user16
+INC100380,2026-04-06 20:24:00,2026-04-07 06:22:10,Closed,2 - High,Request,Access,Access Request,ERP Support,Microsoft Entra ID,Need access to the HR system shared drive,Sales,user98
+INC100381,2026-05-03 22:30:00,,In Progress,4 - Low,Incident,Software,Content,Endpoint Team,Field Sales App,iPad slide deck not displaying in field app,Operations,user83
+INC100382,2026-04-03 16:11:00,2026-04-03 23:14:22,Closed,3 - Moderate,Incident,Network,Connectivity,Service Desk L1,Meraki WiFi,WiFi keeps dropping in office,Operations,user92
+INC100383,2026-03-21 19:10:00,2026-03-22 03:57:14,Closed,2 - High,Request,MDM,Enrollment,ERP Support,Intune,Enroll my iPhone in the CRM,Engineering,user137
+INC100384,2026-03-17 06:36:00,2026-03-17 07:39:50,Resolved,2 - High,Incident,Access,Account Lockout,Identity Team,Okta,"Cannot log in to the CRM, account locked",Operations,user82
+INC100385,2026-05-03 20:58:00,,In Progress,1 - Critical,Incident,Software,Content,ERP Support,Field Sales App,iPad slide deck not displaying in field app,Engineering,user146
+INC100386,2026-02-18 21:36:00,2026-02-19 07:14:45,Closed,4 - Low,Request,MDM,Enrollment,Network Team,Intune,Enroll my iPhone in the finance app,Finance,user126
+INC100387,2026-02-01 04:03:00,2026-02-01 04:48:08,Closed,2 - High,Incident,Access,Account Lockout,Service Desk L1,Okta,"Cannot log in to the HR system, account locked",HR,user1
+INC100388,2026-03-11 03:51:00,2026-03-12 14:27:03,Closed,3 - Moderate,Incident,Hardware,Laptop,Service Desk L1,Dell Latitude,Laptop screen flickering,Finance,user151
+INC100389,2026-02-18 17:49:00,2026-02-19 11:58:25,Closed,3 - Moderate,Incident,Software,Content,Service Desk L1,Field Sales App,iPad slide deck not displaying in field app,HR,user151
+INC100390,2026-04-26 06:19:00,2026-04-26 09:46:35,Closed,4 - Low,Incident,Access,MFA,CRM Support,Okta,MFA not working on the VPN,HR,user167
+INC100391,2026-03-01 20:45:00,,In Progress,3 - Moderate,Incident,Hardware,Laptop,Identity Team,Dell Latitude,Laptop screen flickering,Operations,user209
+INC100392,2026-05-10 12:19:00,,Open,1 - Critical,Incident,Software,Application Error,ERP Support,SAP GUI,the HR system keeps crashing on launch,HR,user218
+INC100393,2026-01-12 10:11:00,,In Progress,3 - Moderate,Request,MDM,Enrollment,CRM Support,Intune,Enroll my iPhone in the HR system,Finance,user164
+INC100394,2026-02-05 21:59:00,2026-02-06 07:55:15,Resolved,2 - High,Request,MDM,Enrollment,Endpoint Team,Intune,Enroll my iPhone in the finance app,Finance,user163
+INC100395,2026-04-25 23:28:00,2026-04-27 05:41:45,Closed,3 - Moderate,Request,Access,Access Request,Identity Team,Microsoft Entra ID,Need access to the CRM shared drive,Sales,user90
+INC100396,2026-02-07 06:46:00,2026-02-08 13:47:16,Closed,4 - Low,Incident,HR,Attendance,Identity Team,SAP SuccessFactors,Leave balance incorrect in email,HR,user97
+INC100397,2026-05-09 11:06:00,2026-05-11 17:14:34,Resolved,2 - High,Request,Hardware,Peripheral,Identity Team,Monitor,Need a new monitor,Sales,user205
+INC100398,2026-04-12 00:01:00,2026-04-12 01:59:25,Closed,3 - Moderate,Incident,Access,Account Lockout,Identity Team,Okta,"Cannot log in to email, account locked",Finance,user188
+INC100399,2026-02-02 03:21:00,,In Progress,4 - Low,Request,Access,Access Request,ERP Support,Microsoft Entra ID,Need access to the portal shared drive,HR,user168
+INC100400,2026-05-29 13:10:00,2026-05-30 03:47:09,Closed,2 - High,Incident,Software,Application Error,HR Ops,SAP GUI,the VPN keeps crashing on launch,Operations,user185
+INC100401,2026-04-01 22:42:00,2026-04-02 09:09:03,Closed,3 - Moderate,Request,CRM,Data,Identity Team,Salesforce,Update opportunity stage in the portal,Sales,user101
+INC100402,2026-06-17 22:09:00,2026-06-18 03:15:10,Closed,3 - Moderate,Request,MDM,Enrollment,CRM Support,Intune,Enroll my iPhone in the VPN,Operations,user123
+INC100403,2026-02-03 11:01:00,2026-02-04 21:26:41,Closed,2 - High,Request,Software,License,ERP Support,Adobe Creative Cloud,Request license for the finance app,Sales,user122
+INC100404,2026-04-16 15:50:00,2026-04-16 16:19:42,Resolved,3 - Moderate,Incident,Access,MFA,Service Desk L1,Okta,MFA not working on the VPN,Operations,user100
+INC100405,2026-05-08 00:56:00,2026-05-08 14:46:58,Resolved,3 - Moderate,Incident,Software,Application Error,Identity Team,SAP GUI,email keeps crashing on launch,Sales,user68
+INC100406,2026-06-09 02:16:00,2026-06-09 09:52:33,Closed,2 - High,Incident,Email,Mailbox,CRM Support,Outlook,Outlook not receiving email,Sales,user22
+INC100407,2026-04-28 17:51:00,,In Progress,4 - Low,Request,Workflow,Approval,CRM Support,ServiceNow,Approve my software purchase in the HR system,Finance,user142
+INC100408,2026-05-13 12:52:00,,In Progress,4 - Low,Incident,Access,Account Lockout,Network Team,Okta,"Cannot log in to the CRM, account locked",HR,user77
+INC100409,2026-05-16 03:57:00,,Open,1 - Critical,Request,Access,Access Request,Network Team,Microsoft Entra ID,Need access to the HR system shared drive,Operations,user205
+INC100410,2026-02-20 16:07:00,2026-02-21 02:52:41,Resolved,2 - High,Request,MDM,Enrollment,CRM Support,Intune,Enroll my iPhone in the CRM,Finance,user11
+INC100411,2026-01-28 02:43:00,2026-01-28 12:49:13,Resolved,2 - High,Incident,Network,VPN,CRM Support,GlobalProtect,VPN not connecting,Finance,user214
+INC100412,2026-03-30 09:20:00,,Open,4 - Low,Incident,MDM,Compliance,Network Team,Intune,Device shows non-compliant in email,Operations,user84
+INC100413,2026-06-06 18:58:00,2026-06-07 15:17:00,Closed,4 - Low,Incident,HR,Attendance,Service Desk L1,SAP SuccessFactors,Leave balance incorrect in email,Finance,user38
+INC100414,2026-02-04 13:59:00,2026-02-04 19:47:24,Closed,3 - Moderate,Request,MDM,Enrollment,CRM Support,Intune,Enroll my iPhone in the HR system,Engineering,user106
+INC100415,2026-05-12 02:41:00,2026-05-12 23:07:30,Resolved,4 - Low,Incident,HR,Attendance,Service Desk L1,SAP SuccessFactors,Leave balance incorrect in the CRM,Engineering,user104
+INC100416,2026-05-18 11:02:00,2026-05-18 16:08:14,Resolved,2 - High,Request,Software,How-to,Service Desk L1,Company Portal,How do I install the VPN,HR,user69
+INC100417,2026-01-08 06:21:00,2026-01-09 19:19:51,Closed,3 - Moderate,Request,Hardware,Peripheral,Endpoint Team,Monitor,Need a new monitor,Sales,user59
+INC100418,2026-04-13 22:47:00,2026-04-14 02:59:42,Resolved,4 - Low,Request,Software,How-to,Network Team,Company Portal,How do I install the VPN,Sales,user49
+INC100419,2026-03-14 12:58:00,2026-03-14 16:52:45,Resolved,4 - Low,Incident,Email,Mailbox,CRM Support,Outlook,Outlook not receiving email,Engineering,user211
+INC100420,2026-02-24 15:04:00,2026-02-24 16:51:44,Closed,1 - Critical,Incident,Access,Account Lockout,Identity Team,Okta,"Cannot log in to the CRM, account locked",Finance,user215
+INC100421,2026-03-27 12:02:00,2026-03-27 13:14:46,Resolved,1 - Critical,Incident,Access,Account Lockout,Endpoint Team,Okta,"Cannot log in to the VPN, account locked",Finance,user71
+INC100422,2026-06-08 19:32:00,2026-06-10 13:01:20,Resolved,1 - Critical,Request,Hardware,Peripheral,Identity Team,Monitor,Need a new monitor,HR,user153
+INC100423,2026-03-02 23:55:00,2026-03-03 04:59:19,Resolved,3 - Moderate,Incident,Email,Mailbox,Endpoint Team,Outlook,Outlook not receiving email,Engineering,user192
+INC100424,2026-02-01 05:18:00,2026-02-01 17:35:34,Closed,2 - High,Incident,Software,Content,CRM Support,Field Sales App,iPad slide deck not displaying in field app,Finance,user174
+INC100425,2026-04-03 05:41:00,2026-04-04 11:44:20,Resolved,1 - Critical,Request,Software,License,CRM Support,Adobe Creative Cloud,Request license for the VPN,Sales,user122
+INC100426,2026-03-01 11:38:00,2026-03-01 15:59:33,Closed,3 - Moderate,Request,Software,How-to,ERP Support,Company Portal,How do I install the VPN,Engineering,user109
+INC100427,2026-04-30 09:29:00,2026-04-30 21:48:19,Closed,2 - High,Incident,Network,Connectivity,HR Ops,Meraki WiFi,WiFi keeps dropping in office,Operations,user212
+INC100428,2026-05-16 22:37:00,2026-05-18 02:36:15,Closed,3 - Moderate,Incident,MDM,Compliance,Network Team,Intune,Device shows non-compliant in the VPN,Operations,user156
+INC100429,2026-04-13 06:43:00,2026-04-14 14:51:25,Closed,4 - Low,Request,HR,Attendance,Service Desk L1,SAP,"Attendance not captured, need unlock in the finance app",Engineering,user164
+INC100430,2026-04-05 21:16:00,,Open,3 - Moderate,Incident,Hardware,Laptop,Identity Team,Dell Latitude,Laptop screen flickering,Operations,user196
+INC100431,2026-01-20 18:51:00,,In Progress,4 - Low,Incident,HR,Payroll,ERP Support,Workday,Payslip missing in the finance app,Finance,user185
+INC100432,2026-06-20 03:18:00,2026-06-20 05:18:33,Closed,1 - Critical,Incident,Access,Password,Network Team,Active Directory,Password reset for the VPN,Operations,user209
+INC100433,2026-04-28 12:46:00,,Open,2 - High,Request,Software,License,ERP Support,Adobe Creative Cloud,Request license for the HR system,HR,user172
+INC100434,2026-06-23 12:19:00,2026-06-26 09:29:26,Closed,2 - High,Request,Hardware,Peripheral,Endpoint Team,Monitor,Need a new monitor,HR,user33
+INC100435,2026-03-04 20:43:00,2026-03-05 03:33:33,Closed,1 - Critical,Incident,HR,Attendance,Identity Team,SAP SuccessFactors,Leave balance incorrect in the finance app,Finance,user191
+INC100436,2026-05-24 21:50:00,2026-05-25 16:48:29,Closed,4 - Low,Request,HR,Attendance,CRM Support,SAP,"Attendance not captured, need unlock in the portal",HR,user14
+INC100437,2026-01-25 16:30:00,2026-01-26 11:51:51,Closed,1 - Critical,Request,Reporting,Report,CRM Support,Power BI,Need the Q3 sales dashboard export,HR,user136
+INC100438,2026-05-22 09:03:00,2026-05-23 20:15:56,Closed,4 - Low,Request,HR,Attendance,Network Team,SAP,"Attendance not captured, need unlock in email",Finance,user81
+INC100439,2026-03-03 22:49:00,2026-03-04 16:51:53,Closed,4 - Low,Incident,Software,Content,Endpoint Team,Field Sales App,iPad slide deck not displaying in field app,Finance,user81
+INC100440,2026-01-21 04:00:00,2026-01-21 16:36:14,Resolved,2 - High,Request,Reporting,Report,Network Team,Power BI,Need the Q3 sales dashboard export,HR,user202
+INC100441,2026-02-14 13:39:00,2026-02-15 23:02:29,Resolved,4 - Low,Request,Access,Access Request,HR Ops,Microsoft Entra ID,Need access to email shared drive,HR,user99
+INC100442,2026-01-14 06:34:00,2026-01-14 07:53:18,Closed,3 - Moderate,Incident,Access,Password,CRM Support,Active Directory,Password reset for the HR system,Finance,user5
+INC100443,2026-01-02 18:40:00,,Open,2 - High,Request,Workflow,Approval,Identity Team,ServiceNow,Approve my software purchase in the VPN,Engineering,user80
+INC100444,2026-02-05 10:24:00,,In Progress,1 - Critical,Request,Software,How-to,Endpoint Team,Company Portal,How do I install the finance app,HR,user187
+INC100445,2026-04-26 16:27:00,,Open,2 - High,Incident,CRM,Sync,Endpoint Team,Salesforce,Salesforce report not syncing data,Engineering,user193
+INC100446,2026-02-26 15:58:00,2026-02-28 01:19:33,Resolved,2 - High,Request,Software,License,Identity Team,Adobe Creative Cloud,Request license for the VPN,Sales,user151
+INC100447,2026-02-28 01:07:00,2026-03-01 06:04:25,Closed,1 - Critical,Incident,CRM,Sync,HR Ops,Salesforce,Salesforce report not syncing data,Engineering,user198
+INC100448,2026-01-17 23:38:00,2026-01-18 05:52:46,Closed,1 - Critical,Request,CRM,Data,Service Desk L1,Salesforce,Update opportunity stage in the VPN,Sales,user107
+INC100449,2026-05-11 04:07:00,,In Progress,3 - Moderate,Incident,Email,Mailbox,HR Ops,Outlook,Outlook not receiving email,Finance,user53
+INC100450,2026-01-04 13:19:00,2026-01-04 23:39:23,Resolved,3 - Moderate,Incident,Software,Content,Network Team,Field Sales App,iPad slide deck not displaying in field app,Finance,user108
+INC100451,2026-06-24 23:46:00,,In Progress,1 - Critical,Incident,Access,MFA,Endpoint Team,Okta,MFA not working on the portal,Sales,user128
+INC100452,2026-03-10 13:49:00,2026-03-12 05:31:16,Closed,3 - Moderate,Request,Software,License,ERP Support,Adobe Creative Cloud,Request license for email,Engineering,user42
+INC100453,2026-06-19 19:58:00,2026-06-19 20:10:00,Closed,4 - Low,Incident,Access,Account Lockout,Endpoint Team,Okta,"Cannot log in to the CRM, account locked",Sales,user4
+INC100454,2026-01-31 18:58:00,2026-02-01 15:49:23,Closed,2 - High,Request,Workflow,Approval,Service Desk L1,ServiceNow,Approve my software purchase in the HR system,Sales,user186
+INC100455,2026-03-29 17:41:00,2026-03-29 19:08:55,Closed,4 - Low,Incident,Access,MFA,Endpoint Team,Okta,MFA not working on the finance app,HR,user13
+INC100456,2026-03-02 00:55:00,2026-03-02 04:35:46,Closed,3 - Moderate,Incident,Access,MFA,HR Ops,Okta,MFA not working on the VPN,Sales,user25
+INC100457,2026-01-04 16:54:00,2026-01-04 18:17:40,Closed,2 - High,Incident,Access,Account Lockout,Endpoint Team,Okta,"Cannot log in to the finance app, account locked",HR,user160
+INC100458,2026-02-02 02:23:00,2026-02-03 04:01:46,Closed,4 - Low,Incident,HR,Attendance,Endpoint Team,SAP SuccessFactors,Leave balance incorrect in email,HR,user205
+INC100459,2026-02-27 07:07:00,2026-02-27 13:57:48,Closed,1 - Critical,Incident,Network,VPN,CRM Support,GlobalProtect,VPN not connecting,Sales,user107
+INC100460,2026-06-15 03:51:00,,In Progress,4 - Low,Request,MDM,Enrollment,CRM Support,Intune,Enroll my iPhone in the finance app,Operations,user8
+INC100461,2026-02-14 23:30:00,2026-02-15 11:51:18,Resolved,1 - Critical,Request,Workflow,Approval,HR Ops,ServiceNow,Approve my software purchase in email,Sales,user17
+INC100462,2026-04-18 15:00:00,,Open,2 - High,Incident,HR,Attendance,ERP Support,SAP SuccessFactors,Leave balance incorrect in the finance app,Operations,user134
+INC100463,2026-02-02 21:27:00,,Open,2 - High,Incident,Software,Content,HR Ops,Field Sales App,iPad slide deck not displaying in field app,HR,user39
+INC100464,2026-01-20 00:00:00,,Open,4 - Low,Request,CRM,Data,CRM Support,Salesforce,Update opportunity stage in email,Finance,user20
+INC100465,2026-04-20 19:15:00,2026-04-21 03:20:50,Closed,3 - Moderate,Request,Email,Distribution List,Service Desk L1,Exchange,Add me to the the HR system distribution list,Finance,user141
+INC100466,2026-05-10 14:25:00,2026-05-11 09:45:23,Closed,4 - Low,Request,Reporting,Report,Service Desk L1,Power BI,Need the Q3 sales dashboard export,HR,user81
+INC100467,2026-06-20 03:47:00,,Open,1 - Critical,Incident,Access,MFA,Service Desk L1,Okta,MFA not working on email,HR,user10
+INC100468,2026-01-01 10:52:00,2026-01-01 22:16:02,Closed,3 - Moderate,Request,CRM,Data,Network Team,Salesforce,Update opportunity stage in the HR system,Finance,user168
+INC100469,2026-06-06 02:21:00,2026-06-06 02:33:00,Closed,1 - Critical,Request,Workflow,Approval,CRM Support,ServiceNow,Approve my software purchase in the CRM,HR,user85
+INC100470,2026-06-11 20:45:00,,Open,1 - Critical,Request,CRM,Data,CRM Support,Salesforce,Update opportunity stage in the VPN,Finance,user1
+INC100471,2026-05-02 14:53:00,,Open,3 - Moderate,Incident,Hardware,Laptop,Network Team,Dell Latitude,Laptop screen flickering,Engineering,user180
+INC100472,2026-01-17 00:57:00,2026-01-17 01:43:24,Closed,4 - Low,Incident,Access,MFA,Service Desk L1,Okta,MFA not working on the finance app,Operations,user51
+INC100473,2026-02-11 14:59:00,2026-02-12 17:54:09,Resolved,2 - High,Request,Software,License,HR Ops,Adobe Creative Cloud,Request license for the CRM,Engineering,user28
+INC100474,2026-01-17 05:59:00,,Open,4 - Low,Incident,Network,VPN,HR Ops,GlobalProtect,VPN not connecting,Operations,user130
+INC100475,2026-06-20 15:00:00,,In Progress,1 - Critical,Request,Software,How-to,Network Team,Company Portal,How do I install email,Operations,user124
+INC100476,2026-03-02 20:44:00,,In Progress,1 - Critical,Incident,CRM,Sync,HR Ops,Salesforce,Salesforce report not syncing data,Operations,user156
+INC100477,2026-06-22 10:56:00,2026-06-25 05:01:07,Resolved,4 - Low,Incident,Hardware,Laptop,Network Team,Dell Latitude,Laptop screen flickering,Finance,user71
+INC100478,2026-04-28 09:18:00,2026-04-28 17:53:20,Resolved,3 - Moderate,Incident,Network,Connectivity,CRM Support,Meraki WiFi,WiFi keeps dropping in office,Operations,user81
+INC100479,2026-03-16 13:12:00,2026-03-17 01:07:11,Closed,3 - Moderate,Incident,Software,Content,ERP Support,Field Sales App,iPad slide deck not displaying in field app,Finance,user182
+INC100480,2026-03-03 01:32:00,,In Progress,1 - Critical,Request,Reporting,Report,CRM Support,Power BI,Need the Q3 sales dashboard export,Operations,user123
+INC100481,2026-05-23 20:43:00,,Open,3 - Moderate,Request,MDM,Enrollment,CRM Support,Intune,Enroll my iPhone in email,Sales,user134
+INC100482,2026-01-10 00:24:00,2026-01-10 03:47:13,Closed,3 - Moderate,Incident,Access,MFA,CRM Support,Okta,MFA not working on the CRM,Engineering,user175
+INC100483,2026-02-20 08:53:00,2026-02-21 07:51:59,Closed,3 - Moderate,Incident,HR,Attendance,Identity Team,SAP SuccessFactors,Leave balance incorrect in the HR system,Sales,user92
+INC100484,2026-02-05 08:39:00,,Open,4 - Low,Incident,Email,Mailbox,Identity Team,Outlook,Outlook not receiving email,Engineering,user178
+INC100485,2026-01-17 09:59:00,2026-01-17 13:12:25,Resolved,4 - Low,Request,Workflow,Approval,HR Ops,ServiceNow,Approve my software purchase in the VPN,Engineering,user142
+INC100486,2026-01-05 19:47:00,2026-01-05 22:15:06,Closed,4 - Low,Incident,Access,Account Lockout,CRM Support,Okta,"Cannot log in to the CRM, account locked",Engineering,user194
+INC100487,2026-03-09 10:49:00,,Open,2 - High,Request,MDM,Enrollment,Endpoint Team,Intune,Enroll my iPhone in email,Finance,user175
+INC100488,2026-03-06 04:11:00,,Open,4 - Low,Request,Access,Access Request,Endpoint Team,Microsoft Entra ID,Need access to the HR system shared drive,Engineering,user34
+INC100489,2026-03-29 10:00:00,2026-03-29 21:35:38,Closed,4 - Low,Incident,Software,Application Error,ERP Support,SAP GUI,the CRM keeps crashing on launch,Sales,user40
+INC100490,2026-01-18 17:49:00,,Open,4 - Low,Incident,Hardware,Laptop,CRM Support,Dell Latitude,Laptop screen flickering,Operations,user92
+INC100491,2026-04-19 20:33:00,2026-04-20 08:43:30,Closed,2 - High,Request,Access,Access Request,Network Team,Microsoft Entra ID,Need access to the portal shared drive,Operations,user41
+INC100492,2026-05-19 01:05:00,2026-05-19 06:19:57,Closed,3 - Moderate,Incident,Network,VPN,Endpoint Team,GlobalProtect,VPN not connecting,Engineering,user56
+INC100493,2026-06-12 11:35:00,,Open,1 - Critical,Incident,MDM,Compliance,Service Desk L1,Intune,Device shows non-compliant in the VPN,Engineering,user115
+INC100494,2026-03-25 14:02:00,,Open,1 - Critical,Incident,HR,Payroll,HR Ops,Workday,Payslip missing in the finance app,Operations,user186
+INC100495,2026-01-09 19:58:00,,In Progress,3 - Moderate,Request,HR,Attendance,Network Team,SAP,"Attendance not captured, need unlock in the HR system",HR,user125
+INC100496,2026-04-12 13:57:00,,Open,1 - Critical,Incident,Access,Account Lockout,Identity Team,Okta,"Cannot log in to the HR system, account locked",Operations,user2
+INC100497,2026-01-23 17:13:00,,Open,2 - High,Request,Reporting,Report,CRM Support,Power BI,Need the Q3 sales dashboard export,HR,user214
+INC100498,2026-03-12 13:34:00,,Open,4 - Low,Incident,Access,MFA,ERP Support,Okta,MFA not working on the portal,Finance,user7
+INC100499,2026-04-24 14:02:00,2026-04-24 17:18:24,Closed,1 - Critical,Incident,Email,Mailbox,Service Desk L1,Outlook,Outlook not receiving email,Engineering,user143
+INC100500,2026-03-20 01:58:00,2026-03-20 14:38:19,Closed,4 - Low,Request,Access,Access Request,HR Ops,Microsoft Entra ID,Need access to the finance app shared drive,Sales,user100
+INC100501,2026-02-10 18:34:00,2026-02-11 14:24:37,Closed,1 - Critical,Request,Workflow,Approval,CRM Support,ServiceNow,Approve my software purchase in the VPN,Operations,user12
+INC100502,2026-01-26 03:22:00,,In Progress,3 - Moderate,Incident,Software,Content,Network Team,Field Sales App,iPad slide deck not displaying in field app,Engineering,user196
+INC100503,2026-05-11 13:25:00,,Open,1 - Critical,Incident,Email,Mailbox,HR Ops,Outlook,Outlook not receiving email,Operations,user57
+INC100504,2026-05-14 20:50:00,,In Progress,3 - Moderate,Request,Software,How-to,ERP Support,Company Portal,How do I install the VPN,Engineering,user3
+INC100505,2026-02-18 15:07:00,2026-02-19 05:01:07,Closed,1 - Critical,Request,CRM,Data,Network Team,Salesforce,Update opportunity stage in the HR system,HR,user138
+INC100506,2026-01-30 10:19:00,2026-01-30 19:14:00,Closed,3 - Moderate,Request,CRM,Data,Identity Team,Salesforce,Update opportunity stage in email,Operations,user37
+INC100507,2026-03-05 04:14:00,,In Progress,3 - Moderate,Incident,Software,Application Error,Identity Team,SAP GUI,the portal keeps crashing on launch,Finance,user172
+INC100508,2026-01-19 22:54:00,,In Progress,3 - Moderate,Request,MDM,Enrollment,ERP Support,Intune,Enroll my iPhone in the portal,Engineering,user26
+INC100509,2026-06-16 16:21:00,2026-06-17 21:30:56,Closed,2 - High,Request,Software,License,ERP Support,Adobe Creative Cloud,Request license for the VPN,Finance,user26
+INC100510,2026-01-25 04:57:00,2026-01-26 05:31:24,Closed,3 - Moderate,Request,HR,Attendance,ERP Support,SAP,"Attendance not captured, need unlock in the HR system",Finance,user145
+INC100511,2026-05-05 18:51:00,2026-05-06 04:38:27,Closed,4 - Low,Request,MDM,Enrollment,Identity Team,Intune,Enroll my iPhone in the portal,Engineering,user64
+INC100512,2026-05-30 05:17:00,2026-05-31 07:03:32,Closed,4 - Low,Incident,HR,Payroll,HR Ops,Workday,Payslip missing in email,Engineering,user199
+INC100513,2026-06-16 14:35:00,2026-06-18 11:09:16,Closed,2 - High,Request,HR,Attendance,ERP Support,SAP,"Attendance not captured, need unlock in the HR system",Sales,user216
+INC100514,2026-02-18 03:57:00,,In Progress,1 - Critical,Incident,HR,Attendance,ERP Support,SAP SuccessFactors,Leave balance incorrect in the portal,Sales,user218
+INC100515,2026-01-12 00:52:00,,In Progress,4 - Low,Incident,CRM,Sync,CRM Support,Salesforce,Salesforce report not syncing data,Finance,user10
+INC100516,2026-03-31 07:34:00,,In Progress,3 - Moderate,Request,CRM,Data,HR Ops,Salesforce,Update opportunity stage in the CRM,Operations,user188
+INC100517,2026-02-16 01:29:00,,In Progress,1 - Critical,Request,HR,Attendance,HR Ops,SAP,"Attendance not captured, need unlock in the finance app",Operations,user3
+INC100518,2026-03-23 21:54:00,,In Progress,2 - High,Request,Workflow,Approval,HR Ops,ServiceNow,Approve my software purchase in the CRM,Finance,user145
+INC100519,2026-02-20 06:47:00,,Open,4 - Low,Request,MDM,Enrollment,Endpoint Team,Intune,Enroll my iPhone in the portal,Finance,user195
+INC100520,2026-03-21 11:04:00,2026-03-21 20:15:35,Closed,2 - High,Request,Email,Distribution List,Network Team,Exchange,Add me to the the finance app distribution list,HR,user121
+INC100521,2026-01-17 05:02:00,,Open,3 - Moderate,Incident,Email,Mailbox,Service Desk L1,Outlook,Outlook not receiving email,Operations,user163
+INC100522,2026-04-01 06:37:00,,In Progress,4 - Low,Incident,HR,Attendance,Endpoint Team,SAP SuccessFactors,Leave balance incorrect in the HR system,Sales,user133
+INC100523,2026-05-09 19:58:00,2026-05-10 14:18:57,Closed,4 - Low,Incident,HR,Attendance,Endpoint Team,SAP SuccessFactors,Leave balance incorrect in the finance app,HR,user203
+INC100524,2026-01-03 15:32:00,2026-01-03 22:50:42,Closed,3 - Moderate,Request,Email,Distribution List,Identity Team,Exchange,Add me to the the CRM distribution list,Finance,user41
+INC100525,2026-02-10 18:42:00,2026-02-12 23:49:05,Closed,4 - Low,Request,Hardware,Peripheral,CRM Support,Monitor,Need a new monitor,Sales,user124
+INC100526,2026-06-13 19:30:00,2026-06-14 03:43:25,Closed,4 - Low,Request,Workflow,Approval,Service Desk L1,ServiceNow,Approve my software purchase in the CRM,Sales,user33
+INC100527,2026-02-25 08:08:00,,Open,1 - Critical,Request,MDM,Enrollment,Network Team,Intune,Enroll my iPhone in the CRM,Sales,user43
+INC100528,2026-03-03 19:33:00,2026-03-04 08:21:17,Resolved,1 - Critical,Incident,HR,Attendance,ERP Support,SAP SuccessFactors,Leave balance incorrect in the VPN,Engineering,user22
+INC100529,2026-06-03 16:38:00,2026-06-04 10:48:17,Resolved,4 - Low,Request,Software,License,Identity Team,Adobe Creative Cloud,Request license for the CRM,HR,user154
+INC100530,2026-03-04 10:39:00,,Open,3 - Moderate,Request,Software,How-to,HR Ops,Company Portal,How do I install the HR system,Operations,user18
+INC100531,2026-05-10 11:24:00,2026-05-11 05:06:14,Closed,1 - Critical,Incident,HR,Payroll,Service Desk L1,Workday,Payslip missing in the CRM,Operations,user130
+INC100532,2026-05-24 15:52:00,2026-05-25 04:42:50,Closed,1 - Critical,Request,Workflow,Approval,CRM Support,ServiceNow,Approve my software purchase in the HR system,Operations,user193
+INC100533,2026-02-02 04:30:00,,Open,2 - High,Incident,Access,MFA,Network Team,Okta,MFA not working on the HR system,Sales,user199
+INC100534,2026-05-28 15:33:00,2026-05-29 06:14:27,Resolved,4 - Low,Request,Workflow,Approval,Identity Team,ServiceNow,Approve my software purchase in email,HR,user90
+INC100535,2026-02-03 17:27:00,2026-02-04 01:03:25,Closed,3 - Moderate,Request,MDM,Enrollment,HR Ops,Intune,Enroll my iPhone in the CRM,Sales,user73
+INC100536,2026-05-20 20:16:00,2026-05-21 14:31:20,Closed,1 - Critical,Incident,MDM,Compliance,Network Team,Intune,Device shows non-compliant in the HR system,Sales,user134
+INC100537,2026-05-09 09:41:00,2026-05-09 11:13:02,Closed,3 - Moderate,Incident,Access,Password,HR Ops,Active Directory,Password reset for the finance app,Sales,user40
+INC100538,2026-03-28 22:16:00,,In Progress,3 - Moderate,Incident,Network,VPN,ERP Support,GlobalProtect,VPN not connecting,Finance,user106
+INC100539,2026-06-15 01:11:00,2026-06-15 11:46:12,Closed,4 - Low,Request,CRM,Data,Endpoint Team,Salesforce,Update opportunity stage in the finance app,Operations,user89
+INC100540,2026-05-17 06:47:00,2026-05-18 03:10:47,Closed,2 - High,Incident,Software,Content,HR Ops,Field Sales App,iPad slide deck not displaying in field app,Finance,user26
+INC100541,2026-06-23 21:25:00,2026-06-24 11:21:27,Closed,1 - Critical,Request,Software,License,Identity Team,Adobe Creative Cloud,Request license for email,Sales,user206
+INC100542,2026-02-19 23:30:00,,In Progress,2 - High,Request,Access,Access Request,Endpoint Team,Microsoft Entra ID,Need access to the portal shared drive,Operations,user10
+INC100543,2026-05-18 03:39:00,,Open,3 - Moderate,Incident,Network,Connectivity,ERP Support,Meraki WiFi,WiFi keeps dropping in office,Sales,user199
+INC100544,2026-06-19 02:28:00,2026-06-19 16:33:52,Closed,3 - Moderate,Incident,Software,Application Error,Identity Team,SAP GUI,the portal keeps crashing on launch,Operations,user131
+INC100545,2026-03-21 10:39:00,2026-03-23 06:17:00,Closed,1 - Critical,Incident,CRM,Sync,Endpoint Team,Salesforce,Salesforce report not syncing data,Sales,user41
+INC100546,2026-04-05 13:49:00,2026-04-06 04:58:29,Resolved,2 - High,Request,Access,Access Request,Network Team,Microsoft Entra ID,Need access to the portal shared drive,Sales,user24
+INC100547,2026-04-08 11:46:00,,In Progress,3 - Moderate,Request,CRM,Data,Endpoint Team,Salesforce,Update opportunity stage in the finance app,Finance,user156
+INC100548,2026-06-05 14:59:00,2026-06-06 09:46:20,Resolved,4 - Low,Request,Software,License,Network Team,Adobe Creative Cloud,Request license for the portal,Operations,user19
+INC100549,2026-04-11 19:21:00,2026-04-12 19:23:56,Closed,3 - Moderate,Incident,CRM,Sync,Network Team,Salesforce,Salesforce report not syncing data,Engineering,user178
+INC100550,2026-05-10 02:36:00,2026-05-10 09:06:19,Resolved,4 - Low,Incident,Email,Mailbox,ERP Support,Outlook,Outlook not receiving email,Operations,user8
+INC100551,2026-02-10 01:16:00,2026-02-10 04:35:11,Closed,4 - Low,Request,Email,Distribution List,ERP Support,Exchange,Add me to the the CRM distribution list,Finance,user205
+INC100552,2026-05-22 03:22:00,,In Progress,3 - Moderate,Incident,Hardware,Laptop,Identity Team,Dell Latitude,Laptop screen flickering,Sales,user103
+INC100553,2026-04-28 02:04:00,,In Progress,2 - High,Request,Workflow,Approval,HR Ops,ServiceNow,Approve my software purchase in the finance app,Engineering,user56
+INC100554,2026-04-03 05:11:00,,Open,4 - Low,Request,MDM,Enrollment,ERP Support,Intune,Enroll my iPhone in the CRM,Finance,user189
+INC100555,2026-04-01 23:13:00,2026-04-02 02:47:37,Closed,2 - High,Incident,HR,Payroll,CRM Support,Workday,Payslip missing in the CRM,Operations,user92
+INC100556,2026-02-06 18:07:00,2026-02-06 21:03:19,Closed,1 - Critical,Request,Software,How-to,CRM Support,Company Portal,How do I install the HR system,Sales,user218
+INC100557,2026-05-08 01:39:00,2026-05-08 06:22:36,Closed,4 - Low,Request,Email,Distribution List,Network Team,Exchange,Add me to the the finance app distribution list,HR,user47
+INC100558,2026-04-07 00:25:00,2026-04-08 04:25:22,Closed,4 - Low,Incident,CRM,Sync,HR Ops,Salesforce,Salesforce report not syncing data,Sales,user129
+INC100559,2026-05-15 18:55:00,,Open,2 - High,Request,Hardware,Peripheral,HR Ops,Monitor,Need a new monitor,Operations,user118
+INC100560,2026-01-04 05:00:00,,Open,3 - Moderate,Incident,Hardware,Laptop,Endpoint Team,Dell Latitude,Laptop screen flickering,Engineering,user48
+INC100561,2026-04-01 02:15:00,2026-04-01 15:51:17,Closed,4 - Low,Request,CRM,Data,Network Team,Salesforce,Update opportunity stage in the finance app,Engineering,user48
+INC100562,2026-05-26 01:13:00,2026-05-26 10:02:24,Resolved,4 - Low,Request,Email,Distribution List,Endpoint Team,Exchange,Add me to the email distribution list,Finance,user147
+INC100563,2026-03-20 09:52:00,2026-03-20 12:23:45,Closed,3 - Moderate,Request,Software,How-to,CRM Support,Company Portal,How do I install the CRM,Operations,user111
+INC100564,2026-03-09 07:09:00,,Open,2 - High,Incident,Network,Connectivity,HR Ops,Meraki WiFi,WiFi keeps dropping in office,Finance,user218
+INC100565,2026-04-19 03:50:00,2026-04-20 02:01:00,Resolved,3 - Moderate,Request,Reporting,Report,Endpoint Team,Power BI,Need the Q3 sales dashboard export,Operations,user13
+INC100566,2026-02-04 03:44:00,2026-02-04 17:11:17,Closed,4 - Low,Incident,Network,Connectivity,CRM Support,Meraki WiFi,WiFi keeps dropping in office,Sales,user116
+INC100567,2026-03-31 01:23:00,2026-04-02 04:11:21,Closed,3 - Moderate,Incident,Hardware,Laptop,Endpoint Team,Dell Latitude,Laptop screen flickering,HR,user32
+INC100568,2026-03-10 06:36:00,,In Progress,3 - Moderate,Request,Hardware,Peripheral,Endpoint Team,Monitor,Need a new monitor,Operations,user125
+INC100569,2026-01-28 03:24:00,,In Progress,3 - Moderate,Incident,Email,Mailbox,HR Ops,Outlook,Outlook not receiving email,Finance,user43
+INC100570,2026-04-26 12:26:00,,Open,1 - Critical,Request,Reporting,Report,Service Desk L1,Power BI,Need the Q3 sales dashboard export,Engineering,user59
+INC100571,2026-04-19 12:41:00,2026-04-20 18:06:47,Closed,3 - Moderate,Incident,Hardware,Laptop,Network Team,Dell Latitude,Laptop screen flickering,HR,user70
+INC100572,2026-05-05 08:47:00,,In Progress,2 - High,Incident,Email,Mailbox,Identity Team,Outlook,Outlook not receiving email,Finance,user187
+INC100573,2026-03-28 06:47:00,,Open,1 - Critical,Incident,HR,Payroll,Identity Team,Workday,Payslip missing in the CRM,HR,user27
+INC100574,2026-01-23 03:59:00,2026-01-23 06:43:07,Resolved,4 - Low,Incident,Access,MFA,Network Team,Okta,MFA not working on the portal,Sales,user68
+INC100575,2026-02-23 09:05:00,,Open,4 - Low,Incident,MDM,Compliance,Endpoint Team,Intune,Device shows non-compliant in the CRM,Finance,user189
+INC100576,2026-06-01 15:40:00,2026-06-03 13:13:08,Closed,1 - Critical,Request,HR,Attendance,Service Desk L1,SAP,"Attendance not captured, need unlock in the VPN",Engineering,user84
+INC100577,2026-06-09 20:55:00,,In Progress,3 - Moderate,Request,Email,Distribution List,Network Team,Exchange,Add me to the email distribution list,Finance,user179
+INC100578,2026-03-02 19:37:00,,In Progress,4 - Low,Request,CRM,Data,Network Team,Salesforce,Update opportunity stage in the VPN,Operations,user80
+INC100579,2026-06-14 18:34:00,2026-06-17 03:10:27,Closed,1 - Critical,Request,Hardware,Peripheral,HR Ops,Monitor,Need a new monitor,Engineering,user106
+INC100580,2026-02-23 12:19:00,2026-02-25 02:29:33,Closed,2 - High,Incident,HR,Attendance,Endpoint Team,SAP SuccessFactors,Leave balance incorrect in the finance app,HR,user137
+INC100581,2026-06-18 06:48:00,2026-06-18 08:18:02,Resolved,3 - Moderate,Incident,Access,Password,Service Desk L1,Active Directory,Password reset for email,Engineering,user153
+INC100582,2026-01-03 20:35:00,2026-01-04 20:11:19,Closed,4 - Low,Incident,HR,Payroll,HR Ops,Workday,Payslip missing in the CRM,Finance,user184
+INC100583,2026-05-14 09:53:00,2026-05-15 10:36:45,Resolved,2 - High,Request,Reporting,Report,Endpoint Team,Power BI,Need the Q3 sales dashboard export,HR,user161
+INC100584,2026-04-04 04:18:00,,Open,4 - Low,Incident,HR,Payroll,Identity Team,Workday,Payslip missing in the portal,Finance,user35
+INC100585,2026-02-08 01:40:00,2026-02-08 09:51:34,Resolved,4 - Low,Request,HR,Attendance,Endpoint Team,SAP,"Attendance not captured, need unlock in the VPN",Operations,user126
+INC100586,2026-04-20 19:01:00,2026-04-22 09:15:55,Closed,2 - High,Request,Software,License,Service Desk L1,Adobe Creative Cloud,Request license for the finance app,Engineering,user33
+INC100587,2026-05-31 00:46:00,2026-05-31 18:02:40,Closed,2 - High,Incident,Software,Content,Service Desk L1,Field Sales App,iPad slide deck not displaying in field app,Sales,user127
+INC100588,2026-04-28 01:26:00,2026-04-29 06:09:09,Closed,3 - Moderate,Request,Software,License,HR Ops,Adobe Creative Cloud,Request license for the VPN,Sales,user85
+INC100589,2026-02-20 05:03:00,2026-02-20 15:53:17,Closed,4 - Low,Request,Access,Access Request,Service Desk L1,Microsoft Entra ID,Need access to the HR system shared drive,HR,user47
+INC100590,2026-03-27 17:52:00,2026-03-28 22:22:14,Resolved,2 - High,Request,Software,License,HR Ops,Adobe Creative Cloud,Request license for email,Finance,user189
+INC100591,2026-03-10 08:29:00,,Open,1 - Critical,Incident,Access,Account Lockout,Network Team,Okta,"Cannot log in to the VPN, account locked",Finance,user122
+INC100592,2026-04-17 21:59:00,2026-04-18 08:47:20,Closed,1 - Critical,Incident,Network,Connectivity,Endpoint Team,Meraki WiFi,WiFi keeps dropping in office,Engineering,user51
+INC100593,2026-01-19 03:55:00,,Open,2 - High,Request,Hardware,Peripheral,Service Desk L1,Monitor,Need a new monitor,HR,user84
+INC100594,2026-02-27 12:50:00,2026-02-27 13:48:51,Closed,2 - High,Incident,Access,Password,Service Desk L1,Active Directory,Password reset for the portal,Operations,user201
+INC100595,2026-06-12 14:44:00,,In Progress,2 - High,Incident,Software,Content,Endpoint Team,Field Sales App,iPad slide deck not displaying in field app,Finance,user41
+INC100596,2026-02-01 13:43:00,,In Progress,1 - Critical,Request,Email,Distribution List,Service Desk L1,Exchange,Add me to the the finance app distribution list,Finance,user180
+INC100597,2026-02-07 00:08:00,2026-02-07 17:13:11,Resolved,2 - High,Request,CRM,Data,Endpoint Team,Salesforce,Update opportunity stage in the HR system,Engineering,user207
+INC100598,2026-03-08 05:01:00,,Open,3 - Moderate,Incident,Email,Mailbox,Service Desk L1,Outlook,Outlook not receiving email,HR,user144
+INC100599,2026-06-17 15:12:00,,In Progress,2 - High,Request,HR,Attendance,Network Team,SAP,"Attendance not captured, need unlock in the finance app",Engineering,user188
