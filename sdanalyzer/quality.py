@@ -6,6 +6,8 @@ what is missing, and how reliable the data is. Never invents fields.
 
 import pandas as pd
 
+from .textclean import plausible_label
+
 REQUIRED_FIELDS = [
     "ticket_id", "summary", "category", "priority", "status",
     "created_date", "resolved_date",
@@ -55,8 +57,8 @@ def assess(df: pd.DataFrame, mapping: dict) -> dict:
         if field not in mapping:
             return None
         vc = df[mapping[field]].dropna().astype(str).str.strip()
-        vc = vc[vc != ""].value_counts()
-        return vc.head(top).to_dict()
+        vc = vc[(vc != "") & vc.map(plausible_label)].value_counts()
+        return vc.head(top).to_dict() or None
 
     inventories = {
         "ticket_types": _values("ticket_type"),

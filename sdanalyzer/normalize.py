@@ -1,10 +1,14 @@
 """Normalization (methodology step 2).
 
 Builds a clean analytical view with canonical column names, parsed dates,
-computed MTTR, and standardized priority/status values.
+computed MTTR, and standardized priority/status values. Categorical labels
+are scrubbed: values that look like free text, URLs, tracking blobs, or log
+lines are blanked so they can never surface in rollup tables.
 """
 
 import pandas as pd
+
+from .textclean import scrub_labels, clean_text
 
 PRIORITY_MAP = {
     "1": "P1 - Critical", "p1": "P1 - Critical", "critical": "P1 - Critical",
@@ -66,17 +70,19 @@ def normalize(df: pd.DataFrame, mapping: dict) -> pd.DataFrame:
         return df[mapping[field]] if field in mapping else pd.Series(pd.NA, index=df.index)
 
     out["ticket_id"] = col("ticket_id")
-    out["summary"] = col("summary").fillna("").astype(str).str.strip()
-    out["description"] = col("description").fillna("").astype(str).str.strip()
-    out["category_raw"] = col("category").fillna("").astype(str).str.strip()
-    out["subcategory_raw"] = col("subcategory").fillna("").astype(str).str.strip()
-    out["ticket_type"] = col("ticket_type").fillna("").astype(str).str.strip()
+    # Free text: strip URLs/blobs/markup, cap length (email dumps add noise)
+    out["summary"] = col("summary").fillna("").map(clean_text)
+    out["description"] = col("description").fillna("").map(clean_text)
+    # Categorical labels are scrubbed: free text/URLs/log lines become ""
+    out["category_raw"] = scrub_labels(col("category").fillna(""))
+    out["subcategory_raw"] = scrub_labels(col("subcategory").fillna(""))
+    out["ticket_type"] = scrub_labels(col("ticket_type").fillna(""))
     out["priority"] = col("priority").map(_std_priority)
     out["status"] = col("status").map(_std_status)
-    out["assignment_group"] = col("assignment_group").fillna("").astype(str).str.strip()
+    out["assignment_group"] = scrub_labels(col("assignment_group").fillna(""))
     out["requester"] = col("requester").fillna("").astype(str).str.strip()
-    out["department"] = col("department").fillna("").astype(str).str.strip()
-    out["application"] = col("application").fillna("").astype(str).str.strip()
+    out["department"] = scrub_labels(col("department").fillna(""))
+    out["application"] = scrub_labels(col("application").fillna(""))
     out["resolution_notes"] = col("resolution_notes").fillna("").astype(str).str.strip()
 
     out["created_date"] = pd.to_datetime(col("created_date"), errors="coerce", format="mixed")

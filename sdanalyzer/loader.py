@@ -10,6 +10,8 @@ import re
 
 import pandas as pd
 
+from .textclean import STATUS_LIKE, plausible_label
+
 NA_VALUES = ["", "null", "NULL", "None", "N/A", "n/a"]
 
 # Canonical field -> candidate source column names (lowercased, punctuation stripped)
@@ -115,7 +117,8 @@ def detect_columns(columns) -> dict:
 
 def _validate_mapping(df: pd.DataFrame, mapping: dict) -> list[str]:
     """Sanity-check field mappings against actual content. Drops mappings
-    that do not hold up (e.g. a 'date' column that contains names) and
+    that do not hold up (e.g. a 'date' column that contains names, an
+    'application' column that contains approval statuses or free text) and
     returns human-readable notes about what was rejected."""
     notes = []
     for field in ("created_date", "resolved_date"):
@@ -139,6 +142,32 @@ def _validate_mapping(df: pd.DataFrame, mapping: dict) -> list[str]:
                 f"Column '{mapping['mttr_hours']}' looked like an MTTR column but is "
                 "not numeric; mapping rejected.")
             del mapping["mttr_hours"]
+
+    # Categorical fields: reject columns whose content is approval-status
+    # vocabulary or mostly free text / URLs / log lines.
+    for field in ("application", "category", "subcategory", "assignment_group",
+                  "department", "ticket_type"):
+        col = mapping.get(field)
+        if not col:
+            continue
+        sample = df[col].dropna().astype(str)
+        sample = sample[sample.str.strip() != ""].head(500)
+        if not len(sample):
+            continue
+        lowered = sample.str.strip().str.lower()
+        status_share = lowered.isin(STATUS_LIKE).mean()
+        implausible_share = 1 - sample.map(plausible_label).mean()
+        if status_share > 0.5:
+            notes.append(
+                f"Column '{col}' looked like {field} by name but contains approval/"
+                f"status values ({round(status_share * 100)}% match status vocabulary); "
+                "mapping rejected.")
+            del mapping[field]
+        elif implausible_share > 0.5:
+            notes.append(
+                f"Column '{col}' looked like {field} by name but over half its values "
+                "are free text, URLs, or log fragments; mapping rejected.")
+            del mapping[field]
     return notes
 
 
