@@ -19,6 +19,11 @@ THEME_PLAYBOOK = {
             "Access provisioning", "Identity automation", "MCP/API orchestration",
             "Approval automation",
         ],
+        "ai_coworkers": [
+            "Atom (front door in Slack/Teams: password reset and unlock, ~90s zero-touch)",
+            "Access Guardian (agentic IGA: Okta/Entra provisioning, group membership, "
+            "deprovisioning with approval matrix)",
+        ],
         "deflection": (40, 60), "mttr_reduction": (50, 80),
         "complexity": "Medium", "risk": "Medium",
         "dependencies": ["Okta / Entra ID API access", "Approval policy definition"],
@@ -30,6 +35,9 @@ THEME_PLAYBOOK = {
         "capabilities": [
             "AI coworker in Slack or Microsoft Teams", "Knowledge ingestion",
             "Ticket deflection", "Employee self-service",
+        ],
+        "ai_coworkers": [
+            "Atom (answers policy/how-to questions from ingested knowledge, cites sources)",
         ],
         "deflection": (50, 70), "mttr_reduction": (60, 90),
         "complexity": "Low", "risk": "Low",
@@ -43,6 +51,10 @@ THEME_PLAYBOOK = {
             "HR service automation", "AI coworker in Slack or Microsoft Teams",
             "Knowledge ingestion", "MCP/API orchestration", "Human approval loop",
         ],
+        "ai_coworkers": [
+            "People Ops Assistant (payslips on demand via Workday/SuccessFactors MCP, "
+            "benefits and leave policy answers)",
+        ],
         "deflection": (30, 50), "mttr_reduction": (30, 50),
         "complexity": "Medium", "risk": "Medium",
         "dependencies": ["Workday / HRMS API access", "HR policy knowledge base"],
@@ -54,6 +66,10 @@ THEME_PLAYBOOK = {
         "capabilities": [
             "HR service automation", "Workflow execution", "Approval automation",
             "MCP/API orchestration",
+        ],
+        "ai_coworkers": [
+            "People Ops Assistant (leave balance, regularization requests with manager "
+            "approval loop)",
         ],
         "deflection": (35, 55), "mttr_reduction": (40, 60),
         "complexity": "Medium", "risk": "Medium",
@@ -67,6 +83,10 @@ THEME_PLAYBOOK = {
             "Guided troubleshooting", "Employee self-service", "Ticket deflection",
             "Workflow execution",
         ],
+        "ai_coworkers": [
+            "Collaboration Concierge (DL creation/membership, shared mailboxes, "
+            "Entra/Exchange groups via Graph)",
+        ],
         "deflection": (30, 50), "mttr_reduction": (30, 50),
         "complexity": "Low", "risk": "Low",
         "dependencies": ["M365 / Google admin API for mailbox and DL actions"],
@@ -78,6 +98,10 @@ THEME_PLAYBOOK = {
         "capabilities": [
             "Employee self-service", "Guided troubleshooting", "Workflow execution",
             "Approval automation", "Ticket deflection",
+        ],
+        "ai_coworkers": [
+            "Atom (software catalog requests with approval chain, license reclaim)",
+            "Device Doctor (app push/install via Intune, guided troubleshooting)",
         ],
         "deflection": (25, 45), "mttr_reduction": (30, 50),
         "complexity": "Medium", "risk": "Low",
@@ -91,6 +115,11 @@ THEME_PLAYBOOK = {
             "Agentic backend action", "MCP/API orchestration", "IT service automation",
             "Guided troubleshooting",
         ],
+        "ai_coworkers": [
+            "Device Health Coworker (reads linked asset, runs Intune Endpoint Analytics "
+            "diagnostics, proposes remediation for approval; sync/restart auto, "
+            "wipe/retire gated)",
+        ],
         "deflection": (30, 50), "mttr_reduction": (40, 70),
         "complexity": "Medium", "risk": "Medium",
         "dependencies": ["Intune / Jamf API permissions", "Device compliance policy clarity"],
@@ -102,6 +131,12 @@ THEME_PLAYBOOK = {
         "capabilities": [
             "Workflow execution", "MCP/API orchestration", "Human approval loop",
             "Analytics and operational insights",
+        ],
+        "ai_coworkers": [
+            "Phishing Triage Coworker (SPF/DKIM/DMARC forensics, blast radius, verdict "
+            "for analyst approval)",
+            "SecOps Coworker (device posture + risk reasoning; isolate/scan gated by "
+            "approval)",
         ],
         "deflection": (25, 45), "mttr_reduction": (30, 50),
         "complexity": "Medium", "risk": "Medium",
@@ -117,6 +152,10 @@ THEME_PLAYBOOK = {
             "Agentic backend action", "Human approval loop", "Workflow execution",
             "MCP/API orchestration",
         ],
+        "ai_coworkers": [
+            "Custom ERP Coworker (built in the AI Coworker builder with scoped skills; "
+            "unlock/posting actions always behind human approval)",
+        ],
         "deflection": (20, 40), "mttr_reduction": (30, 60),
         "complexity": "High", "risk": "High",
         "dependencies": ["SAP BAPI/OData availability or GUI-level agentic access",
@@ -129,6 +168,10 @@ THEME_PLAYBOOK = {
         "capabilities": [
             "Agentic backend action", "MCP/API orchestration", "Workflow execution",
         ],
+        "ai_coworkers": [
+            "Custom CRM Coworker (record fixes and content sync via Salesforce MCP/API; "
+            "production metadata changes gated by approval)",
+        ],
         "deflection": (25, 45), "mttr_reduction": (30, 60),
         "complexity": "Medium", "risk": "Medium",
         "dependencies": ["Salesforce API scopes", "Sandbox for validation"],
@@ -139,6 +182,9 @@ THEME_PLAYBOOK = {
         "solution_type": "B. Workflow Automation",
         "capabilities": [
             "Approval automation", "Workflow execution", "AI coworker in Slack or Microsoft Teams",
+        ],
+        "ai_coworkers": [
+            "Atom (approval chains in Slack/Teams: remind, delegate per matrix, escalate)",
         ],
         "deflection": (40, 60), "mttr_reduction": (50, 80),
         "complexity": "Low", "risk": "Low",
@@ -152,6 +198,10 @@ THEME_PLAYBOOK = {
             "Analytics and operational insights", "Agentic backend action",
             "MCP/API orchestration",
         ],
+        "ai_coworkers": [
+            "Reporting Coworker (builds and refreshes dashboards/reports via Power BI MCP, "
+            "distributes on schedule)",
+        ],
         "deflection": (20, 40), "mttr_reduction": (30, 50),
         "complexity": "Medium", "risk": "Medium",
         "dependencies": ["BI platform API access", "Report catalog"],
@@ -162,6 +212,11 @@ THEME_PLAYBOOK = {
         "solution_type": "A. Knowledge AI + E. Human-in-the-loop AI",
         "capabilities": [
             "Guided troubleshooting", "Knowledge ingestion", "Ticket deflection",
+        ],
+        "ai_coworkers": [
+            "Atom (guided VPN/Wi-Fi triage)",
+            "Infrastructure Coworker (guardrailed infra diagnosis: correlate alerts, "
+            "root cause, propose remediation with approval)",
         ],
         "deflection": (15, 30), "mttr_reduction": (10, 30),
         "complexity": "Medium", "risk": "Medium",
@@ -174,6 +229,9 @@ THEME_PLAYBOOK = {
         "capabilities": [
             "Employee self-service", "Approval automation", "IT service automation",
         ],
+        "ai_coworkers": [
+            "Atom (request-approval-dispatch workflow around physical work)",
+        ],
         "deflection": (10, 25), "mttr_reduction": (10, 20),
         "complexity": "Low", "risk": "Low",
         "dependencies": ["Asset management integration"],
@@ -183,6 +241,10 @@ THEME_PLAYBOOK = {
     "Other / Unclear": {
         "solution_type": "F. No Automation Recommended",
         "capabilities": ["Analytics and operational insights"],
+        "ai_coworkers": [
+            "Ticket Attribute Coworker (categorizes, prioritizes, and routes every ticket "
+            "at intake; directly shrinks this bucket)",
+        ],
         "deflection": (0, 10), "mttr_reduction": (0, 10),
         "complexity": "n/a", "risk": "n/a",
         "dependencies": ["Better categorization at intake"],
@@ -304,6 +366,7 @@ def build_opportunities(view: pd.DataFrame, theme_stats: list[dict]) -> list[dic
             "pct_of_total": ts["pct"],
             "solution_type": play["solution_type"],
             "atomicwork_capabilities": play["capabilities"],
+            "ai_coworkers": play.get("ai_coworkers", []),
             "deflection_range_pct": (lo, hi),
             "deflection_range_tickets": (deflect_lo, deflect_hi),
             "mttr_reduction_range_pct": (mlo, mhi),

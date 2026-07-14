@@ -101,12 +101,15 @@ def _slide_outline(meta, qa, pareto_res, mttr_res, theme_stats, opps, agentic, w
                       if meta.get("short_period") else ""))
     outcome_slides = []
     if brief:
-        outcome_slides.append({"title": "The Situation", "bullets": [
+        outcome_slides.append({"title": "Where We Are Today", "bullets": [
             brief["situation"], *brief["problems"][:3]]})
-        outcome_slides.append({"title": "The Opportunity", "bullets": [
-            brief["opportunity"]]})
-        outcome_slides.append({"title": "Recommendation", "bullets": [
-            brief["recommendation"], f"Ask: {brief['ask']}"]})
+        outcome_slides.append({"title": "Where We Want To Be", "bullets": [
+            brief["opportunity"], *brief.get("target_state", [])[:3]]})
+        outcome_slides.append({"title": "How We Get There", "bullets": [
+            brief["recommendation"],
+            "Re-run this analysis after each phase; progress measured against "
+            "today's baseline",
+            f"Ask: {brief['ask']}"]})
     if stakeholders:
         outcome_slides.append({"title": "Who Gets What", "bullets": [
             f"{s['stakeholder']}: {s['outcome'][:110]}" for s in stakeholders[:6]]})
@@ -304,10 +307,33 @@ def _decision_brief(outcomes, opps, agentic, mttr_res, workflow, pareto_res,
            "An inventory of which systems allow API access. Your loaded L1 hourly cost "
            "to turn hours into money.")
 
+    # Target state: concrete, checkable statements of the desired end state.
+    target_state = []
+    if d_hi > 0:
+        target_state.append(
+            f"Routine requests ({oc['deflect_pct_range'][0]}-{oc['deflect_pct_range'][1]}% "
+            "of volume) resolved by AI coworkers in seconds, with human approval on "
+            "anything risky.")
+    if oc["median_wait_str"]:
+        target_state.append(
+            f"Median resolution time for automated themes drops from "
+            f"{oc['median_wait_str']} to near-instant; agents work only tickets that "
+            "need judgment.")
+    if workflow.get("available") and workflow.get("stuck_n"):
+        target_state.append("Nothing sits on hold untracked: stale approvals are "
+                            "reminded, delegated, or escalated automatically.")
+    if workflow.get("available") and workflow.get("transfer_n", 0) >= 3:
+        target_state.append("Tickets land with the right team first time: AI "
+                            "categorization at intake replaces manual routing.")
+    target_state.append("Every automated action is logged, budgeted, and reversible; "
+                        "deflection and resolution time reported monthly against this "
+                        "baseline.")
+
     return {
         "situation": situation,
         "problems": problems,
         "opportunity": opportunity,
+        "target_state": target_state,
         "recommendation": recommendation,
         "ask": ask,
     }
@@ -379,30 +405,36 @@ def _stakeholder_value(outcomes, opps, agentic, workflow) -> list[dict]:
 def _roadmap(wins, opps, agentic) -> dict:
     integration = [o for o in opps if "C. Integration" in o["solution_type"]
                    and not o["solution_type"].startswith("F.")][:4]
+
+    def _first_coworker(o):
+        cw = o.get("ai_coworkers") or []
+        return f" [{cw[0].split(' (')[0]}]" if cw else ""
+
     return {
         "30": {
-            "focus": "Foundations and quick wins",
+            "focus": "Start where you are: baseline and quick wins",
             "items": [
-                "Baseline metrics agreed (volume, MTTR, deflection definitions)",
-                "Knowledge ingestion for top how-to themes",
-                *(f"Deploy: {w['theme']} ({w['solution_type'].split('+')[0].strip()})" for w in wins[:3]),
+                "Baseline agreed from this report (volume, wait time, deflection definitions)",
+                "Atom live in Slack/Teams: knowledge ingestion for top how-to themes",
+                *(f"Deploy: {w['theme']}{_first_coworker(w)} "
+                  f"({w['solution_type'].split('+')[0].strip()})" for w in wins[:3]),
                 "SME validation workshop on theme mapping",
             ],
         },
         "60": {
-            "focus": "Integration automation",
+            "focus": "Integration automation: connect the systems",
             "items": [
-                *(f"Integrate: {o['theme']} - {', '.join(o['dependencies'][:1])}" for o in integration),
-                "AI coworker rollout in Slack/Teams to pilot departments",
-                "Deflection and MTTR tracking dashboard",
+                *(f"Integrate: {o['theme']}{_first_coworker(o)} - "
+                  f"{', '.join(o['dependencies'][:1])}" for o in integration),
+                "Deflection and wait-time dashboard against the day-0 baseline",
             ],
         },
         "90": {
-            "focus": "Agentic pilots and scale",
+            "focus": "Agentic coworkers: act, with approval",
             "items": [
                 *(f"Agentic pilot: {a['name']} (approval: {a['human_approval']})" for a in agentic[:3]),
-                "Expand AI coworker to all departments",
-                "ROI review against 30-day baseline; go/no-go on phase 2",
+                "Expand AI coworkers to all departments",
+                "Re-run this analysis; ROI review against day-0; go/no-go on phase 2",
             ],
         },
     }

@@ -32,21 +32,28 @@ def render(r: dict) -> str:
           "month-end effects, and one-off events cannot be separated. Use this to shape "
           "questions, not to size ROI. Request 3-6 months of data for a committed roadmap.\n")
 
-    # A. Executive Summary: a one-page decision memo, not a metrics dump.
+    # A. Executive Summary: ITIL arc. Start where you are; where do we want
+    # to be; how do we get there. A decision memo, not a metrics dump.
     b = r["brief"]
     o = r["outcomes"]
     a("## A. Executive Summary\n")
+    a("### Where we are today\n")
     a(f"{b['situation']}\n")
-    a("**What is broken today**\n")
     for problem in b["problems"]:
         a(f"- {problem}")
     a("")
-    a("**The opportunity**\n")
+    a("### Where we want to be\n")
     a(f"{b['opportunity']}\n")
-    a("**Recommendation**\n")
+    if b.get("target_state"):
+        for t in b["target_state"]:
+            a(f"- {t}")
+        a("")
+    a("### How we get there\n")
     a(f"{b['recommendation']}\n")
     a("**What we need from you**\n")
     a(f"{b['ask']}\n")
+    a("_Progress is measured against this report as the baseline: same analysis, "
+    "re-run after each phase (ITIL: progress iteratively with feedback)._\n")
 
     # Supporting numbers, compressed to what a decision actually needs.
     d_lo, d_hi = o["deflect_range"]
@@ -241,6 +248,8 @@ def render(r: dict) -> str:
     for o in r["opportunities"]:
         a(f"### {o['theme']}\n")
         a(f"- Tickets addressable: **{o['tickets_addressable']}** ({o['pct_of_total']}%)")
+        if o.get("ai_coworkers"):
+            a(f"- AI Coworkers: {'; '.join(o['ai_coworkers'])}")
         a(f"- Solution type: {o['solution_type']}")
         a(f"- Estimated deflection: {_rng(o['deflection_range_pct'], '%')} "
           f"= {_rng(o['deflection_range_tickets'])} tickets")
@@ -272,11 +281,15 @@ def render(r: dict) -> str:
 
     # J. Atomicwork Solution Mapping
     a("## J. Atomicwork Solution Mapping\n")
-    a("| Theme | Atomicwork capabilities | Solution type |")
-    a("| --- | --- | --- |")
+    a("| Theme | AI Coworkers | Atomicwork capabilities | Solution type |")
+    a("| --- | --- | --- | --- |")
     for o in r["opportunities"]:
-        a(f"| {o['theme']} | {', '.join(o['atomicwork_capabilities'])} | {o['solution_type']} |")
+        cw = "; ".join(o.get("ai_coworkers", [])) or "-"
+        a(f"| {o['theme']} | {cw} | {', '.join(o['atomicwork_capabilities'])} | {o['solution_type']} |")
     a("")
+    a("AI Coworkers are scoped agents with a defined role, skills, permissions, and "
+      "a token budget. They act behind Atom (the front door in Slack/Teams/portal): "
+      "reads are autonomous, writes and high-risk actions route to human approval.\n")
 
     # K. Roadmap
     a("## K. 30-60-90 Day Roadmap\n")
