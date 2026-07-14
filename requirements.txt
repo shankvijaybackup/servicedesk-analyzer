@@ -1,0 +1,4 @@
+pandas>=2.0
+flask>=3.0
+python-pptx>=0.6.23
+openpyxl>=3.1
