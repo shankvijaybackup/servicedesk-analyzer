@@ -1,40 +1,101 @@
 # Service Desk Intelligence Analyzer
 
-Analyze service desk exports (CSV or Excel) from ServiceNow, Jira Service Management,
-Freshservice, Zendesk, ManageEngine, or Atomicwork, and produce an executive-ready
-operational assessment: theme breakdown, Pareto and MTTR analysis, an AI automation
-opportunity backlog, an Agentic AI use case backlog, a 30-60-90 roadmap, and a
-PowerPoint deck.
+Turn a raw service desk export (CSV or Excel) into an executive decision memo,
+built on ITIL 4 guiding principles: where we are today, where we want to be,
+and how we get there.
+
+Works with exports from ServiceNow, Jira Service Management, Freshservice,
+Zendesk, ManageEngine, and Atomicwork. Produces a browser report, Markdown,
+a PowerPoint deck, and a slide outline. Fully offline, deterministic, and
+auditable: no AI, no cloud, no data retention.
+
+## Why this exists
+
+Service desk reporting is usually a metrics dump: ticket counts, SLA charts,
+MTTR graphs. Numbers without a decision. ITIL 4 says value is co-created with
+the consumer, and reporting should serve decisions, not dashboards. This tool
+reads one export and answers the three questions an executive actually asks:
+
+1. **Where are we today?** Measured from your data: volume concentration,
+   median wait, work stuck on hold, tickets bouncing between teams.
+2. **Where do we want to be?** A concrete, checkable target state: which share
+   of requests should never need a human, what employee wait should become.
+3. **How do we get there?** A 30-60-90 plan with named automations, an explicit
+   ask, and this report as the baseline to measure progress against.
+
+## ITIL 4 alignment
+
+### Guiding principles, applied end to end
+
+| ITIL 4 principle | How the report applies it |
+| --- | --- |
+| Focus on value | The report opens with outcomes per stakeholder (CIO, CFO, CHRO, service desk lead, employees), not metrics. Every number must serve a decision or it is cut. |
+| Start where you are | The analysis is built only from your export. Missing fields are declared missing, never invented. The report itself becomes the day-0 baseline. |
+| Progress iteratively with feedback | The roadmap is 30-60-90 with a re-run of this analysis after each phase. Scale only what the data shows is working. |
+| Collaborate and promote visibility | Deliverable L is a workshop question set for SMEs; every finding carries a confidence tag (High / Medium / Low) so disagreement is invited, not hidden. |
+| Think and work holistically | Themes span IT, HR, security, ERP, and CRM; workflow-state analysis (stuck, transferred) exposes cross-team friction, not just per-queue stats. |
+| Keep it simple and practical | One page decision memo up front. Median wait in human units ("15 hours"), never absurd cumulative figures. No invented currency: hours x your rate. |
+| Optimize and automate | Every theme is classified into solution types A-F, including "No Automation Recommended" where the honest answer is a human or a process fix. |
+
+### Service Value Chain mapping
+
+The deliverables map to ITIL 4 Service Value Chain activities:
+
+| SVC activity | Deliverables |
+| --- | --- |
+| Plan | A. Executive Summary (decision memo), K. 30-60-90 Roadmap |
+| Improve | G. Friction Points, H. Automation Backlog, I. Agentic AI Backlog, N. Recommendations |
+| Engage | L. Workshop Questions, M. Slide Outline, stakeholder value table |
+| Design and transition | J. Solution Mapping (AI Coworkers, capabilities, dependencies, risk, approval paths) |
+| Obtain/build | Dependencies per opportunity: API access, credentials, knowledge quality |
+| Deliver and support | C. Volume, D. MTTR, E. Themes, F. Application Landscape (the operational evidence base) |
+
+### Continual improvement, built in
+
+The report follows the ITIL continual improvement model: *What is the vision*
+(target state) -> *Where are we now* (baseline, data quality verdict) ->
+*Where do we want to be* (deflection ranges, wait-time targets) -> *How do we
+get there* (roadmap) -> *Take action* (quick wins, pilots) -> *Did we get
+there* (re-run the analysis; deltas against day-0). Because the tool is
+deterministic, two runs on the same data always produce the same numbers:
+your baseline is reproducible, not a screenshot.
+
+### Metrics discipline (ITIL 4 measurement and reporting practice)
+
+- Facts, assumptions, and recommendations are separated and labeled. Measured
+  figures cite their source (e.g. "median elapsed time from your timestamps");
+  assumption-based figures state the band used (e.g. "15-45 min handle time,
+  replace with yours").
+- Ranges, never fake precision. Deflection is "40-60% if API-accessible", not
+  "52.3%".
+- No invented currency. The report gives hours; you bring your loaded rate.
+- Confidence tags on every insight, and a self-challenge section that attacks
+  the analysis before you present it (misclassification rate, blind spots,
+  duplicate distortion, one-time spikes, MTTR reliability).
 
 ## Privacy: no AI, no cloud, no retention
 
-This tool is fully offline and deterministic. Verifiable in the source:
+- **No LLM, no AI service, no telemetry.** No API clients, no SDKs, no keys.
+  Dependencies are exactly pandas, Flask, python-pptx, openpyxl. Analysis is
+  rule-based: keyword classification and aggregation.
+- **Data never leaves the machine.** Local execution only.
+- **No training, no learning.** No model, no state between runs.
+- **Forgets immediately.** Uploads are processed in memory, never written to
+  disk. Raw data is deleted at each pipeline stage. The web app keeps only the
+  aggregate report for 30 minutes (or until "Forget now"), then purges.
 
-- **No LLM, no AI service, no telemetry.** There are no API clients, no SDKs, no keys.
-  The only dependencies are pandas, Flask, python-pptx, and openpyxl. Analysis is
-  rule-based (keyword classification and aggregation) - grep the code for `http` and
-  you will find no outbound calls.
-- **Your data never leaves your machine.** Everything runs locally (or on whatever
-  host you deploy it to). Nothing is sent anywhere.
-- **No training, no learning.** The tool has no model and stores nothing between runs.
-- **No retention.** Uploads are processed in memory and never written to disk. The
-  web app keeps only the aggregated report (no raw rows) in memory for 30 minutes so
-  you can download formats, then purges it. A "Forget now" button purges immediately.
-  The CLI writes only the report files you ask for.
-
-Do not take these claims on faith. Run the audit yourself:
+Do not take these claims on faith. Run the audit:
 
 ```bash
 .venv/bin/python audit.py
 ```
 
-It verifies, on your machine: no network/AI imports anywhere in the source, the
-dependency list is exactly pandas/flask/python-pptx/openpyxl, the web app has no
-disk writes, raw data is deleted at every pipeline stage, "Forget now" and the
-30-minute TTL actually purge, and generated reports contain no emojis, no
-marketing filler, and no invented figures. Exits non-zero on any violation.
+Fourteen checks, exits non-zero on any violation: no network/AI imports, exact
+dependency list, no disk writes in the web app, deletion at every pipeline
+stage, forget and TTL purge verified live, and generated reports free of
+emojis, marketing filler, and invented figures.
 
-## Quick start (local)
+## Quick start
 
 Requires Python 3.10+.
 
@@ -52,8 +113,8 @@ python3 -m venv .venv
 # open http://127.0.0.1:5080
 ```
 
-Upload a CSV/XLSX, view the report in the browser, download Markdown / HTML / PPTX /
-slide outline, then "Forget now".
+Upload a CSV/XLSX, read the memo, download Markdown / HTML / PPTX / slide
+outline, then "Forget now".
 
 ### CLI
 
@@ -62,80 +123,74 @@ slide outline, then "Forget now".
 .venv/bin/python cli.py tickets.xlsx -f html md pptx ppt-outline -o output
 ```
 
-### Try it with sample data
+### Sample data
 
 ```bash
 cd sample_data && ../.venv/bin/python make_sample.py && cd ..
 .venv/bin/python cli.py sample_data/sample_tickets.csv -f html -o output
 ```
 
-## Hosting it (optional)
+## Hosting (optional)
 
-The default bind is 127.0.0.1 (local only). To expose it, set `HOST` and `PORT`:
+Default bind is 127.0.0.1. To expose it:
 
 ```bash
 HOST=0.0.0.0 PORT=8080 .venv/bin/python web_app.py
 ```
 
-Or with Docker:
+Or Docker:
 
 ```bash
 docker build -t servicedesk-analyzer .
 docker run --rm -p 5080:5080 servicedesk-analyzer
 ```
 
-The container runs as a non-root user and keeps a single worker process because the
-report store is in-process memory. If you host it for a team, put it behind your own
-TLS/auth (reverse proxy); the app itself has no accounts and no database by design.
+Non-root container, single worker (the report store is in-process memory).
+For team use, put your own TLS/auth in front; the app has no accounts and no
+database by design.
 
-## What the report contains (deliverables A-N)
+## What you get (deliverables A-N)
 
-A. Executive Summary - B. Data Quality Assessment - C. Ticket Volume Analysis -
-D. MTTR Analysis - E. Theme and Category Breakdown - F. Application Landscape -
-G. Top Operational Friction Points - H. AI Automation Opportunity Backlog -
-I. Agentic AI Use Case Backlog - J. Atomicwork Solution Mapping -
-K. 30-60-90 Day Roadmap - L. Workshop Questions - M. PowerPoint Slide Outline -
-N. Final Recommendations (with a self-challenge section separating facts from
-assumptions).
+A. Executive Summary (the three-question decision memo) - B. Data Quality
+Assessment - C. Ticket Volume Analysis - D. MTTR and Workflow-State Analysis -
+E. Theme and Category Breakdown (with blind-spot term mining) - F. Application
+Landscape - G. Operational Friction Points - H. AI Automation Opportunity
+Backlog - I. Agentic AI Use Case Backlog - J. Atomicwork Solution Mapping
+(AI Coworkers per theme) - K. 30-60-90 Roadmap - L. Workshop Questions -
+M. PowerPoint Slide Outline - N. Final Recommendations with self-challenge.
 
-## Methodology
+## How the analysis works
 
-1. Data integrity first: columns, missing fields, duplicates, parse rates. Missing
-   fields are reported, never invented.
-2. Normalization: canonical schema, standardized priority/status, MTTR from an
-   explicit column or computed from timestamps.
-3. Theme categorization: 14 enterprise themes via ordered keyword rules. Specific
-   systems (SAP, Salesforce, MDM) are matched before generic buckets, so "iPad slide
-   content not updated" is classified as application content, not hardware.
-4. Pareto: top 20% of categories driving 80% of load; high-volume vs high-pain split.
-5. MTTR by theme, priority, application, and assignment group with coverage caveats.
-6. AI opportunity types A-F per theme: Knowledge AI, Workflow Automation, Integration
-   Automation, Agentic AI, Human-in-the-loop, or No Automation Recommended.
-7. Atomicwork capability mapping per opportunity.
-8. Agentic use cases with trigger, system of action, permissions, steps, risk,
-   approval requirement, and fallback path.
-9. ROI as conservative ranges tied to observed volume and MTTR - never fake precision.
-10. Every insight carries a confidence tag (High / Medium / Low).
-
-## Project structure
-
-- `sdanalyzer/loader.py` - CSV/XLSX import, vendor column detection
-- `sdanalyzer/quality.py` - data integrity assessment
-- `sdanalyzer/normalize.py` - canonical analytical view
-- `sdanalyzer/themes.py` - theme classification rules
-- `sdanalyzer/analysis.py` - Pareto + MTTR
-- `sdanalyzer/opportunities.py` - opportunity / agentic / ROI playbooks
-- `sdanalyzer/report.py` - pipeline + deliverable assembly
-- `sdanalyzer/render_md.py` / `render_html.py` / `render_pptx.py` - output formats
-- `cli.py` / `web_app.py` - entry points
-- `sample_data/make_sample.py` - synthetic test data generator
+1. **Data integrity first.** Columns, missing fields, duplicates, parse rates.
+   Column mappings are content-validated: a "Resolved By" column of names will
+   not be mistaken for a date; an "Application" column full of approval
+   statuses is rejected with a note.
+2. **Pollution defense.** Email dumps, tracking URLs, base64 blobs, and error
+   logs inside fields are scrubbed before they can reach any table.
+3. **Normalization.** Canonical schema, standardized priority/status, MTTR
+   from explicit column or timestamps.
+4. **Theme classification.** 15 enterprise themes via ordered keyword rules,
+   summary-first weighting (the subject line outvotes boilerplate in the
+   description). Unclassified tickets get term-mined so the blind spot is
+   visible, not hidden.
+5. **Pareto and pain.** 80% volume drivers; high-volume vs high-MTTR split;
+   stuck and transferred work as friction signals when MTTR is absent.
+6. **Opportunity mapping.** Solution types A-F per theme, AI Coworker
+   assignments, deflection ranges gated by evidence volume (below 5 tickets,
+   no recommendation).
+7. **Honesty guards.** Short observation windows produce a loud snapshot
+   warning; sub-0.3 FTE claims are suppressed; every estimate declares its
+   basis.
 
 ## Extending
 
-Theme rules live in `sdanalyzer/themes.py` (`THEME_RULES`), and the per-theme
-automation playbook in `sdanalyzer/opportunities.py` (`THEME_PLAYBOOK`,
-`AGENTIC_TEMPLATES`). Both are plain data structures - adjust keywords, deflection
-ranges, or add new agentic scenarios without touching the pipeline.
+- Theme rules: `THEME_RULES` in [sdanalyzer/themes.py](sdanalyzer/themes.py)
+- Automation playbook and AI Coworker mapping: `THEME_PLAYBOOK` and
+  `AGENTIC_TEMPLATES` in [sdanalyzer/opportunities.py](sdanalyzer/opportunities.py)
+- Deliverable assembly: [sdanalyzer/report.py](sdanalyzer/report.py)
+
+All plain data structures; adjust without touching the pipeline. Run
+`audit.py` after changes.
 
 ## License
 
