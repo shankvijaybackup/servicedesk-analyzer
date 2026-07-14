@@ -32,65 +32,70 @@ def render(r: dict) -> str:
           "month-end effects, and one-off events cannot be separated. Use this to shape "
           "questions, not to size ROI. Request 3-6 months of data for a committed roadmap.\n")
 
-    # A. Executive Summary - leads with outcomes, not metrics
-    a("## A. Executive Summary\n")
+    # A. Executive Summary: a one-page decision memo, not a metrics dump.
+    b = r["brief"]
     o = r["outcomes"]
+    a("## A. Executive Summary\n")
+    a(f"{b['situation']}\n")
+    a("**What is broken today**\n")
+    for problem in b["problems"]:
+        a(f"- {problem}")
+    a("")
+    a("**The opportunity**\n")
+    a(f"{b['opportunity']}\n")
+    a("**Recommendation**\n")
+    a(f"{b['recommendation']}\n")
+    a("**What we need from you**\n")
+    a(f"{b['ask']}\n")
+
+    # Supporting numbers, compressed to what a decision actually needs.
     d_lo, d_hi = o["deflect_range"]
     if d_hi > 0:
-        a(f"### The headline\n")
-        a(f"Of {o['total_n']} tickets in this export, **{o['addressable']} "
-          f"({o['addressable_pct']}%) sit in themes with a viable automation path**. "
-          f"Applying conservative deflection bands, **{d_lo}-{d_hi} tickets "
-          f"({o['deflect_pct_range'][0]}-{o['deflect_pct_range'][1]}%) would never need "
-          "a human agent**.\n")
-        bullets = []
-        if o["wait_hours_range"]:
-            w_lo, w_hi = o["wait_hours_range"]
-            bullets.append(f"**{w_lo:,}-{w_hi:,} employee waiting hours eliminated** "
-                           "(measured: deflected tickets x your median MTTR)")
+        a("### The numbers, if you want them\n")
         e_lo, e_hi = o["effort_hours_range"]
-        bullets.append(f"**{e_lo:,}-{e_hi:,} agent-hours returned to the IT team** "
-                       "(assumption: 15-45 min handle time per ticket)")
+        rows = [("Requests that need no human", f"{d_lo}-{d_hi} of {o['total_n']} "
+                 f"({o['deflect_pct_range'][0]}-{o['deflect_pct_range'][1]}%)")]
+        if o["median_wait_str"]:
+            rows.append(("Employee wait today (median)", o["median_wait_str"]))
+            rows.append(("Employee wait after automation", "seconds, for deflected requests"))
+        rows.append(("Agent time freed", f"{e_lo}-{e_hi} hours over the period "
+                     "(assumes 15-45 min per ticket; swap in your real handle time)"))
         if o["fte_range"]:
-            bullets.append(f"**~{o['fte_range'][0]}-{o['fte_range'][1]} FTE-equivalent "
-                           "capacity per month** freed for project work instead of tickets")
+            rows.append(("Capacity equivalent", f"{o['fte_range'][0]}-{o['fte_range'][1]} "
+                         "FTE per month"))
         if o["stuck_n"]:
-            bullets.append(f"**{o['stuck_n']} tickets currently sitting in On Hold/Pending** "
-                           "become automation targets (reminders, escalation, delegation)")
-        for b in bullets:
-            a(f"- {b}")
-        a("\nCost translation: multiply agent-hours by your loaded L1/L2 hourly rate. "
-          "This report does not invent currency figures; bring your rate to the workshop.\n")
-    else:
-        a("No automation opportunity cleared the evidence threshold in this export. "
-          "See data quality issues below; a larger or cleaner export is needed.\n")
+            rows.append(("Requests stuck on hold right now", str(o["stuck_n"])))
+        a("| | |")
+        a("| --- | --- |")
+        for k, v in rows:
+            a(f"| {k} | {v} |")
+        a("")
+        a("_Dollar figure: agent hours x your loaded hourly rate. We do not invent it._\n")
 
-    a("### What each stakeholder gets\n")
-    a("| Stakeholder | Outcome | Value metrics to track |")
+    a("### Who gets what\n")
+    a("| Stakeholder | Outcome | Track it with |")
     a("| --- | --- | --- |")
     for s in r["stakeholders"]:
         a(f"| {s['stakeholder']} | {s['outcome']} | {s['metric']} |")
     a("")
-    a("### Basis and assumptions for the numbers above\n")
-    for asm in o["assumptions"]:
-        a(f"- {asm}")
-    a("")
-    a(f"Data quality verdict: **{q['verdict']}**. "
-      f"{q['total_records']} records covering {r['meta']['date_range_str']}.\n")
-    a("### Top findings\n")
+    a("### Top findings from the data\n")
     for f in r["findings"]:
         a(f"- {f['text']} _[{f['confidence']}]_")
-    a("\n### Top automation opportunities\n")
-    for o in r["opportunities"][:5]:
-        a(f"- **{o['theme']}**: {_rng(o['deflection_range_tickets'])} tickets deflectable "
-          f"({_rng(o['deflection_range_pct'], '%')}) via {o['solution_type']} _[{o['confidence']}]_")
-    a("\n### Top Agentic AI opportunities\n")
+    a("\n### Where automation applies\n")
+    for op in r["opportunities"][:5]:
+        a(f"- **{op['theme']}**: {_rng(op['deflection_range_tickets'])} tickets deflectable "
+          f"({_rng(op['deflection_range_pct'], '%')}) via {op['solution_type']} _[{op['confidence']}]_")
+    a("\n### Where agentic AI applies\n")
     if r["agentic"]:
         for ag in r["agentic"][:5]:
             a(f"- **{ag['name']}** on {ag['system_of_action']} "
               f"(evidence: {ag['evidence_tickets']} tickets, risk {ag['risk']}) _[{ag['confidence']}]_")
     else:
         a("- No agentic scenarios evidenced in this dataset.")
+    a("")
+    a("### How these numbers were produced\n")
+    for asm in o["assumptions"]:
+        a(f"- {asm}")
     a("")
 
     # B. Data Quality Assessment
