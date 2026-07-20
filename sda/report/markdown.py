@@ -189,6 +189,30 @@ def write(a: dict, path) -> str:
         w(f"- {rec}")
     w("")
 
+    iteration = a.get("iteration")
+    if iteration:
+        w("## Iterative Improvement Scorecard")
+        w("")
+        w(f"- Pilot: {iteration['pilot']['name']}")
+        w(f"- Cohort sizes: baseline {iteration['baseline']['cohort_size']}; "
+          f"follow-up {iteration['follow_up']['cohort_size']}")
+        w(f"- Comparability: {iteration['comparability']['status']}")
+        w(f"- Decision: **{iteration['decision']['code'].replace('_', ' ').title()}**")
+        for reason in iteration["decision"]["reasons"]:
+            w(f"- Evidence: {reason}")
+        w(f"- Method note: {iteration['causality_note']}")
+        w("")
+        w("| Metric | Baseline | Follow-up | Improvement % |")
+        w("| --- | ---: | ---: | ---: |")
+        for metric, change in iteration["changes"].items():
+            before = iteration["baseline"]["metrics"][metric]["value"]
+            after = iteration["follow_up"]["metrics"][metric]["value"]
+            improvement = change.get("improvement_pct")
+            w(f"| {metric} | {before if before is not None else '-'} | "
+              f"{after if after is not None else '-'} | "
+              f"{improvement if improvement is not None else '-'} |")
+        w("")
+
     # O-S. Implementation and UAT package
     impl = a.get("implementation")
     if impl:

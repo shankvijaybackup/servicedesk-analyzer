@@ -12,7 +12,7 @@ Build a clean analytical view with canonical columns, parsed dates, a computed M
 
 ## 3. Theme categorization (sda/themes.py, rules/themes.yaml)
 
-Score each ticket's text against keyword rules per business theme (Access, Application, HR, Attendance, Hardware, Network, Email, SAP/ERP, CRM, MDM, Knowledge, Approval, Data, Other). Highest score wins; word-boundary matching prevents false hits; negatives reduce misclassification. Per theme: count, percentage, MTTR, top types, top applications, example phrases, and a confidence level.
+Score each ticket's text against keyword rules per business theme (Access, Application, HR, Attendance, Hardware, Network, Email, SAP/ERP, CRM, MDM, Knowledge, Approval, Data, Other). Highest score wins; word-boundary matching prevents false hits; negatives reduce misclassification. Per theme: count, percentage, MTTR, top types, top applications, match strength, description coverage, and a confidence level. Raw example phrases are not included in exportable analysis.
 
 ## 4. Pareto (sda/pareto.py)
 
@@ -41,6 +41,23 @@ When the analysis will feed a tool implementation or migration (for example repl
 ## 13. Deliverables
 
 A through N plus the implementation package O through S (UAT test plan, role matrix, RACI, readiness checklist, phase plan), rendered to HTML, PowerPoint, Markdown, Excel, and JSON by `sda/report/`. The Excel workbook includes execution columns (status, tester, date, defect ref) so the test plan is directly usable as a tracking sheet.
+
+## 14. Iterative improvement and feedback
+
+The tool can compare a baseline and follow-up export for one explicitly defined
+cohort. The same deterministic rule pack is applied to both. Every metric states
+whether it is measurable and includes its denominator and coverage. Missing
+feedback fields remain unknown.
+
+The comparison checks minimum sample size, overlapping ticket identifiers,
+priority-mix differences, and MTTR-coverage differences. It then applies a pure
+decision order: insufficient evidence means continue measuring; a failed required
+guardrail means stop; a passed primary threshold with measurable guardrails means
+widen; otherwise correct.
+
+This is an observational before-and-after comparison. It reports association,
+not causation. Ticket mix, staffing, seasonality, and unrelated process changes
+can influence the result.
 
 ## Rules the tool follows
 

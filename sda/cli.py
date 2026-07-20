@@ -12,6 +12,9 @@ import sys
 from pathlib import Path
 
 from .analyze import analyze_file
+from .ingest import read_table
+from .iteration import compare_dataframes
+from .pilots import CohortSpec, PilotCharter
 from .report import FORMATS, write_all
 
 
@@ -28,6 +31,14 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("-n", "--name", default=None,
                    help="Base filename for outputs (default: derived from input).")
     p.add_argument("--quiet", action="store_true", help="Suppress the summary printout.")
+    p.add_argument("--compare-with", default=None,
+                   help="Follow-up CSV/XLSX for an iterative pilot comparison.")
+    p.add_argument("--pilot-name", default="Service desk improvement pilot")
+    p.add_argument("--theme", default=None, help="Limit comparison to one classified theme.")
+    p.add_argument("--assignment-group", default=None, help="Limit comparison to one team/queue.")
+    p.add_argument("--primary-metric", default="median_mttr_hours")
+    p.add_argument("--minimum-improvement", type=float, default=10.0)
+    p.add_argument("--minimum-cohort-size", type=int, default=20)
     return p
 
 
@@ -48,7 +59,29 @@ def main(argv: list[str] | None = None) -> int:
     basename = args.name or in_path.stem + "-analysis"
 
     try:
-        analysis = analyze_file(str(in_path))
+        analysis_source = args.compare_with or str(in_path)
+        analysis = analyze_file(analysis_source)
+        if args.compare_with:
+            follow_path = Path(args.compare_with)
+            if not follow_path.exists():
+                print(f"error: follow-up file not found: {follow_path}", file=sys.stderr)
+                return 2
+            charter = PilotCharter(
+                pilot_id="cli-pilot",
+                name=args.pilot_name,
+                intervention="User-defined pilot intervention",
+                cohort=CohortSpec(
+                    themes=(args.theme,) if args.theme else (),
+                    assignment_groups=(args.assignment_group,) if args.assignment_group else (),
+                ),
+                primary_metric=args.primary_metric,
+                minimum_improvement_pct=args.minimum_improvement,
+                minimum_cohort_size=args.minimum_cohort_size,
+            )
+            analysis["iteration"] = compare_dataframes(
+                read_table(str(in_path)), read_table(str(follow_path)), charter,
+                baseline_name=in_path.name, follow_up_name=follow_path.name,
+            )
         written = write_all(analysis, args.out, basename=basename, formats=formats)
     except Exception as err:  # surface a clean message, not a traceback, to end users
         print(f"error: {err}", file=sys.stderr)
@@ -61,6 +94,9 @@ def main(argv: list[str] | None = None) -> int:
               f"(quality {dq['quality_grade']} {dq['quality_score']}/100).")
         print(f"Estimated deflectable: {roi['est_total_deflectable_pct_range'][0]}-"
               f"{roi['est_total_deflectable_pct_range'][1]}% of volume (planning range).")
+        if analysis.get("iteration"):
+            print(f"Pilot decision: {analysis['iteration']['decision']['code']} "
+                  f"(comparability {analysis['iteration']['comparability']['status']}).")
         print("Wrote:")
         for path in written:
             print(f"  {path}")

@@ -1,6 +1,6 @@
 # Service Desk Analyzer
 
-Import a service desk export (CSV or XLSX) from any tool and get an executive-ready analysis: data-quality assessment, ticket volume and MTTR, theme breakdown, Pareto, an automation opportunity backlog, agentic use cases, and a 30-60-90 roadmap. Outputs to HTML, PowerPoint, Markdown, Excel, and JSON.
+Import a service desk export (CSV or XLSX) from any tool and get an executive-ready analysis, one transparent pilot recommendation, and an evidence-based way to compare the pilot with its baseline. Outputs to HTML, PowerPoint, Markdown, Excel, and JSON.
 
 It is deterministic and offline. No LLM, no model training, no data retention. Every number is computed by explicit, inspectable Python rules and is traceable to your input. The same file always produces the same result.
 
@@ -10,7 +10,7 @@ Teams on ServiceNow, Jira Service Management, Freshservice, Zendesk, ManageEngin
 
 ## What "no AI BS" means here
 
-- No large language model is called, at analysis time or ever.
+- Core analysis never calls a language model.
 - No training, no fine-tuning, no embeddings, no external API.
 - Classification is a transparent keyword rule set (`sda/rules/themes.yaml`) you can read and edit.
 - Nothing is persisted: files are analyzed in memory and forgotten. Reports contain aggregated analysis only, never raw ticket rows, so no PII is written to disk.
@@ -38,6 +38,21 @@ sda tickets.xlsx --out reports --formats html,pptx
 ```
 
 This writes `reports/<name>-analysis.{html,md,json,xlsx,pptx}`.
+
+Compare a follow-up export with the baseline:
+
+```bash
+sda baseline.csv --compare-with follow-up.csv \
+  --theme "Access & Authentication" \
+  --assignment-group "L1" \
+  --primary-metric median_mttr_hours \
+  --minimum-improvement 10 \
+  --out reports
+```
+
+The comparison reports one of four deterministic decisions: `widen`, `correct`,
+`continue_measuring`, or `stop`. Before-and-after results are labeled as
+associations and never presented as proof that the intervention caused a change.
 
 ## Use it: web UI
 
@@ -94,10 +109,93 @@ Each ticket's text (category, subcategory, application, description) is scored a
 
 ## Privacy and statelessness
 
-- Runs entirely on your machine. No network calls.
+- Core analysis runs entirely on your machine with no network calls.
 - The uploaded/opened file is read into memory and discarded after analysis.
 - Generated reports contain aggregates (theme counts, metrics, opportunity backlog), not raw ticket records.
 - `.gitignore` excludes `data/`, `reports/`, and generated report files so customer data and outputs are never committed.
+
+## Optional local AI assistance
+
+The deterministic analyzer does not require or bundle a language model. The
+optional `sda.ai` package can draft pilot wording through a user-managed
+llama.cpp server on `localhost`. It sends only an explicit allowlist of
+aggregate metrics. Raw ticket text, requester data, ticket identifiers, and
+filenames remain outside the AI boundary. Metrics and decisions remain
+deterministic and cannot be changed by AI output.
+
+```python
+from sda.ai import draft_pilot
+from sda.ai.llamacpp import LlamaCppHTTPProvider
+
+provider = LlamaCppHTTPProvider(
+    "http://127.0.0.1:8080",
+    model="Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+)
+draft = draft_pilot(provider, analysis)
+```
+
+No model weights are included or downloaded. If the local server is absent,
+the function returns an explicit `unavailable` result and deterministic
+analysis continues unchanged. AI responses are labeled as advisory drafts and
+must cite fields in the safe aggregate evidence packet.
+
+### Model packaging decision
+
+The default distribution does not bundle a TinyLM or other model weights. Model
+artifacts are large, hardware-dependent, updated independently, and carry their
+own provenance and redistribution obligations. Users explicitly choose and run
+a local model instead.
+
+The initial recommended CPU tier is Qwen2.5-1.5B-Instruct in an audited,
+checksummed Q4 GGUF build through llama.cpp. The official Qwen model is Apache
+2.0 licensed and has 1.54 billion parameters. The GGUF artifact must be pinned
+and audited separately because community quantizations are separate artifacts.
+SmolLM2-1.7B-Instruct is an Apache 2.0 alternative, but its official model card
+describes it as primarily English and warns that its output may be inaccurate.
+No performance claim is made because target-hardware benchmarks have not yet
+been run.
+
+Primary references:
+
+- Qwen model card: https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct
+- SmolLM2 model card: https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct
+- llama.cpp: https://github.com/ggml-org/llama.cpp
+
+Executive summaries are deterministic because live testing showed that a 1.5B
+model could confuse median and p90 values or turn planning estimates into
+claims. AI is limited to human-reviewed pilot wording from an aggregate
+allowlist. It cannot compute metrics, classify tickets, select the final pilot,
+write the grounded executive summary, or issue the pilot decision.
+
+See [Local AI](docs/local-ai.md) for setup, trust boundaries, and limitations.
+
+## Iterative improvement workflow
+
+1. Analyze one export and verify its data quality.
+2. Use the transparent recommendation score to select one theme and team.
+3. Record a pilot charter, primary metric, threshold, and required guardrails.
+4. Run the pilot with human approval where required.
+5. Upload the baseline and follow-up exports.
+6. Review comparability, metric coverage, absolute change, and percentage change.
+7. Widen, correct, continue measuring, or stop based on the configured evidence.
+
+Optional feedback fields are detected through conservative exact header aliases:
+reopen count, first-contact resolution, SLA breach, escalation, AI attempted,
+AI accepted, human override, user-confirmed resolution, pilot id, and treatment
+group. Missing or invalid values remain unknown and are never converted to false
+or zero.
+
+Aggregate scorecard history is opt-in. When enabled in the UI it uses a local
+SQLite file and stores the pilot charter and aggregate comparison only. Source
+ticket rows are never stored, and history can be deleted through the history API.
+
+Detailed documentation:
+
+- [Feature guide](docs/features.md)
+- [Iterative improvement workflow](docs/iterative-improvement.md)
+- [Local AI setup and boundaries](docs/local-ai.md)
+- [Privacy and security](docs/privacy-security.md)
+- [Analysis methodology](docs/methodology.md)
 
 ## Project layout
 
@@ -113,9 +211,14 @@ sda/
   opportunities.py steps 6-9, 11: opportunity + Atomicwork map + agentic + ROI + confidence
   executive.py    step 10: exec summary, roadmap, questions
   uat.py          step 12: UAT test plan, role matrix, RACI, readiness, phase plan
+  pilots.py       cohort, guardrail, charter, and deterministic recommendation
+  metrics.py      measured outcome registry with numerator/denominator coverage
+  iteration.py    baseline/follow-up comparison and decision engine
+  history.py      optional aggregate-only SQLite iteration history
   analyze.py      orchestrator -> analysis dict
   cli.py          command line
   app.py          Streamlit UI
+  ai/             optional aggregate-only local AI advisory layer
   rules/          editable YAML rule files
   report/         html, markdown, json, excel, pptx writers
 tests/            pytest suite
@@ -126,7 +229,7 @@ docs/methodology.md   the analysis methodology this implements
 ## Tests
 
 ```bash
-pytest -q
+python -m pytest -q
 ```
 
 ## License

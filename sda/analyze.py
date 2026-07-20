@@ -14,6 +14,8 @@ import datetime as _dt
 import pandas as pd
 
 from . import executive, integrity, mttr, opportunities, pareto, themes, uat
+from .feedback import feedback_parse_quality
+from .pilots import recommend_pilot
 from .ingest import read_table
 from .normalize import normalize
 from .schema import detect_schema
@@ -37,7 +39,7 @@ def analyze_dataframe(df: pd.DataFrame, *, source_name: str = "uploaded data") -
     exec_layer["application_landscape"] = executive.application_landscape(classified)
     implementation = uat.build(classified, integ, theme_summaries, mttr_res)
 
-    return {
+    result = {
         "meta": {
             "tool": "servicedesk-analyzer",
             "version": __version__,
@@ -55,7 +57,10 @@ def analyze_dataframe(df: pd.DataFrame, *, source_name: str = "uploaded data") -
         "opportunities": opp,
         "executive": exec_layer,
         "implementation": implementation,
+        "feedback_data_quality": feedback_parse_quality(df, schema),
     }
+    result["recommended_pilot"] = recommend_pilot(result)
+    return result
 
 
 def analyze_file(source, *, filename: str | None = None) -> dict:

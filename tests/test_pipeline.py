@@ -2,14 +2,18 @@
 
 from __future__ import annotations
 
+import json
+
 import pandas as pd
 import pytest
 
 from sda import analyze_dataframe
 from sda.integrity import assess
+from sda.feedback import feedback_parse_quality
 from sda.mttr import build as mttr_build
 from sda.normalize import normalize
 from sda.pareto import pareto
+from sda.report.json_out import write as write_json
 from sda.schema import detect_schema
 from sda.themes import OTHER, classify
 
@@ -40,6 +44,60 @@ def test_schema_detection_maps_vendor_headers():
     assert m["resolved"] == "Resolved"
     assert m["priority"] == "Priority"
     assert m["assignment_group"] == "Assignment group"
+
+
+def test_feedback_fields_use_exact_aliases_and_typed_normalization():
+    df = pd.DataFrame({
+        "Reopen_Count": [0, "2", None],
+        "First Contact Resolved": ["yes", "false", None],
+        "AI Attempted": [1, "no", ""],
+        "Pilot ID": ["pilot-1", "pilot-1", None],
+        "Treatment Group": ["treatment", "control", None],
+    })
+    schema = detect_schema(df)
+    norm = normalize(df, schema)
+
+    assert schema["mapping"]["reopen_count"] == "Reopen_Count"
+    assert str(norm["reopen_count"].dtype) == "Int64"
+    assert norm["reopen_count"].tolist() == [0, 2, pd.NA]
+    assert str(norm["first_contact_resolved"].dtype) == "boolean"
+    assert norm["first_contact_resolved"].iloc[:2].tolist() == [True, False]
+    assert pd.isna(norm["first_contact_resolved"].iloc[2])
+    assert norm["ai_attempted"].iloc[:2].tolist() == [True, False]
+    assert pd.isna(norm["ai_attempted"].iloc[2])
+    assert str(norm["pilot_id"].dtype) == "string"
+
+
+def test_feedback_invalid_values_are_unavailable_not_false():
+    df = pd.DataFrame({"SLA Breached": ["yes", "unknown", "", None, "no"]})
+    schema = detect_schema(df)
+    norm = normalize(df, schema)
+    quality = feedback_parse_quality(df, schema)["sla_breached"]
+
+    assert norm["sla_breached"].iloc[[0, 4]].tolist() == [True, False]
+    assert norm["sla_breached"].iloc[1:4].isna().all()
+    assert quality == {
+        "available": True,
+        "source_column": "SLA Breached",
+        "supplied_count": 3,
+        "parsed_count": 2,
+        "invalid_count": 1,
+    }
+
+
+def test_feedback_detection_does_not_fuzzily_map_unrelated_columns():
+    schema = detect_schema(pd.DataFrame({
+        "AI category": ["automation"],
+        "Escalated owner": ["team-a"],
+        "Pilot identifier notes": ["draft"],
+    }))
+
+    assert schema["mapping"]["ai_attempted"] is None
+    assert schema["mapping"]["ai_accepted"] is None
+    assert schema["mapping"]["escalated"] is None
+    assert schema["mapping"]["pilot_id"] is None
+    assert "ai_attempted" not in schema["missing"]
+    assert "ai_attempted" in schema["optional_missing"]
 
 
 def test_missing_fields_are_reported_not_invented():
@@ -90,6 +148,34 @@ def test_full_analysis_shape_and_no_data_retained():
     assert len(rng) == 2 and rng[0] <= rng[1]
     # analysis dict carries no raw ticket text column
     assert "_text" not in a["themes"][0]
+
+
+def test_analysis_and_json_never_emit_raw_ticket_descriptions(tmp_path):
+    descriptions = [
+        "PRIVATE-CANARY-ALPHA password reset for person@example.test",
+        "PRIVATE-CANARY-BRAVO laptop assigned to employee 555-0102",
+    ]
+    df = pd.DataFrame({
+        "Number": ["PRIVATE-ID-001", "PRIVATE-ID-002"],
+        "Opened": ["2026-01-01 09:00:00"] * 2,
+        "Resolved": ["2026-01-01 11:00:00"] * 2,
+        "Category": ["Access", "Hardware"],
+        "Short description": descriptions,
+    })
+
+    analysis = analyze_dataframe(df, source_name="privacy-test.csv")
+    serialized_analysis = json.dumps(analysis, default=str)
+
+    output = tmp_path / "analysis.json"
+    write_json(analysis, output)
+    serialized_report = output.read_text(encoding="utf-8")
+
+    for private_value in [*descriptions, "PRIVATE-ID-001", "PRIVATE-ID-002"]:
+        assert private_value not in serialized_analysis
+        assert private_value not in serialized_report
+
+    assert all("examples" not in theme for theme in analysis["themes"])
+    assert sum(theme["count"] for theme in analysis["themes"]) == len(df)
 
 
 def test_unknown_text_goes_to_other():

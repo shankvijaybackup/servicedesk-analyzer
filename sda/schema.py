@@ -66,6 +66,29 @@ FIELD_ALIASES: dict[str, list[str]] = {
         "mttr", "resolution time", "time to resolve", "duration", "resolution time hours",
         "handle time", "elapsed time",
     ],
+    # Optional pilot-feedback fields are exact-match only. Their aliases are
+    # deliberately specific so ordinary columns such as "AI category" cannot
+    # silently become outcome evidence.
+    "reopen_count": ["reopen count", "number of reopens", "reopens"],
+    "first_contact_resolved": [
+        "first contact resolved", "resolved on first contact",
+    ],
+    "sla_breached": ["sla breached", "sla breach"],
+    "escalated": ["escalated", "is escalated"],
+    "ai_attempted": ["ai attempted", "ai assistance attempted"],
+    "ai_accepted": ["ai accepted", "ai answer accepted", "ai assistance accepted"],
+    "human_override": ["human override", "human overridden"],
+    "user_confirmed_resolved": [
+        "user confirmed resolved", "user confirmed resolution", "confirmed resolved by user",
+    ],
+    "pilot_id": ["pilot id", "experiment id"],
+    "treatment_group": ["treatment group", "experiment group", "control or treatment"],
+}
+
+EXACT_ONLY_FIELDS = {
+    "reopen_count", "first_contact_resolved", "sla_breached", "escalated",
+    "ai_attempted", "ai_accepted", "human_override", "user_confirmed_resolved",
+    "pilot_id", "treatment_group",
 }
 
 
@@ -84,10 +107,27 @@ def detect_schema(df: pd.DataFrame) -> dict:
         norm_to_actual.setdefault(_norm(col), col)
 
     mapping: dict[str, str | None] = {}
+
+    # Reserve exact-only feedback columns before fuzzy matching legacy fields.
+    # Otherwise broad aliases such as "id", "resolved", or "group" can steal
+    # a precise header such as "Pilot ID" or "First Contact Resolved".
     used: set[str] = set()
+    for field in FIELD_ALIASES:
+        if field not in EXACT_ONLY_FIELDS:
+            continue
+        chosen = next(
+            (norm_to_actual[_norm(alias)] for alias in FIELD_ALIASES[field]
+             if _norm(alias) in norm_to_actual and norm_to_actual[_norm(alias)] not in used),
+            None,
+        )
+        mapping[field] = chosen
+        if chosen is not None:
+            used.add(chosen)
 
     # Exact normalized match first, then substring, longest alias wins.
     for field, aliases in FIELD_ALIASES.items():
+        if field in EXACT_ONLY_FIELDS:
+            continue
         chosen: str | None = None
         for alias in sorted(aliases, key=len, reverse=True):
             na = _norm(alias)
@@ -114,9 +154,18 @@ def detect_schema(df: pd.DataFrame) -> dict:
         else:
             mapping[field] = None
 
-    present = [f for f, c in mapping.items() if c is not None]
-    missing = [f for f, c in mapping.items() if c is None]
-    return {"mapping": mapping, "present": present, "missing": missing}
+    # Preserve canonical declaration order in public output.
+    ordered_mapping = {field: mapping[field] for field in FIELD_ALIASES}
+    present = [f for f, c in ordered_mapping.items() if c is not None]
+    missing = [f for f, c in ordered_mapping.items()
+               if c is None and f not in EXACT_ONLY_FIELDS]
+    optional_missing = [f for f in EXACT_ONLY_FIELDS if ordered_mapping[f] is None]
+    return {
+        "mapping": ordered_mapping,
+        "present": present,
+        "missing": missing,
+        "optional_missing": sorted(optional_missing),
+    }
 
 
 def _phrase_in(needle: str, haystack: str) -> bool:

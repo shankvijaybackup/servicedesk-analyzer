@@ -11,6 +11,7 @@ import re
 import pandas as pd
 
 from . import util
+from .feedback import normalize_feedback
 from .schema import col
 
 _PRIORITY_MAP = {
@@ -47,6 +48,9 @@ def normalize(df: pd.DataFrame, schema: dict) -> pd.DataFrame:
     out["requester"] = _clean_text(_get(df, schema, "requester"))
     out["department"] = _clean_text(_get(df, schema, "department"))
     out["application"] = _clean_text(_get(df, schema, "application"))
+
+    for field, values in normalize_feedback(df, schema).items():
+        out[field] = values
 
     short = _get(df, schema, "short_description")
     long = _get(df, schema, "description")

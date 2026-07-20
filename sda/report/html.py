@@ -208,6 +208,27 @@ def write(a: dict, path) -> str:
         w(f"<li>{_h.escape(risk)}</li>")
     w("</ul></div>")
 
+    iteration = a.get("iteration")
+    if iteration:
+        _section(w, "Iterative improvement scorecard")
+        decision = iteration["decision"]["code"].replace("_", " ").title()
+        w(f"<div style='border:1px solid #c7d2fe;border-radius:12px;padding:14px'>"
+          f"<b>{_h.escape(iteration['pilot']['name'])}</b><br>"
+          f"<span style='font-size:13px'>Decision: <b>{_h.escape(decision)}</b> &middot; "
+          f"Comparability: {_h.escape(iteration['comparability']['status'])} &middot; "
+          f"Cohorts: {iteration['baseline']['cohort_size']} / "
+          f"{iteration['follow_up']['cohort_size']}</span></div>")
+        rows = []
+        for metric, change in iteration["changes"].items():
+            before = iteration["baseline"]["metrics"][metric]["value"]
+            after = iteration["follow_up"]["metrics"][metric]["value"]
+            rows.append([metric, before if before is not None else "-",
+                         after if after is not None else "-",
+                         change.get("improvement_pct") if change.get("improvement_pct") is not None else "-"])
+        w(_table(["Metric", "Baseline", "Follow-up", "Improvement %"], rows))
+        w(f"<div style='font-size:12px;color:#64748b;margin-top:8px'>"
+          f"{_h.escape(iteration['causality_note'])}</div>")
+
     # O-S. Implementation and UAT package
     impl = a.get("implementation")
     if impl:

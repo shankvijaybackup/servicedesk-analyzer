@@ -139,6 +139,18 @@ def write(a: dict, path) -> str:
                   for p in impl["phase_plan_15_day"]]
         _bullets(s, lines, size=14)
 
+    iteration = a.get("iteration")
+    if iteration:
+        s = _content(prs, blank, "Iterative improvement scorecard")
+        lines = [
+            f"Pilot: {iteration['pilot']['name']}",
+            f"Decision: {iteration['decision']['code'].replace('_', ' ').title()}",
+            f"Comparability: {iteration['comparability']['status']}",
+        ]
+        lines.extend(iteration["decision"]["reasons"])
+        lines.append(iteration["causality_note"])
+        _bullets(s, lines, size=15)
+
     path = Path(path)
     prs.save(path)
     return str(path)

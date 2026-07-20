@@ -115,6 +115,25 @@ def write(a: dict, path) -> str:
             [p["days"], p["phase"], " | ".join(p["activities"]), p["exit_criteria"]]
             for p in impl["phase_plan_15_day"]])
 
+    iteration = a.get("iteration")
+    if iteration:
+        rows = [["Metric", "Baseline", "Follow-up", "Absolute change", "Improvement %",
+                 "Baseline n", "Follow-up n"]]
+        for metric, change in iteration["changes"].items():
+            before = iteration["baseline"]["metrics"][metric]
+            after = iteration["follow_up"]["metrics"][metric]
+            rows.append([metric, before["value"], after["value"], change.get("absolute"),
+                         change.get("improvement_pct"), before["denominator"], after["denominator"]])
+        _sheet(wb, "IterationScorecard", rows)
+        _sheet(wb, "IterationDecision", [["Field", "Value"],
+            ["Pilot", iteration["pilot"]["name"]],
+            ["Decision", iteration["decision"]["code"]],
+            ["Reasons", "; ".join(iteration["decision"]["reasons"])],
+            ["Comparability", iteration["comparability"]["status"]],
+            ["Method", iteration["method"]],
+            ["Causality note", iteration["causality_note"]],
+        ])
+
     path = Path(path)
     wb.save(path)
     return str(path)
@@ -134,9 +153,15 @@ def _sheet(wb, title, rows):
 
 def _cell(v):
     if isinstance(v, (list, tuple)):
-        return ", ".join(map(str, v))
+        v = ", ".join(map(str, v))
     if v is None:
         return ""
+    # Excel interprets strings beginning with these characters as formulas.
+    # Report labels come from uploaded data, so force them to remain literal
+    # text. Numeric values (including legitimate negative numbers) are left
+    # untouched because this branch applies only to strings.
+    if isinstance(v, str) and v.startswith(("=", "+", "-", "@")):
+        return "'" + v
     return v
 
 

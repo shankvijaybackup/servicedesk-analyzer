@@ -70,7 +70,6 @@ def theme_summary(classified: pd.DataFrame) -> list[dict]:
         mttr = grp["mttr_hours"].dropna()
         top_types = _top(grp["type"], 3)
         top_apps = _top(grp["application"], 3)
-        examples = [str(x) for x in grp["short_description"].dropna().head(3).tolist()]
         avg_score = float(grp["_theme_score"].mean()) if count else 0.0
         desc_share = util.pct(grp["short_description"].notna().sum(), count)
         summaries.append({
@@ -81,7 +80,6 @@ def theme_summary(classified: pd.DataFrame) -> list[dict]:
             "mttr_p90_hours": util.safe_round(mttr.quantile(0.9)) if len(mttr) else None,
             "top_types": top_types,
             "top_applications": top_apps,
-            "examples": examples,
             "avg_match_score": util.safe_round(avg_score, 2),
             "description_coverage_pct": desc_share,
             "confidence": _theme_confidence(theme, count, avg_score, desc_share),
